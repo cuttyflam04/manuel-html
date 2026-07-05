@@ -1,4 +1,4 @@
-# Chapitre 4 — Les formulaires HTML
+# Les formulaires HTML
 
 Les formulaires permettent aux utilisateurs d'interagir avec une page Web en saisissant des informations.
 
@@ -15,12 +15,6 @@ Ce chapitre est organisé en trois sections :
 - [Section 1 – Les bases des formulaires](#section-1--les-bases-des-formulaires)
 - [Section 2 – Les contrôles de sélection](#section-2--les-contrôles-de-sélection)
 - [Section 3 – Les champs avancés et les boutons](#section-3--les-champs-avancés-et-les-boutons)
-
----
-
-⬅️ Précédent : Les tableaux HTML
-
-➡️ Suivant : Les images HTML
 
 ---
 
@@ -327,10 +321,6 @@ Maîtriser la création d'un formulaire simple utilisant les balises :
 
 - `<FORM>`
 - `<INPUT>`
-
----
-
-⬅️ **Retour :** Introduction du chapitre
 
 ---
 
@@ -763,8 +753,6 @@ La sélection s'effectue généralement à l'aide des touches **Ctrl** ou **Maj*
 ### Objectif
 
 Maîtriser les contrôles de sélection proposés par HTML.
-
----
 
 ---
 
