@@ -1,0 +1,54 @@
+.md-typeset h1{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#0f4c9b;
+
+    border-bottom:3px solid #4f8fe6;
+
+    padding-bottom:15px;
+
+    margin-bottom:45px;
+}
+.md-typeset h2{
+
+    border-left:5px solid #4f8fe6;
+
+    padding-left:18px;
+
+    margin-top:60px;
+
+    margin-bottom:25px;
+
+    font-size:1.3rem;
+
+}
+.md-typeset h3{
+
+    margin-top:40px;
+
+    color:#1f2937;
+
+    font-size:0.9rem;
+
+}
+.md-typeset p{
+
+    text-align:justify;
+
+    line-height:1.9;
+
+    font-size:0.78rem;
+
+}
+.md-typeset li{
+
+    margin-bottom:12px;
+
+}
+.md-typeset table{
+
+    width:100%;
+
+    font-size:.75rem;
+
+}

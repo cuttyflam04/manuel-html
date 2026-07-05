@@ -1,0 +1,103 @@
+site_name: Manuel HTML
+site_description: Manuel interactif de HTML - UAM
+site_author: Flamme
+site_url: http://127.0.0.1:8000
+
+nav:
+
+  - Accueil: index.md
+
+  - Manuel:
+      - Présentation: manuel/index.md
+      - Chapitre 1: manuel/chapitre1/index.md
+      - Chapitre 2: manuel/chapitre2/index.md
+      - Chapitre 3: manuel/chapitre3/index.md
+      - Chapitre 4: manuel/chapitre4/index.md
+      - Chapitre 5: manuel/chapitre5/index.md
+      - Chapitre 6: manuel/chapitre6/index.md
+      - Chapitre 7: manuel/chapitre7/index.md
+  - Annexes:
+      - Annexe A: manuel/annexes/annexe-a.md
+      - Annexe B: manuel/annexes/annexe-b.md
+  - À propos: about.md
+
+theme:
+  name: material
+
+  language: fr
+
+  palette:
+
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Mode sombre
+
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Mode clair
+
+  features:
+
+    - navigation.tabs
+
+    - navigation.sections
+
+    - navigation.expand
+
+    - navigation.top
+
+    - navigation.footer
+
+    - navigation.instant
+
+    - navigation.tracking
+
+    - navigation.indexes
+
+    - toc.follow
+
+    - search.suggest
+
+    - search.highlight
+
+    - content.code.copy
+
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/home.css
+  - stylesheets/manual.css
+  - stylesheets/code.css
+
+extra_javascript:
+  - javascripts/preview.js
+
+markdown_extensions:
+
+  - admonition
+
+  - attr_list
+
+  - md_in_html
+
+  - tables
+
+  - pymdownx.highlight
+
+  - pymdownx.superfences
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.details
+
+  - toc:
+      permalink: true

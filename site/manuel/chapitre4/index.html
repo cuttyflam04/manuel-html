@@ -1,0 +1,3808 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manuel interactif de HTML - UAM">
+      
+      
+        <meta name="author" content="Flamme">
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/manuel/chapitre4/">
+      
+      
+        <link rel="prev" href="../chapitre3/">
+      
+      
+        <link rel="next" href="../chapitre5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapitre 4 - Manuel HTML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/manual.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/code.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapitre-4-les-formulaires-html" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manuel HTML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Manuel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../annexes/annexe-a/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Annexes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  À propos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manuel HTML
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manuel
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manuel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sommaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sommaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-les-bases-des-formulaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — Les bases des formulaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;FORM&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;FORM&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe générale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ACTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut METHOD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L&#39;attribut METHOD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-enctype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ENCTYPE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;INPUT&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-champs-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les champs texte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les champs texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-mots-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les mots de passe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les mots de passe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="À retenir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-les-controles-de-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — Les contrôles de sélection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-boutons-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les boutons radio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les boutons radio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-cases-a-cocher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les cases à cocher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les cases à cocher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-entre-radio-et-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence entre RADIO et CHECKBOX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes-deroulantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes déroulantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les listes déroulantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;OPTION&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-optgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;OPTGROUP&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes-a-selection-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes à sélection multiple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="À retenir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-les-champs-avances-et-les-boutons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Les champs avancés et les boutons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-fieldset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;FIELDSET&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;FIELDSET&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;LEGEND&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;LEGEND&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;TEXTAREA&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;TEXTAREA&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texte-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texte par défaut
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-submit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton SUBMIT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton SUBMIT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton RESET
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton RESET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton BUTTON
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton IMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton IMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-type-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le type FILE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le type FILE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-type-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le type HIDDEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-final-de-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice final de synthèse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice final de synthèse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-du-chapitre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion du chapitre
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Annexes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexe A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexe B
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    À propos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sommaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sommaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-les-bases-des-formulaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — Les bases des formulaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;FORM&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;FORM&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe générale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ACTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut METHOD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L&#39;attribut METHOD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-enctype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ENCTYPE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;INPUT&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-champs-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les champs texte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les champs texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-mots-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les mots de passe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les mots de passe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="À retenir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-les-controles-de-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — Les contrôles de sélection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-boutons-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les boutons radio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les boutons radio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-cases-a-cocher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les cases à cocher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les cases à cocher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-entre-radio-et-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence entre RADIO et CHECKBOX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes-deroulantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes déroulantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les listes déroulantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;OPTION&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-optgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;OPTGROUP&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes-a-selection-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes à sélection multiple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="À retenir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-les-champs-avances-et-les-boutons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Les champs avancés et les boutons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-fieldset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;FIELDSET&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;FIELDSET&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;LEGEND&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;LEGEND&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;TEXTAREA&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;TEXTAREA&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texte-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texte par défaut
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-submit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton SUBMIT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton SUBMIT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton RESET
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton RESET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton BUTTON
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bouton-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bouton IMAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le bouton IMAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-type-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le type FILE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le type FILE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-type-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le type HIDDEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-final-de-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice final de synthèse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice final de synthèse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-du-chapitre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion du chapitre
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapitre-4-les-formulaires-html">Chapitre 4 — Les formulaires HTML<a class="headerlink" href="#chapitre-4-les-formulaires-html" title="Permanent link">&para;</a></h1>
+<p>Les formulaires permettent aux utilisateurs d'interagir avec une page Web en saisissant des informations.</p>
+<p>Ce chapitre est organisé en trois sections :</p>
+<ol>
+<li><strong>Les bases des formulaires</strong> — structure et champs textuels</li>
+<li><strong>Les contrôles de sélection</strong> — boutons radio, cases à cocher, listes déroulantes</li>
+<li><strong>Les champs avancés et les boutons</strong> — organisation, zones de texte, envoi et fichiers</li>
+</ol>
+<hr />
+<h2 id="sommaire">Sommaire<a class="headerlink" href="#sommaire" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#section-1--les-bases-des-formulaires">Section 1 – Les bases des formulaires</a></li>
+<li><a href="#section-2--les-contrôles-de-sélection">Section 2 – Les contrôles de sélection</a></li>
+<li><a href="#section-3--les-champs-avancés-et-les-boutons">Section 3 – Les champs avancés et les boutons</a></li>
+</ul>
+<hr />
+<p>⬅️ Précédent : Les tableaux HTML</p>
+<p>➡️ Suivant : Les images HTML</p>
+<hr />
+<h2 id="section-1-les-bases-des-formulaires">Section 1 — Les bases des formulaires<a class="headerlink" href="#section-1-les-bases-des-formulaires" title="Permanent link">&para;</a></h2>
+<p>Jusqu'à présent, les pages HTML réalisées permettaient uniquement d'afficher des informations.</p>
+<p>Les <strong>formulaires HTML</strong> permettent désormais aux utilisateurs <strong>d'interagir avec une page Web</strong> en saisissant des informations qui seront ensuite envoyées à un serveur.</p>
+<p>Par exemple, ils permettent de :</p>
+<ul>
+<li>créer un compte ;</li>
+<li>se connecter ;</li>
+<li>effectuer une recherche ;</li>
+<li>réserver un billet ;</li>
+<li>envoyer un commentaire ;</li>
+<li>remplir un questionnaire.</li>
+</ul>
+<hr />
+<h2 id="la-balise-form">La balise <code>&lt;FORM&gt;</code><a class="headerlink" href="#la-balise-form" title="Permanent link">&para;</a></h2>
+<p>La balise <code>&lt;FORM&gt;</code> est la balise principale de tout formulaire.</p>
+<p>Elle délimite l'ensemble des champs qui seront envoyés lors de la validation.</p>
+<h3 id="syntaxe-generale">Syntaxe générale<a class="headerlink" href="#syntaxe-generale" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">&quot;destination.htm&quot;</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+
+    ...
+
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACTION</code></td>
+<td>Indique la destination des données du formulaire.</td>
+</tr>
+<tr>
+<td><code>METHOD</code></td>
+<td>Définit la méthode de transmission des données (<code>GET</code> ou <code>POST</code>).</td>
+</tr>
+<tr>
+<td><code>ENCTYPE</code></td>
+<td>Définit le type d'encodage utilisé lors de l'envoi des données.</td>
+</tr>
+<tr>
+<td><code>NAME</code></td>
+<td>Donne un nom au formulaire.</td>
+</tr>
+<tr>
+<td><code>TARGET</code></td>
+<td>Détermine où afficher la réponse du serveur.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lattribut-action">L'attribut <code>ACTION</code><a class="headerlink" href="#lattribut-action" title="Permanent link">&para;</a></h2>
+<p>L'attribut <code>ACTION</code> indique <strong>l'adresse vers laquelle les informations seront envoyées</strong> après la validation du formulaire.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.1 — Utilisation de ACTION</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">&quot;inscription.htm&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Fonctionnement</p>
+<p>Lorsque l'utilisateur valide le formulaire, les données sont envoyées vers :</p>
+<p><code>inscription.htm</code></p>
+</div>
+<hr />
+<h2 id="lattribut-method">L'attribut <code>METHOD</code><a class="headerlink" href="#lattribut-method" title="Permanent link">&para;</a></h2>
+<p>Deux méthodes sont principalement utilisées pour envoyer les données d'un formulaire.</p>
+<h3 id="get"><code>GET</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<p>La méthode <strong>GET</strong> ajoute les données directement à l'adresse de la page.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.2 — Méthode GET</p>
+<div class="highlight"><pre><span></span><code>resultat.htm?nom=Ali&amp;age=20
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Utilisation</p>
+<p>Cette méthode est principalement utilisée pour :</p>
+<ul>
+<li>les recherches ;</li>
+<li>les filtres ;</li>
+<li>les pages dont les paramètres peuvent apparaître dans l'URL.</li>
+</ul>
+</div>
+<hr />
+<h3 id="post"><code>POST</code><a class="headerlink" href="#post" title="Permanent link">&para;</a></h3>
+<p>La méthode <strong>POST</strong> transmet les données dans le corps de la requête.</p>
+<p>Les informations <strong>n'apparaissent pas dans l'adresse</strong> du navigateur.</p>
+<div class="admonition tip">
+<p class="admonition-title">Utilisation</p>
+<p>Cette méthode est recommandée pour :</p>
+<ul>
+<li>les formulaires d'inscription ;</li>
+<li>les formulaires de connexion ;</li>
+<li>l'envoi de fichiers.</li>
+</ul>
+</div>
+<hr />
+<h2 id="lattribut-enctype">L'attribut <code>ENCTYPE</code><a class="headerlink" href="#lattribut-enctype" title="Permanent link">&para;</a></h2>
+<p>L'attribut <code>ENCTYPE</code> précise <strong>le format utilisé pour envoyer les données</strong>.</p>
+<p>Les valeurs les plus courantes sont :</p>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>application/x-www-form-urlencoded</code></td>
+<td>Formulaire classique</td>
+</tr>
+<tr>
+<td><code>multipart/form-data</code></td>
+<td>Envoi de fichiers</td>
+</tr>
+<tr>
+<td><code>text/plain</code></td>
+<td>Débogage ou cas particuliers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="la-balise-input">La balise <code>&lt;INPUT&gt;</code><a class="headerlink" href="#la-balise-input" title="Permanent link">&para;</a></h2>
+<p>La majorité des champs d'un formulaire sont créés grâce à la balise :</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Son comportement dépend principalement de son attribut :</p>
+<div class="highlight"><pre><span></span><code>TYPE
+</code></pre></div>
+<p>Selon la valeur choisie (<code>text</code>, <code>password</code>, <code>radio</code>, etc.), le navigateur affichera un champ différent.</p>
+<hr />
+<h2 id="les-champs-texte">Les champs texte<a class="headerlink" href="#les-champs-texte" title="Permanent link">&para;</a></h2>
+<p>Le type <code>TEXT</code> permet à l'utilisateur de saisir une information sur <strong>une seule ligne</strong>.</p>
+<h3 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NAME</code></td>
+<td>Nom du champ.</td>
+</tr>
+<tr>
+<td><code>SIZE</code></td>
+<td>Largeur de la zone de saisie.</td>
+</tr>
+<tr>
+<td><code>MAXLENGTH</code></td>
+<td>Nombre maximal de caractères.</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td>Texte affiché par défaut.</td>
+</tr>
+<tr>
+<td><code>READONLY</code></td>
+<td>Rend le champ non modifiable.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.3 — Champs texte</p>
+<div class="highlight"><pre><span></span><code>Nom :
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;nom&quot;</span>
+       <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;25&quot;</span><span class="p">&gt;</span>
+
+Prénom :
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;prenom&quot;</span>
+       <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;25&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="les-mots-de-passe">Les mots de passe<a class="headerlink" href="#les-mots-de-passe" title="Permanent link">&para;</a></h2>
+<p>Le type <code>PASSWORD</code> fonctionne comme un champ texte.</p>
+<p>La différence est que <strong>les caractères saisis sont masqués</strong> pendant la saisie.</p>
+<h3 id="syntaxe_1">Syntaxe<a class="headerlink" href="#syntaxe_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.4 — Champ mot de passe</p>
+<div class="highlight"><pre><span></span><code>Mot de passe :
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;password&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;motdepasse&quot;</span>
+       <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;15&quot;</span>
+       <span class="na">MAXLENGTH</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="exemple-complet">Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Connexion étudiant</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+        Connexion
+    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;white&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
+        Connexion étudiant
+    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">&quot;connexion.htm&quot;</span>
+          <span class="na">METHOD</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+
+            Nom :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+                   <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;nom&quot;</span>
+                   <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;30&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+
+            Mot de passe :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;password&quot;</span>
+                   <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;mdp&quot;</span>
+                   <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;15&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">À éviter</p>
+<ul>
+<li>
+<p>oublier la balise <code>&lt;FORM&gt;</code> ;</p>
+</li>
+<li>
+<p>oublier de fermer le formulaire ;</p>
+</li>
+<li>
+<p>oublier l'attribut <code>NAME</code> ;</p>
+</li>
+<li>
+<p>utiliser deux attributs <code>TYPE</code> dans le même <code>&lt;INPUT&gt;</code> ;</p>
+</li>
+<li>
+<p>oublier l'attribut <code>METHOD</code>.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Points essentiels</p>
+<ul>
+<li>
+<p>Tous les formulaires commencent par <code>&lt;FORM&gt;</code>.</p>
+</li>
+<li>
+<p><code>&lt;INPUT&gt;</code> permet de créer différents types de champs.</p>
+</li>
+<li>
+<p><code>TYPE="text"</code> crée une zone de texte.</p>
+</li>
+<li>
+<p><code>TYPE="password"</code> masque les caractères saisis.</p>
+</li>
+<li>
+<p><code>ACTION</code> indique la destination des données.</p>
+</li>
+<li>
+<p><code>METHOD</code> définit la méthode d'envoi.</p>
+</li>
+</ul>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exercice</p>
+<p>Créer une page HTML intitulée <strong>Connexion à la Bibliothèque Universitaire</strong> contenant :</p>
+<ul>
+<li>un titre centré ;</li>
+<li>un formulaire utilisant la méthode <code>POST</code> ;</li>
+<li>un champ <strong>Nom</strong> ;</li>
+<li>un champ <strong>Prénom</strong> ;</li>
+<li>un champ <strong>Mot de passe</strong> ;</li>
+<li>une ligne horizontale séparant le titre du formulaire.</li>
+</ul>
+</div>
+<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
+<p>Maîtriser la création d'un formulaire simple utilisant les balises :</p>
+<ul>
+<li><code>&lt;FORM&gt;</code></li>
+<li><code>&lt;INPUT&gt;</code></li>
+</ul>
+<hr />
+<p>⬅️ <strong>Retour :</strong> Introduction du chapitre</p>
+<hr />
+<h2 id="section-2-les-controles-de-selection">Section 2 — Les contrôles de sélection<a class="headerlink" href="#section-2-les-controles-de-selection" title="Permanent link">&para;</a></h2>
+<p>Les principaux contrôles sont :</p>
+<ul>
+<li>les boutons radio ;</li>
+<li>les cases à cocher ;</li>
+<li>les listes déroulantes ;</li>
+<li>les listes à sélection multiple.</li>
+</ul>
+<hr />
+<h2 id="les-boutons-radio">Les boutons radio<a class="headerlink" href="#les-boutons-radio" title="Permanent link">&para;</a></h2>
+<p>Les boutons radio (<code>TYPE="radio"</code>) permettent à l'utilisateur de sélectionner <strong>une seule réponse</strong> parmi plusieurs propositions.</p>
+<p>Tous les boutons appartenant au même groupe doivent posséder <strong>le même attribut <code>NAME</code></strong>.</p>
+<h3 id="syntaxe_2">Syntaxe<a class="headerlink" href="#syntaxe_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;groupe&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;valeur&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TYPE="radio"</code></td>
+<td>Crée un bouton radio.</td>
+</tr>
+<tr>
+<td><code>NAME</code></td>
+<td>Identifie le groupe auquel appartient le bouton.</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td>Valeur envoyée lorsque le bouton est sélectionné.</td>
+</tr>
+<tr>
+<td><code>CHECKED</code></td>
+<td>Définit le choix sélectionné par défaut.</td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td>Désactive le bouton.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.5 — Boutons radio</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;</span>Choisissez votre niveau :<span class="p">&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;niveau&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;L1&quot;</span><span class="p">&gt;</span>
+
+Licence 1
+
+<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;niveau&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;L2&quot;</span>
+       <span class="na">CHECKED</span><span class="p">&gt;</span>
+
+Licence 2
+
+<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;niveau&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;L3&quot;</span><span class="p">&gt;</span>
+
+Licence 3
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque</p>
+<p>Le navigateur interdit automatiquement la sélection simultanée de plusieurs boutons radio appartenant au même groupe.</p>
+</div>
+<hr />
+<h2 id="les-cases-a-cocher">Les cases à cocher<a class="headerlink" href="#les-cases-a-cocher" title="Permanent link">&para;</a></h2>
+<p>Les cases à cocher (<code>TYPE="checkbox"</code>) permettent à l'utilisateur de sélectionner <strong>plusieurs réponses</strong>.</p>
+<p>Contrairement aux boutons radio, plusieurs cases peuvent être cochées simultanément.</p>
+<h3 id="syntaxe_3">Syntaxe<a class="headerlink" href="#syntaxe_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TYPE="checkbox"</code></td>
+<td>Crée une case à cocher.</td>
+</tr>
+<tr>
+<td><code>NAME</code></td>
+<td>Nom du groupe.</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td>Valeur envoyée au serveur.</td>
+</tr>
+<tr>
+<td><code>CHECKED</code></td>
+<td>Case cochée par défaut.</td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td>Désactive la case.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.6 — Cases à cocher</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;</span>Langages étudiés<span class="p">&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;langage&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;HTML&quot;</span>
+       <span class="na">CHECKED</span><span class="p">&gt;</span>
+
+HTML
+
+<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;langage&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;CSS&quot;</span><span class="p">&gt;</span>
+
+CSS
+
+<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;langage&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+
+JavaScript
+
+<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+       <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;langage&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;PHP&quot;</span><span class="p">&gt;</span>
+
+PHP
+</code></pre></div>
+</div>
+<hr />
+<h2 id="difference-entre-radio-et-checkbox">Différence entre <code>RADIO</code> et <code>CHECKBOX</code><a class="headerlink" href="#difference-entre-radio-et-checkbox" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Bouton radio</th>
+<th>Case à cocher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un seul choix possible</td>
+<td>Plusieurs choix possibles</td>
+</tr>
+<tr>
+<td>Même attribut <code>NAME</code></td>
+<td>Généralement le même <code>NAME</code></td>
+</tr>
+<tr>
+<td>Utilisé pour une réponse unique</td>
+<td>Utilisé pour une sélection multiple</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="les-listes-deroulantes">Les listes déroulantes<a class="headerlink" href="#les-listes-deroulantes" title="Permanent link">&para;</a></h2>
+<p>La balise <code>&lt;SELECT&gt;</code> permet d'afficher une liste de choix.</p>
+<p>Chaque élément de cette liste est représenté par une balise <code>&lt;OPTION&gt;</code>.</p>
+<h3 id="syntaxe_4">Syntaxe<a class="headerlink" href="#syntaxe_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Choix 1<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Choix 2<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NAME</code></td>
+<td>Nom de la liste.</td>
+</tr>
+<tr>
+<td><code>SIZE</code></td>
+<td>Nombre d'éléments visibles.</td>
+</tr>
+<tr>
+<td><code>MULTIPLE</code></td>
+<td>Autorise plusieurs sélections.</td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td>Désactive la liste.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="la-balise-option">La balise <code>&lt;OPTION&gt;</code><a class="headerlink" href="#la-balise-option" title="Permanent link">&para;</a></h2>
+<p>Chaque élément d'une liste est défini grâce à la balise <code>&lt;OPTION&gt;</code>.</p>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>VALUE</code></td>
+<td>Valeur envoyée au serveur.</td>
+</tr>
+<tr>
+<td><code>SELECTED</code></td>
+<td>Élément sélectionné par défaut.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.7 — Liste déroulante</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    Choisissez votre département :
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;departement&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;GI&quot;</span><span class="p">&gt;</span>
+        Génie Informatique
+    <span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;SIC&quot;</span> <span class="na">SELECTED</span><span class="p">&gt;</span>
+        Sciences de l&#39;Information et de la Communication
+    <span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;ELEC&quot;</span><span class="p">&gt;</span>
+        Électronique
+    <span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="la-balise-optgroup">La balise <code>&lt;OPTGROUP&gt;</code><a class="headerlink" href="#la-balise-optgroup" title="Permanent link">&para;</a></h2>
+<p>La balise <code>&lt;OPTGROUP&gt;</code> permet de regrouper plusieurs options appartenant à une même catégorie.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.8 — Groupes d'options</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;bibliotheque&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTGROUP</span> <span class="na">LABEL</span><span class="o">=</span><span class="s">&quot;Sciences&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Mathématiques<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Physique<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Informatique<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">OPTGROUP</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTGROUP</span> <span class="na">LABEL</span><span class="o">=</span><span class="s">&quot;Lettres&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Français<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>Anglais<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">OPTGROUP</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="les-listes-a-selection-multiple">Les listes à sélection multiple<a class="headerlink" href="#les-listes-a-selection-multiple" title="Permanent link">&para;</a></h2>
+<p>L'attribut <code>MULTIPLE</code> autorise l'utilisateur à sélectionner plusieurs éléments.</p>
+<p>La sélection s'effectue généralement à l'aide des touches <strong>Ctrl</strong> ou <strong>Maj</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.9 — Sélection multiple</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    Modules suivis :
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">SELECT</span>
+    <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;modules&quot;</span>
+    <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;5&quot;</span>
+    <span class="na">MULTIPLE</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>CSS<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>JavaScript<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>PHP<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>SQL<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="exemple-complet_1">Exemple complet<a class="headerlink" href="#exemple-complet_1" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Inscription universitaire</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+        Inscription Universitaire
+    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;white&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
+        Inscription
+    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">&quot;inscription.htm&quot;</span>
+          <span class="na">METHOD</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+            Sexe :
+        <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+               <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;sexe&quot;</span>
+               <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;M&quot;</span><span class="p">&gt;</span>
+
+        Masculin
+
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+               <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;sexe&quot;</span>
+               <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;F&quot;</span>
+               <span class="na">CHECKED</span><span class="p">&gt;</span>
+
+        Féminin
+
+        <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+            Compétences :
+        <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+               <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;competence&quot;</span>
+               <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;HTML&quot;</span><span class="p">&gt;</span>
+
+        HTML
+
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+               <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;competence&quot;</span>
+               <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;CSS&quot;</span><span class="p">&gt;</span>
+
+        CSS
+
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+               <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;competence&quot;</span>
+               <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+
+        JavaScript
+
+        <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+            Département :
+        <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;departement&quot;</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">OPTGROUP</span> <span class="na">LABEL</span><span class="o">=</span><span class="s">&quot;TECNA&quot;</span><span class="p">&gt;</span>
+
+                <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;GI&quot;</span><span class="p">&gt;</span>
+                    Génie Informatique
+                <span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+                <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;SIC&quot;</span> <span class="na">SELECTED</span><span class="p">&gt;</span>
+                    SIC
+                <span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;/</span><span class="nt">OPTGROUP</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="erreurs-frequentes_1">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes_1" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">À éviter</p>
+<ul>
+<li>
+<p>utiliser des boutons radio ayant des noms différents alors qu'ils appartiennent au même groupe ;</p>
+</li>
+<li>
+<p>oublier l'attribut <code>VALUE</code> ;</p>
+</li>
+<li>
+<p>oublier de fermer une balise <code>&lt;SELECT&gt;</code> ;</p>
+</li>
+<li>
+<p>placer une balise <code>&lt;OPTION&gt;</code> en dehors d'une balise <code>&lt;SELECT&gt;</code> ;</p>
+</li>
+<li>
+<p>oublier <code>CHECKED</code> lorsqu'un choix par défaut est souhaité ;</p>
+</li>
+<li>
+<p>utiliser <code>MULTIPLE</code> sans augmenter la valeur de <code>SIZE</code>, ce qui rend la sélection multiple moins évidente.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="a-retenir_1">À retenir<a class="headerlink" href="#a-retenir_1" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Points essentiels</p>
+<ul>
+<li>
+<p><code>TYPE="radio"</code> permet un choix unique.</p>
+</li>
+<li>
+<p><code>TYPE="checkbox"</code> permet plusieurs choix.</p>
+</li>
+<li>
+<p><code>&lt;SELECT&gt;</code> crée une liste déroulante.</p>
+</li>
+<li>
+<p><code>&lt;OPTION&gt;</code> représente une valeur de la liste.</p>
+</li>
+<li>
+<p><code>&lt;OPTGROUP&gt;</code> regroupe plusieurs options.</p>
+</li>
+<li>
+<p><code>MULTIPLE</code> autorise plusieurs sélections.</p>
+</li>
+<li>
+<p><code>CHECKED</code> et <code>SELECTED</code> permettent de définir une valeur par défaut.</p>
+</li>
+</ul>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exercice</p>
+<p>Créer une page HTML intitulée <strong>Inscription à un club universitaire</strong> contenant :</p>
+<ul>
+<li>
+<p>une section <strong>Informations générales</strong> ;</p>
+</li>
+<li>
+<p>un groupe de boutons radio permettant de choisir le niveau d'étude ;</p>
+</li>
+<li>
+<p>des cases à cocher représentant les activités souhaitées :</p>
+<ul>
+<li>Sport ;</li>
+<li>Musique ;</li>
+<li>Informatique ;</li>
+<li>Lecture.</li>
+</ul>
+</li>
+<li>
+<p>une liste déroulante permettant de choisir la faculté ;</p>
+</li>
+<li>
+<p>une liste à sélection multiple contenant les langues parlées ;</p>
+</li>
+<li>
+<p>une ligne horizontale séparant chaque partie du formulaire.</p>
+</li>
+</ul>
+</div>
+<h3 id="objectif_1">Objectif<a class="headerlink" href="#objectif_1" title="Permanent link">&para;</a></h3>
+<p>Maîtriser les contrôles de sélection proposés par HTML.</p>
+<hr />
+<hr />
+<h2 id="section-3-les-champs-avances-et-les-boutons">Section 3 — Les champs avancés et les boutons<a class="headerlink" href="#section-3-les-champs-avances-et-les-boutons" title="Permanent link">&para;</a></h2>
+<ul>
+<li>les groupes de champs (<code>FIELDSET</code>) ;</li>
+<li>les titres de groupes (<code>LEGEND</code>) ;</li>
+<li>les zones de texte (<code>TEXTAREA</code>) ;</li>
+<li>les différents types de boutons ;</li>
+<li>les champs de type <code>FILE</code> et <code>HIDDEN</code>.</li>
+</ul>
+<hr />
+<h2 id="la-balise-fieldset">La balise <code>&lt;FIELDSET&gt;</code><a class="headerlink" href="#la-balise-fieldset" title="Permanent link">&para;</a></h2>
+<p>Lorsqu'un formulaire devient volumineux, il est conseillé de regrouper les champs ayant le même objectif.</p>
+<p>Pour cela, HTML met à disposition la balise <code>&lt;FIELDSET&gt;</code>.</p>
+<p>Cette balise permet d'entourer un ensemble de champs par un cadre afin de mieux organiser le formulaire.</p>
+<p>L'utilisation de plusieurs <code>FIELDSET</code> rend un formulaire plus lisible et facilite sa compréhension.</p>
+<h3 id="syntaxe_5">Syntaxe<a class="headerlink" href="#syntaxe_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+    ...
+
+<span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.10 — Utilisation de FIELDSET</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+    Nom :
+
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;nom&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+    Prénom :
+
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;prenom&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque</p>
+<p>Un formulaire peut contenir plusieurs balises <code>&lt;FIELDSET&gt;</code>.</p>
+<p>Par exemple :</p>
+<ul>
+<li>Informations personnelles ;</li>
+<li>Coordonnées ;</li>
+<li>Diplômes ;</li>
+<li>Informations complémentaires.</li>
+</ul>
+</div>
+<hr />
+<h2 id="la-balise-legend">La balise <code>&lt;LEGEND&gt;</code><a class="headerlink" href="#la-balise-legend" title="Permanent link">&para;</a></h2>
+<p>La balise <code>&lt;LEGEND&gt;</code> est utilisée à l'intérieur d'un <code>&lt;FIELDSET&gt;</code>.</p>
+<p>Elle permet d'afficher un titre décrivant le groupe de champs.</p>
+<h3 id="syntaxe_6">Syntaxe<a class="headerlink" href="#syntaxe_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+        Informations personnelles
+    <span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+
+    ...
+
+<span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.11 — Titre d'un groupe</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+        Étudiant
+    <span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+
+    Nom :
+
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+    Prénom :
+
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Résultat</p>
+<p>Le navigateur affiche automatiquement le texte de la balise <code>&lt;LEGEND&gt;</code> sur le bord supérieur du cadre.</p>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Bonne pratique</p>
+<p>Une balise <code>&lt;FIELDSET&gt;</code> devrait toujours être accompagnée d'une balise <code>&lt;LEGEND&gt;</code>.</p>
+<p>Même si la balise <code>&lt;LEGEND&gt;</code> est facultative en HTML, elle est fortement recommandée, car elle :</p>
+<ul>
+<li>donne un titre au groupe de champs ;</li>
+<li>améliore la lisibilité du formulaire ;</li>
+<li>facilite la compréhension pour les utilisateurs ;</li>
+<li>améliore l'accessibilité, notamment pour les lecteurs d'écran.</li>
+</ul>
+<p>Un formulaire peut contenir plusieurs balises <code>&lt;FIELDSET&gt;</code>, chacune possédant son propre <code>&lt;LEGEND&gt;</code>.</p>
+<p>Exemples de groupes :</p>
+<ul>
+<li>Informations personnelles ;</li>
+<li>Coordonnées ;</li>
+<li>Diplômes ;</li>
+<li>Informations complémentaires.</li>
+</ul>
+</div>
+<hr />
+<h2 id="la-balise-textarea">La balise <code>&lt;TEXTAREA&gt;</code><a class="headerlink" href="#la-balise-textarea" title="Permanent link">&para;</a></h2>
+<p>Contrairement au champ <code>TEXT</code>, qui permet une saisie sur une seule ligne, la balise <code>&lt;TEXTAREA&gt;</code> permet de saisir <strong>plusieurs lignes de texte</strong>.</p>
+<p>Elle est principalement utilisée pour :</p>
+<ul>
+<li>les commentaires ;</li>
+<li>les observations ;</li>
+<li>les messages ;</li>
+<li>les descriptions.</li>
+</ul>
+<h3 id="syntaxe_7">Syntaxe<a class="headerlink" href="#syntaxe_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NAME</code></td>
+<td>Nom de la zone de texte.</td>
+</tr>
+<tr>
+<td><code>ROWS</code></td>
+<td>Nombre de lignes visibles.</td>
+</tr>
+<tr>
+<td><code>COLS</code></td>
+<td>Largeur de la zone de texte.</td>
+</tr>
+<tr>
+<td><code>READONLY</code></td>
+<td>Rend la zone non modifiable.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.12 — Zone de texte</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TEXTAREA</span>
+    <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;commentaire&quot;</span>
+    <span class="na">ROWS</span><span class="o">=</span><span class="s">&quot;5&quot;</span>
+    <span class="na">COLS</span><span class="o">=</span><span class="s">&quot;50&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="texte-par-defaut">Texte par défaut<a class="headerlink" href="#texte-par-defaut" title="Permanent link">&para;</a></h3>
+<p>Le texte initial est placé <strong>entre les deux balises</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.13 — Texte par défaut</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TEXTAREA</span>
+    <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;observation&quot;</span>
+    <span class="na">ROWS</span><span class="o">=</span><span class="s">&quot;4&quot;</span>
+    <span class="na">COLS</span><span class="o">=</span><span class="s">&quot;40&quot;</span><span class="p">&gt;</span>
+
+Aucun commentaire.
+
+<span class="p">&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="le-bouton-submit">Le bouton <code>SUBMIT</code><a class="headerlink" href="#le-bouton-submit" title="Permanent link">&para;</a></h2>
+<p>Le bouton <code>SUBMIT</code> permet d'envoyer les informations du formulaire.</p>
+<p>Lorsqu'il est cliqué, le navigateur transmet toutes les données à l'adresse indiquée dans l'attribut <code>ACTION</code>.</p>
+<h3 id="syntaxe_8">Syntaxe<a class="headerlink" href="#syntaxe_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TYPE="submit"</code></td>
+<td>Crée un bouton d'envoi.</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td>Texte affiché sur le bouton.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.14 — Bouton d'envoi</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;submit&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="le-bouton-reset">Le bouton <code>RESET</code><a class="headerlink" href="#le-bouton-reset" title="Permanent link">&para;</a></h2>
+<p>Le bouton <code>RESET</code> remet tous les champs du formulaire dans leur état initial.</p>
+<p>Toutes les informations saisies par l'utilisateur sont effacées.</p>
+<h3 id="syntaxe_9">Syntaxe<a class="headerlink" href="#syntaxe_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;reset&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.15 — Réinitialisation</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;reset&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;Effacer&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="le-bouton-button">Le bouton <code>BUTTON</code><a class="headerlink" href="#le-bouton-button" title="Permanent link">&para;</a></h2>
+<p>Le type <code>BUTTON</code> crée un bouton classique.</p>
+<p>Contrairement au bouton <code>SUBMIT</code>, il n'effectue <strong>aucune action automatiquement</strong>.</p>
+<p>Il est généralement utilisé avec un programme JavaScript.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.16 — Bouton classique</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;button&quot;</span>
+       <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;Calculer&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="le-bouton-image">Le bouton <code>IMAGE</code><a class="headerlink" href="#le-bouton-image" title="Permanent link">&para;</a></h2>
+<p>Le type <code>IMAGE</code> remplace un bouton <code>SUBMIT</code> par une image.</p>
+<p>Lorsque l'utilisateur clique sur cette image, le formulaire est envoyé.</p>
+<h3 id="syntaxe_10">Syntaxe<a class="headerlink" href="#syntaxe_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span>
+    <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;image&quot;</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;valider.gif&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Les principaux attributs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRC</code></td>
+<td>Image utilisée comme bouton.</td>
+</tr>
+<tr>
+<td><code>WIDTH</code></td>
+<td>Largeur de l'image.</td>
+</tr>
+<tr>
+<td><code>HEIGHT</code></td>
+<td>Hauteur de l'image.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="le-type-file">Le type <code>FILE</code><a class="headerlink" href="#le-type-file" title="Permanent link">&para;</a></h2>
+<p>Le type <code>FILE</code> permet à l'utilisateur de sélectionner un fichier sur son ordinateur.</p>
+<p>Ce fichier pourra être transmis au serveur lors de l'envoi du formulaire.</p>
+<h3 id="syntaxe_11">Syntaxe<a class="headerlink" href="#syntaxe_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;file&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><pre><span></span><code>Photo :
+
+<span class="p">&lt;</span><span class="nt">INPUT</span>
+    <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;file&quot;</span>
+    <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;photo&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque</p>
+<p>Pour envoyer un fichier, le formulaire doit utiliser :</p>
+<div class="highlight"><pre><span></span><code>ENCTYPE=&quot;multipart/form-data&quot;
+</code></pre></div>
+</div>
+<hr />
+<h2 id="le-type-hidden">Le type <code>HIDDEN</code><a class="headerlink" href="#le-type-hidden" title="Permanent link">&para;</a></h2>
+<p>Le type <code>HIDDEN</code> crée un champ invisible.</p>
+<p>L'utilisateur ne peut ni le voir ni le modifier.</p>
+<p>Ce champ permet d'envoyer discrètement certaines informations.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 4.17 — Champ caché</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">INPUT</span>
+    <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span>
+    <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;identifiant&quot;</span>
+    <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;20260015&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="exemple-complet_2">Exemple complet<a class="headerlink" href="#exemple-complet_2" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Inscription à la bibliothèque</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+        Inscription à la bibliothèque
+    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;white&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
+        Nouvel étudiant
+    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">FORM</span>
+        <span class="na">ACTION</span><span class="o">=</span><span class="s">&quot;inscription.htm&quot;</span>
+        <span class="na">METHOD</span><span class="o">=</span><span class="s">&quot;POST&quot;</span>
+        <span class="na">ENCTYPE</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+                Informations personnelles
+            <span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+
+            Nom :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+                   <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;nom&quot;</span>
+                   <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;25&quot;</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+            Prénom :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+                   <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;prenom&quot;</span>
+                   <span class="na">SIZE</span><span class="o">=</span><span class="s">&quot;25&quot;</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+            Mot de passe :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;password&quot;</span>
+                   <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;motdepasse&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+                Informations complémentaires
+            <span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+
+            Commentaire :
+
+            <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">TEXTAREA</span>
+                <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;commentaire&quot;</span>
+                <span class="na">ROWS</span><span class="o">=</span><span class="s">&quot;5&quot;</span>
+                <span class="na">COLS</span><span class="o">=</span><span class="s">&quot;45&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+            Photo :
+
+            <span class="p">&lt;</span><span class="nt">INPUT</span>
+                <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;file&quot;</span>
+                <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;photo&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span>
+            <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span>
+            <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;code&quot;</span>
+            <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;UAM2026&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span>
+            <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;submit&quot;</span>
+            <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;Envoyer&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">INPUT</span>
+            <span class="na">TYPE</span><span class="o">=</span><span class="s">&quot;reset&quot;</span>
+            <span class="na">VALUE</span><span class="o">=</span><span class="s">&quot;Effacer&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="erreurs-frequentes_2">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes_2" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">À éviter</p>
+<ul>
+<li>
+<p>oublier de fermer une balise <code>&lt;FIELDSET&gt;</code> ;</p>
+</li>
+<li>
+<p>placer <code>&lt;LEGEND&gt;</code> en dehors d'un <code>&lt;FIELDSET&gt;</code> ;</p>
+</li>
+<li>
+<p>utiliser un <code>TEXTAREA</code> avec un attribut <code>VALUE</code> (le texte par défaut doit être placé entre les balises) ;</p>
+</li>
+<li>
+<p>oublier <code>ENCTYPE="multipart/form-data"</code> lors de l'envoi d'un fichier ;</p>
+</li>
+<li>
+<p>croire que <code>RESET</code> annule un formulaire déjà envoyé ;</p>
+</li>
+<li>
+<p>utiliser <code>BUTTON</code> en pensant qu'il envoie automatiquement le formulaire.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="a-retenir_2">À retenir<a class="headerlink" href="#a-retenir_2" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Points essentiels</p>
+<ul>
+<li>
+<p><code>&lt;FIELDSET&gt;</code> regroupe plusieurs champs d'un formulaire.</p>
+</li>
+<li>
+<p><code>&lt;LEGEND&gt;</code> donne un titre à un groupe de champs.</p>
+</li>
+<li>
+<p><code>&lt;TEXTAREA&gt;</code> permet la saisie de plusieurs lignes de texte.</p>
+</li>
+<li>
+<p><code>SUBMIT</code> envoie le formulaire.</p>
+</li>
+<li>
+<p><code>RESET</code> réinitialise les champs.</p>
+</li>
+<li>
+<p><code>BUTTON</code> crée un bouton sans action automatique.</p>
+</li>
+<li>
+<p><code>IMAGE</code> transforme une image en bouton d'envoi.</p>
+</li>
+<li>
+<p><code>FILE</code> permet de sélectionner un fichier.</p>
+</li>
+<li>
+<p><code>HIDDEN</code> permet de transmettre des informations invisibles.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="exercice-final-de-synthese">Exercice final de synthèse<a class="headerlink" href="#exercice-final-de-synthese" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Exercice</p>
+<p>Créer une page HTML intitulée <strong>Fiche d'inscription d'un étudiant</strong> comportant :</p>
+<ul>
+<li>
+<p>un titre principal centré ;</p>
+</li>
+<li>
+<p>un formulaire utilisant la méthode <code>POST</code> ;</p>
+</li>
+<li>
+<p>deux groupes de champs (<code>FIELDSET</code>) :</p>
+<p><strong>Informations personnelles</strong></p>
+<ul>
+<li>Nom ;</li>
+<li>Prénom ;</li>
+<li>Mot de passe.</li>
+</ul>
+<p><strong>Informations complémentaires</strong></p>
+<ul>
+<li>Département ;</li>
+<li>Commentaires ;</li>
+<li>Photo d'identité.</li>
+</ul>
+</li>
+<li>
+<p>un champ caché contenant un numéro d'inscription ;</p>
+</li>
+<li>
+<p>un bouton <strong>Envoyer</strong> et un bouton <strong>Effacer</strong>.</p>
+</li>
+</ul>
+</div>
+<h3 id="objectif_2">Objectif<a class="headerlink" href="#objectif_2" title="Permanent link">&para;</a></h3>
+<p>Réaliser un formulaire complet mettant en œuvre l'ensemble des balises étudiées dans ce chapitre.</p>
+<hr />
+<hr />
+<h2 id="conclusion-du-chapitre">Conclusion du chapitre<a class="headerlink" href="#conclusion-du-chapitre" title="Permanent link">&para;</a></h2>
+<p>Ce chapitre a présenté l'ensemble des éléments essentiels pour créer des formulaires HTML complets et fonctionnels :</p>
+<ul>
+<li>La balise <code>&lt;FORM&gt;</code> et ses attributs (<code>ACTION</code>, <code>METHOD</code>, <code>ENCTYPE</code>)</li>
+<li>Les champs de saisie texte (<code>TEXT</code>, <code>PASSWORD</code>)</li>
+<li>Les contrôles de sélection (<code>RADIO</code>, <code>CHECKBOX</code>, <code>&lt;SELECT&gt;</code>, <code>&lt;OPTION&gt;</code>, <code>&lt;OPTGROUP&gt;</code>)</li>
+<li>L'organisation des formulaires (<code>&lt;FIELDSET&gt;</code>, <code>&lt;LEGEND&gt;</code>)</li>
+<li>Les zones de texte multilignes (<code>&lt;TEXTAREA&gt;</code>)</li>
+<li>Les boutons d'action (<code>SUBMIT</code>, <code>RESET</code>, <code>BUTTON</code>, <code>IMAGE</code>)</li>
+<li>Les champs spéciaux (<code>FILE</code>, <code>HIDDEN</code>)</li>
+</ul>
+<p>La maîtrise de ces éléments permet de construire des formulaires adaptés à tous les besoins : inscription, connexion, recherche, envoi de fichiers, etc.</p>
+<hr />
+<p>⬅️ <strong>Précédent :</strong> Les tableaux HTML</p>
+<p>➡️ <strong>Suivant :</strong> Chapitre 5 — Les liens HTML</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../chapitre3/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre 3">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Chapitre 3
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapitre5/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre 5">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Chapitre 5
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/preview.js"></script>
+      
+    
+  </body>
+</html>
