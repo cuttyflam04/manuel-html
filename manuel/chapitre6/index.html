@@ -1,0 +1,1883 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manuel interactif de HTML - UAM">
+      
+      
+        <meta name="author" content="Flamme">
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/manuel/chapitre6/">
+      
+      
+        <link rel="prev" href="../chapitre5/">
+      
+      
+        <link rel="next" href="../chapitre7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapitre 6 - Manuel HTML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/manual.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/code.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-images-en-html" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manuel HTML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Manuel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../annexes/annexe-a/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Annexes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  À propos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manuel HTML
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manuel
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manuel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 6
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;IMG&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;IMG&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe générale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut SRC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L&#39;attribut SRC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meme-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Même dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sous-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sous-dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autre dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ALT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-attributs-height-et-width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les attributs HEIGHT et WIDTH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les attributs HEIGHT et WIDTH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEIGHT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WIDTH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height-et-width-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEIGHT et WIDTH ensemble
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-align" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ALIGN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-images-comme-liens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les images comme liens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plusieurs-images-dans-une-meme-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plusieurs images dans une même page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-formats-dimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les formats d'image
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapitre 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Annexes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexe A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexe B
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    À propos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;IMG&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;IMG&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe générale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut SRC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L&#39;attribut SRC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meme-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Même dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sous-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sous-dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autre dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ALT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-attributs-height-et-width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les attributs HEIGHT et WIDTH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les attributs HEIGHT et WIDTH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#height" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEIGHT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WIDTH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#height-et-width-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEIGHT et WIDTH ensemble
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lattribut-align" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'attribut ALIGN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-images-comme-liens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les images comme liens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plusieurs-images-dans-une-meme-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plusieurs images dans une même page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-formats-dimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les formats d'image
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="les-images-en-html">Les images en HTML<a class="headerlink" href="#les-images-en-html" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Les images occupent une place importante dans la conception d'une page Web.</p>
+<p>Elles permettent :</p>
+<ul>
+<li>d'illustrer un texte ;</li>
+<li>d'améliorer la présentation d'un site ;</li>
+<li>de faciliter la compréhension des informations.</li>
+</ul>
+<p>En HTML, les images sont insérées grâce à la balise <code>&lt;IMG&gt;</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Remarque</p>
+<p>La balise <code>&lt;IMG&gt;</code> est une <strong>balise orpheline</strong> (<em>void element</em>). Elle ne possède donc <strong>pas de balise fermante</strong>.</p>
+</div>
+<hr />
+<h2 id="la-balise-img">La balise <code>&lt;IMG&gt;</code><a class="headerlink" href="#la-balise-img" title="Permanent link">&para;</a></h2>
+<p>La balise <code>&lt;IMG&gt;</code> permet d'insérer une image dans une page HTML.</p>
+<h3 id="syntaxe-generale">Syntaxe générale<a class="headerlink" href="#syntaxe-generale" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;image.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Le navigateur affiche alors l'image indiquée par l'attribut <code>SRC</code>.</p>
+<hr />
+<h2 id="lattribut-src">L'attribut <code>SRC</code><a class="headerlink" href="#lattribut-src" title="Permanent link">&para;</a></h2>
+<p>L'attribut <code>SRC</code> (<em>Source</em>) indique l'emplacement de l'image.</p>
+<p>L'image peut se trouver :</p>
+<ul>
+<li>dans le même dossier que la page HTML ;</li>
+<li>dans un sous-dossier ;</li>
+<li>dans un autre dossier de l'ordinateur ;</li>
+<li>sur Internet.</li>
+</ul>
+<h3 id="meme-dossier">Même dossier<a class="headerlink" href="#meme-dossier" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.1</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;logo.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="sous-dossier">Sous-dossier<a class="headerlink" href="#sous-dossier" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.2</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;Images/logo.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="autre-dossier">Autre dossier<a class="headerlink" href="#autre-dossier" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.3</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;C:\MesImages\logo.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Bonne pratique</p>
+<p>Lors des travaux pratiques réalisés en local, il est fréquent d'utiliser un chemin provenant directement de l'ordinateur.</p>
+<p>En revanche, pour un site Web destiné à être publié, il est recommandé de placer les images dans le même projet que les pages HTML et d'utiliser des <strong>chemins relatifs</strong>.</p>
+</div>
+<hr />
+<h2 id="lattribut-alt">L'attribut <code>ALT</code><a class="headerlink" href="#lattribut-alt" title="Permanent link">&para;</a></h2>
+<p>L'attribut <code>ALT</code> (<em>Alternative Text</em>) fournit une description de l'image.</p>
+<p>Ce texte est affiché lorsque l'image ne peut pas être chargée.</p>
+<p>Il améliore également l'accessibilité des pages Web, notamment pour les lecteurs d'écran.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.4 — Texte alternatif</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
+    <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Photo d&#39;un ordinateur portable&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="les-attributs-height-et-width">Les attributs <code>HEIGHT</code> et <code>WIDTH</code><a class="headerlink" href="#les-attributs-height-et-width" title="Permanent link">&para;</a></h2>
+<p>Les attributs <code>HEIGHT</code> et <code>WIDTH</code> permettent de modifier les dimensions de l'image.</p>
+<h3 id="height"><code>HEIGHT</code><a class="headerlink" href="#height" title="Permanent link">&para;</a></h3>
+<p>Définit la hauteur.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.5</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
+    <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;150&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="width"><code>WIDTH</code><a class="headerlink" href="#width" title="Permanent link">&para;</a></h3>
+<p>Définit la largeur.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.6</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
+    <span class="na">WIDTH</span><span class="o">=</span><span class="s">&quot;300&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="height-et-width-ensemble"><code>HEIGHT</code> et <code>WIDTH</code> ensemble<a class="headerlink" href="#height-et-width-ensemble" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.7</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
+    <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;180&quot;</span>
+    <span class="na">WIDTH</span><span class="o">=</span><span class="s">&quot;300&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Bonne pratique</p>
+<p>Pour éviter de déformer une image, il est préférable de modifier uniquement la largeur <strong>ou</strong> la hauteur, ou de conserver les proportions d'origine.</p>
+</div>
+<hr />
+<h2 id="lattribut-align">L'attribut <code>ALIGN</code><a class="headerlink" href="#lattribut-align" title="Permanent link">&para;</a></h2>
+<p>Dans le HTML classique utilisé lors des travaux pratiques, l'attribut <code>ALIGN</code> permet d'indiquer la position de l'image par rapport au texte.</p>
+<p>Les principales valeurs sont :</p>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LEFT</code></td>
+<td>Image placée à gauche.</td>
+</tr>
+<tr>
+<td><code>RIGHT</code></td>
+<td>Image placée à droite.</td>
+</tr>
+<tr>
+<td><code>TOP</code></td>
+<td>Alignement vers le haut.</td>
+</tr>
+<tr>
+<td><code>MIDDLE</code></td>
+<td>Alignement au milieu.</td>
+</tr>
+<tr>
+<td><code>BOTTOM</code></td>
+<td>Alignement vers le bas.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.8 — Image alignée à gauche</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
+    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
+    <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;LEFT&quot;</span><span class="p">&gt;</span>
+
+Cette image est placée à gauche du paragraphe.
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">HTML5</p>
+<p>L'attribut <code>ALIGN</code> est aujourd'hui <strong>obsolète</strong> en HTML5.</p>
+<p>Dans les sites modernes, le positionnement des images est réalisé avec <strong>CSS</strong>.</p>
+<p>Cet attribut reste néanmoins utile pour comprendre les anciens documents HTML et les exercices de ce cours.</p>
+</div>
+<hr />
+<h2 id="les-images-comme-liens">Les images comme liens<a class="headerlink" href="#les-images-comme-liens" title="Permanent link">&para;</a></h2>
+<p>Une image peut également servir de lien hypertexte.</p>
+<p>Il suffit de placer la balise <code>&lt;IMG&gt;</code> entre les balises <code>&lt;A&gt;</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.9 — Image cliquable</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">IMG</span>
+        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;maison.jpg&quot;</span>
+        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;100&quot;</span>
+        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Accueil&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Résultat</p>
+<p>Lorsque l'utilisateur clique sur l'image, le navigateur ouvre la page indiquée.</p>
+</div>
+<hr />
+<h2 id="plusieurs-images-dans-une-meme-page">Plusieurs images dans une même page<a class="headerlink" href="#plusieurs-images-dans-une-meme-page" title="Permanent link">&para;</a></h2>
+<p>Une page HTML peut contenir autant d'images que nécessaire.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.10</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo1.jpg&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo2.jpg&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo3.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="exemple-complet">Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Galerie Informatique</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+        Galerie Informatique
+    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;WHITE&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;BLACK&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">H1</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
+        Salle Informatique
+    <span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+        Bienvenue dans notre laboratoire informatique.
+    <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">IMG</span>
+        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;ordinateur.jpg&quot;</span>
+        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;180&quot;</span>
+        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Ordinateur&quot;</span>
+        <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;LEFT&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+        Les étudiants disposent d&#39;ordinateurs modernes leur permettant de réaliser leurs travaux pratiques en programmation, infographie et développement Web.
+    <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>
+        Quelques équipements
+    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">IMG</span>
+        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;imprimante.jpg&quot;</span>
+        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
+        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Imprimante&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">IMG</span>
+        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;serveur.jpg&quot;</span>
+        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
+        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Serveur&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">IMG</span>
+        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;projecteur.jpg&quot;</span>
+        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
+        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Projecteur&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">IMG</span>
+            <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;retour.jpg&quot;</span>
+            <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;70&quot;</span>
+            <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Retour à l&#39;accueil&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h2 id="les-formats-dimage">Les formats d'image<a class="headerlink" href="#les-formats-dimage" title="Permanent link">&para;</a></h2>
+<p>Les formats les plus utilisés sont :</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JPG / JPEG</code></td>
+<td>Photographies</td>
+</tr>
+<tr>
+<td><code>PNG</code></td>
+<td>Images avec fond transparent</td>
+</tr>
+<tr>
+<td><code>GIF</code></td>
+<td>Images simples ou animées</td>
+</tr>
+<tr>
+<td><code>BMP</code></td>
+<td>Images non compressées</td>
+</tr>
+<tr>
+<td><code>WEBP</code></td>
+<td>Format moderne offrant une bonne qualité avec une taille réduite</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">À éviter</p>
+<ul>
+<li>
+<p>oublier l'attribut <code>SRC</code> ;</p>
+</li>
+<li>
+<p>utiliser un chemin incorrect ;</p>
+</li>
+<li>
+<p>oublier l'attribut <code>ALT</code> ;</p>
+</li>
+<li>
+<p>modifier excessivement la largeur ou la hauteur, ce qui déforme l'image ;</p>
+</li>
+<li>
+<p>utiliser une image qui n'existe pas dans le dossier indiqué ;</p>
+</li>
+<li>
+<p>confondre les majuscules et minuscules dans le nom du fichier.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Points essentiels</p>
+<ul>
+<li>
+<p><code>&lt;IMG&gt;</code> permet d'insérer une image.</p>
+</li>
+<li>
+<p><code>SRC</code> indique l'emplacement de l'image.</p>
+</li>
+<li>
+<p><code>ALT</code> fournit un texte alternatif.</p>
+</li>
+<li>
+<p><code>HEIGHT</code> définit la hauteur.</p>
+</li>
+<li>
+<p><code>WIDTH</code> définit la largeur.</p>
+</li>
+<li>
+<p><code>ALIGN</code> permet de positionner l'image dans le HTML classique.</p>
+</li>
+<li>
+<p>Une image peut également servir de lien hypertexte.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Exercice 1</p>
+<p>Créer une page intitulée <strong>Galerie de l'UAM</strong> contenant :</p>
+<ul>
+<li>un titre principal ;</li>
+<li>trois images représentant différents bâtiments de l'université ;</li>
+<li>une ligne horizontale séparant chaque partie.</li>
+</ul>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exercice 2</p>
+<p>Créer une page présentant un laboratoire informatique avec :</p>
+<ul>
+<li>une image alignée à gauche ;</li>
+<li>un paragraphe décrivant le laboratoire ;</li>
+<li>deux autres images affichées sous le texte.</li>
+</ul>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exercice 3</p>
+<p>Créer une page intitulée <strong>Mon Album Photo</strong> contenant :</p>
+<ul>
+<li>cinq images de tailles différentes ;</li>
+<li>une image servant de bouton <strong>Retour à l'accueil</strong> ;</li>
+<li>une image accompagnée d'un texte descriptif utilisant l'attribut <code>ALT</code>.</li>
+</ul>
+</div>
+<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
+<p>Apprendre à insérer, dimensionner et organiser plusieurs images dans une page HTML tout en utilisant les principaux attributs de la balise <code>&lt;IMG&gt;</code>.</p>
+<hr />
+<p>⬅️ <strong>Précédent :</strong> Les liens hypertextes en HTML</p>
+<p>➡️ <strong>Suivant :</strong> Les feuilles de style CSS</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../chapitre5/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre 5">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Chapitre 5
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapitre7/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre 7">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Chapitre 7
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/preview.js"></script>
+      
+    
+  </body>
+</html>
