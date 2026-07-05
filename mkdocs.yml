@@ -1,7 +1,7 @@
 site_name: Manuel HTML
 site_description: Manuel interactif de HTML - UAM
 site_author: Flamme
-site_url: http://127.0.0.1:8000
+site_url: https://flamme.github.io/manuel-html/
 
 nav:
 
