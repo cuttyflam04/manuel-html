@@ -148,3 +148,10 @@
   .atelier-app[data-vue="rendu"] :is(.atelier-barre-onglets, .atelier-fichiers, .atelier-editeur) { display: none; }
   .atelier-outils { margin-left: 0; width: 100%; }
 }
+
+/* Le titre d'étape n'est pas un titre de section : pas de décoration de style (points, filets, numéro). */
+.md-typeset h2.atelier-etape-titre { background: none !important; padding-top: 0 !important; display: block !important; }
+.md-typeset h2.atelier-etape-titre::before { content: none !important; display: none !important; }
+@media screen and (max-width: 59.9375em) {
+  body:has(.atelier) .md-footer { padding-bottom: 4rem; }
+}
