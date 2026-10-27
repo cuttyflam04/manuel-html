@@ -32,6 +32,7 @@ Il existe des milliers de tutoriels HTML. Celui-ci a une seule règle : **il ne 
 | [6. Les images](chapitre6/index.md) | `<IMG>` et ses attributs |
 | [7. Les tableaux](chapitre7/index.md) | `<TABLE>`, `<TR>`, `<TD>`, `<TH>`, fusions |
 | [8. Les feuilles de style](chapitre8/index.md) | `STYLE`, `<STYLE>`, classes |
+| [Projet : mon site](projet/index.md) | Votre propre site, étape par étape, téléchargeable |
 | [Bonus : formulaires](bonus-formulaires/index.md) | Hors programme |
 | [Annexe A](annexes/annexe-a.md) | Les erreurs fréquentes |
 | [Annexe B](annexes/annexe-b.md) | Le récapitulatif des balises |

@@ -301,6 +301,10 @@ Dans un paragraphe, écrivez : « Le 1er TP porte sur la formule H2O » avec **e
 Affichez exactement ce texte dans la page : **La balise &lt;BR&gt; va à la ligne & c'est tout.** Il faudra utiliser des codes de caractères spéciaux.
 </div>
 
+## Votre site : étape 2
+
+<div class="etape-projet" data-etape="2"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch3"></div>

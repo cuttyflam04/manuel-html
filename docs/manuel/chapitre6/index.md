@@ -187,6 +187,10 @@ Insérez l'image `campus.jpg` avec une **largeur de 250 pixels** et un **texte a
 Créez un paragraphe avec l'image `labo.jpg` **alignée à gauche** (le texte doit s'enrouler autour), puis, en dessous, une image `retour.gif` **cliquable** qui mène vers `index.html`, **sans bordure**.
 </div>
 
+## Votre site : étape 5
+
+<div class="etape-projet" data-etape="5"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch6"></div>

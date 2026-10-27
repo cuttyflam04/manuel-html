@@ -291,6 +291,10 @@ Créez un tableau **avec bordure** de 3 colonnes : une ligne d'en-tête **Nom**,
 Reproduisez cet emploi du temps : une ligne d'en-tête **Jour**, **08h-10h**, **10h-12h** ; puis **Lundi** : HTML, CSS ; **Mardi** : JavaScript, PHP ; **Mercredi** : « Base de données » qui occupe **les deux créneaux** (fusion). Ajoutez un titre « Emploi du temps » avec `<CAPTION>`.
 </div>
 
+## Votre site : étape 6
+
+<div class="etape-projet" data-etape="6"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch7"></div>

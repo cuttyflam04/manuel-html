@@ -226,11 +226,40 @@
     });
   }
 
+  /* ---------- Projet « Mon site » : encadrés de fin de chapitre ---------- */
+
+  const lireProjet = () => { try { return JSON.parse(store.get("projet") || "null"); } catch (e) { return null; } };
+
+  function enhanceEtapesProjet(root) {
+    const etapes = (window.MH && window.MH.projet && window.MH.projet.ETAPES) || [];
+    root.querySelectorAll(".etape-projet[data-etape]").forEach((box) => {
+      const n = +box.dataset.etape, e = etapes[n - 1];
+      if (!e) return;
+      const projet = lireProjet();
+      const reussie = !!projet && (projet.etapesReussies || []).includes(n);
+      const etat = !projet ? "Pas encore commencé" : reussie ? "Réussie ✓" : "À faire";
+      box.className = "etape-projet" + (reussie ? " reussie" : "");
+      box.innerHTML =
+        '<p class="etape-projet-tete"><b>Étape ' + n + " · " + e.titre + '</b><span class="etape-projet-etat">' + etat + "</span></p>" +
+        "<p>Appliquez ce chapitre à votre propre site" + (projet && projet.nom ? " « " + window.MH.esc(projet.nom) + " »" : "") +
+        ". La vérification se fait toute seule pendant que vous tapez.</p>" +
+        '<a class="md-button md-button--primary" href="../projet/#etape-' + n + '">' + (projet ? "Ouvrir l'atelier" : "Créer mon site") + "</a>";
+    });
+  }
+
   /* ---------- Progression ---------- */
 
   function updateProgress(root) {
     const data = window.MH_EXERCICES || {};
     root.querySelectorAll("[data-progression]").forEach((n) => {
+      if (n.dataset.progression === "projet") {
+        const projet = lireProjet(), r = projet ? (projet.etapesReussies || []).length : 0;
+        n.hidden = false;
+        n.textContent = projet ? r + " / 7 étapes" : "à commencer";
+        n.classList.toggle("complet", r === 7);
+        n.style.setProperty("--p", (r / 7 * 100) + "%");
+        return;
+      }
       const prefix = n.dataset.progression + "-";
       const ids = Object.keys(data).filter((k) => k.startsWith(prefix));
       if (!ids.length) { n.hidden = true; return; }
@@ -254,7 +283,7 @@
 
   function rememberPage() {
     const path = location.pathname;
-    if (/\/manuel\/(chapitre\d|bonus|annexes)/.test(path)) {
+    if (/\/manuel\/(chapitre\d|bonus|annexes|projet)/.test(path)) {
       const h1 = document.querySelector(".md-content h1");
       store.set("derniere-page", path + location.hash);
       if (h1) store.set("derniere-page-titre", h1.textContent.replace("¶", "").trim());
@@ -330,6 +359,7 @@
     enhanceExercises(root);
     enhanceQuiz(root);
     enhanceDemo(root);
+    enhanceEtapesProjet(root);
     updateProgress(root);
     rememberPage();
   }

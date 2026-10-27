@@ -218,6 +218,10 @@ Créez une page avec un **sommaire** de deux liens vers deux sections, **« Form
 Votre page est dans le dossier `cours/`. Créez un lien vers `index.html`, qui se trouve **un dossier au-dessus**, et un lien vers `tp1.html`, qui se trouve dans le dossier `tp/` **à côté** de `cours/`.
 </div>
 
+## Votre site : étape 4
+
+<div class="etape-projet" data-etape="4"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch5"></div>

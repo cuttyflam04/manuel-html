@@ -240,6 +240,10 @@ Complétez cette page : ajoutez le **doctype**, un **titre** « Licence 1 — UA
 Donnez à la page un **fond noir** et un **texte blanc** en utilisant les **codes hexadécimaux**, puis ajoutez un **commentaire** au début du corps.
 </div>
 
+## Votre site : étape 1
+
+<div class="etape-projet" data-etape="1"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch2"></div>
