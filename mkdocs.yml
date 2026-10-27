@@ -72,18 +72,17 @@ theme:
     - navigation.indexes
     - toc.follow
     - search.suggest
-    - search.highlight
     - content.code.copy
 
 # ?v=… : changez ce numéro à chaque publication pour que les navigateurs
 # rechargent les styles et scripts au lieu d'utiliser leur ancienne copie.
 extra_css:
-  - stylesheets/manuel.css?v=2.1.0
-  - stylesheets/styles.css?v=2.1.0
+  - stylesheets/manuel.css?v=2.1.1
+  - stylesheets/styles.css?v=2.1.1
 
 extra_javascript:
-  - javascripts/exercices.js?v=2.1.0
-  - javascripts/manuel.js?v=2.1.0
+  - javascripts/exercices.js?v=2.1.1
+  - javascripts/manuel.js?v=2.1.1
 
 markdown_extensions:
   - admonition
