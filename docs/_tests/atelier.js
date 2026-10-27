@@ -71,3 +71,24 @@ test("atelier : #etape-5 ouvre l'étape 5", async () => {
   const titre = doc.querySelector(".atelier-guide .atelier-etape-titre");
   attendre(titre && /Les images/.test(titre.textContent), "titre affiché : " + (titre && titre.textContent));
 });
+
+test("atelier : un autre onglet a modifié les fichiers → bandeau, et plus aucune écriture ici", async () => {
+  const { doc, win } = await creerClub();
+  const avant = win.MH.Dossier.lire("index.html");
+  win.dispatchEvent(new win.StorageEvent("storage", { key: "mh:rev", newValue: "x", storageArea: win.localStorage }));
+  await pause(150);
+  attendre(!doc.querySelector(".atelier-bandeau-onglet").hidden, "bandeau absent");
+  await taper(doc, win, "index.html", "<P>écrit dans l'onglet périmé</P>");
+  await pause(800);
+  attendre(win.MH.Dossier.lire("index.html") === avant, "l'onglet périmé a écrasé le fichier");
+});
+
+test("atelier : une sauvegarde de secours périmée est ignorée", async () => {
+  const { win } = await creerClub();
+  await win.MH.Dossier.ecrire("index.html", "<P>version récente</P>");
+  win.localStorage.setItem("mh:brouillon", JSON.stringify({ chemin: "index.html", texte: "<P>vieux brouillon</P>", rev: "ancienne" }));
+  const r = await charger("manuel/projet/");
+  await r.win.MH.Dossier.ready; await pause(400);
+  attendre(r.win.MH.Dossier.lire("index.html") === "<P>version récente</P>", "le brouillon périmé a écrasé : " + r.win.MH.Dossier.lire("index.html"));
+  attendre(!r.win.localStorage.getItem("mh:brouillon"), "brouillon non effacé");
+});

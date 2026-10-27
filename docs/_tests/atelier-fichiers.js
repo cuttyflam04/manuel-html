@@ -99,3 +99,19 @@ test("import : les fichiers inconnus sont ignorés et listés", async () => {
   attendre(/rapport\.docx/.test(message(doc)), "message : " + message(doc));
   attendre(win.MH.Dossier.lire("index.html") === "<P>ok</P>", "index importé");
 });
+
+test("import : l'ancien atelier n'écrase pas le projet importé", async () => {
+  const r = await atelierNeuf();
+  const f = r.doc.querySelector(".atelier-depart");
+  f.querySelector('input[name="nom"]').value = "Fatou";
+  f.querySelector('input[name="modele"][value="perso"]').checked = true;
+  f.querySelector('button[type="submit"]').click();
+  for (let i = 0; i < 30 && !r.doc.querySelector(".atelier-travail"); i++) await pause(100);
+  r.win.confirm = () => true;
+  const e = new TextEncoder();
+  const zip = r.win.MH.zip.creer(Object.entries(SITE_COMPLET.textes).map(([c, t]) => ({ chemin: c, octets: e.encode(t) })));
+  await r.win.MH.atelier.importer(new r.win.File([zip], "club.zip"));
+  await pause(900);
+  const base = JSON.parse(r.win.localStorage.getItem("mh:projet")).base.join(",");
+  attendre(base === "index.html,activites.html,contact.html", "méta réécrite par l'ancien atelier : " + base);
+});

@@ -79,3 +79,16 @@ test("aperçu cours : inchangé, un lien affiche « Ce lien ouvrirait »", async
   await pause(300);
   attendre(/Ce lien ouvrirait/.test(ad.querySelector(".apercu-note").textContent), "message des chapitres modifié");
 });
+
+test("aperçu site : modifier style.css met à jour le rendu", async () => {
+  const { D, p } = await monterSite({
+    "style.css": "p { color: rgb(255, 0, 0) }",
+    "index.html": '<HEAD><LINK REL="stylesheet" HREF="style.css"></HEAD><BODY><P>texte</P></BODY>',
+  });
+  p.ouvrir("index.html");
+  await attendreRendu(p, (d) => d.querySelector("p") && d.defaultView.getComputedStyle(d.querySelector("p")).color === "rgb(255, 0, 0)");
+  await D.ecrire("style.css", "p { color: rgb(0, 0, 255) }");
+  const d = await attendreRendu(p, (d) => d.querySelector("p") && d.defaultView.getComputedStyle(d.querySelector("p")).color === "rgb(0, 0, 255)", 20);
+  attendre(d.defaultView.getComputedStyle(d.querySelector("p")).color === "rgb(0, 0, 255)", "le rendu garde l'ancien style");
+  await D.vider();
+});

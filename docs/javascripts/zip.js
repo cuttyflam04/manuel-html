@@ -46,6 +46,14 @@
     return new Blob([...parts, ...central, fin], { type: "application/zip" });
   }
 
+  // Noms sans drapeau UTF-8 (Explorateur Windows) : UTF-8 s'il est valide, sinon page de code 850.
+  const CP850 = "ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜø£Ø×ƒáíóúñÑªº¿®¬½¼¡«»░▒▓│┤ÁÂÀ©╣║╗╝¢¥┐└┴┬├─┼ãÃ╚╔╩╦╠═╬¤ðÐÊËÈıÍÎÏ┘┌█▄¦Ì▀ÓßÔÒõÕµþÞÚÛÙýÝ¯´\u00ad±‗¾¶§÷¸°¨·¹³²■\u00a0";
+  const lireNom = (octets, utf8Declare) => {
+    if (utf8Declare) return new TextDecoder("utf-8").decode(octets);
+    try { return new TextDecoder("utf-8", { fatal: true }).decode(octets); }
+    catch (e) { return Array.from(octets, (o) => (o < 128 ? String.fromCharCode(o) : CP850[o - 128])).join(""); }
+  };
+
   async function decompresser(octets) {
     const flux = new Blob([octets]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
     return new Uint8Array(await new Response(flux).arrayBuffer());
@@ -61,14 +69,14 @@
     if (fin < 0) throw new Error("zip-invalide");
     const total = v.getUint16(fin + 10, true);
     let p = v.getUint32(fin + 16, true);
-    const utf8 = new TextDecoder("utf-8");
     const sortie = [];
     for (let n = 0; n < total; n++) {
       if (p + 46 > buf.length || v.getUint32(p, true) !== 0x02014b50) throw new Error("zip-invalide");
+      const drapeaux = v.getUint16(p + 8, true);
       const methode = v.getUint16(p + 10, true), taille = v.getUint32(p + 20, true);
       const lnom = v.getUint16(p + 28, true), lext = v.getUint16(p + 30, true), lcom = v.getUint16(p + 32, true);
       const local = v.getUint32(p + 42, true);
-      const chemin = utf8.decode(buf.subarray(p + 46, p + 46 + lnom)).replace(/\\/g, "/");
+      const chemin = lireNom(buf.subarray(p + 46, p + 46 + lnom), drapeaux & 0x0800).replace(/\\/g, "/");
       p += 46 + lnom + lext + lcom;
       if (chemin.endsWith("/")) continue;
       const debut = local + 30 + v.getUint16(local + 26, true) + v.getUint16(local + 28, true);

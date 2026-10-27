@@ -37,3 +37,15 @@ test("zip : lit un zip compressé par Windows", async () => {
 test("zip : refuse un fichier qui n'est pas un zip", async () => {
   await assert.rejects(lire(new Blob(["bonjour"])), /zip-invalide/);
 });
+
+test("zip : noms accentués d'un zip de l'Explorateur Windows (CP850, sans drapeau UTF-8)", async () => {
+  const blob = creer([{ chemin: "images/#t# 1.jpg", octets: Uint8Array.of(9) }]);
+  const b = new Uint8Array(await blob.arrayBuffer());
+  const v = new DataView(b.buffer);
+  v.setUint16(6, 0, true); // drapeau UTF-8 retiré (en-tête local)
+  const central = b.length - 22 - (46 + 16);
+  v.setUint16(central + 8, 0, true); // et dans le répertoire central
+  for (let i = 0; i < b.length; i++) if (b[i] === 0x23) b[i] = 0x82; // « é » en CP850
+  const [f] = await lire(new Blob([b]));
+  assert.equal(f.chemin, "images/été 1.jpg");
+});

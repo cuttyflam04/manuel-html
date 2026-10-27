@@ -116,6 +116,8 @@
     const subs = new Set();
     const LIMITE = 5 * 1024 * 1024;
     let db = null, persistant = true, persistantErreur = false;
+    // Révision partagée : chaque écriture la change, les autres onglets le voient (événement storage).
+    const toucher = () => { try { localStorage.setItem("mh:rev", Date.now() + "-" + Math.random().toString(36).slice(2, 7)); } catch (e) { /* stockage local indisponible */ } };
     const notify = () => subs.forEach((f) => { try { f(); } catch (e) { /* un abonné cassé n'arrête pas les autres */ } });
     const measure = (rec) => new Promise((ok) => {
       const i = new Image();
@@ -174,11 +176,13 @@
           .sort((a, b) => a[0].localeCompare(b[0])).map(([path, r]) => Object.assign({ path }, r));
       },
       chemins() { return [...files.keys()].sort(); },
+      rev() { try { return localStorage.getItem("mh:rev") || ""; } catch (e) { return ""; } },
       estImage(chemin) { const r = files.get(chemin); return estImage(chemin, r && r.blob); },
       lire(chemin) { const r = files.get(chemin); return r && !estImage(chemin, r.blob) ? r.texte : null; },
       async ecrire(chemin, texte) {
         chemin = clean(chemin);
         const blob = new Blob([texte], { type: typeTexte(chemin) + ";charset=utf-8" });
+        toucher();
         await put(chemin, blob, texte);
         const ok = await tx((s) => s.put({ path: chemin, blob }));
         if (db && !ok) persistantErreur = true;
@@ -198,6 +202,7 @@
         if (!/^image\//.test(file.type)) return "« " + file.name + " » n'est pas une image.";
         if (file.size > LIMITE) return "« " + file.name + " » est trop lourde (plus de 5 Mo). Réduisez-la d'abord.";
         path = clean(path || file.name);
+        toucher();
         await put(path, file);
         await tx((s) => s.put({ path, blob: file }));
         notify();
@@ -207,6 +212,7 @@
         const r = files.get(path);
         if (!r) return;
         if (r.url) URL.revokeObjectURL(r.url);
+        toucher();
         files.delete(path);
         tx((s) => s.delete(path));
         notify();
@@ -218,6 +224,7 @@
         if (files.has(newP)) return "Un fichier « " + newP + " » existe déjà.";
         const r = files.get(oldP);
         if (!r) return null;
+        toucher();
         files.delete(oldP);
         files.set(newP, r);
         tx((s) => { s.delete(oldP); s.put({ path: newP, blob: r.blob }); });
@@ -239,7 +246,9 @@
   /* ---------- Aperçu : un faux navigateur qui affiche le code ---------- */
 
   const PREVIEWS = new Set();
-  const imagesSig = () => Dossier.list({ type: "image" }).map((f) => f.path).join(",");
+  // Ce dont dépend une page en mode site : la liste des images et le contenu des feuilles .css.
+  const imagesSig = () => Dossier.list({ type: "image" }).map((f) => f.path).join(",") + "|" +
+    Dossier.list({ type: "texte" }).filter((f) => /\.css$/i.test(f.path)).map((f) => f.path + ":" + f.texte).join("¦");
   Dossier.on(() => PREVIEWS.forEach((p) => {
     if (!p.node.isConnected) { PREVIEWS.delete(p); return; }
     p.refresh();

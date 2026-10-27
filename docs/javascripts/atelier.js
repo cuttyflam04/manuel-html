@@ -30,7 +30,8 @@
     MH.Dossier.ready.then(() => {
       // Un brouillon resté en mémoire (page quittée avant la sauvegarde) est récupéré.
       const b = (() => { try { return JSON.parse(MH.store.get(BROUILLON) || "null"); } catch (e) { return null; } })();
-      const suite = b && b.chemin ? MH.Dossier.ecrire(b.chemin, b.texte) : Promise.resolve();
+      // Seulement s'il est encore à jour : si un fichier a été écrit depuis (autre onglet, autre visite), il est périmé.
+      const suite = b && b.chemin && b.rev === MH.Dossier.rev() ? MH.Dossier.ecrire(b.chemin, b.texte) : Promise.resolve();
       suite.then(() => {
         MH.store.del(BROUILLON);
         const meta = lireMeta();
@@ -157,7 +158,9 @@
     /* --- état --- */
     let actif = MH.Dossier.lire(meta.actif) != null ? meta.actif : meta.base.find((c) => MH.Dossier.lire(c) != null) || meta.base[0];
     let etapeVue = 1, chargement = false, enAttente = false, dernierRes = null;
-    const sauverMeta = () => { meta.actif = actif; ecrireMeta(meta); };
+    // mort : cet atelier a été remplacé (import, recommencer) ; gele : un autre onglet a écrit, on n'écrit plus rien.
+    let mort = false, gele = false;
+    const sauverMeta = () => { if (mort || gele) return; meta.actif = actif; ecrireMeta(meta); };
 
     const apercu = MH.makePreview({
       site: true, page: actif, maxHeight: 2000,
@@ -175,7 +178,7 @@
     travail.append(apercu.node);
 
     const sauver = () => {
-      if (!enAttente) return Promise.resolve();
+      if (!enAttente || mort || gele) return Promise.resolve();
       enAttente = false;
       return MH.Dossier.ecrire(actif, editeur.value).then((ok) => {
         statut.textContent = ok || !MH.Dossier.persistant ? "Enregistré" : "Stockage plein : télécharge ton site";
@@ -386,6 +389,7 @@
 
     /* --- vérification --- */
     function evaluer() {
+      if (mort) return;
       const textes = {};
       MH.Dossier.list({ type: "texte" }).forEach((f) => { textes[f.path] = f.texte; });
       if (enAttente) textes[actif] = editeur.value;
@@ -452,17 +456,24 @@
       racine.dataset.vu = ""; demarrer(racine);
     });
     btnRecharger.addEventListener("click", () => location.reload());
-    ecouter(window, "storage", (e) => { if (e.key === "mh:" + CLE && racine.isConnected) bandeauOnglet.hidden = false; });
+    ecouter(window, "storage", (e) => {
+      if ((e.key === "mh:" + CLE || e.key === "mh:rev") && racine.isConnected && !mort) {
+        gele = true; enAttente = false;
+        statut.textContent = "Modifié ailleurs : recharge la page";
+        bandeauOnglet.hidden = false;
+      }
+    });
     // Quitter la page : on garde tout de suite le texte non sauvegardé (sauvegarde synchrone de secours).
     const auDepart = () => {
-      if (!enAttente) return;
-      MH.store.set(BROUILLON, JSON.stringify({ chemin: actif, texte: editeur.value }));
-      sauver();
+      if (!enAttente || mort || gele) return;
+      const chemin = actif, texte = editeur.value;
+      sauver().then((ok) => { if (ok !== false) MH.store.del(BROUILLON); });
+      MH.store.set(BROUILLON, JSON.stringify({ chemin, texte, rev: MH.Dossier.rev() }));
     };
     ecouter(window, "pagehide", auDepart);
     const surHash = () => { const m = /^#etape-(\d)$/.exec(location.hash); if (m) voirEtape(+m[1]); };
     ecouter(window, "hashchange", surHash);
-    const surDossier = () => { if (!racine.isConnected) { detruire(); return; } dessinerOnglets(); dessinerFichiers(); evaluerPlusTard(); };
+    const surDossier = () => { if (mort) return; if (!racine.isConnected) { detruire(); return; } dessinerOnglets(); dessinerFichiers(); evaluerPlusTard(); };
     MH.Dossier.on(surDossier);
     nettoyages.push(() => MH.Dossier.off(surDossier));
     if (window.document$ && window.document$.subscribe) {
@@ -470,7 +481,7 @@
       const abo = window.document$.subscribe(() => { if (!racine.isConnected) { auDepart(); detruire(); } });
       nettoyages.push(() => { if (abo && abo.unsubscribe) abo.unsubscribe(); });
     }
-    function detruire() { while (nettoyages.length) { try { nettoyages.pop()(); } catch (e) { /* déjà nettoyé */ } } }
+    function detruire() { mort = true; while (nettoyages.length) { try { nettoyages.pop()(); } catch (e) { /* déjà nettoyé */ } } }
 
     /* --- premier affichage --- */
     dessinerOnglets();
