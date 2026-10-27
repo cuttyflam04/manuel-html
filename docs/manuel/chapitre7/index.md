@@ -1,412 +1,296 @@
-# La mise en forme d'une page HTML
+# Les tableaux
 
-## Introduction
+Un tableau organise des informations **structurées** sous forme de lignes et de colonnes : une liste d'étudiants, des notes, un emploi du temps… Il se compose de **lignes**, elles-mêmes découpées en **cellules**.
 
-Une page Web ne se limite pas à l'affichage de texte. Pour améliorer sa présentation et faciliter la lecture, HTML propose plusieurs attributs permettant de modifier l'apparence d'une page.
+## Trois balises imbriquées
 
-Dans les premiers apprentissages du HTML, ces attributs sont directement intégrés aux balises. Bien qu'ils soient aujourd'hui remplacés par le **CSS** dans les sites Web modernes, ils restent très utiles pour comprendre le fonctionnement de la mise en page et sont encore utilisés dans de nombreux travaux pratiques.
+| Balise | Rôle |
+|--------|------|
+| `<TABLE> … </TABLE>` | Ouverture et fermeture du **tableau** |
+| `<TR> … </TR>` | Ouverture et fermeture d'une **ligne** (*Table Row*) |
+| `<TD> … </TD>` | Ouverture et fermeture d'une **cellule** (*Table Data*) |
 
-Dans ce chapitre, nous étudierons les principaux attributs de présentation utilisés dans le HTML classique.
+Un tableau se lit **ligne par ligne** : on ouvre une ligne `<TR>`, on y met ses cellules `<TD>`, on la ferme, puis on passe à la ligne suivante.
 
----
-
-## Les couleurs de la page
-
-La balise `<BODY>` possède plusieurs attributs permettant de modifier l'apparence générale de la page.
-
-Les principaux attributs sont :
-
-| Attribut | Fonction |
-|----------|----------|
-| `BGCOLOR` | Définit la couleur de fond de la page. |
-| `TEXT` | Définit la couleur du texte. |
-
-!!! example "Exemple 7.1 — Couleurs de base"
+!!! example "Exemple 7.1 — Un premier tableau"
 
     ```html
-    <BODY BGCOLOR="WHITE" TEXT="BLACK">
+    <TABLE BORDER="1">
+        <TR>
+            <TD>Nom</TD>
+            <TD>Prénom</TD>
+        </TR>
+        <TR>
+            <TD>Fall</TD>
+            <TD>Amadou</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! info "Résultat"
+!!! danger "La règle d'or"
 
-    Le fond de la page sera blanc et le texte sera noir.
+    **Chaque ligne doit avoir le même nombre de cellules**, qui correspond au nombre de colonnes du tableau. Sinon, le tableau se désorganise.
 
-### Autres exemples
+## Les attributs de `<TABLE>`
 
-!!! example "Exemple 7.2"
+| Attribut | Rôle |
+|----------|------|
+| `BORDER="b"` | Épaisseur de l'encadrement du tableau et des cellules, en pixels. `0` : pas de bordure. |
+| `WIDTH="w"` ou `"w%"` | Largeur du tableau, en pixels ou en pourcentage de la fenêtre (à utiliser avec prudence). |
+| `BGCOLOR="couleur"` | Couleur de fond du tableau. |
+
+!!! example "Exemple 7.2 — Bordure, largeur et fond"
 
     ```html
-    <BODY BGCOLOR="LIGHTBLUE" TEXT="NAVY">
+    <TABLE BORDER="3" WIDTH="60%" BGCOLOR="#C0C0C0">
+        <TR>
+            <TD>HTML</TD>
+            <TD>Licence 1</TD>
+        </TR>
+        <TR>
+            <TD>PHP</TD>
+            <TD>Licence 2</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! example "Exemple 7.3"
+Changez `BORDER="3"` en `BORDER="0"` puis en `BORDER="10"` pour voir la différence.
+
+## Les cellules d'en-tête : `<TH>`
+
+`<TH>` (*Table Header*) remplace `<TD>` pour les **titres de colonnes**. Le navigateur affiche leur contenu **en gras** et **centré**.
+
+!!! example "Exemple 7.3 — Titres de colonnes"
 
     ```html
-    <BODY BGCOLOR="YELLOW" TEXT="RED">
+    <TABLE BORDER="1">
+        <TR>
+            <TH>Titre 1</TH>
+            <TH>Titre 2</TH>
+            <TH>Titre 3</TH>
+        </TR>
+        <TR>
+            <TD>a</TD>
+            <TD>b</TD>
+            <TD>c</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! tip "Remarque"
+## Le titre du tableau : `<CAPTION>`
 
-    Les couleurs peuvent être indiquées :
+`<CAPTION>` donne un **titre au tableau**. Il se place juste après `<TABLE>`. L'attribut `ALIGN` choisit sa position : `"TOP"` (au-dessus, par défaut) ou `"BOTTOM"` (en dessous).
 
-    - par leur nom en anglais (`WHITE`, `RED`, `BLUE`, etc.) ;
-    - par leur code hexadécimal.
-
----
-
-## Les couleurs en notation hexadécimale
-
-Les couleurs peuvent également être représentées sous la forme :
-
-```text
-#RRGGBB
-```
-
-Chaque paire représente l'intensité des composantes :
-
-- **RR** : Rouge ;
-- **GG** : Vert ;
-- **BB** : Bleu.
-
-Quelques couleurs courantes :
-
-| Couleur | Code |
-|---------|------|
-| Blanc | `#FFFFFF` |
-| Noir | `#000000` |
-| Rouge | `#FF0000` |
-| Vert | `#00FF00` |
-| Bleu | `#0000FF` |
-| Jaune | `#FFFF00` |
-
-!!! example "Exemple 7.4 — Couleur hexadécimale"
+!!! example "Exemple 7.4 — Titre en dessous"
 
     ```html
-    <BODY BGCOLOR="#F5F5F5" TEXT="#000000">
+    <TABLE BORDER="1">
+        <CAPTION ALIGN="BOTTOM">Le titre du tableau</CAPTION>
+        <TR>
+            <TH>Jour</TH>
+            <TH>Cours</TH>
+        </TR>
+        <TR>
+            <TD>Lundi</TD>
+            <TD>HTML</TD>
+        </TR>
+    </TABLE>
     ```
 
----
+## Aligner le contenu : `ALIGN` et `VALIGN`
 
-## L'alignement des éléments
+Ces attributs se placent sur une **ligne** `<TR>` (pour toutes ses cellules) ou sur une **cellule** `<TD>` (cellule par cellule).
 
-L'attribut `ALIGN` permet de modifier la position de certains éléments.
+| Attribut | Valeurs |
+|----------|---------|
+| `ALIGN` (horizontal) | `LEFT` (par défaut), `CENTER`, `RIGHT`, `JUSTIFY` (avec prudence) |
+| `VALIGN` (vertical) | `TOP`, `MIDDLE` (par défaut), `BOTTOM` |
 
-Il peut être utilisé avec :
-
-- les titres ;
-- les paragraphes ;
-- les tableaux ;
-- les images.
-
-### Les principales valeurs
-
-| Valeur | Fonction |
-|---------|----------|
-| `LEFT` | Alignement à gauche |
-| `CENTER` | Centrage |
-| `RIGHT` | Alignement à droite |
-
-!!! example "Exemple 7.5 — Titre centré"
+!!! example "Exemple 7.5 — Alignements"
 
     ```html
-    <H1 ALIGN="CENTER">
-
-        Université Amadou Mahtar Mbow
-
-    </H1>
+    <TABLE BORDER="1" WIDTH="100%">
+        <TR ALIGN="CENTER">
+            <TD>Toute la ligne</TD>
+            <TD>est</TD>
+            <TD>centrée</TD>
+        </TR>
+        <TR>
+            <TD VALIGN="TOP">En haut</TD>
+            <TD>Une cellule<BR>haute de<BR>quatre<BR>lignes</TD>
+            <TD VALIGN="BOTTOM" ALIGN="RIGHT">En bas à droite</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! example "Exemple 7.6 — Paragraphe aligné"
+!!! support "Dans le support de cours"
+
+    L'exemple de la page 91 écrit `<td align=middle>`. **`MIDDLE` n'existe pas pour `ALIGN`** : c'est une valeur de `VALIGN`. Pour centrer horizontalement, écrivez `ALIGN="CENTER"`.
+
+### La largeur d'une cellule
+
+`WIDTH="w"` ou `"w%"` sur un `<TD>` donne la largeur de la cellule, en pixels ou en pourcentage de la largeur du tableau. Indiquez-la **une seule fois** par colonne (sur une seule ligne) : elle fixe la largeur de toute la colonne.
+
+## Fusionner des cellules : `COLSPAN` et `ROWSPAN`
+
+| Attribut | Effet |
+|----------|-------|
+| `COLSPAN="c"` | Fusionne `c` cellules **à l'horizontale** : le texte s'étend sur plusieurs colonnes. |
+| `ROWSPAN="r"` | Fusionne `r` cellules **à la verticale** : le texte s'étend sur plusieurs lignes. |
+
+!!! warning "Compter les cellules"
+
+    Une cellule fusionnée **compte pour autant de cellules** que la valeur de son `COLSPAN`. Avec `ROWSPAN`, la cellule « occupe » aussi une place dans les lignes du dessous : il faut **retirer** une cellule dans chacune de ces lignes.
+
+!!! example "Exemple 7.6 — COLSPAN"
 
     ```html
-    <P ALIGN="RIGHT">
-
-        Ce texte est aligné à droite.
-
-    </P>
+    <TABLE BORDER="1">
+        <TR>
+            <TH COLSPAN="2">Étudiant</TH>
+        </TR>
+        <TR>
+            <TH>Nom</TH>
+            <TH>Prénom</TH>
+        </TR>
+        <TR>
+            <TD>Diop</TD>
+            <TD>Awa</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! example "Exemple 7.7 — Tableau centré"
+!!! example "Exemple 7.7 — ROWSPAN"
 
     ```html
-    <TABLE
-        BORDER="1"
-        ALIGN="CENTER">
+    <TABLE BORDER="1">
+        <TR>
+            <TD ROWSPAN="3">Lundi</TD>
+            <TD>08h - HTML</TD>
+        </TR>
+        <TR>
+            <TD>10h - Algorithmique</TD>
+        </TR>
+        <TR>
+            <TD>14h - Anglais</TD>
+        </TR>
+    </TABLE>
     ```
 
-!!! warning "HTML5"
+Les deuxième et troisième lignes n'ont **qu'une** cellule : la première colonne est déjà occupée par « Lundi ».
 
-    L'attribut `ALIGN` est aujourd'hui **obsolète** en HTML5.
+## Les cellules vides
 
-    Les sites Web modernes utilisent **CSS** pour gérer l'alignement des éléments.
+| Code | Résultat |
+|------|----------|
+| `<TD></TD>` | Une cellule vide, **sans bordure** dans les anciens navigateurs |
+| `<TD>&nbsp;</TD>` | Une cellule vide **avec bordure** (elle contient une espace) |
 
----
+## L'exemple complet du cours
 
-## Les lignes horizontales
+Cet exemple réunit `CAPTION`, `TH`, `COLSPAN`, `ROWSPAN` et `BGCOLOR`. Il est **corrigé** : la version du support contient quelques coquilles, détaillées juste après.
 
-La balise `<HR>` permet de séparer plusieurs parties d'une page.
-
-Elle améliore la lisibilité du document.
-
-!!! example "Exemple 7.8 — Ligne horizontale"
+!!! example "Exemple 7.8 — Comparatif de modèles économiques"
 
     ```html
-    Présentation
-
-    <HR>
-
-    Bienvenue sur notre site.
+    <TABLE BORDER="1" BGCOLOR="yellow">
+        <CAPTION ALIGN="TOP">Comparatif mod&egrave;le &eacute;conomique</CAPTION>
+        <TR>
+            <TH COLSPAN="3">Mod&egrave;le</TH>
+            <TH ROWSPAN="2">Vitesse<BR>en km/heure</TH>
+            <TH ROWSPAN="2">Consommation<BR>en litre/100 km</TH>
+        </TR>
+        <TR>
+            <TH>Marque</TH>
+            <TH>Type</TH>
+            <TH>Num&eacute;ro de s&eacute;rie</TH>
+        </TR>
+        <TR>
+            <TD>Peugeot 106</TD>
+            <TD>b2</TD>
+            <TD ALIGN="CENTER">234.34</TD>
+            <TD>132</TD>
+            <TD>5,7</TD>
+        </TR>
+        <TR>
+            <TD>Citro&euml;n AX</TD>
+            <TD>AT67B8</TD>
+            <TD ALIGN="CENTER">6789</TD>
+            <TD>126</TD>
+            <TD>5,5</TD>
+        </TR>
+    </TABLE>
     ```
 
-Les principaux attributs sont :
+!!! support "Dans le support de cours (page 91)"
 
-| Attribut | Fonction |
-|----------|----------|
-| `WIDTH` | Largeur de la ligne |
-| `SIZE` | Épaisseur |
-| `ALIGN` | Alignement |
+    Trois corrections par rapport au support :
 
-!!! example "Exemple 7.9 — Ligne personnalisée"
+    - `<rt>` doit s'écrire **`<tr>`** (ouverture de ligne) ;
+    - `</dt>` doit s'écrire **`</td>`** (fermeture de cellule) ;
+    - `align=middle` doit s'écrire **`ALIGN="CENTER"`**.
+
+    L'exemple utilisait aussi `BORDER="0"` : ici on met `BORDER="1"` pour bien voir les fusions.
+
+## Les tableaux imbriqués
+
+Une cellule peut contenir **n'importe quoi**, y compris **un autre tableau**. C'était une technique courante pour faire la mise en page en colonnes.
+
+!!! example "Exemple 7.9 — Deux colonnes, dont un tableau imbriqué"
 
     ```html
-    <HR
-        WIDTH="70%"
-        SIZE="4"
-        ALIGN="CENTER">
+    <TABLE BORDER="1" WIDTH="100%">
+        <TR>
+            <TD WIDTH="30%" VALIGN="TOP">
+                <B>Menu</B><BR>
+                Accueil<BR>
+                Cours<BR>
+                Contact
+            </TD>
+            <TD>
+                Notes du semestre :
+                <TABLE BORDER="1" BGCOLOR="#FFFF00">
+                    <TR><TH>Matière</TH><TH>Note</TH></TR>
+                    <TR><TD>HTML</TD><TD>16</TD></TR>
+                    <TR><TD>Maths</TD><TD>13</TD></TR>
+                </TABLE>
+            </TD>
+        </TR>
+    </TABLE>
     ```
-
----
-
-## Les retours à la ligne
-
-La balise `<BR>` permet de passer à la ligne sans créer un nouveau paragraphe.
-
-!!! example "Exemple 7.10 — Retour à la ligne"
-
-    ```html
-    Nom : Ndiaye
-
-    <BR>
-
-    Prénom : Fatou
-
-    <BR>
-
-    Classe : Licence 2
-    ```
-
-!!! tip "Bonne pratique"
-
-    Utilisez `<BR>` pour effectuer un simple retour à la ligne.
-
-    Pour séparer plusieurs idées ou blocs de texte, préférez la balise `<P>`.
-
----
-
-## Les styles de texte
-
-HTML permet de mettre en valeur certaines parties du texte.
-
-Les principales balises sont :
-
-| Balise | Fonction |
-|---------|----------|
-| `<B>` | Gras |
-| `<I>` | Italique |
-| `<U>` | Souligné |
-
-!!! example "Exemple 7.11 — Mise en valeur"
-
-    ```html
-    <P>
-
-        Le langage
-
-        <B>HTML</B>
-
-        est
-
-        <I>simple</I>
-
-        à apprendre.
-
-    </P>
-    ```
-
-!!! warning "HTML5"
-
-    Dans les pages Web modernes, on privilégie généralement :
-
-    - `<strong>` à la place de `<B>` ;
-    - `<em>` à la place de `<I>`.
-
-    Cependant, les balises `<B>` et `<I>` restent très utilisées dans les exercices d'initiation.
-
----
-
-## Combiner plusieurs balises
-
-Plusieurs balises peuvent être utilisées simultanément afin d'améliorer la présentation d'une page.
-
-!!! example "Exemple 7.12 — Combinaison de balises"
-
-    ```html
-    <H1 ALIGN="CENTER">
-        Bibliothèque Universitaire
-    </H1>
-
-    <P>
-
-        Bienvenue dans la
-        <B>bibliothèque</B>
-        de l'université.
-
-        Vous trouverez des ouvrages de
-        <I>mathématiques</I>
-        et d'
-        <U>informatique</U>.
-
-    </P>
-    ```
-
----
-
-## Exemple complet
-
-!!! example "Présentation de l'UAM"
-
-    ```html
-    <HTML>
-
-    <HEAD>
-
-        <TITLE>
-            Présentation de l'UAM
-        </TITLE>
-
-    </HEAD>
-
-    <BODY
-        BGCOLOR="#F5F5F5"
-        TEXT="BLACK">
-
-        <H1 ALIGN="CENTER">
-            Université Amadou Mahtar Mbow
-        </H1>
-
-        <HR WIDTH="80%" SIZE="3">
-
-        <P ALIGN="JUSTIFY">
-
-            L'
-
-            <B>Université Amadou Mahtar Mbow</B>
-
-            forme chaque année plusieurs milliers d'étudiants dans différents domaines scientifiques et technologiques.
-
-            <BR><BR>
-
-            Elle dispose de nombreuses salles de cours, laboratoires et bibliothèques.
-
-        </P>
-
-        <H2>
-            Nos formations
-        </H2>
-
-        <P>
-
-            <I>Génie Informatique</I>
-
-            <BR>
-
-            Sciences de l'Information et de la Communication
-
-            <BR>
-
-            Électronique
-
-        </P>
-
-        <HR>
-
-        <P ALIGN="CENTER">
-
-            <U>Fin de la présentation</U>
-
-        </P>
-
-    </BODY>
-
-    </HTML>
-    ```
-
----
 
 ## Erreurs fréquentes
 
 !!! danger "À éviter"
 
-    - oublier de fermer une balise de mise en forme (`<B>`, `<I>`, `<U>`) ;
-
-    - utiliser des couleurs rendant le texte difficile à lire ;
-
-    - abuser des retours à la ligne (`<BR>`) au lieu d'utiliser des paragraphes ;
-
-    - centrer tous les éléments de la page, ce qui nuit à la lisibilité ;
-
-    - utiliser simultanément plusieurs attributs de présentation sans cohérence.
-
----
+    - placer un `<TD>` directement dans `<TABLE>`, sans `<TR>` ;
+    - avoir des lignes avec un nombre de cellules différent ;
+    - oublier de retirer des cellules après un `COLSPAN` ou un `ROWSPAN` ;
+    - confondre `ALIGN` (horizontal) et `VALIGN` (vertical) ;
+    - oublier de fermer `</TABLE>` : tout le reste de la page peut disparaître.
 
 ## À retenir
 
 !!! success "Points essentiels"
 
-    - `BGCOLOR` définit la couleur de fond de la page.
+    - `<TABLE>` contient des lignes `<TR>`, qui contiennent des cellules `<TD>` ou `<TH>`.
+    - Chaque ligne a le **même nombre de cellules**.
+    - `BORDER`, `WIDTH` et `BGCOLOR` règlent le tableau.
+    - `<TH>` : cellule d'en-tête, en gras et centrée. `<CAPTION>` : titre du tableau.
+    - `ALIGN` aligne horizontalement, `VALIGN` verticalement, sur `<TR>` ou `<TD>`.
+    - `COLSPAN` fusionne des colonnes, `ROWSPAN` fusionne des lignes.
+    - `&nbsp;` dans un `<TD>` garde une cellule vide visible.
 
-    - `TEXT` définit la couleur du texte.
+## Exercices
 
-    - `ALIGN` permet d'aligner différents éléments.
+<div class="exo" data-exo="ch7-1" markdown>
+Créez un tableau **avec bordure** de 3 colonnes : une ligne d'en-tête **Nom**, **Prénom**, **Âge** avec `<TH>`, puis trois étudiants (Ndiaye Ousmane 22, Faye Khady 20, Diallo Ibrahima 21).
+</div>
 
-    - `<HR>` crée une ligne horizontale.
+<div class="exo" data-exo="ch7-2" markdown>
+Reproduisez cet emploi du temps : une ligne d'en-tête **Jour**, **08h-10h**, **10h-12h** ; puis **Lundi** : HTML, CSS ; **Mardi** : JavaScript, PHP ; **Mercredi** : « Base de données » qui occupe **les deux créneaux** (fusion). Ajoutez un titre « Emploi du temps » avec `<CAPTION>`.
+</div>
 
-    - `<BR>` effectue un retour à la ligne.
+## Vérifiez vos acquis
 
-    - `<B>`, `<I>` et `<U>` permettent de mettre du texte en valeur.
-
-    - Ces attributs appartiennent au HTML classique. Les sites Web modernes utilisent principalement le CSS pour gérer la présentation.
-
----
-
-## Exercice de synthèse
-
-!!! question "Exercice"
-
-    Créer une page HTML intitulée **Présentation de mon université** contenant :
-
-    - un fond de page de couleur claire ;
-
-    - un titre principal centré ;
-
-    - une ligne horizontale sous le titre ;
-
-    - deux paragraphes présentant l'université ;
-
-    - plusieurs retours à la ligne pour organiser les informations ;
-
-    - au moins trois mots mis en **gras**, en *italique* et <u>soulignés</u> ;
-
-    - un sous-titre aligné à gauche ;
-
-    - une seconde ligne horizontale pour séparer la conclusion.
-
-### Objectif
-
-Maîtriser les principaux attributs de mise en forme du HTML classique et réaliser une page lisible et correctement présentée.
-
----
-
-⬅️ **Précédent :** Les images en HTML
-
-➡️ **Suivant :** Les feuilles de style CSS
+<div class="quiz" data-quiz="ch7"></div>

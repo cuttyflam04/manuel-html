@@ -1,382 +1,168 @@
-# Les images en HTML
+# Les images
 
-## Introduction
-
-Les images occupent une place importante dans la conception d'une page Web.
-
-Elles permettent :
-
-- d'illustrer un texte ;
-- d'améliorer la présentation d'un site ;
-- de faciliter la compréhension des informations.
-
-En HTML, les images sont insérées grâce à la balise `<IMG>`.
-
-!!! tip "Remarque"
-
-    La balise `<IMG>` est une **balise orpheline** (*void element*). Elle ne possède donc **pas de balise fermante**.
-
----
-
-## La balise `<IMG>`
-
-La balise `<IMG>` permet d'insérer une image dans une page HTML.
-
-### Syntaxe générale
-
-```html
-<IMG SRC="image.jpg">
-```
-
-Le navigateur affiche alors l'image indiquée par l'attribut `SRC`.
-
----
-
-## L'attribut `SRC`
-
-L'attribut `SRC` (*Source*) indique l'emplacement de l'image.
-
-L'image peut se trouver :
-
-- dans le même dossier que la page HTML ;
-- dans un sous-dossier ;
-- dans un autre dossier de l'ordinateur ;
-- sur Internet.
-
-### Même dossier
-
-!!! example "Exemple 6.1"
-
-    ```html
-    <IMG SRC="logo.jpg">
-    ```
-
-### Sous-dossier
-
-!!! example "Exemple 6.2"
-
-    ```html
-    <IMG SRC="Images/logo.jpg">
-    ```
-
-### Autre dossier
-
-!!! example "Exemple 6.3"
-
-    ```html
-    <IMG SRC="C:\MesImages\logo.jpg">
-    ```
-
-!!! tip "Bonne pratique"
-
-    Lors des travaux pratiques réalisés en local, il est fréquent d'utiliser un chemin provenant directement de l'ordinateur.
-
-    En revanche, pour un site Web destiné à être publié, il est recommandé de placer les images dans le même projet que les pages HTML et d'utiliser des **chemins relatifs**.
-
----
-
-## L'attribut `ALT`
-
-L'attribut `ALT` (*Alternative Text*) fournit une description de l'image.
-
-Ce texte est affiché lorsque l'image ne peut pas être chargée.
-
-Il améliore également l'accessibilité des pages Web, notamment pour les lecteurs d'écran.
-
-!!! example "Exemple 6.4 — Texte alternatif"
-
-    ```html
-    <IMG
-        SRC="photo.jpg"
-        ALT="Photo d'un ordinateur portable">
-    ```
-
----
-
-## Les attributs `HEIGHT` et `WIDTH`
-
-Les attributs `HEIGHT` et `WIDTH` permettent de modifier les dimensions de l'image.
-
-### `HEIGHT`
-
-Définit la hauteur.
-
-!!! example "Exemple 6.5"
-
-    ```html
-    <IMG
-        SRC="photo.jpg"
-        HEIGHT="150">
-    ```
-
-### `WIDTH`
-
-Définit la largeur.
-
-!!! example "Exemple 6.6"
-
-    ```html
-    <IMG
-        SRC="photo.jpg"
-        WIDTH="300">
-    ```
-
-### `HEIGHT` et `WIDTH` ensemble
-
-!!! example "Exemple 6.7"
-
-    ```html
-    <IMG
-        SRC="photo.jpg"
-        HEIGHT="180"
-        WIDTH="300">
-    ```
-
-!!! tip "Bonne pratique"
-
-    Pour éviter de déformer une image, il est préférable de modifier uniquement la largeur **ou** la hauteur, ou de conserver les proportions d'origine.
-
----
-
-## L'attribut `ALIGN`
-
-Dans le HTML classique utilisé lors des travaux pratiques, l'attribut `ALIGN` permet d'indiquer la position de l'image par rapport au texte.
-
-Les principales valeurs sont :
-
-| Valeur | Fonction |
-|--------|----------|
-| `LEFT` | Image placée à gauche. |
-| `RIGHT` | Image placée à droite. |
-| `TOP` | Alignement vers le haut. |
-| `MIDDLE` | Alignement au milieu. |
-| `BOTTOM` | Alignement vers le bas. |
-
-!!! example "Exemple 6.8 — Image alignée à gauche"
-
-    ```html
-    <IMG
-        SRC="photo.jpg"
-        ALIGN="LEFT">
-
-    Cette image est placée à gauche du paragraphe.
-    ```
-
-!!! warning "HTML5"
-
-    L'attribut `ALIGN` est aujourd'hui **obsolète** en HTML5.
-
-    Dans les sites modernes, le positionnement des images est réalisé avec **CSS**.
-
-    Cet attribut reste néanmoins utile pour comprendre les anciens documents HTML et les exercices de ce cours.
-
----
-
-## Les images comme liens
-
-Une image peut également servir de lien hypertexte.
-
-Il suffit de placer la balise `<IMG>` entre les balises `<A>`.
-
-!!! example "Exemple 6.9 — Image cliquable"
-
-    ```html
-    <A HREF="accueil.html">
-
-        <IMG
-            SRC="maison.jpg"
-            HEIGHT="100"
-            ALT="Accueil">
-
-    </A>
-    ```
-
-!!! info "Résultat"
-
-    Lorsque l'utilisateur clique sur l'image, le navigateur ouvre la page indiquée.
-
----
-
-## Plusieurs images dans une même page
-
-Une page HTML peut contenir autant d'images que nécessaire.
-
-!!! example "Exemple 6.10"
-
-    ```html
-    <IMG SRC="photo1.jpg">
-    <IMG SRC="photo2.jpg">
-    <IMG SRC="photo3.jpg">
-    ```
-
----
-
-## Exemple complet
-
-!!! example "Galerie Informatique"
-
-    ```html
-    <HTML>
-
-    <HEAD>
-
-        <TITLE>
-            Galerie Informatique
-        </TITLE>
-
-    </HEAD>
-
-    <BODY BGCOLOR="WHITE" TEXT="BLACK">
-
-        <H1 ALIGN="CENTER">
-            Salle Informatique
-        </H1>
-
-        <HR>
-
-        <P>
-            Bienvenue dans notre laboratoire informatique.
-        </P>
-
-        <IMG
-            SRC="ordinateur.jpg"
-            HEIGHT="180"
-            ALT="Ordinateur"
-            ALIGN="LEFT">
-
-        <P>
-            Les étudiants disposent d'ordinateurs modernes leur permettant de réaliser leurs travaux pratiques en programmation, infographie et développement Web.
-        </P>
-
-        <BR><BR><BR><BR><BR><BR>
-
-        <HR>
-
-        <H2>
-            Quelques équipements
-        </H2>
-
-        <IMG
-            SRC="imprimante.jpg"
-            HEIGHT="120"
-            ALT="Imprimante">
-
-        <IMG
-            SRC="serveur.jpg"
-            HEIGHT="120"
-            ALT="Serveur">
-
-        <IMG
-            SRC="projecteur.jpg"
-            HEIGHT="120"
-            ALT="Projecteur">
-
-        <HR>
-
-        <A HREF="accueil.html">
-
-            <IMG
-                SRC="retour.jpg"
-                HEIGHT="70"
-                ALT="Retour à l'accueil">
-
-        </A>
-
-    </BODY>
-
-    </HTML>
-    ```
-
----
+Une image illustre un texte, améliore la présentation d'une page et aide à comprendre l'information. En HTML, on l'insère avec une seule balise : `<IMG>`.
 
 ## Les formats d'image
 
-Les formats les plus utilisés sont :
+Le cours présente **deux formats** lus par tous les navigateurs :
 
-| Format | Utilisation |
-|---------|-------------|
-| `JPG / JPEG` | Photographies |
-| `PNG` | Images avec fond transparent |
-| `GIF` | Images simples ou animées |
-| `BMP` | Images non compressées |
-| `WEBP` | Format moderne offrant une bonne qualité avec une taille réduite |
+| Format | Nom complet | Usage |
+|--------|-------------|-------|
+| **GIF** | *Graphics Interchange Format* | Les **illustrations** (logos, dessins, icônes) |
+| **JPEG** | *Joint Photographic Expert Group* (format JFIF) | Les **photos** |
 
----
+## La balise `<IMG>`
 
-## Erreurs fréquentes
+```html
+<IMG SRC="nom_du_fichier.jpg">
+```
 
-!!! danger "À éviter"
+- `<IMG>` est une **balise orpheline** (auto-fermante) : pas de `</IMG>`.
+- C'est une balise **en ligne** (*inline*) : elle ne provoque **pas de retour à la ligne** et peut s'insérer au milieu du texte.
+- On la place généralement dans un `<P>`, mais elle peut aller n'importe où dans le `<BODY>`.
 
-    - oublier l'attribut `SRC` ;
+!!! info "Les images dans ce manuel"
 
-    - utiliser un chemin incorrect ;
+    Les fichiers des exemples (`photo.jpg`, `logo.gif`…) n'existent pas sur ce site. L'aperçu les remplace par une **image de démonstration** qui porte le nom du fichier et respecte la taille demandée. Sur votre ordinateur, mettez une vraie image avec ce nom dans le dossier de votre page.
 
-    - oublier l'attribut `ALT` ;
+## L'attribut `SRC` : la source
 
-    - modifier excessivement la largeur ou la hauteur, ce qui déforme l'image ;
+`SRC="…"` donne le **chemin vers l'image** : sur le serveur, ou une URL. C'est le **même principe que pour les liens** (chapitre 5).
 
-    - utiliser une image qui n'existe pas dans le dossier indiqué ;
+| Où est l'image ? | On écrit |
+|------------------|----------|
+| Dans le même dossier que la page | `SRC="photo.jpg"` |
+| Dans un sous-dossier `images/` | `SRC="images/photo.jpg"` |
+| Un dossier au-dessus | `SRC="../photo.jpg"` |
+| Sur un autre site | `SRC="http://www.site.com/photo.jpg"` |
 
-    - confondre les majuscules et minuscules dans le nom du fichier.
+!!! danger "Attention aux noms de fichiers"
 
----
+    `Photo.JPG` et `photo.jpg` peuvent être considérés comme **deux fichiers différents** sur un serveur. Écrivez le nom **exactement** comme il est, et préférez des noms simples, en minuscules, sans espaces ni accents.
 
-## À retenir
+## L'attribut `ALT` : le texte alternatif
 
-!!! success "Points essentiels"
+`ALT="description de l'image"` donne un **texte qui décrit** l'image. Il la **remplace** si elle ne peut pas être chargée.
 
-    - `<IMG>` permet d'insérer une image.
+- Il est **lu à voix haute** par les lecteurs d'écran, et aide les personnes malvoyantes à comprendre l'image.
+- Il est **obligatoire**, mais peut rester **vide** (`ALT=""`) pour une image purement décorative.
 
-    - `SRC` indique l'emplacement de l'image.
+!!! example "Exemple 6.1 — Texte alternatif"
 
-    - `ALT` fournit un texte alternatif.
+    ```html
+    <P>
+        <IMG SRC="photo.jpg" ALT="Photo d'un ordinateur portable">
+        Une image accompagnée de son texte alternatif.
+    </P>
+    ```
 
-    - `HEIGHT` définit la hauteur.
+!!! support "Dans le support de cours"
 
-    - `WIDTH` définit la largeur.
+    Le support indique que `ALT` « apparaît si la souris s'arrête sur l'image » (info-bulle). C'était le cas dans d'**anciens navigateurs** comme Internet Explorer. Aujourd'hui, `ALT` sert à **remplacer** l'image ; pour une info-bulle, on utilise l'attribut **`TITLE`**, comme pour les liens.
 
-    - `ALIGN` permet de positionner l'image dans le HTML classique.
+## `WIDTH` et `HEIGHT` : la taille
 
-    - Une image peut également servir de lien hypertexte.
+| Attribut | Rôle |
+|----------|------|
+| `WIDTH="w"` ou `"w%"` | **Largeur** affichée, en pixels ou en pourcentage |
+| `HEIGHT="h"` ou `"h%"` | **Hauteur** affichée, en pixels ou en pourcentage |
 
----
+- Sans ces attributs, l'image s'affiche à sa **taille réelle**.
+- Si on n'en donne **qu'un seul**, l'autre est **calculé automatiquement** en proportion.
+- Sans taille, le navigateur « devine », ce qui fait **sauter** la page pendant le chargement. **Indiquez toujours au moins un des deux** pour accélérer l'affichage.
+
+!!! example "Exemple 6.2 — Différentes tailles"
+
+    ```html
+    <IMG SRC="campus.jpg" WIDTH="300" ALT="Le campus">
+    <IMG SRC="campus.jpg" WIDTH="150" ALT="Le campus, plus petit">
+    <IMG SRC="campus.jpg" WIDTH="300" HEIGHT="80" ALT="Le campus déformé">
+    ```
+
+La troisième image est **déformée** : sa largeur et sa hauteur ne respectent plus ses proportions.
+
+!!! tip "Conseils du cours"
+
+    - Attention au **poids** des images : pas d'images trop lourdes.
+    - Mieux vaut **redimensionner l'image** dans un logiciel avant, plutôt que de charger une grande image et la rétrécir avec `WIDTH`.
+    - Pour une galerie : de **petites images cliquables** qui mènent vers les grandes.
+
+!!! support "Dans le support de cours"
+
+    Page 79, `WIDTH` et `HEIGHT` sont décrits comme « largeur / hauteur **du tableau** ». Il s'agit bien sûr de la largeur et de la hauteur **de l'image**.
+
+## `BORDER` : le cadre
+
+`BORDER="n"` dessine un **cadre noir** de `n` pixels autour de l'image. Si l'image est un **lien**, mettez `BORDER="0"` pour ne pas voir le cadre de la couleur des liens (`LINK` du `<BODY>`).
+
+!!! example "Exemple 6.3 — Bordure"
+
+    ```html
+    <IMG SRC="mafoto.jpg" WIDTH="160" BORDER="4" ALT="Ma photo">
+    ```
+
+## `ALIGN` : la position par rapport au texte
+
+| Valeur | Effet |
+|--------|-------|
+| `TOP`, `MIDDLE`, `BOTTOM` | Position **verticale** de l'image par rapport à la ligne de texte |
+| `LEFT`, `RIGHT` | L'image se place à gauche ou à droite, et **le texte s'enroule autour** |
+
+!!! example "Exemple 6.4 — Image alignée au milieu de la ligne"
+
+    ```html
+    <P>
+        Texte avant
+        <IMG SRC="mafoto.jpg" WIDTH="100" ALIGN="MIDDLE" BORDER="2" ALT="Ma photo">
+        texte après, centré verticalement sur l'image.
+    </P>
+    ```
+
+!!! example "Exemple 6.5 — Le texte s'enroule autour"
+
+    ```html
+    <P>
+        <IMG SRC="salle-info.jpg" WIDTH="150" ALIGN="LEFT" ALT="Salle informatique">
+        Les étudiants disposent d'ordinateurs pour réaliser leurs travaux pratiques
+        en programmation et en développement Web. Grâce à ALIGN="LEFT", ce texte
+        s'enroule autour de l'image, à sa droite, au lieu de commencer en dessous.
+        Essayez de remplacer LEFT par RIGHT pour voir l'image passer de l'autre côté.
+    </P>
+    ```
+
+## Une image cliquable
+
+Comme vu au chapitre 5, une image placée entre `<A>` et `</A>` devient un lien.
+
+!!! example "Exemple 6.6 — Galerie de vignettes"
+
+    ```html
+    <A HREF="grande1.jpg"><IMG SRC="vignette1.jpg" WIDTH="100" BORDER="0" ALT="Amphithéâtre"></A>
+    <A HREF="grande2.jpg"><IMG SRC="vignette2.jpg" WIDTH="100" BORDER="0" ALT="Bibliothèque"></A>
+    <A HREF="grande3.jpg"><IMG SRC="vignette3.jpg" WIDTH="100" BORDER="0" ALT="Restaurant"></A>
+    ```
+
+## Récapitulatif
+
+| Attribut | Rôle |
+|----------|------|
+| `SRC="url"` | Adresse du fichier image (obligatoire) |
+| `ALT="texte"` | Texte alternatif (obligatoire, vide si décoratif) |
+| `WIDTH="w"` | Largeur, en pixels ou en % |
+| `HEIGHT="h"` | Hauteur, en pixels ou en % |
+| `BORDER="n"` | Cadre de `n` pixels |
+| `ALIGN="…"` | `TOP`, `MIDDLE`, `BOTTOM`, ou `LEFT` / `RIGHT` pour l'enroulement |
 
 ## Exercices
 
-!!! question "Exercice 1"
+<div class="exo" data-exo="ch6-1" markdown>
+Insérez l'image `campus.jpg` avec une **largeur de 250 pixels** et un **texte alternatif** qui la décrit.
+</div>
 
-    Créer une page intitulée **Galerie de l'UAM** contenant :
+<div class="exo" data-exo="ch6-2" markdown>
+Créez un paragraphe avec l'image `labo.jpg` **alignée à gauche** (le texte doit s'enrouler autour), puis, en dessous, une image `retour.gif` **cliquable** qui mène vers `index.html`, **sans bordure**.
+</div>
 
-    - un titre principal ;
-    - trois images représentant différents bâtiments de l'université ;
-    - une ligne horizontale séparant chaque partie.
+## Vérifiez vos acquis
 
----
-
-!!! question "Exercice 2"
-
-    Créer une page présentant un laboratoire informatique avec :
-
-    - une image alignée à gauche ;
-    - un paragraphe décrivant le laboratoire ;
-    - deux autres images affichées sous le texte.
-
----
-
-!!! question "Exercice 3"
-
-    Créer une page intitulée **Mon Album Photo** contenant :
-
-    - cinq images de tailles différentes ;
-    - une image servant de bouton **Retour à l'accueil** ;
-    - une image accompagnée d'un texte descriptif utilisant l'attribut `ALT`.
-
-### Objectif
-
-Apprendre à insérer, dimensionner et organiser plusieurs images dans une page HTML tout en utilisant les principaux attributs de la balise `<IMG>`.
-
----
-
-⬅️ **Précédent :** Les liens hypertextes en HTML
-
-➡️ **Suivant :** Les feuilles de style CSS
+<div class="quiz" data-quiz="ch6"></div>

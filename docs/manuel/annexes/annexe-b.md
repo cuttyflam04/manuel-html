@@ -1,96 +1,94 @@
-# Annexe B — Tableau récapitulatif des balises HTML
+# Annexe B — Récapitulatif des balises
 
-## Comment mémoriser les balises HTML ?
-
-La plupart des balises HTML sont des **abréviations de mots anglais**.
-
-Connaître leur signification permet de retenir plus facilement leur rôle.
+Toutes les balises du cours, avec leur origine anglaise : retenir le mot anglais aide à retrouver la balise.
 
 !!! tip "Astuce de mémorisation"
 
-    Au lieu d'apprendre les balises par cœur, essayez de retenir **le mot anglais dont elles sont issues**.
+    `<IMG>` = *image*, `<TR>` = *table row*, `<OL>` = *ordered list*… Comprendre l'abréviation évite d'apprendre par cœur.
 
-    Par exemple :
+## Structure du document
 
-    - `<IMG>` signifie **Image** ;
-    - `<TABLE>` signifie **Table** (tableau) ;
-    - `<FORM>` signifie **Form** (formulaire).
+| Balise | Origine | Rôle | Attributs du cours |
+|--------|---------|------|--------------------|
+| `<!DOCTYPE html>` | *Document type* | Déclare une page HTML | — |
+| `<HTML>` | *HyperText Markup Language* | Délimite le document | — |
+| `<HEAD>` | *Head* | En-tête (informations non affichées) | — |
+| `<TITLE>` | *Title* | Titre, affiché dans l'onglet | — |
+| `<META>` | *Metadata* | Informations sur la page | `NAME`, `CONTENT`, `HTTP-EQUIV`, `CHARSET` |
+| `<BODY>` | *Body* | Corps (contenu affiché) | `BGCOLOR`, `BACKGROUND`, `TEXT`, `LINK`, `ALINK`, `VLINK` |
+| `<!-- … -->` | *Comment* | Commentaire, non affiché | — |
 
-    Une fois l'origine comprise, il devient beaucoup plus facile de retrouver la bonne balise sans avoir besoin de la mémoriser mot à mot.
+## Texte
 
----
+| Balise | Origine | Rôle | Attributs du cours |
+|--------|---------|------|--------------------|
+| `<P>` | *Paragraph* | Paragraphe | `ALIGN` |
+| `<BR>` | *Break* | Retour à la ligne (orpheline) | — |
+| `<H1>` … `<H6>` | *Header* | Titres de niveau 1 à 6 | `ALIGN` |
+| `<HR>` | *Horizontal Rule* | Ligne horizontale (orpheline) | `SIZE`, `WIDTH`, `ALIGN` |
+| `<CENTER>` | *Center* | Centre le contenu | — |
+| `<B>` | *Bold* | Gras | — |
+| `<I>` | *Italic* | Italique | — |
+| `<U>` | *Underline* | Souligné | — |
+| `<EM>` | *Emphasis* | Insistance (italique par défaut) | — |
+| `<STRONG>` | *Strong* | Importance (gras par défaut) | — |
+| `<BIG>` | *Big* | Texte plus gros | — |
+| `<SMALL>` | *Small* | Texte plus petit, mentions légales | — |
+| `<SUP>` | *Superscript* | Exposant | — |
+| `<SUB>` | *Subscript* | Indice | — |
+| `<FONT>` | *Font* | Couleur et taille du texte | `COLOR`, `SIZE` (1 à 7 ou +n) |
 
-| Balise | Origine (anglais) | Signification | Principaux attributs | Exemple |
-|---------|-------------------|---------------|----------------------|----------|
-| `<HTML>` | HyperText Markup Language | Délimite le document HTML | — | `<HTML>...</HTML>` |
-| `<HEAD>` | Head | En-tête du document | — | `<HEAD>...</HEAD>` |
-| `<TITLE>` | Title | Titre de la page | — | `<TITLE>Mon site</TITLE>` |
-| `<BODY>` | Body | Corps visible de la page | `BGCOLOR`, `TEXT` | `<BODY>` |
-| `<H1>` à `<H6>` | Heading | Titre | `ALIGN` | `<H1>Titre</H1>` |
-| `<P>` | Paragraph | Paragraphe | `ALIGN` | `<P>Bonjour</P>` |
-| `<BR>` | Break | Retour à la ligne | — | `<BR>` |
-| `<HR>` | Horizontal Rule | Ligne horizontale | `WIDTH`, `SIZE`, `ALIGN` | `<HR>` |
-| `<B>` | Bold | Texte en gras | — | `<B>Important</B>` |
-| `<I>` | Italic | Texte en italique | — | `<I>HTML</I>` |
-| `<U>` | Underline | Texte souligné | — | `<U>Attention</U>` |
-| `<IMG>` | Image | Insère une image | `SRC`, `ALT`, `HEIGHT`, `WIDTH` | `<IMG SRC="...">` |
-| `<A>` | Anchor | Crée un lien | `HREF`, `TARGET` | `<A HREF="">` |
-| `<UL>` | Unordered List | Liste à puces | — | `<UL>` |
-| `<OL>` | Ordered List | Liste numérotée | — | `<OL>` |
-| `<LI>` | List Item | Élément d'une liste | — | `<LI>` |
-| `<TABLE>` | Table | Tableau | `BORDER`, `WIDTH`, `ALIGN` | `<TABLE>` |
-| `<TR>` | Table Row | Ligne du tableau | — | `<TR>` |
-| `<TH>` | Table Header | Cellule d'en-tête | `COLSPAN`, `ROWSPAN` | `<TH>` |
-| `<TD>` | Table Data | Cellule de données | `COLSPAN`, `ROWSPAN` | `<TD>` |
-| `<FORM>` | Form | Formulaire | `ACTION`, `METHOD` | `<FORM>` |
-| `<INPUT>` | Input | Champ de saisie | `TYPE`, `NAME`, `VALUE` | `<INPUT>` |
-| `<SELECT>` | Select | Liste déroulante | `NAME`, `SIZE`, `MULTIPLE` | `<SELECT>` |
-| `<OPTION>` | Option | Choix d'une liste | `VALUE`, `SELECTED` | `<OPTION>` |
-| `<OPTGROUP>` | Option Group | Groupe d'options | `LABEL` | `<OPTGROUP>` |
-| `<FIELDSET>` | Field Set | Groupe de champs | — | `<FIELDSET>` |
-| `<LEGEND>` | Legend | Titre d'un groupe | — | `<LEGEND>` |
-| `<TEXTAREA>` | Text Area | Zone de texte | `ROWS`, `COLS`, `NAME` | `<TEXTAREA>` |
+## Listes
 
----
+| Balise | Origine | Rôle |
+|--------|---------|------|
+| `<UL>` | *Unordered List* | Liste à puces |
+| `<OL>` | *Ordered List* | Liste numérotée |
+| `<LI>` | *List Item* | Élément de liste |
 
-## Les principaux types de `<INPUT>`
+## Liens et images
 
-| Type | Origine | Utilisation |
-|------|---------|-------------|
-| `text` | Text | Zone de texte simple |
-| `password` | Password | Mot de passe masqué |
-| `radio` | Radio Button | Choix unique |
-| `checkbox` | Check Box | Plusieurs choix |
-| `submit` | Submit | Envoi du formulaire |
-| `reset` | Reset | Réinitialisation |
-| `button` | Button | Bouton classique |
-| `image` | Image | Bouton sous forme d'image |
-| `file` | File | Sélection d'un fichier |
-| `hidden` | Hidden | Champ invisible |
+| Balise | Origine | Rôle | Attributs du cours |
+|--------|---------|------|--------------------|
+| `<A>` | *Anchor* | Lien, ou étiquette d'ancre | `HREF`, `TITLE`, `TARGET`, `NAME` |
+| `<IMG>` | *Image* | Image (orpheline) | `SRC`, `ALT`, `WIDTH`, `HEIGHT`, `BORDER`, `ALIGN` |
 
----
+## Tableaux
 
-## À retenir
+| Balise | Origine | Rôle | Attributs du cours |
+|--------|---------|------|--------------------|
+| `<TABLE>` | *Table* | Tableau | `BORDER`, `WIDTH`, `BGCOLOR` |
+| `<CAPTION>` | *Caption* | Titre du tableau | `ALIGN` (`TOP`, `BOTTOM`) |
+| `<TR>` | *Table Row* | Ligne | `ALIGN`, `VALIGN` |
+| `<TH>` | *Table Header* | Cellule d'en-tête | `COLSPAN`, `ROWSPAN`, `ALIGN`, `VALIGN` |
+| `<TD>` | *Table Data* | Cellule | `ALIGN`, `VALIGN`, `COLSPAN`, `ROWSPAN`, `WIDTH` |
 
-!!! success "Les balises les plus faciles à retenir"
+## Feuilles de style
 
-    La plupart des balises HTML correspondent simplement à un mot anglais :
+| Code | Rôle |
+|------|------|
+| `STYLE="…"` | Attribut : style local d'une balise |
+| `<STYLE> … </STYLE>` | Styles globaux, dans `<HEAD>` |
+| `CLASS="nom"` | Attribut : applique une classe définie dans `<STYLE>` |
 
-    - **Head** → `<HEAD>`
-    - **Body** → `<BODY>`
-    - **Paragraph** → `<P>`
-    - **Image** → `<IMG>`
-    - **Anchor** → `<A>`
-    - **Table** → `<TABLE>`
-    - **Table Row** → `<TR>`
-    - **Table Header** → `<TH>`
-    - **Table Data** → `<TD>`
-    - **Form** → `<FORM>`
-    - **Input** → `<INPUT>`
-    - **Select** → `<SELECT>`
-    - **Option** → `<OPTION>`
-    - **Field Set** → `<FIELDSET>`
-    - **Legend** → `<LEGEND>`
-    - **Text Area** → `<TEXTAREA>`
+## Caractères spéciaux
 
-    Une fois ces correspondances mémorisées, il devient beaucoup plus simple de retrouver naturellement les balises HTML.
+| Code | Donne | Code | Donne |
+|------|-------|------|-------|
+| `&lt;` | < | `&eacute;` | é |
+| `&gt;` | > | `&egrave;` | è |
+| `&amp;` | & | `&ecirc;` | ê |
+| `&nbsp;` | espace | `&agrave;` | à |
+| `&copy;` | © | `&ccedil;` | ç |
+| `&#171;` | « | `&#187;` | » |
+
+## Bonus (hors programme) : formulaires
+
+| Balise | Origine | Rôle |
+|--------|---------|------|
+| `<FORM>` | *Form* | Formulaire (`ACTION`, `METHOD`, `ENCTYPE`) |
+| `<INPUT>` | *Input* | Champ (`TYPE`, `NAME`, `VALUE`…) |
+| `<SELECT>` / `<OPTION>` | *Select* / *Option* | Liste déroulante et ses choix |
+| `<OPTGROUP>` | *Option Group* | Groupe d'options |
+| `<TEXTAREA>` | *Text Area* | Zone de texte sur plusieurs lignes |
+| `<FIELDSET>` / `<LEGEND>` | *Field Set* / *Legend* | Groupe de champs et son titre |

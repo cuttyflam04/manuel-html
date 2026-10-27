@@ -1,339 +1,215 @@
-# Annexe A — Erreurs fréquentes des débutants en HTML
+# Annexe A — Les erreurs fréquentes
 
-## Introduction
-
-Lors des premiers exercices en HTML, certaines erreurs reviennent très souvent.
-
-Bien qu'elles soient généralement faciles à corriger, elles peuvent empêcher le navigateur d'afficher correctement la page Web.
-
-Cette annexe présente les erreurs les plus courantes ainsi que les solutions permettant de les éviter. :contentReference[oaicite:0]{index=0}
-
----
+Les mêmes erreurs reviennent dans presque tous les premiers TP. Elles sont faciles à corriger, à condition de savoir les reconnaître. Rappel : le navigateur est **tolérant**, il affiche souvent quelque chose même quand le code est faux. Une page qui « s'affiche » n'est donc pas forcément correcte.
 
 ## 1. Oublier de fermer une balise
 
-Certaines balises possèdent obligatoirement une balise de fermeture.
+=== "Incorrect"
 
-### ❌ Incorrect
+    ```html
+    <P>Bienvenue sur mon site.
+    <P><B>Attention : tout le reste est en gras.
+    <P>Même ce paragraphe.
+    ```
 
-```html
-<P>
+=== "Correct"
 
-Bienvenue sur mon site.
-```
+    ```html
+    <P>Bienvenue sur mon site.</P>
+    <P><B>Attention :</B> seul ce mot est en gras.</P>
+    <P>Ce paragraphe est normal.</P>
+    ```
 
-### ✅ Correct
+## 2. Mal imbriquer les balises
 
-```html
-<P>
+La dernière balise ouverte est la **première fermée**.
 
-Bienvenue sur mon site.
+=== "Incorrect"
 
-</P>
-```
+    ```html
+    <B><I>Texte</B></I>
+    ```
 
----
+=== "Correct"
 
-## 2. Mal placer les balises `<HEAD>` et `<BODY>`
+    ```html
+    <B><I>Texte</I></B>
+    ```
 
-Le contenu visible de la page doit toujours être placé dans la balise `<BODY>`.
+## 3. Mettre du contenu visible dans `<HEAD>`
 
-### ❌ Incorrect
+Tout ce qui doit s'afficher va dans `<BODY>`.
 
-```html
-<HEAD>
+=== "Incorrect"
 
-    <H1>Bienvenue</H1>
+    ```html
+    <HEAD>
+        <H1>Bienvenue</H1>
+    </HEAD>
+    ```
 
-</HEAD>
-```
+=== "Correct"
 
-### ✅ Correct
+    ```html
+    <HEAD>
+        <TITLE>Ma page</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>Bienvenue</H1>
+    </BODY>
+    ```
 
-```html
-<HEAD>
+## 4. Oublier le doctype ou le titre
 
-    <TITLE>Ma page</TITLE>
+Chaque page commence par `<!DOCTYPE html>` et possède un `<TITLE>` dans son en-tête.
 
-</HEAD>
+## 5. Utiliser des guillemets typographiques
 
-<BODY>
+Les traitements de texte (et certaines diapositives) remplacent `"` par `“ ”` ou `‘’`. Le HTML ne reconnaît que les **guillemets droits** du clavier.
 
-    <H1>Bienvenue</H1>
+=== "Incorrect"
 
-</BODY>
-```
+    ```text
+    <BODY BGCOLOR=‘’yellow’’>
+    ```
 
----
+=== "Correct"
 
-## 3. Oublier le titre de la page
+    ```html
+    <BODY BGCOLOR="yellow">
+    ```
 
-Une page HTML devrait toujours contenir une balise `<TITLE>`.
+!!! tip "Astuce"
 
-### ✅ Correct
+    N'écrivez jamais votre code dans Word. Utilisez un éditeur de texte comme Visual Studio Code ou le Bloc-notes.
 
-```html
-<TITLE>
+## 6. Écrire un `<BR>` ou du texte hors d'un paragraphe
 
-    Bibliothèque Universitaire
+Le cours précise que `<BR>` se met **à l'intérieur d'un paragraphe**.
 
-</TITLE>
-```
+=== "Moins bien"
 
----
+    ```html
+    Première ligne<BR>
+    Deuxième ligne
+    ```
 
-## 4. Les images ne s'affichent pas
+=== "Correct"
 
-Cette erreur est très fréquente.
+    ```html
+    <P>Première ligne<BR>
+    Deuxième ligne</P>
+    ```
 
-Les causes possibles sont :
+## 7. Les accents qui s'affichent mal
 
-- le nom du fichier est incorrect ;
-- l'image se trouve dans un autre dossier ;
-- l'extension est incorrecte (`.jpg`, `.png`, `.gif`, etc.) ;
-- le chemin est mal écrit.
+Si vous voyez `Ã©` à la place de `é`, l'encodage n'est pas indiqué. Deux solutions :
 
-### Exemple
+- ajouter `<META CHARSET="utf-8">` dans l'en-tête (et enregistrer le fichier en UTF-8) ;
+- ou écrire les accents avec leur code : `&eacute;`, `&egrave;`, `&agrave;`…
 
-```html
-<IMG SRC="photo.jpg">
-```
+Et pour afficher `<`, `>` ou `&`, toujours `&lt;`, `&gt;`, `&amp;`.
 
-!!! tip "À vérifier"
+## 8. Les images ne s'affichent pas
 
-    Le fichier **photo.jpg** doit exister à l'emplacement indiqué dans l'attribut `SRC`.
+Causes possibles :
 
----
-
-## 5. Oublier l'attribut `ALT`
-
-Chaque image devrait posséder un texte alternatif.
-
-### ❌ Incorrect
-
-```html
-<IMG SRC="logo.jpg">
-```
-
-### ✅ Correct
-
-```html
-<IMG
-    SRC="logo.jpg"
-    ALT="Logo de l'université">
-```
-
----
-
-## 6. Les tableaux mal construits
-
-Une cellule (`<TD>` ou `<TH>`) doit toujours être placée à l'intérieur d'une ligne (`<TR>`).
-
-### ❌ Incorrect
-
-```html
-<TABLE>
-
-    <TD>Nom</TD>
-
-</TABLE>
-```
-
-### ✅ Correct
-
-```html
-<TABLE>
-
-    <TR>
-
-        <TD>Nom</TD>
-
-    </TR>
-
-</TABLE>
-```
-
----
-
-## 7. Mauvaise utilisation de `ROWSPAN` ou `COLSPAN`
-
-La fusion des cellules doit respecter le nombre réel de lignes ou de colonnes du tableau.
-
-!!! warning "Attention"
-
-    Une valeur incorrecte peut désorganiser complètement l'affichage du tableau.
-
----
-
-## 8. Les formulaires sans balise `<FORM>`
-
-Tous les champs doivent être placés dans une balise `<FORM>`.
-
-### ❌ Incorrect
-
-```html
-<INPUT TYPE="text">
-```
-
-### ✅ Correct
-
-```html
-<FORM>
-
-    <INPUT TYPE="text">
-
-</FORM>
-```
-
----
-
-## 9. Oublier l'attribut `NAME`
-
-Sans l'attribut `NAME`, les informations saisies ne pourront pas être correctement identifiées lors de l'envoi du formulaire.
-
-### ✅ Correct
-
-```html
-<INPUT
-    TYPE="text"
-    NAME="nom">
-```
-
----
-
-## 10. Deux attributs `TYPE` dans le même `<INPUT>`
-
-Une balise `<INPUT>` ne doit contenir **qu'un seul** attribut `TYPE`.
-
-### ❌ Incorrect
-
-```html
-<INPUT
-    TYPE="Nom"
-    TYPE="text">
-```
-
-### ✅ Correct
-
-```html
-<INPUT TYPE="text">
-```
-
----
-
-## 11. Les boutons radio ne possèdent pas le même `NAME`
-
-Pour former un groupe, tous les boutons radio doivent partager le même attribut `NAME`.
-
-### ✅ Correct
-
-```html
-<INPUT
-    TYPE="radio"
-    NAME="niveau">
-
-<INPUT
-    TYPE="radio"
-    NAME="niveau">
-```
-
----
-
-## 12. Utiliser `VALUE` avec `<TEXTAREA>`
-
-La balise `<TEXTAREA>` ne possède **pas** d'attribut `VALUE`.
-
-Le texte par défaut est placé entre les deux balises.
-
-### ✅ Correct
-
-```html
-<TEXTAREA>
-
-Votre commentaire...
-
-</TEXTAREA>
-```
-
----
-
-## 13. Oublier `ENCTYPE` lors d'un envoi de fichier
-
-Lorsqu'un formulaire contient un champ `TYPE="file"`, il est recommandé d'utiliser :
-
-```html
-ENCTYPE="multipart/form-data"
-```
-
----
-
-## 14. Oublier de fermer les listes
-
-Les balises :
-
-- `<UL>` ;
-- `<OL>` ;
-- `<LI>`
-
-doivent être correctement fermées.
-
-!!! warning "Attention"
-
-    Une mauvaise imbrication rend la structure difficile à comprendre et peut provoquer un affichage incorrect.
-
----
-
-## 15. Utiliser des noms de fichiers contenant des erreurs
-
-Exemples :
-
-```text
-Photo.JPG
-photo.jpg
-PHOTO.jpg
-```
-
-Selon le système utilisé, ces noms peuvent être considérés comme différents.
+- le nom du fichier est mal écrit, ou n'a pas la même casse (`Photo.JPG` ≠ `photo.jpg`) ;
+- l'image n'est pas dans le dossier indiqué ;
+- le chemin pointe vers un dossier précis de **votre** disque dur : il ne fonctionnera plus sur un autre ordinateur ni sur un serveur. Utilisez des **chemins relatifs** (`images/photo.jpg`).
 
 !!! tip "Bonne pratique"
 
-    Utilisez des noms de fichiers :
+    Des noms de fichiers simples : sans espaces, sans accents, en minuscules.
 
-    - simples ;
-    - sans espaces ;
-    - sans caractères spéciaux ;
-    - de préférence en minuscules.
+## 9. Oublier `ALT`
 
----
+Chaque image a un texte alternatif, vide si elle est purement décorative.
 
-## Conseils pour éviter les erreurs
+```html
+<IMG SRC="logo.gif" ALT="Logo de l'université">
+```
 
-!!! success "Bonnes pratiques"
+## 10. Un lien externe sans `http://`
 
-    - Fermer toutes les balises.
+=== "Incorrect"
 
-    - Indenter correctement le code.
+    ```html
+    <A HREF="www.google.fr">Google</A>
+    ```
 
-    - Utiliser des noms de fichiers simples.
+=== "Correct"
 
-    - Vérifier le chemin des images.
+    ```html
+    <A HREF="http://www.google.fr">Google</A>
+    ```
 
-    - Tester régulièrement la page dans le navigateur.
+Sans le protocole, le navigateur cherche un fichier nommé `www.google.fr` dans votre dossier.
 
-    - Corriger les erreurs une par une.
+## 11. Une ancre qui ne mène nulle part
 
-    - Relire le code avant de l'enregistrer.
+Le nom après `#` doit être **exactement** celui de l'étiquette (`NAME` ou `ID`), majuscules comprises.
 
----
+```html
+<A HREF="#horaires">Horaires</A>
+…
+<H2 ID="horaires">Horaires</H2>
+```
 
-## Conclusion
+## 12. Des listes mal construites
 
-La majorité des erreurs rencontrées par les débutants proviennent d'oublis ou de fautes de syntaxe.
+`<UL>` et `<OL>` ne contiennent que des `<LI>`. Une sous-liste se place **dans** un `<LI>`.
 
-Avec une bonne organisation du code, une indentation claire et des tests réguliers, ces erreurs deviennent beaucoup plus faciles à identifier et à corriger.
+=== "Incorrect"
 
----
+    ```html
+    <UL>
+        Mes cours :
+        <LI>HTML</LI>
+    </UL>
+    ```
 
-⬅️ **Précédent :** La mise en forme d'une page HTML
+=== "Correct"
 
-🏁 **Fin du manuel HTML**
+    ```html
+    <P>Mes cours :</P>
+    <UL>
+        <LI>HTML</LI>
+    </UL>
+    ```
+
+## 13. Des tableaux mal construits
+
+Une cellule est toujours dans une ligne, et chaque ligne a le même nombre de cellules, en comptant les fusions.
+
+=== "Incorrect"
+
+    ```html
+    <TABLE BORDER="1">
+        <TD>Nom</TD>
+    </TABLE>
+    ```
+
+=== "Correct"
+
+    ```html
+    <TABLE BORDER="1">
+        <TR>
+            <TD>Nom</TD>
+        </TR>
+    </TABLE>
+    ```
+
+## 14. Confondre `ALIGN` et `VALIGN`
+
+`ALIGN` est horizontal (`LEFT`, `CENTER`, `RIGHT`), `VALIGN` est vertical (`TOP`, `MIDDLE`, `BOTTOM`). `ALIGN="MIDDLE"` sur une cellule ne centre rien.
+
+## Pour éviter les erreurs
+
+!!! success "Les bons réflexes"
+
+    - Fermer chaque balise dès qu'on l'ouvre, puis écrire le contenu entre les deux.
+    - Indenter son code.
+    - Tester **souvent** dans le navigateur, pas seulement à la fin.
+    - Corriger une erreur à la fois, en commençant par le haut.
+    - Utiliser des noms de fichiers simples et des chemins relatifs.

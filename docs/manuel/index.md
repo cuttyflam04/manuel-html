@@ -1,96 +1,57 @@
-# Manuel HTML
+# Présentation du manuel
 
-Bienvenue dans le **Manuel HTML**, un support de cours conçu pour accompagner les étudiants dans la découverte du développement Web.
+Ce manuel reprend le cours de HTML de Dr Mariame Niang (« Évolution et Écosystème Web », UAM, 2025-2026) sous une forme plus pratique : lisible sur téléphone, avec le rendu de chaque exemple et des exercices corrigés automatiquement.
 
-Ce manuel présente progressivement les principales notions du **HTML classique**, à travers des explications simples, des exemples détaillés et des exercices d'application.
+## Un principe : le cours, rien que le cours
 
-L'objectif n'est pas seulement d'apprendre des balises par cœur, mais de comprendre leur rôle et de savoir les utiliser pour construire des pages Web complètes.
+Il existe des milliers de tutoriels HTML. Celui-ci a une seule règle : **il ne contient que ce qui a été vu en classe**, avec le vocabulaire et le style d'écriture du cours.
 
----
+- Les balises sont écrites **en majuscules**, comme en TP (`<BODY>`, `<TABLE>`).
+- On utilise le **HTML classique** du cours : attributs `BGCOLOR`, `ALIGN`, balise `<FONT>`… Les sites modernes font la même chose avec le CSS (chapitre 8), mais ce sont bien ces balises qui sont au programme.
+- Le chapitre sur les **formulaires** n'est pas dans le support : il est rangé à part, dans un **bonus** clairement signalé.
 
-## À qui s'adresse ce manuel ?
+## Ce que vous saurez faire
 
-Ce cours est destiné :
+À la fin du manuel, vous saurez :
 
-- aux étudiants découvrant le développement Web ;
-- aux débutants souhaitant apprendre le HTML pas à pas ;
-- à toute personne désirant acquérir des bases solides avant d'étudier le CSS et JavaScript.
+- expliquer le fonctionnement du Web (client, serveur, HTTP) ;
+- écrire la structure complète d'une page HTML ;
+- mettre en forme du texte, écrire les accents et les caractères spéciaux ;
+- créer des listes, des liens, des images et des tableaux ;
+- appliquer des styles avec les feuilles de style.
 
-Aucune connaissance préalable en programmation n'est nécessaire.
-
----
-
-## Ce que vous apprendrez
-
-À la fin de ce manuel, vous serez capable de :
-
-- créer une page HTML complète ;
-- structurer correctement un document HTML ;
-- créer des listes et des tableaux ;
-- concevoir des formulaires interactifs ;
-- insérer des liens hypertextes et des images ;
-- mettre en forme une page avec les attributs du HTML classique ;
-- identifier et corriger les erreurs les plus fréquentes.
-
----
-
-## Organisation du manuel
-
-Le contenu est organisé de manière progressive.
+## Organisation
 
 | Chapitre | Contenu |
-|----------|----------|
-| **Chapitre 1** | Les bases du HTML |
-| **Chapitre 2** | Les listes HTML |
-| **Chapitre 3** | Les tableaux HTML |
-| **Chapitre 4** | Les formulaires HTML |
-| **Chapitre 5** | Les liens hypertextes |
-| **Chapitre 6** | Les images |
-| **Chapitre 7** | La mise en forme d'une page HTML |
-| **Annexe A** | Les erreurs fréquentes des débutants |
-| **Annexe B** | Tableau récapitulatif des balises HTML |
+|----------|---------|
+| [1. Le Web et le HTML](chapitre1/index.md) | Le Web, HTTP, l'histoire du HTML, les balises et les attributs |
+| [2. La structure d'une page](chapitre2/index.md) | Doctype, `<HEAD>`, `<BODY>`, `<TITLE>`, `<META>`, couleurs, commentaires |
+| [3. Le texte](chapitre3/index.md) | Paragraphes, titres, mise en valeur, `<FONT>`, caractères spéciaux |
+| [4. Les listes](chapitre4/index.md) | `<UL>`, `<OL>`, `<LI>`, listes imbriquées |
+| [5. Les liens](chapitre5/index.md) | `<A>`, URL absolues et relatives, ancres, `mailto:` |
+| [6. Les images](chapitre6/index.md) | `<IMG>` et ses attributs |
+| [7. Les tableaux](chapitre7/index.md) | `<TABLE>`, `<TR>`, `<TD>`, `<TH>`, fusions |
+| [8. Les feuilles de style](chapitre8/index.md) | `STYLE`, `<STYLE>`, classes |
+| [Bonus : formulaires](bonus-formulaires/index.md) | Hors programme |
+| [Annexe A](annexes/annexe-a.md) | Les erreurs fréquentes |
+| [Annexe B](annexes/annexe-b.md) | Le récapitulatif des balises |
+| [Annexe C](annexes/annexe-c.md) | Les corrections du support de cours |
 
----
+## Comment lire un chapitre
 
-## Conseils de lecture
+Chaque chapitre contient :
 
-Pour profiter pleinement de ce manuel :
+- **des exemples** : le code, puis son rendu dans un faux navigateur. Le bouton *Modifier le code* le rend modifiable ;
+- **des encadrés « Dans le support de cours »** quand le support contient une coquille ;
+- **des exercices interactifs** : écrivez votre code, la liste de vérification se coche au fur et à mesure ;
+- **un quiz** pour vérifier vos acquis.
 
-- lisez les chapitres dans l'ordre ;
-- reproduisez tous les exemples dans Visual Studio Code ;
-- testez régulièrement votre code dans un navigateur ;
-- réalisez les exercices proposés à la fin de chaque chapitre.
+!!! tip "Le meilleur conseil"
 
-Le développement Web s'apprend principalement en pratiquant.
+    Refaites chaque exercice **dans Visual Studio Code**, avec un vrai fichier `.html` ouvert dans votre navigateur. C'est comme ça qu'on passe le TP et l'examen.
 
-!!! tip "Conseil"
+## Ce qu'il vous faut
 
-    N'hésitez pas à modifier les exemples proposés dans ce manuel.
-
-    Changer une couleur, ajouter une image ou modifier un tableau est souvent le meilleur moyen de comprendre le fonctionnement du HTML.
-
----
-
-## Prérequis
-
-Avant de commencer, assurez-vous de disposer :
-
-- d'un éditeur de texte (Visual Studio Code recommandé) ;
-- d'un navigateur Web récent ;
-- d'un dossier de travail dans lequel enregistrer vos pages HTML.
-
----
-
-## Bonne lecture !
-
-Vous êtes maintenant prêt à découvrir les bases du langage HTML.
-
-Le premier chapitre présente la structure d'un document HTML et les principales balises indispensables pour créer une première page Web.
-
----
-
-<div style="text-align:center">
-
-## 👉 Commencez par le **Chapitre 1**
-
-</div>
+- un éditeur de texte (Visual Studio Code recommandé, ou le Bloc-notes) ;
+- un navigateur Web ;
+- un dossier de travail pour vos pages `.html`.

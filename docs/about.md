@@ -1,94 +1,39 @@
 # À propos
 
-Bienvenue dans le **Manuel HTML**, un support pédagogique conçu pour accompagner les étudiants dans leur apprentissage des bases du développement Web.
+Ce manuel a été écrit par **Flamme**, étudiant en L1 à l'Université Amadou Mahtar Mbow, pour ses camarades. Il suit le cours « Évolution et Écosystème Web » de **Dr Mariame Niang** (2025-2026).
 
-Ce manuel a été réalisé dans le cadre d'un cours d'initiation au **langage HTML**. Son objectif est de proposer un contenu clair, progressif et illustré afin de faciliter la compréhension des principaux concepts.
+## Pourquoi ce manuel ?
 
----
+Les tutoriels HTML ne manquent pas, mais aucun ne suit **notre** cours : les mêmes balises, les mêmes exemples, le même ordre. Ici, tout est **contextualisé** : ce qui a été vu en classe, et rien de plus.
 
-## Objectifs du manuel
+## Le HTML classique
 
-Ce manuel a pour objectif de permettre au lecteur de :
+Ce manuel enseigne le **HTML classique**, comme le programme. Certaines balises et attributs (`<FONT>`, `<CENTER>`, `BGCOLOR`, `ALIGN`…) sont aujourd'hui remplacés par le CSS dans les sites modernes. Ils restent au programme et permettent de bien comprendre les bases.
 
-- comprendre la structure d'un document HTML ;
-- créer des pages Web simples et bien organisées ;
-- utiliser les principales balises HTML classiques ;
-- réaliser des tableaux, des listes, des formulaires et des liens hypertextes ;
-- insérer des images et mettre en forme une page ;
-- acquérir des bases solides avant l'apprentissage du CSS et du JavaScript.
+## Choisir son style
 
----
+Le bouton en forme de palette, en haut à droite, change l'apparence du manuel :
 
-## Public concerné
+- **Classique** : sobre et lisible ;
+- **Sous-verre** : les aplats vifs et les cernes noirs de la peinture sous verre sénégalaise ;
+- **Car rapide** : le jaune, le bleu et les filets peints des cars rapides de Dakar ;
+- **Notice de montage** : un livret d'instructions, avec ses grands numéros d'étape.
 
-Ce manuel s'adresse principalement :
+Chaque style existe en clair et en sombre. Le contenu est le même partout. Le style **Classique** est celui par défaut.
 
-- aux étudiants débutant en développement Web ;
-- aux personnes souhaitant découvrir le HTML ;
-- à toute personne désirant revoir les bases du langage HTML.
+Sous-verre, Car rapide et Notice de montage chargent leurs polices depuis Internet. Sans connexion, le manuel reste utilisable, mais avec une police de secours.
 
-Aucun prérequis en programmation n'est nécessaire.
+## Vos données
 
----
-
-## Technologies utilisées
-
-Ce manuel a été rédigé à l'aide des outils suivants :
-
-- **HTML** (contenu pédagogique)
-- **Markdown**
-- **Material for MkDocs**
-- **Visual Studio Code**
-
-Le site est entièrement statique et peut être consulté depuis n'importe quel navigateur Web moderne.
-
----
-
-## Remarque importante
-
-!!! warning "HTML classique"
-
-    Ce manuel enseigne volontairement le **HTML classique**, conformément au programme du cours.
-
-    Certaines balises et certains attributs présentés (`ALIGN`, `BGCOLOR`, `<B>`, etc.) sont aujourd'hui remplacés par le **CSS** dans le développement Web moderne.
-
-    Ils restent néanmoins très utiles pour comprendre les bases du HTML et sont encore largement utilisés dans les exercices d'initiation.
-
----
-
-## Conseils aux étudiants
-
-Pour progresser efficacement :
-
-- reproduisez tous les exemples proposés ;
-- modifiez le code afin d'observer les changements ;
-- réalisez les exercices à la fin de chaque chapitre ;
-- consultez les annexes lorsque vous rencontrez une difficulté.
-
-L'apprentissage du développement Web repose avant tout sur la pratique.
-
----
+Votre code d'exercice, votre progression et votre style sont enregistrés **uniquement dans votre navigateur**. Rien n'est envoyé nulle part. Si vous videz les données du site, ou changez d'appareil, la progression repart de zéro.
 
 ## Versions
 
-| Élément | Version |
-|---------|---------:|
-| Manuel | 1.0 |
-| Langage étudié | HTML classique |
-| Format | Site Web pédagogique |
+| Version | Changements |
+|---------|-------------|
+| 2.0 | Quatre styles au choix. Contenu réaligné sur le support de cours, coquilles du support signalées, aperçus en direct, exercices corrigés automatiquement, quiz, nouveau design. |
+| 1.0 | Première version du manuel. |
 
----
+## Signaler une erreur
 
-## Remerciements
-
-Ce manuel a été conçu dans le but de proposer un support de cours clair, accessible et évolutif.
-
-Il pourra être enrichi au fil du temps par de nouveaux chapitres, des exercices supplémentaires et des améliorations pédagogiques.
-
----
-
-<div align="center">
-
-**Bon apprentissage et bon développement !** 🚀
-
-</div>
+Une faute, un exemple qui ne marche pas ? Ouvrez un ticket sur le [dépôt GitHub du manuel](https://github.com/cuttyflam04/manuel-html/issues).

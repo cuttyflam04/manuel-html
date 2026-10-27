@@ -1,103 +1,100 @@
 site_name: Manuel HTML
-site_description: Manuel interactif de HTML - UAM
+site_description: Le cours de HTML de l'UAM, avec aperçus en direct et exercices corrigés instantanément.
 site_author: Flamme
-site_url: https://flamme.github.io/manuel-html/
+site_url: https://cuttyflam04.github.io/manuel-html/
+repo_url: https://github.com/cuttyflam04/manuel-html
+repo_name: manuel-html
+edit_uri: ""
 
 nav:
-
   - Accueil: index.md
-
-  - Manuel:
+  - Le manuel:
       - Présentation: manuel/index.md
-      - Chapitre 1: manuel/chapitre1/index.md
-      - Chapitre 2: manuel/chapitre2/index.md
-      - Chapitre 3: manuel/chapitre3/index.md
-      - Chapitre 4: manuel/chapitre4/index.md
-      - Chapitre 5: manuel/chapitre5/index.md
-      - Chapitre 6: manuel/chapitre6/index.md
-      - Chapitre 7: manuel/chapitre7/index.md
+      - 1. Le Web et le HTML: manuel/chapitre1/index.md
+      - 2. Structure d'une page: manuel/chapitre2/index.md
+      - 3. Le texte: manuel/chapitre3/index.md
+      - 4. Les listes: manuel/chapitre4/index.md
+      - 5. Les liens: manuel/chapitre5/index.md
+      - 6. Les images: manuel/chapitre6/index.md
+      - 7. Les tableaux: manuel/chapitre7/index.md
+      - 8. Les feuilles de style: manuel/chapitre8/index.md
+  - Bonus:
+      - Les formulaires: manuel/bonus-formulaires/index.md
   - Annexes:
-      - Annexe A: manuel/annexes/annexe-a.md
-      - Annexe B: manuel/annexes/annexe-b.md
+      - A. Erreurs fréquentes: manuel/annexes/annexe-a.md
+      - B. Récapitulatif des balises: manuel/annexes/annexe-b.md
+      - C. Corrections du support: manuel/annexes/annexe-c.md
   - À propos: about.md
 
 theme:
   name: material
-
+  custom_dir: overrides
   language: fr
-
+  favicon: img/favicon.ico
+  icon:
+    logo: material/code-tags
+    repo: fontawesome/brands/github
+    admonition:
+      example: material/eye-outline
+      question: material/pencil-outline
+      success: material/check-circle-outline
+      danger: material/alert-octagon-outline
+  font:
+    text: Atkinson Hyperlegible
+    code: JetBrains Mono
   palette:
-
-    - scheme: default
-      primary: blue
-      accent: light blue
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Thème clair
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Mode sombre
-
-    - scheme: slate
-      primary: blue
-      accent: light blue
+        name: Thème sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/weather-sunny
-        name: Mode clair
-
+        icon: material/brightness-auto
+        name: Thème automatique
   features:
-
-    - navigation.tabs
-
     - navigation.sections
-
     - navigation.expand
-
     - navigation.top
-
     - navigation.footer
-
     - navigation.instant
-
+    - navigation.instant.progress
     - navigation.tracking
-
     - navigation.indexes
-
     - toc.follow
-
     - search.suggest
-
     - search.highlight
-
     - content.code.copy
 
-    - content.tabs.link
-
 extra_css:
-  - stylesheets/home.css
-  - stylesheets/manual.css
-  - stylesheets/code.css
+  - stylesheets/manuel.css
+  - stylesheets/styles.css
 
 extra_javascript:
-  - javascripts/preview.js
+  - javascripts/exercices.js
+  - javascripts/manuel.js
 
 markdown_extensions:
-
   - admonition
-
   - attr_list
-
   - md_in_html
-
   - tables
-
+  - def_list
   - pymdownx.highlight
-
   - pymdownx.superfences
-
   - pymdownx.inlinehilite
-
+  - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
-
-  - pymdownx.details
-
   - toc:
       permalink: true
+      permalink_title: Lien vers cette section
