@@ -61,6 +61,10 @@
     ta.spellcheck = false;
     ta.setAttribute("autocapitalize", "off");
     ta.setAttribute("autocomplete", "off");
+    // les correcteurs (Grammarly, etc.) n'ont rien à faire dans du code
+    ta.setAttribute("data-gramm", "false");
+    ta.setAttribute("data-gramm_editor", "false");
+    ta.setAttribute("data-enable-grammarly", "false");
     ta.setAttribute("aria-label", label || "Code HTML modifiable");
     ta.value = initial;
     wrap.append(hl, ta);

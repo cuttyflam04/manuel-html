@@ -127,6 +127,8 @@ L'attribut `ALIGN` s'utilise aussi sur les paragraphes et les titres, avec les v
     <HR SIZE="6" WIDTH="80%">
     ```
 
+Remarquez l'aspect des lignes : par défaut, le navigateur dessine une ligne `<HR>` **en relief**, comme une rainure grise. Plus `SIZE` est grand, plus on voit qu'elle est « creuse ». C'est normal : c'est le rendu de base du HTML, sans feuille de style.
+
 !!! support "Dans le support de cours"
 
     Le support écrit `align="left | rigth"`. L'orthographe correcte est **`right`** : avec `rigth`, l'attribut est ignoré.

@@ -282,17 +282,19 @@ input, textarea { caret-color: var(--mh-accent); }
 @keyframes mh-glisse { from { opacity: 0; transform: translateY(-4px); } }
 
 /* boutons compacts */
-.md-typeset .md-button, .md-button {
+.md-typeset .md-button, .md-button,
+.md-typeset .md-button:focus, .md-button:focus {
   display: inline-flex; align-items: center; gap: .4em; font-size: .68rem; font-weight: 700;
   padding: .32em .8em; border-radius: 8px; border: 1px solid var(--mh-ligne-forte);
   color: var(--md-default-fg-color); background: var(--md-default-bg-color); cursor: pointer;
   transition: background .15s, border-color .15s, color .15s;
 }
 .md-typeset .md-button:hover, .md-button:hover { border-color: var(--mh-accent); color: var(--mh-accent-fort); background: var(--mh-accent-doux); }
-.md-typeset .md-button--primary, .md-button--primary {
+.md-typeset .md-button--primary, .md-button--primary,
+.md-typeset .md-button--primary:focus, .md-button--primary:focus {
   background: var(--mh-accent); border-color: var(--mh-accent); color: #fff;
 }
-[data-md-color-scheme="slate"] .md-button--primary { color: #0b1512; }
+html:not([data-mh-style]) [data-md-color-scheme="slate"] .md-typeset :is(.md-button--primary, .md-button--primary:focus, .md-button--primary:hover), html:not([data-mh-style]) [data-md-color-scheme="slate"] :is(.md-button--primary, .md-button--primary:focus, .md-button--primary:hover) { color: #0b1512; }
 .md-typeset .md-button--primary:hover, .md-button--primary:hover { background: var(--mh-accent-fort); border-color: var(--mh-accent-fort); color: #fff; }
 .md-button svg { width: 1.15em; height: 1.15em; flex: none; }
 .apercu-btn { font-size: .62rem !important; padding: .22em .6em !important; }

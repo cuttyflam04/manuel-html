@@ -78,12 +78,12 @@ theme:
 # ?v=… : changez ce numéro à chaque publication pour que les navigateurs
 # rechargent les styles et scripts au lieu d'utiliser leur ancienne copie.
 extra_css:
-  - stylesheets/manuel.css?v=2.0.3
-  - stylesheets/styles.css?v=2.0.3
+  - stylesheets/manuel.css?v=2.0.4
+  - stylesheets/styles.css?v=2.0.4
 
 extra_javascript:
-  - javascripts/exercices.js?v=2.0.3
-  - javascripts/manuel.js?v=2.0.3
+  - javascripts/exercices.js?v=2.0.4
+  - javascripts/manuel.js?v=2.0.4
 
 markdown_extensions:
   - admonition
