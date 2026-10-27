@@ -311,3 +311,6 @@
 @media screen and (max-width: 44.9375em) {
   [data-mh-style="notice"] .md-content { margin: .6rem .3rem 1rem; }
 }
+
+/* Bordure d'aperçu de 2px dans les trois styles : la barre recule d'autant */
+[data-mh-style] .md-typeset .admonition .apercu-barre { padding-left: calc(1.4rem - 2px); }
