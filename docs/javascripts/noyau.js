@@ -239,6 +239,7 @@
   /* ---------- Aperçu : un faux navigateur qui affiche le code ---------- */
 
   const PREVIEWS = new Set();
+  const imagesSig = () => Dossier.list({ type: "image" }).map((f) => f.path).join(",");
   Dossier.on(() => PREVIEWS.forEach((p) => {
     if (!p.node.isConnected) { PREVIEWS.delete(p); return; }
     p.refresh();
@@ -265,6 +266,17 @@
     const tab = el("span", "apercu-onglet");
     const actions = el("span", "apercu-actions");
     bar.append(dots, tab, actions);
+    // Mode site (atelier) : plusieurs pages du dossier, barre d'adresse et bouton Retour.
+    const site = !!opts.site;
+    let page = opts.page || "index.html", lastSig = null, feuillesManquantes = [];
+    const historique = [];
+    const adresse = el("span", "apercu-adresse");
+    const btnRetour = el("button", "md-button apercu-btn apercu-retour",
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Retour</span>');
+    btnRetour.type = "button";
+    btnRetour.setAttribute("aria-label", "Revenir à la page précédente");
+    btnRetour.hidden = true;
+    if (site) { box.classList.add("apercu-site"); tab.after(adresse); actions.prepend(btnRetour); }
     const frame = el("iframe", "apercu-cadre");
     frame.setAttribute("title", "Rendu du code dans le navigateur");
     frame.setAttribute("loading", "lazy");
@@ -392,7 +404,7 @@
         img.addEventListener("error", fail);
         img.addEventListener("load", fit);
         const src = img.getAttribute("src");
-        const r = Dossier.resolve(src);
+        const r = Dossier.resolve(src, site ? page : "");
         if (r.fichier) { img.src = r.fichier.url; return; }
         if (r.casse) soucis.push("<code>" + esc(src) + "</code> introuvable, mais <code>" + esc(r.casse) + "</code> existe : attention aux majuscules et minuscules.");
         else if (r.dehors) soucis.push("<code>" + esc(src) + "</code> remonte au-dessus du dossier de la page : il y a un <code>../</code> de trop.");
@@ -405,11 +417,12 @@
       });
       d.querySelectorAll("[background]").forEach((n) => {
         const src = n.getAttribute("background");
-        const r = Dossier.resolve(src);
+        const r = Dossier.resolve(src, site ? page : "");
         if (r.fichier) n.setAttribute("background", r.fichier.url);
         else if (r.casse) soucis.push("Fond <code>" + esc(src) + "</code> introuvable, mais <code>" + esc(r.casse) + "</code> existe : attention aux majuscules.");
         else if (!r.externe && Dossier.list({ type: "image" }).length) soucis.push("Image de fond <code>" + esc(src) + "</code> absente de votre dossier.");
       });
+      feuillesManquantes.forEach((h) => soucis.push("Feuille de style <code>" + esc(h) + "</code> introuvable dans ton dossier."));
       if (soucis.length) showNote(soucis.join("<br>"));
       // Déposer une image directement dans le rendu
       d.addEventListener("dragover", (e) => { if (isFileDrag(e)) { e.preventDefault(); box.classList.add("depot"); } });
@@ -428,6 +441,14 @@
             showNote("Ancre trouvée : le navigateur descend jusqu'à <code>" + esc(href) + "</code>.");
           } else showNote("Aucune ancre <code>" + esc(id) + "</code> dans cette page.");
           return;
+        }
+        if (site && !/^[a-z][a-z0-9+.-]*:|^\/\//i.test(href)) {
+          const r = Dossier.resolve(href, page);
+          if (r.fichier && /\.html?$/i.test(r.path)) { api.ouvrir(r.path, true); return; }
+          if (r.fichier) return showNote("Ce lien ouvrirait le fichier <code>" + esc(r.path) + "</code>.");
+          if (r.casse) return showNote("<code>" + esc(href) + "</code> n'existe pas, mais <code>" + esc(r.casse) + "</code> oui : attention aux majuscules et minuscules.");
+          if (r.dehors) return showNote("<code>" + esc(href) + "</code> remonte au-dessus du dossier du site : il y a un <code>../</code> de trop.");
+          return showNote("Cette page n'existe pas dans ton dossier : <code>" + esc(href) + "</code>." + (r.proche ? " Voulais-tu dire <code>" + esc(r.proche) + "</code> ?" : ""));
         }
         if (/^mailto:/i.test(href)) return showNote("Ce lien ouvrirait votre messagerie pour écrire à <code>" + esc(href.slice(7)) + "</code>.");
         if (/^tel:/i.test(href)) return showNote("Ce lien proposerait d'appeler le <code>" + esc(href.slice(4)) + "</code>.");
@@ -463,13 +484,31 @@
     const api = {
       node: box, actions,
       refresh() {
+        if (site) {
+          // Ne recharge que si la page ou les images ont changé (évite un clignotement à chaque sauvegarde).
+          const t = Dossier.lire(page);
+          if (t != null && t + "|" + imagesSig() !== lastSig) api.render(t);
+          return;
+        }
         drawPanel();
         if (last != null) api.render(last);
       },
+      ouvrir(chemin, empiler) {
+        if (empiler && chemin !== page) historique.push(page);
+        page = chemin;
+        adresse.textContent = chemin;
+        btnRetour.hidden = !historique.length;
+        const t = Dossier.lire(chemin);
+        api.render(t == null ? "" : t);
+        if (t == null) showNote("Cette page n'existe pas dans ton dossier : <code>" + esc(chemin) + "</code>.");
+        if (opts.onNavigate) opts.onNavigate(chemin);
+      },
+      get page() { return page; },
       render(src) {
         last = src;
+        lastSig = src + "|" + imagesSig();
         const aDesImages = /<img\b|\bbackground\s*=/i.test(src);
-        btnImg.hidden = !aDesImages;
+        btnImg.hidden = !aDesImages || site;
         if (!aDesImages) openPanel(false);
         if (!panel.dataset.dessine) { panel.dataset.dessine = "1"; drawPanel(); }
         note.hidden = true;
@@ -479,9 +518,20 @@
           redirect = c ? { delay: c[1], url: c[2].trim() } : { delay: "?", url: "?" };
           return "";
         });
-        frame.srcdoc = clean;
+        feuillesManquantes = [];
+        frame.srcdoc = !site ? clean : clean.replace(/<link\b[^>]*>/gi, (tag) => {
+          if (!/rel\s*=\s*["']?stylesheet/i.test(tag)) return tag;
+          const m = /href\s*=\s*["']?([^"'\s>]+)/i.exec(tag);
+          if (!m) return tag;
+          const r = MH.outils.resoudreChemin(m[1], page, Dossier.chemins());
+          if (r.fichier) return "<style>" + (Dossier.lire(r.fichier) || "") + "</style>";
+          feuillesManquantes.push(m[1]);
+          return "";
+        });
       },
     };
+    btnRetour.addEventListener("click", () => { const prev = historique.pop(); if (prev) api.ouvrir(prev, false); });
+    if (site) adresse.textContent = page;
     PREVIEWS.add(api);
     return api;
   }

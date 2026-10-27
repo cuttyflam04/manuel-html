@@ -269,6 +269,11 @@ input, textarea { caret-color: var(--mh-accent); }
   margin-bottom: -.35rem; align-self: flex-end; color: var(--md-default-fg-color); max-width: 60%;
 }
 .apercu-onglet.vide { color: var(--md-default-fg-color--light); font-style: italic; }
+.apercu-adresse {
+  flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-family: var(--mh-mono); font-size: 12px; padding: .1rem .55rem; border-radius: 6px;
+  background: var(--md-default-bg-color); border: 1px solid var(--mh-ligne); color: var(--md-default-fg-color);
+}
 .apercu-actions { margin-left: auto; display: inline-flex; gap: .3rem; flex: none; }
 .apercu-cadre { display: block; width: 100%; height: 80px; border: 0; background: #fff; color-scheme: light; }
 .apercu-note {
