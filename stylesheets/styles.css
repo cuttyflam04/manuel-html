@@ -118,7 +118,7 @@
 [data-mh-style="sousverre"] .exo-titre { font-family: "Gluten", cursive; font-size: .9rem; }
 [data-mh-style="sousverre"] .md-typeset .exo.reussi { border-color: var(--mh-ok); background: linear-gradient(158deg, color-mix(in srgb, var(--mh-ok) 10%, transparent) 0 12%, transparent 12.4%), var(--md-default-bg-color); }
 [data-mh-style="sousverre"] .md-typeset .md-button, [data-mh-style="sousverre"] .md-button { border: 2px solid var(--sv-trait); border-radius: 10px; }
-[data-mh-style="sousverre"] .md-typeset .md-button--primary, [data-mh-style="sousverre"] .md-button--primary { background: var(--sv-rouge); border-color: var(--sv-trait); color: #fff; }
+[data-mh-style="sousverre"] .md-typeset .md-button--primary, [data-mh-style="sousverre"] .md-button--primary, [data-mh-style="sousverre"] .md-typeset .md-button--primary:focus { background: var(--sv-rouge); border-color: var(--sv-trait); color: #fff; }
 [data-mh-style="sousverre"] .md-typeset .md-button:hover { background: #f6c453; color: #141414; border-color: var(--sv-trait); }
 [data-mh-style="sousverre"] .mh-num { font-family: "Gluten", cursive; color: var(--sv-rouge); font-size: 1.2rem; }
 [data-mh-style="sousverre"] .md-footer { background: var(--sv-indigo); color: #fff; border-top: 2px solid #141414; }
@@ -203,11 +203,11 @@
 [data-mh-style="carrapide"] .apercu-points i:nth-child(2) { background: var(--cr-rouge); }
 [data-mh-style="carrapide"] .apercu-points i:nth-child(3) { background: #3dbb6c; }
 [data-mh-style="carrapide"] .apercu-onglet { background: #fff; color: #0f1d3a; border-color: #fff; }
-[data-mh-style="carrapide"] .apercu-barre .md-button { background: var(--cr-jaune); color: #0f1d3a; border-color: var(--cr-jaune); }
+[data-mh-style="carrapide"] .apercu-barre .md-button, [data-mh-style="carrapide"] .apercu-barre .md-button:focus { background: var(--cr-jaune); color: #0f1d3a; border-color: var(--cr-jaune); }
 [data-mh-style="carrapide"] .md-typeset .exo { border-radius: 20px; }
 [data-mh-style="carrapide"] .exo-titre { font-family: "Bungee", sans-serif; font-weight: 400; font-size: .8rem; color: var(--mh-accent); }
 [data-mh-style="carrapide"] .md-typeset .md-button, [data-mh-style="carrapide"] .md-button { border: 2px solid var(--cr-trait); border-radius: 999px; }
-[data-mh-style="carrapide"] .md-typeset .md-button--primary, [data-mh-style="carrapide"] .md-button--primary { background: var(--cr-rouge); border-color: var(--cr-rouge); color: #fff; }
+[data-mh-style="carrapide"] .md-typeset .md-button--primary, [data-mh-style="carrapide"] .md-button--primary, [data-mh-style="carrapide"] .md-typeset .md-button--primary:focus { background: var(--cr-rouge); border-color: var(--cr-rouge); color: #fff; }
 [data-mh-style="carrapide"] .md-typeset .md-button:hover { background: var(--cr-jaune); color: #0f1d3a; border-color: var(--cr-bleu); }
 [data-mh-style="carrapide"] .mh-num { font-family: "Bungee", sans-serif; font-weight: 400; color: var(--cr-rouge); font-size: 1.1rem; }
 [data-mh-style="carrapide"] [data-md-color-scheme="slate"] .mh-num { color: #ff7a7a; }
@@ -297,7 +297,7 @@
 [data-mh-style="notice"] .exo-titre { font-family: "Archivo", sans-serif; font-weight: 900; font-size: .85rem; }
 [data-mh-style="notice"] .exo-etat { border-radius: 4px; border: 2px solid var(--nt-trait); }
 [data-mh-style="notice"] .md-typeset .md-button, [data-mh-style="notice"] .md-button { border: 2px solid var(--nt-trait); border-radius: 4px; }
-[data-mh-style="notice"] .md-typeset .md-button--primary, [data-mh-style="notice"] .md-button--primary { background: var(--nt-rouge); color: #fff; border-color: var(--nt-trait); }
+[data-mh-style="notice"] .md-typeset .md-button--primary, [data-mh-style="notice"] .md-button--primary, [data-mh-style="notice"] .md-typeset .md-button--primary:focus { background: var(--nt-rouge); color: #fff; border-color: var(--nt-trait); }
 [data-mh-style="notice"] .md-typeset .md-button:hover { background: var(--nt-jaune); color: #1a1a1a; border-color: var(--nt-trait); }
 [data-mh-style="notice"] .mh-num {
   display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; font-family: "Archivo", sans-serif; font-weight: 900;
