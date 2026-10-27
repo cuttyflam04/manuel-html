@@ -103,15 +103,19 @@
     };
   }
 
-  /* ---------- Dossier virtuel : les images de l'étudiant ----------
-     Un seul dossier pour tout le manuel, comme le dossier de travail en TP.
+  /* ---------- Dossier virtuel : images et pages de l'étudiant ----------
+     Un seul dossier pour tout le manuel, comme le dossier de travail en TP :
+     les images de « Mes images » et les pages du projet « Mon site ».
      Les fichiers restent dans le navigateur (IndexedDB) : rien n'est envoyé. */
 
   const Dossier = (() => {
-    const files = new Map(); // chemin -> { blob, url, w, h }
+    const files = new Map(); // chemin -> { blob, url, w, h } pour une image, { blob, texte } pour une page
+    const IMAGE = /\.(gif|jpe?g|png|webp|svg|bmp)$/i;
+    const typeTexte = (chemin) => /\.css$/i.test(chemin) ? "text/css" : /\.html?$/i.test(chemin) ? "text/html" : "text/plain";
+    const estImage = (chemin, blob) => (blob && /^image\//.test(blob.type)) || IMAGE.test(chemin);
     const subs = new Set();
     const LIMITE = 5 * 1024 * 1024;
-    let db = null, persistant = true;
+    let db = null, persistant = true, persistantErreur = false;
     const notify = () => subs.forEach((f) => { try { f(); } catch (e) { /* un abonné cassé n'arrête pas les autres */ } });
     const measure = (rec) => new Promise((ok) => {
       const i = new Image();
@@ -119,17 +123,28 @@
       i.onerror = () => ok();
       i.src = rec.url;
     });
-    const put = (path, blob) => {
+    const put = (path, blob, texte) => {
       const old = files.get(path);
-      if (old) URL.revokeObjectURL(old.url);
+      if (old && old.url) URL.revokeObjectURL(old.url);
+      if (!estImage(path, blob)) {
+        const rec = { blob, texte: texte != null ? texte : "" };
+        files.set(path, rec);
+        return texte != null ? Promise.resolve() : blob.text().then((t) => { rec.texte = t; }, () => {});
+      }
       const rec = { blob, url: URL.createObjectURL(blob), w: 0, h: 0 };
       files.set(path, rec);
       return measure(rec);
     };
-    const tx = (fn) => {
-      if (!db) return;
-      try { fn(db.transaction("fichiers", "readwrite").objectStore("fichiers")); } catch (e) { /* stockage plein ou bloqué */ }
-    };
+    // Écrit dans IndexedDB et attend que l'écriture soit vraiment terminée.
+    const tx = (fn) => new Promise((ok) => {
+      if (!db) return ok(false);
+      try {
+        const t = db.transaction("fichiers", "readwrite");
+        t.oncomplete = () => ok(true);
+        t.onerror = t.onabort = () => ok(false);
+        fn(t.objectStore("fichiers"));
+      } catch (e) { ok(false); /* stockage plein ou bloqué */ }
+    });
     const ready = new Promise((ok) => {
       try {
         const rq = indexedDB.open("manuel-html", 1);
@@ -152,7 +167,31 @@
       ready, LIMITE,
       get persistant() { return persistant; },
       get size() { return files.size; },
-      list() { return [...files.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([path, r]) => Object.assign({ path }, r)); },
+      list(opts) {
+        const type = (opts && opts.type) || "tout";
+        return [...files.entries()]
+          .filter(([path, r]) => type === "tout" || (type === "image") === estImage(path, r.blob))
+          .sort((a, b) => a[0].localeCompare(b[0])).map(([path, r]) => Object.assign({ path }, r));
+      },
+      chemins() { return [...files.keys()].sort(); },
+      estImage(chemin) { const r = files.get(chemin); return estImage(chemin, r && r.blob); },
+      lire(chemin) { const r = files.get(chemin); return r && !estImage(chemin, r.blob) ? r.texte : null; },
+      async ecrire(chemin, texte) {
+        chemin = clean(chemin);
+        const blob = new Blob([texte], { type: typeTexte(chemin) + ";charset=utf-8" });
+        await put(chemin, blob, texte);
+        const ok = await tx((s) => s.put({ path: chemin, blob }));
+        if (db && !ok) persistantErreur = true;
+        notify();
+        return ok;
+      },
+      async vider() {
+        files.forEach((r) => { if (r.url) URL.revokeObjectURL(r.url); });
+        files.clear();
+        await tx((s) => s.clear());
+        notify();
+      },
+      get erreurEcriture() { return persistantErreur; },
       on(f) { subs.add(f); },
       off(f) { subs.delete(f); },
       async add(file, path) {
@@ -160,14 +199,14 @@
         if (file.size > LIMITE) return "« " + file.name + " » est trop lourde (plus de 5 Mo). Réduisez-la d'abord.";
         path = clean(path || file.name);
         await put(path, file);
-        tx((s) => s.put({ path, blob: file }));
+        await tx((s) => s.put({ path, blob: file }));
         notify();
         return null;
       },
       remove(path) {
         const r = files.get(path);
         if (!r) return;
-        URL.revokeObjectURL(r.url);
+        if (r.url) URL.revokeObjectURL(r.url);
         files.delete(path);
         tx((s) => s.delete(path));
         notify();
@@ -264,7 +303,7 @@
     }
 
     function drawPanel() {
-      const files = Dossier.list();
+      const files = Dossier.list({ type: "image" });
       const compte = btnImg.querySelector(".apercu-compte");
       compte.textContent = files.length ? String(files.length) : "";
       const keepMsg = panel.querySelector(".dossier-msg") ? panel.querySelector(".dossier-msg").textContent : "";
@@ -359,7 +398,7 @@
         else if (r.dehors) soucis.push("<code>" + esc(src) + "</code> remonte au-dessus du dossier de la page : il y a un <code>../</code> de trop.");
         else if (r.disque) soucis.push("<code>" + esc(src) + "</code> pointe vers un disque dur : ce chemin ne marcherait que sur un seul ordinateur. Utilisez un chemin relatif.");
         else if (r.absent && r.proche) soucis.push("<code>" + esc(src) + "</code> n'est pas dans votre dossier. Vouliez-vous dire <code>" + esc(r.proche) + "</code> ?");
-        else if (r.absent && Dossier.size) soucis.push("<code>" + esc(src) + "</code> n'est pas dans votre dossier.");
+        else if (r.absent && Dossier.list({ type: "image" }).length) soucis.push("<code>" + esc(src) + "</code> n'est pas dans votre dossier.");
         else if (r.vide) soucis.push("Une balise <code>&lt;IMG&gt;</code> n'a pas d'attribut <code>SRC</code>.");
         if (!r.externe) fail();
         else if (img.complete && img.naturalWidth === 0) fail();
@@ -369,7 +408,7 @@
         const r = Dossier.resolve(src);
         if (r.fichier) n.setAttribute("background", r.fichier.url);
         else if (r.casse) soucis.push("Fond <code>" + esc(src) + "</code> introuvable, mais <code>" + esc(r.casse) + "</code> existe : attention aux majuscules.");
-        else if (!r.externe && Dossier.size) soucis.push("Image de fond <code>" + esc(src) + "</code> absente de votre dossier.");
+        else if (!r.externe && Dossier.list({ type: "image" }).length) soucis.push("Image de fond <code>" + esc(src) + "</code> absente de votre dossier.");
       });
       if (soucis.length) showNote(soucis.join("<br>"));
       // Déposer une image directement dans le rendu
