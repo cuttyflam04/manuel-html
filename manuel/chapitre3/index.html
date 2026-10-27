@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Manuel interactif de HTML - UAM">
+        <meta name="description" content="Le cours de HTML de l'UAM, avec aperçus en direct et exercices corrigés instantanément.">
       
       
         <meta name="author" content="Flamme">
       
       
-        <link rel="canonical" href="https://flamme.github.io/manuel-html/manuel/chapitre3/">
+        <link rel="canonical" href="https://cuttyflam04.github.io/manuel-html/manuel/chapitre3/">
       
       
         <link rel="prev" href="../chapitre2/">
@@ -24,21 +24,46 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Chapitre 3 - Manuel HTML</title>
+        <title>3. Le texte - Manuel HTML</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%209a3%203%200%200%201%203%203%203%203%200%200%201-3%203%203%203%200%200%201-3-3%203%203%200%200%201%203-3m0-4.5c5%200%209.27%203.11%2011%207.5-1.73%204.39-6%207.5-11%207.5S2.73%2016.39%201%2012c1.73-4.39%206-7.5%2011-7.5M3.18%2012a9.821%209.821%200%200%200%2017.64%200%209.821%209.821%200%200%200-17.64%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.06%209%20.94.94L5.92%2019H5v-.92zm3.6-6c-.25%200-.51.1-.7.29l-1.83%201.83%203.75%203.75%201.83-1.83c.39-.39.39-1.04%200-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6%203.19L3%2017.25V21h3.75L17.81%209.94z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202C6.5%202%202%206.5%202%2012s4.5%2010%2010%2010%2010-4.5%2010-10S17.5%202%2012%202m0%2018c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m4.59-12.42L10%2014.17l-2.59-2.58L6%2013l4%204%208-8z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M8.27%203%203%208.27v7.46L8.27%2021h7.46C17.5%2019.24%2021%2015.73%2021%2015.73V8.27L15.73%203M9.1%205h5.8L19%209.1v5.8L14.9%2019H9.1L5%2014.9V9.1m6%205.9h2v2h-2zm0-8h2v6h-2z%22/%3E%3C/svg%3E');}</style>
+
 
 
     
@@ -50,16 +75,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/home.css">
+      <link rel="stylesheet" href="../../stylesheets/manuel.css">
     
-      <link rel="stylesheet" href="../../stylesheets/manual.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/code.css">
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +90,14 @@
 
     
     
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Bungee&family=Gluten:wght@700;800&display=swap">
+  <script>
+    /* Applique le style choisi avant l'affichage, pour éviter un flash */
+    try { var s = localStorage.getItem("mh:style"); if (s) document.documentElement.setAttribute("data-mh-style", s); } catch (e) {}
+  </script>
+
   </head>
   
   
@@ -77,7 +108,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-tableaux-html" class="md-skip">
+        <a href="#le-texte-et-sa-mise-en-forme" class="md-skip">
           Aller au contenu
         </a>
       
@@ -98,12 +129,14 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapitre 3
+              3. Le texte
             
           </span>
         </div>
@@ -133,9 +166,19 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Thème clair"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Thème clair" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème sombre"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Thème sombre" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -143,10 +186,10 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème automatique"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="Thème automatique" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
       </label>
     
   
@@ -201,6 +244,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -209,99 +264,6 @@
       
       
         
-          
-            
-<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Accueil
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Manuel
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../annexes/annexe-a/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Annexes
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  À propos
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
           
         
       
@@ -316,19 +278,29 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     Manuel HTML
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -388,14 +360,13 @@
       
         
       
+        
+      
     
     
     
       
         
-        
-      
-      
         
       
     
@@ -415,7 +386,7 @@
   <span class="md-ellipsis">
     
   
-    Manuel
+    Le manuel
   
 
     
@@ -437,7 +408,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Manuel
+    Le manuel
   
 
           </label>
@@ -459,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 1
+    1. Le Web et le HTML
   
 
     
@@ -487,7 +458,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 2
+    2. Structure d'une page
   
 
     
@@ -524,7 +495,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 3
+    3. Le texte
   
 
     
@@ -542,7 +513,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 3
+    3. Le texte
   
 
     
@@ -568,10 +539,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#les-paragraphes-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Les paragraphes : &lt;P&gt;
       
     </span>
   </a>
@@ -579,22 +550,110 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-balise-table" class="md-nav__link">
+  <a href="#le-retour-a-la-ligne-br" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La balise &lt;TABLE&gt;
+        Le retour à la ligne : &lt;BR&gt;
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;TABLE&gt;">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-titres-h1-a-h6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les titres : &lt;H1&gt; à &lt;H6&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centrer-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Centrer : &lt;CENTER&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-ligne-horizontale-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La ligne horizontale : &lt;HR&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-le-texte-en-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettre le texte en valeur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couleur-et-taille-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Couleur et taille : &lt;FONT&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recapitulatif-des-balises-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Récapitulatif des balises de texte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-accents-et-les-caracteres-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les accents et les caractères spéciaux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les accents et les caractères spéciaux">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe" class="md-nav__link">
+  <a href="#les-lettres-accentuees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntaxe
+        Les lettres accentuées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-caracteres-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les caractères spéciaux
       
     </span>
   </a>
@@ -603,122 +662,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-lignes-tr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les lignes : &lt;TR&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-cellules-td" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les cellules : &lt;TD&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-cellules-den-tete-th" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les cellules d'en-tête : &lt;TH&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-colonnes-colspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fusion de colonnes : COLSPAN
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fusion de colonnes : COLSPAN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntaxe_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Syntaxe
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-lignes-rowspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fusion de lignes : ROWSPAN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alignement-du-contenu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alignement du contenu
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemple complet
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-utilisant-rowspan-et-colspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemple utilisant ROWSPAN et COLSPAN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Erreurs fréquentes
-      
-    </span>
-  </a>
   
 </li>
       
@@ -742,22 +685,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -784,7 +721,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 4
+    4. Les listes
   
 
     
@@ -812,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 5
+    5. Les liens
   
 
     
@@ -840,7 +777,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 6
+    6. Les images
   
 
     
@@ -868,7 +805,35 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 7
+    7. Les tableaux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les feuilles de style
   
 
     
@@ -899,19 +864,19 @@
     
       
         
-      
+          
         
       
     
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -920,7 +885,80 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <div class="md-nav__link md-nav__container">
+            <a href="../bonus-formulaires/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -938,8 +976,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -963,7 +1001,7 @@
   <span class="md-ellipsis">
     
   
-    Annexe A
+    A. Erreurs fréquentes
   
 
     
@@ -991,7 +1029,35 @@
   <span class="md-ellipsis">
     
   
-    Annexe B
+    B. Récapitulatif des balises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Corrections du support
   
 
     
@@ -1066,10 +1132,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#les-paragraphes-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Les paragraphes : &lt;P&gt;
       
     </span>
   </a>
@@ -1077,22 +1143,110 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-balise-table" class="md-nav__link">
+  <a href="#le-retour-a-la-ligne-br" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La balise &lt;TABLE&gt;
+        Le retour à la ligne : &lt;BR&gt;
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;TABLE&gt;">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-titres-h1-a-h6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les titres : &lt;H1&gt; à &lt;H6&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centrer-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Centrer : &lt;CENTER&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-ligne-horizontale-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La ligne horizontale : &lt;HR&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-le-texte-en-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettre le texte en valeur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couleur-et-taille-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Couleur et taille : &lt;FONT&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recapitulatif-des-balises-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Récapitulatif des balises de texte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-accents-et-les-caracteres-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les accents et les caractères spéciaux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les accents et les caractères spéciaux">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe" class="md-nav__link">
+  <a href="#les-lettres-accentuees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntaxe
+        Les lettres accentuées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-caracteres-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les caractères spéciaux
       
     </span>
   </a>
@@ -1101,122 +1255,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-lignes-tr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les lignes : &lt;TR&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-cellules-td" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les cellules : &lt;TD&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-cellules-den-tete-th" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les cellules d'en-tête : &lt;TH&gt;
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-colonnes-colspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fusion de colonnes : COLSPAN
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fusion de colonnes : COLSPAN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntaxe_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Syntaxe
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-lignes-rowspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fusion de lignes : ROWSPAN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alignement-du-contenu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alignement du contenu
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemple complet
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-utilisant-rowspan-et-colspan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exemple utilisant ROWSPAN et COLSPAN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Erreurs fréquentes
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1240,22 +1278,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1276,531 +1308,468 @@
 
 
 
-<h1 id="les-tableaux-html">Les tableaux HTML<a class="headerlink" href="#les-tableaux-html" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Les <strong>tableaux HTML</strong> permettent de présenter des informations organisées sous forme de <strong>lignes</strong> et de <strong>colonnes</strong>.</p>
-<p>Ils sont particulièrement utiles pour afficher :</p>
+<h1 id="le-texte-et-sa-mise-en-forme">Le texte et sa mise en forme<a class="headerlink" href="#le-texte-et-sa-mise-en-forme" title="Lien vers cette section">&para;</a></h1>
+<p>Une page HTML contient surtout du texte. Ce chapitre montre comment le découper en paragraphes et en titres, le mettre en valeur, changer sa couleur ou sa taille, et écrire les accents et les caractères spéciaux.</p>
+<h2 id="les-paragraphes-p">Les paragraphes : <code>&lt;P&gt;</code><a class="headerlink" href="#les-paragraphes-p" title="Lien vers cette section">&para;</a></h2>
+<p>Quand on écrit du texte dans une page Web, on le place la plupart du temps dans des <strong>paragraphes</strong>.</p>
 <ul>
-<li>
-<p>des listes d'étudiants ;</p>
-</li>
-<li>
-<p>des notes d'examen ;</p>
-</li>
-<li>
-<p>des catalogues de produits ;</p>
-</li>
-<li>
-<p>des emplois du temps ;</p>
-</li>
-<li>
-<p>des statistiques.</p>
-</li>
+<li><code>&lt;P&gt;</code> signifie « début du paragraphe » ;</li>
+<li><code>&lt;/P&gt;</code> signifie « fin du paragraphe ».</li>
 </ul>
-<p>Un tableau est composé de plusieurs <strong>lignes</strong> <code>&lt;TR&gt;</code>), elles-mêmes composées de <strong>cellules</strong> <code>&lt;TD&gt;</code> ou <code>&lt;TH&gt;</code>).</p>
-<hr />
-<h2 id="la-balise-table">La balise <code>&lt;TABLE&gt;</code><a class="headerlink" href="#la-balise-table" title="Permanent link">&para;</a></h2>
-<p>La balise <code>&lt;TABLE&gt;</code> délimite un tableau HTML.</p>
-<h3 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.1 — Deux paragraphes</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">META</span> <span class="na">CHARSET</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>Paragraphes<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Bonjour et bienvenue sur mon site !
+    Ceci est mon premier test alors soyez indulgents s'il vous plaît,
+    j'apprends petit à petit comment cela marche.<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Pour l'instant c'est un peu vide, mais revenez dans 2-3 jours quand
+    j'aurai appris un peu plus de choses, je vous assure que vous allez être surpris !<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Les principaux attributs sont :</p>
+</div>
+<p>Le navigateur laisse automatiquement un espace entre deux paragraphes. En revanche, les retours à la ligne <strong>à l'intérieur</strong> du code sont ignorés.</p>
+<h2 id="le-retour-a-la-ligne-br">Le retour à la ligne : <code>&lt;BR&gt;</code><a class="headerlink" href="#le-retour-a-la-ligne-br" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;BR&gt;</code> est une <strong>balise orpheline</strong> qui sert à aller à la ligne, sans créer de nouveau paragraphe. On peut l'écrire <code>&lt;BR&gt;</code> ou <code>&lt;BR /&gt;</code>.</p>
+<p>Elle se place <strong>à l'intérieur d'un paragraphe</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.2 — Aller à la ligne</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Bonjour et bienvenue sur mon site !<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Ceci est mon premier test alors soyez indulgents s'il vous plaît.<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Première ligne<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Deuxième ligne<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Après une ligne vide<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>Deux <code>&lt;BR&gt;</code> à la suite donnent <strong>une ligne d'espacement</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title"><code>&lt;P&gt;</code> ou <code>&lt;BR&gt;</code> ?</p>
+<p><code>&lt;BR&gt;</code> passe simplement à la ligne suivante. Pour séparer deux idées, préférez deux paragraphes <code>&lt;P&gt;</code>.</p>
+</div>
+<h2 id="les-titres-h1-a-h6">Les titres : <code>&lt;H1&gt;</code> à <code>&lt;H6&gt;</code><a class="headerlink" href="#les-titres-h1-a-h6" title="Lien vers cette section">&para;</a></h2>
+<p>Quand une page s'allonge, les <strong>titres</strong> aident le visiteur à se repérer. Le HTML propose <strong>six niveaux</strong> de titres, de <code>&lt;H1&gt;</code> (le plus important) à <code>&lt;H6&gt;</code> (le moins important). Le <em>H</em> vient de <em>header</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Balise</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;H1&gt;</code></td>
+<td>Titre très important ; en général, le titre de la page</td>
+</tr>
+<tr>
+<td><code>&lt;H2&gt;</code></td>
+<td>Titre important</td>
+</tr>
+<tr>
+<td><code>&lt;H3&gt;</code></td>
+<td>Titre un peu moins important (sous-titre)</td>
+</tr>
+<tr>
+<td><code>&lt;H4&gt;</code></td>
+<td>Titre encore moins important</td>
+</tr>
+<tr>
+<td><code>&lt;H5&gt;</code></td>
+<td>Titre pas important</td>
+</tr>
+<tr>
+<td><code>&lt;H6&gt;</code></td>
+<td>Titre vraiment pas important du tout</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.3 — Le titrage</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H1</span><span class="p">&gt;</span>Le titre<span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>La section<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;</span>La sous-section<span class="p">&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H4</span><span class="p">&gt;</span>Niveau 4<span class="p">&lt;/</span><span class="nt">H4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H5</span><span class="p">&gt;</span>Niveau 5<span class="p">&lt;/</span><span class="nt">H5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H6</span><span class="p">&gt;</span>Niveau 6<span class="p">&lt;/</span><span class="nt">H6</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>Le navigateur affiche les titres en gras, avec une taille qui diminue d'un niveau à l'autre.</p>
+<h2 id="centrer-center">Centrer : <code>&lt;CENTER&gt;</code><a class="headerlink" href="#centrer-center" title="Lien vers cette section">&para;</a></h2>
+<p>La balise <code>&lt;CENTER&gt; … &lt;/CENTER&gt;</code> <strong>centre</strong> tout ce qu'elle contient.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.4 — Centrer un texte</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">CENTER</span><span class="p">&gt;</span>Un paragraphe centré<span class="p">&lt;/</span><span class="nt">CENTER</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Première ligne<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Deuxième ligne<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>Le support cite une balise <code>&lt;justify&gt;</code> pour justifier le texte. <strong>Cette balise n'existe pas</strong> en HTML : le navigateur l'ignore. Pour justifier un paragraphe, on utilise l'attribut <code>ALIGN</code> : <code>&lt;P ALIGN="JUSTIFY"&gt;</code>.</p>
+</div>
+<p>L'attribut <code>ALIGN</code> s'utilise aussi sur les paragraphes et les titres, avec les valeurs <code>LEFT</code> (gauche), <code>CENTER</code> (centre), <code>RIGHT</code> (droite) et <code>JUSTIFY</code> (justifié) :</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.5 — L'attribut ALIGN</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H1</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"CENTER"</span><span class="p">&gt;</span>Université Amadou Mahtar Mbow<span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"RIGHT"</span><span class="p">&gt;</span>Ce texte est aligné à droite.<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"JUSTIFY"</span><span class="p">&gt;</span>Ce paragraphe est justifié : ses lignes s'étirent pour toucher
+les deux bords, comme dans un journal. À utiliser avec prudence, car de grands
+espaces peuvent apparaître entre les mots.<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="la-ligne-horizontale-hr">La ligne horizontale : <code>&lt;HR&gt;</code><a class="headerlink" href="#la-ligne-horizontale-hr" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;HR&gt;</code> insère une <strong>ligne de séparation</strong>. C'est une balise orpheline. Ses options :</p>
 <table>
 <thead>
 <tr>
 <th>Attribut</th>
-<th>Fonction</th>
+<th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>BORDER</code></td>
-<td>Épaisseur de la bordure du tableau</td>
+<td><code>SIZE="n"</code></td>
+<td>Épaisseur du trait</td>
 </tr>
 <tr>
-<td><code>WIDTH</code></td>
-<td>Largeur du tableau</td>
+<td><code>WIDTH="n%"</code></td>
+<td>Largeur de la ligne (en pourcentage ou en pixels)</td>
 </tr>
 <tr>
-<td><code>ALIGN</code></td>
-<td>Position du tableau</td>
-</tr>
-<tr>
-<td><code>CELLPADDING</code></td>
-<td>Marge intérieure des cellules</td>
-</tr>
-<tr>
-<td><code>CELLSPACING</code></td>
-<td>Espacement entre les cellules</td>
+<td><code>ALIGN="LEFT"</code> ou <code>"RIGHT"</code></td>
+<td>Position de la ligne (centrée par défaut)</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition example">
-<p class="admonition-title">Exemple 3.1 — Premier tableau</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>CSS<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<p class="admonition-title">Exemple 3.6 — Des lignes de séparation</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">CENTER</span><span class="p">&gt;</span>Un paragraphe<span class="p">&lt;/</span><span class="nt">CENTER</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Première ligne<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Deuxième ligne<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HR</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"3"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"50%"</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"LEFT"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HR</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"6"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"80%"</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<hr />
-<h2 id="les-lignes-tr">Les lignes : <code>&lt;TR&gt;</code><a class="headerlink" href="#les-lignes-tr" title="Permanent link">&para;</a></h2>
-<p>La balise <code>&lt;TR&gt;</code> (<em>Table Row</em>) représente une <strong>ligne</strong> du tableau.</p>
-<p>Chaque tableau est constitué d'une ou plusieurs lignes.</p>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>Le support écrit <code>align="left | rigth"</code>. L'orthographe correcte est <strong><code>right</code></strong> : avec <code>rigth</code>, l'attribut est ignoré.</p>
+</div>
+<h2 id="mettre-le-texte-en-valeur">Mettre le texte en valeur<a class="headerlink" href="#mettre-le-texte-en-valeur" title="Lien vers cette section">&para;</a></h2>
+<p>Certains mots sont plus importants que d'autres. Le HTML propose plusieurs balises pour les faire ressortir.</p>
+<table>
+<thead>
+<tr>
+<th>Balise</th>
+<th>Effet</th>
+<th>Remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;B&gt; … &lt;/B&gt;</code></td>
+<td><strong>Gras</strong></td>
+<td><em>Bold</em></td>
+</tr>
+<tr>
+<td><code>&lt;I&gt; … &lt;/I&gt;</code></td>
+<td><em>Italique</em></td>
+<td><em>Italic</em></td>
+</tr>
+<tr>
+<td><code>&lt;U&gt; … &lt;/U&gt;</code></td>
+<td>Souligné</td>
+<td><em>Underline</em></td>
+</tr>
+<tr>
+<td><code>&lt;EM&gt; … &lt;/EM&gt;</code></td>
+<td><em>Italique</em> par défaut</td>
+<td>Balise <strong>sémantique</strong> : sert à <strong>insister</strong> sur un passage</td>
+</tr>
+<tr>
+<td><code>&lt;STRONG&gt; … &lt;/STRONG&gt;</code></td>
+<td><strong>Gras</strong> par défaut</td>
+<td>Balise <strong>sémantique</strong> : marque un texte <strong>fortement</strong> mis en valeur</td>
+</tr>
+<tr>
+<td><code>&lt;BIG&gt; … &lt;/BIG&gt;</code></td>
+<td>Texte plus gros</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;SMALL&gt; … &lt;/SMALL&gt;</code></td>
+<td>Texte plus petit</td>
+<td>Pour les annotations, mentions légales, copyright</td>
+</tr>
+<tr>
+<td><code>&lt;SUP&gt; … &lt;/SUP&gt;</code></td>
+<td>Texte en exposant</td>
+<td>1<sup>er</sup></td>
+</tr>
+<tr>
+<td><code>&lt;SUB&gt; … &lt;/SUB&gt;</code></td>
+<td>Texte en indice</td>
+<td>H<sub>2</sub>O</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Que veut dire « sémantique » ?</p>
+<p><code>&lt;B&gt;</code> dit seulement « affiche en gras ». <code>&lt;STRONG&gt;</code> dit « ce texte est <strong>important</strong> ». Le navigateur l'affiche en gras par défaut, mais l'information transmise est le <strong>sens</strong>, pas l'apparence.</p>
+</div>
 <div class="admonition example">
-<p class="admonition-title">Exemple 3.2 — Création de lignes</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Nom<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Prénom<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Fall<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Amadou<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<p class="admonition-title">Exemple 3.7 — Mettre en valeur</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H1</span><span class="p">&gt;</span>C'est un titre de niveau 1<span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>C'est un titre de niveau 2<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">B</span><span class="p">&gt;</span>C'est gras<span class="p">&lt;/</span><span class="nt">B</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">U</span><span class="p">&gt;&lt;</span><span class="nt">I</span><span class="p">&gt;</span>En italique souligné<span class="p">&lt;/</span><span class="nt">I</span><span class="p">&gt;&lt;/</span><span class="nt">U</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+1<span class="p">&lt;</span><span class="nt">SUP</span><span class="p">&gt;</span>er<span class="p">&lt;/</span><span class="nt">SUP</span><span class="p">&gt;</span> de la classe<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+La formule de l'eau est H<span class="p">&lt;</span><span class="nt">SUB</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">SUB</span><span class="p">&gt;</span>O<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Ceci est mon premier test alors <span class="p">&lt;</span><span class="nt">EM</span><span class="p">&gt;</span>soyez indulgents<span class="p">&lt;/</span><span class="nt">EM</span><span class="p">&gt;</span> s'il vous plaît,
+et <span class="p">&lt;</span><span class="nt">STRONG</span><span class="p">&gt;</span>n'oubliez pas le TP<span class="p">&lt;/</span><span class="nt">STRONG</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">BIG</span><span class="p">&gt;</span>Texte gros<span class="p">&lt;/</span><span class="nt">BIG</span><span class="p">&gt;</span> et <span class="p">&lt;</span><span class="nt">SMALL</span><span class="p">&gt;</span>texte petit<span class="p">&lt;/</span><span class="nt">SMALL</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<hr />
-<h2 id="les-cellules-td">Les cellules : <code>&lt;TD&gt;</code><a class="headerlink" href="#les-cellules-td" title="Permanent link">&para;</a></h2>
-<p>La balise <code>&lt;TD&gt;</code> (<em>Table Data</em>) représente une cellule contenant une donnée.</p>
+<p>Les balises peuvent se <strong>combiner</strong>, à condition d'être <strong>bien imbriquées</strong> : la dernière ouverte est la première fermée.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">U</span><span class="p">&gt;&lt;</span><span class="nt">I</span><span class="p">&gt;</span>correct<span class="p">&lt;/</span><span class="nt">I</span><span class="p">&gt;&lt;/</span><span class="nt">U</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">U</span><span class="p">&gt;&lt;</span><span class="nt">I</span><span class="p">&gt;</span>incorrect<span class="p">&lt;/</span><span class="nt">U</span><span class="p">&gt;&lt;/</span><span class="nt">I</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="couleur-et-taille-font">Couleur et taille : <code>&lt;FONT&gt;</code><a class="headerlink" href="#couleur-et-taille-font" title="Lien vers cette section">&para;</a></h2>
+<p>La balise <code>&lt;FONT&gt; … &lt;/FONT&gt;</code> change <strong>ponctuellement</strong> la couleur ou la taille du texte.</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLOR="red"</code></td>
+<td>Couleur du texte (nom ou code <code>#RRVVBB</code>)</td>
+</tr>
+<tr>
+<td><code>SIZE="5"</code></td>
+<td>Taille absolue, de <code>1</code> (la plus petite) à <code>7</code> (la plus grande)</td>
+</tr>
+<tr>
+<td><code>SIZE="+1"</code></td>
+<td>Taille relative, par rapport à la taille par défaut (<code>3</code>)</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Licence 2<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<p class="admonition-title">Exemple 3.8 — La balise FONT</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>Texte en taille 5<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">COLOR</span><span class="o">=</span><span class="s">"red"</span><span class="p">&gt;</span>En rouge<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"+2"</span> <span class="na">COLOR</span><span class="o">=</span><span class="s">"#0000FF"</span><span class="p">&gt;</span>Deux crans plus gros, en bleu<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>Taille 1<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;</span>Taille 4<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"7"</span><span class="p">&gt;</span>Taille 7<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>Les balises <code>&lt;FONT&gt;</code> peuvent être <strong>imbriquées</strong> :</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.9 — FONT imbriquées</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">COLOR</span><span class="o">=</span><span class="s">"green"</span><span class="p">&gt;</span>
+    Texte vert,
+    <span class="p">&lt;</span><span class="nt">FONT</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"6"</span><span class="p">&gt;</span>puis vert et grand,<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;</span>
+    puis de nouveau vert normal.
+<span class="p">&lt;/</span><span class="nt">FONT</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="recapitulatif-des-balises-de-texte">Récapitulatif des balises de texte<a class="headerlink" href="#recapitulatif-des-balises-de-texte" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;B&gt; … &lt;/B&gt;</code></td>
+<td>Zone en gras</td>
+</tr>
+<tr>
+<td><code>&lt;I&gt; … &lt;/I&gt;</code></td>
+<td>Zone en italique</td>
+</tr>
+<tr>
+<td><code>&lt;U&gt; … &lt;/U&gt;</code></td>
+<td>Zone soulignée</td>
+</tr>
+<tr>
+<td><code>&lt;FONT SIZE=?&gt; … &lt;/FONT&gt;</code></td>
+<td>Zone avec cette taille</td>
+</tr>
+<tr>
+<td><code>&lt;FONT COLOR="blue"&gt; … &lt;/FONT&gt;</code></td>
+<td>Zone en couleur</td>
+</tr>
+<tr>
+<td><code>&lt;CENTER&gt; … &lt;/CENTER&gt;</code></td>
+<td>Centrer</td>
+</tr>
+<tr>
+<td><code>&lt;BR&gt;</code></td>
+<td>Aller à la ligne</td>
+</tr>
+<tr>
+<td><code>&lt;!-- … --&gt;</code></td>
+<td>Ne pas afficher (commentaire)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="les-accents-et-les-caracteres-speciaux">Les accents et les caractères spéciaux<a class="headerlink" href="#les-accents-et-les-caracteres-speciaux" title="Lien vers cette section">&para;</a></h2>
+<p>Certains caractères posent problème dans le code :</p>
+<ul>
+<li>les <strong>accents</strong>, qui peuvent mal s'afficher si l'encodage de la page n'est pas indiqué ;</li>
+<li>les caractères <strong>réservés</strong> au HTML, comme <code>&lt;</code> et <code>&gt;</code>, que le navigateur prend pour le début d'une balise.</li>
+</ul>
+<p>On les écrit alors avec un <strong>code</strong> (une <em>entité</em>), qui commence par <code>&amp;</code> et se termine par <code>;</code>.</p>
+<h3 id="les-lettres-accentuees">Les lettres accentuées<a class="headerlink" href="#les-lettres-accentuees" title="Lien vers cette section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code HTML</th>
+<th>Lettre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;eacute;</code></td>
+<td>é (e accent aigu)</td>
+</tr>
+<tr>
+<td><code>&amp;egrave;</code></td>
+<td>è (e accent grave)</td>
+</tr>
+<tr>
+<td><code>&amp;ecirc;</code></td>
+<td>ê (e accent circonflexe)</td>
+</tr>
+<tr>
+<td><code>&amp;euml;</code></td>
+<td>ë (e tréma)</td>
+</tr>
+<tr>
+<td><code>&amp;agrave;</code></td>
+<td>à (a accent grave)</td>
+</tr>
+<tr>
+<td><code>&amp;aacute;</code></td>
+<td>á (a accent aigu)</td>
+</tr>
+<tr>
+<td><code>&amp;acirc;</code></td>
+<td>â (a accent circonflexe)</td>
+</tr>
+<tr>
+<td><code>&amp;auml;</code></td>
+<td>ä (a tréma)</td>
+</tr>
+<tr>
+<td><code>&amp;iuml;</code></td>
+<td>ï (i tréma)</td>
+</tr>
+<tr>
+<td><code>&amp;ccedil;</code></td>
+<td>ç (c cédille)</td>
+</tr>
+<tr>
+<td><code>&amp;ntilde;</code></td>
+<td>ñ (n tilde)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="les-caracteres-speciaux">Les caractères spéciaux<a class="headerlink" href="#les-caracteres-speciaux" title="Lien vers cette section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code HTML</th>
+<th>Caractère</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;lt;</code></td>
+<td><code>&lt;</code></td>
+</tr>
+<tr>
+<td><code>&amp;gt;</code></td>
+<td><code>&gt;</code></td>
+</tr>
+<tr>
+<td><code>&amp;amp;</code></td>
+<td><code>&amp;</code></td>
+</tr>
+<tr>
+<td><code>&amp;nbsp;</code></td>
+<td>une espace (insécable)</td>
+</tr>
+<tr>
+<td><code>&amp;#171;</code></td>
+<td>«</td>
+</tr>
+<tr>
+<td><code>&amp;#187;</code></td>
+<td>»</td>
+</tr>
+<tr>
+<td><code>&amp;copy;</code></td>
+<td>©</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3.10 — Écrire avec des codes</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">B</span><span class="p">&gt;</span>Voici la page Web des <span class="ni">&amp;eacute;</span>tudiants en Biologie<span class="p">&lt;/</span><span class="nt">B</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+Pour faire un titre, on <span class="ni">&amp;eacute;</span>crit la balise <span class="ni">&amp;lt;</span>H1<span class="ni">&amp;gt;</span>.<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="ni">&amp;#171;</span> Le HTML, c'est facile <span class="ni">&amp;#187;</span><span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="ni">&amp;copy;</span> UAM 2026
 </code></pre></div>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Remarque</p>
-<p>Une ligne peut contenir autant de cellules que nécessaire.</p>
+<p class="admonition-title">Accents directs ou codes ?</p>
+<p>Le support conseille de ne pas écrire les accents directement. Aujourd'hui, si l'en-tête contient <code>&lt;META CHARSET="utf-8"&gt;</code> et que le fichier est enregistré en UTF-8 (le réglage par défaut de Visual Studio Code), les accents s'écrivent normalement. En revanche, <code>&amp;lt;</code>, <code>&amp;gt;</code> et <code>&amp;amp;</code> restent <strong>indispensables</strong> pour afficher <code>&lt;</code>, <code>&gt;</code> et <code>&amp;</code>.</p>
 </div>
-<hr />
-<h2 id="les-cellules-den-tete-th">Les cellules d'en-tête : <code>&lt;TH&gt;</code><a class="headerlink" href="#les-cellules-den-tete-th" title="Permanent link">&para;</a></h2>
-<p>Les cellules d'en-tête utilisent la balise <code>&lt;TH&gt;</code>.</p>
-<p>Le navigateur affiche automatiquement leur contenu <strong>en gras</strong> et <strong>centré</strong>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 3.3 — Cellules d'en-tête</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Nom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Âge<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Fatou<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>20<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="fusion-de-colonnes-colspan">Fusion de colonnes : <code>COLSPAN</code><a class="headerlink" href="#fusion-de-colonnes-colspan" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>COLSPAN</code> permet de fusionner plusieurs colonnes.</p>
-<h3 id="syntaxe_1">Syntaxe<a class="headerlink" href="#syntaxe_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TH</span> <span class="na">COLSPAN</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Exemple 3.4 — Fusion de colonnes</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span> <span class="na">COLSPAN</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
-
-            Étudiant
-
-        <span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Nom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Prénom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Diop<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Awa<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Résultat</p>
-<p>La cellule <strong>Étudiant</strong> occupe deux colonnes.</p>
-</div>
-<hr />
-<h2 id="fusion-de-lignes-rowspan">Fusion de lignes : <code>ROWSPAN</code><a class="headerlink" href="#fusion-de-lignes-rowspan" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>ROWSPAN</code> permet de fusionner plusieurs lignes.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 3.5 — Fusion de lignes</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span> <span class="na">ROWSPAN</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
-
-            Classe
-
-        <span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Matière<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Résultat</p>
-<p>La cellule <strong>Classe</strong> occupe deux lignes.</p>
-</div>
-<hr />
-<h2 id="alignement-du-contenu">Alignement du contenu<a class="headerlink" href="#alignement-du-contenu" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>ALIGN</code> permet d'aligner le contenu d'une cellule.</p>
-<p>Les principales valeurs sont :</p>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>Le tableau des caractères spéciaux contient deux coquilles :</p>
 <ul>
-<li>
-<p><code>LEFT</code></p>
-</li>
-<li>
-<p><code>CENTER</code></p>
-</li>
-<li>
-<p><code>RIGHT</code></p>
-</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Exemple 3.6 — Alignement</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TD</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
-
-    Informatique
-
-<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="exemple-complet">Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Résultats des étudiants</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>Résultats des étudiants<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;white&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
-
-        Liste des étudiants
-
-    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TH</span> <span class="na">COLSPAN</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>
-
-                Licence 2 SIC
-
-            <span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Nom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Prénom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Moyenne<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Diouf<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Aminata<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>15.50<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Ba<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Moussa<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>13.75<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Fall<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Mariama<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>17.20<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="exemple-utilisant-rowspan-et-colspan">Exemple utilisant <code>ROWSPAN</code> et <code>COLSPAN</code><a class="headerlink" href="#exemple-utilisant-rowspan-et-colspan" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Exemple 3.7 — Fusion de lignes et de colonnes</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span> <span class="na">COLSPAN</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
-
-            Produit
-
-        <span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span> <span class="na">ROWSPAN</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
-
-            Prix
-
-        <span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Nom<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TH</span><span class="p">&gt;</span>Catégorie<span class="p">&lt;/</span><span class="nt">TH</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Ordinateur<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Informatique<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>450 000 FCFA<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Imprimante<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Bureautique<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>95 000 FCFA<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h2>
-<div class="admonition danger">
-<p class="admonition-title">À éviter</p>
-<ul>
-<li>
-<p>oublier de fermer une balise <code>&lt;TR&gt;</code> ;</p>
-</li>
-<li>
-<p>placer une cellule <code>&lt;TD&gt;</code> en dehors d'une ligne ;</p>
-</li>
-<li>
-<p>utiliser un nombre incorrect de colonnes ;</p>
-</li>
-<li>
-<p>oublier de fermer <code>&lt;TABLE&gt;</code> ;</p>
-</li>
-<li>
-<p>confondre <code>&lt;TH&gt;</code> et <code>&lt;TD&gt;</code> ;</p>
-</li>
-<li>
-<p>utiliser un <code>ROWSPAN</code> ou un <code>COLSPAN</code> incompatible avec la structure du tableau.</p>
-</li>
+<li><code>&amp;nspb;</code> doit s'écrire <strong><code>&amp;nbsp;</code></strong> (<em>non-breaking space</em>) ;</li>
+<li><code>&amp;copy</code> doit se terminer par un point-virgule : <strong><code>&amp;copy;</code></strong>.</li>
 </ul>
 </div>
-<hr />
-<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Permanent link">&para;</a></h2>
+<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Lien vers cette section">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Points essentiels</p>
 <ul>
-<li>
-<p><code>&lt;TABLE&gt;</code> crée un tableau.</p>
-</li>
-<li>
-<p><code>&lt;TR&gt;</code> crée une ligne.</p>
-</li>
-<li>
-<p><code>&lt;TD&gt;</code> crée une cellule contenant des données.</p>
-</li>
-<li>
-<p><code>&lt;TH&gt;</code> crée une cellule d'en-tête.</p>
-</li>
-<li>
-<p><code>COLSPAN</code> fusionne plusieurs colonnes.</p>
-</li>
-<li>
-<p><code>ROWSPAN</code> fusionne plusieurs lignes.</p>
-</li>
-<li>
-<p><code>ALIGN</code> permet d'aligner le contenu.</p>
-</li>
+<li><code>&lt;P&gt;</code> crée un paragraphe ; <code>&lt;BR&gt;</code> va à la ligne <strong>dans</strong> un paragraphe.</li>
+<li><code>&lt;H1&gt;</code> à <code>&lt;H6&gt;</code> créent six niveaux de titres.</li>
+<li><code>&lt;CENTER&gt;</code> centre ; <code>ALIGN</code> aligne un paragraphe ou un titre.</li>
+<li><code>&lt;HR&gt;</code> trace une ligne, réglable avec <code>SIZE</code>, <code>WIDTH</code> et <code>ALIGN</code>.</li>
+<li><code>&lt;B&gt;</code>, <code>&lt;I&gt;</code>, <code>&lt;U&gt;</code>, <code>&lt;EM&gt;</code>, <code>&lt;STRONG&gt;</code>, <code>&lt;BIG&gt;</code>, <code>&lt;SMALL&gt;</code>, <code>&lt;SUP&gt;</code>, <code>&lt;SUB&gt;</code> mettent le texte en valeur.</li>
+<li><code>&lt;FONT&gt;</code> change la couleur (<code>COLOR</code>) et la taille (<code>SIZE</code> de 1 à 7, ou <code>+n</code>).</li>
+<li>Les codes <code>&amp;…;</code> écrivent les accents et les caractères réservés.</li>
 </ul>
 </div>
-<hr />
-<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
-<div class="admonition question">
-<p class="admonition-title">Exercice 1</p>
-<p>Créer un tableau présentant les informations suivantes :</p>
-<table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Prénom</th>
-<th style="text-align: right;">Âge</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ndiaye</td>
-<td>Ousmane</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td>Faye</td>
-<td>Khady</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr>
-<td>Diallo</td>
-<td>Ibrahima</td>
-<td style="text-align: right;">21</td>
-</tr>
-</tbody>
-</table>
-<p>Le tableau devra posséder une bordure de taille <strong>1</strong>.</p>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Lien vers cette section">&para;</a></h2>
+<div class="exo" data-exo="ch3-1">
+<p>Créez une page avec un <strong>titre principal</strong> <code>&lt;H1&gt;</code> centré, un <strong>sous-titre</strong> <code>&lt;H2&gt;</code>, <strong>deux paragraphes</strong>, et une <strong>ligne horizontale</strong> entre le titre et les paragraphes.</p>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 2</p>
-<p>Créer un tableau intitulé <strong>Catalogue de la bibliothèque</strong> comprenant :</p>
-<ul>
-<li>
-<p>un en-tête fusionné avec <code>COLSPAN</code> ;</p>
-</li>
-<li>
-<p>trois colonnes :</p>
-<ul>
-<li>
-<p>Titre ;</p>
-</li>
-<li>
-<p>Auteur ;</p>
-</li>
-<li>
-<p>Disponibilité.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>cinq livres ;</p>
-</li>
-<li>
-<p>une cellule utilisant <code>ROWSPAN</code>.</p>
-</li>
-</ul>
+<div class="exo" data-exo="ch3-2">
+<p>Dans un paragraphe, écrivez : « Le 1er TP porte sur la formule H2O » avec <strong>er</strong> en exposant et <strong>2</strong> en indice. Mettez « TP » en <strong>gras</strong> et ajoutez une phrase en <strong>rouge</strong> avec <code>&lt;FONT&gt;</code>.</p>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 3</p>
-<p>Reproduire le tableau suivant en utilisant correctement <code>ROWSPAN</code> et <code>COLSPAN</code> :</p>
-<table>
-<thead>
-<tr>
-<th>Jour</th>
-<th>08h-10h</th>
-<th>10h-12h</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Lundi</td>
-<td>HTML</td>
-<td>CSS</td>
-</tr>
-<tr>
-<td>Mardi</td>
-<td>JavaScript</td>
-<td>PHP</td>
-</tr>
-<tr>
-<td>Mercredi</td>
-<td>Base de données</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="exo" data-exo="ch3-3">
+<p>Affichez exactement ce texte dans la page : <strong>La balise &lt;BR&gt; va à la ligne &amp; c'est tout.</strong> Il faudra utiliser des codes de caractères spéciaux.</p>
 </div>
-<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
-<p>Maîtriser la création de <strong>tableaux HTML</strong>, la fusion de cellules et l'utilisation des attributs <code>ROWSPAN</code> et <code>COLSPAN</code>.</p>
-<hr />
-<p>⬅️ <strong>Précédent :</strong> Les listes HTML</p>
-<p>➡️ <strong>Suivant :</strong> Les formulaires HTML</p>
+<h2 id="verifiez-vos-acquis">Vérifiez vos acquis<a class="headerlink" href="#verifiez-vos-acquis" title="Lien vers cette section">&para;</a></h2>
+<div class="quiz" data-quiz="ch3"></div>
 
 
 
@@ -1818,8 +1787,6 @@
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1838,7 +1805,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../chapitre2/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre 2">
+          <a href="../chapitre2/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 2. Structure d&#39;une page">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1848,20 +1815,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Chapitre 2
+                2. Structure d'une page
               </div>
             </div>
           </a>
         
         
           
-          <a href="../chapitre4/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre 4">
+          <a href="../chapitre4/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 4. Les listes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Chapitre 4
+                4. Les listes
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1894,16 +1861,20 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../javascripts/preview.js"></script>
+        <script src="../../javascripts/exercices.js"></script>
+      
+        <script src="../../javascripts/manuel.js"></script>
       
     
   </body>

@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Manuel interactif de HTML - UAM">
+        <meta name="description" content="Le cours de HTML de l'UAM, avec aperçus en direct et exercices corrigés instantanément.">
       
       
         <meta name="author" content="Flamme">
       
       
-        <link rel="canonical" href="https://flamme.github.io/manuel-html/manuel/chapitre5/">
+        <link rel="canonical" href="https://cuttyflam04.github.io/manuel-html/manuel/chapitre5/">
       
       
         <link rel="prev" href="../chapitre4/">
@@ -24,21 +24,46 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Chapitre 5 - Manuel HTML</title>
+        <title>5. Les liens - Manuel HTML</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%209a3%203%200%200%201%203%203%203%203%200%200%201-3%203%203%203%200%200%201-3-3%203%203%200%200%201%203-3m0-4.5c5%200%209.27%203.11%2011%207.5-1.73%204.39-6%207.5-11%207.5S2.73%2016.39%201%2012c1.73-4.39%206-7.5%2011-7.5M3.18%2012a9.821%209.821%200%200%200%2017.64%200%209.821%209.821%200%200%200-17.64%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.06%209%20.94.94L5.92%2019H5v-.92zm3.6-6c-.25%200-.51.1-.7.29l-1.83%201.83%203.75%203.75%201.83-1.83c.39-.39.39-1.04%200-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6%203.19L3%2017.25V21h3.75L17.81%209.94z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202C6.5%202%202%206.5%202%2012s4.5%2010%2010%2010%2010-4.5%2010-10S17.5%202%2012%202m0%2018c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m4.59-12.42L10%2014.17l-2.59-2.58L6%2013l4%204%208-8z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M8.27%203%203%208.27v7.46L8.27%2021h7.46C17.5%2019.24%2021%2015.73%2021%2015.73V8.27L15.73%203M9.1%205h5.8L19%209.1v5.8L14.9%2019H9.1L5%2014.9V9.1m6%205.9h2v2h-2zm0-8h2v6h-2z%22/%3E%3C/svg%3E');}</style>
+
 
 
     
@@ -50,16 +75,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/home.css">
+      <link rel="stylesheet" href="../../stylesheets/manuel.css">
     
-      <link rel="stylesheet" href="../../stylesheets/manual.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/code.css">
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +90,14 @@
 
     
     
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Bungee&family=Gluten:wght@700;800&display=swap">
+  <script>
+    /* Applique le style choisi avant l'affichage, pour éviter un flash */
+    try { var s = localStorage.getItem("mh:style"); if (s) document.documentElement.setAttribute("data-mh-style", s); } catch (e) {}
+  </script>
+
   </head>
   
   
@@ -77,7 +108,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-liens-hypertextes-en-html" class="md-skip">
+        <a href="#les-liens-hypertextes" class="md-skip">
           Aller au contenu
         </a>
       
@@ -98,12 +129,14 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapitre 5
+              5. Les liens
             
           </span>
         </div>
@@ -133,9 +166,19 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Thème clair"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Thème clair" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème sombre"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Thème sombre" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -143,10 +186,10 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème automatique"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="Thème automatique" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
       </label>
     
   
@@ -201,6 +244,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -209,99 +264,6 @@
       
       
         
-          
-            
-<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Accueil
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Manuel
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../annexes/annexe-a/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Annexes
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  À propos
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
           
         
       
@@ -316,19 +278,29 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     Manuel HTML
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -388,14 +360,13 @@
       
         
       
+        
+      
     
     
     
       
         
-        
-      
-      
         
       
     
@@ -415,7 +386,7 @@
   <span class="md-ellipsis">
     
   
-    Manuel
+    Le manuel
   
 
     
@@ -437,7 +408,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Manuel
+    Le manuel
   
 
           </label>
@@ -459,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 1
+    1. Le Web et le HTML
   
 
     
@@ -487,7 +458,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 2
+    2. Structure d'une page
   
 
     
@@ -515,7 +486,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 3
+    3. Le texte
   
 
     
@@ -543,7 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 4
+    4. Les listes
   
 
     
@@ -580,7 +551,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 5
+    5. Les liens
   
 
     
@@ -598,7 +569,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 5
+    5. Les liens
   
 
     
@@ -624,17 +595,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#la-balise-a" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -643,14 +603,58 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;A&gt;">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-adresses-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les adresses (URL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lien-externe-vers-un-autre-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lien externe, vers un autre site
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liens-internes-vers-une-page-du-meme-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liens internes, vers une page du même site
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Liens internes, vers une page du même site">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe-generale" class="md-nav__link">
+  <a href="#fichier-du-meme-dossier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntaxe générale
+        Fichier du même dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichier-dun-autre-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier d'un autre dossier
       
     </span>
   </a>
@@ -663,10 +667,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lattribut-href" class="md-nav__link">
+  <a href="#ouvrir-dans-un-nouvel-onglet-target" class="md-nav__link">
     <span class="md-ellipsis">
       
-        L'attribut HREF
+        Ouvrir dans un nouvel onglet : TARGET
       
     </span>
   </a>
@@ -674,77 +678,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-liens-internes" class="md-nav__link">
+  <a href="#les-ancres-aller-a-un-endroit-de-la-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les liens internes
+        Les ancres : aller à un endroit de la page
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-liens-externes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les liens externes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-target" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut TARGET
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-liens-vers-une-adresse-electronique" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les liens vers une adresse électronique
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-ancres" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les ancres
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Les ancres">
+    <nav class="md-nav" aria-label="Les ancres : aller à un endroit de la page">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#etape-1-creer-lancre" class="md-nav__link">
+  <a href="#ancre-dans-une-autre-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 1 — Créer l'ancre
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etape-2-creer-le-lien" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Étape 2 — Créer le lien
+        Ancre dans une autre page
       
     </span>
   </a>
@@ -757,10 +706,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-images-comme-liens" class="md-nav__link">
+  <a href="#lien-vers-une-adresse-e-mail-ou-un-telephone" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les images comme liens
+        Lien vers une adresse e-mail ou un téléphone
       
     </span>
   </a>
@@ -768,21 +717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
+  <a href="#une-image-comme-lien" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemple complet
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Erreurs fréquentes
+        Une image comme lien
       
     </span>
   </a>
@@ -809,22 +747,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -851,7 +783,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 6
+    6. Les images
   
 
     
@@ -879,7 +811,35 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 7
+    7. Les tableaux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les feuilles de style
   
 
     
@@ -910,19 +870,19 @@
     
       
         
-      
+          
         
       
     
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -931,7 +891,80 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <div class="md-nav__link md-nav__container">
+            <a href="../bonus-formulaires/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -949,8 +982,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -974,7 +1007,7 @@
   <span class="md-ellipsis">
     
   
-    Annexe A
+    A. Erreurs fréquentes
   
 
     
@@ -1002,7 +1035,35 @@
   <span class="md-ellipsis">
     
   
-    Annexe B
+    B. Récapitulatif des balises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Corrections du support
   
 
     
@@ -1077,17 +1138,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#la-balise-a" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1096,14 +1146,58 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;A&gt;">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-adresses-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les adresses (URL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lien-externe-vers-un-autre-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lien externe, vers un autre site
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liens-internes-vers-une-page-du-meme-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liens internes, vers une page du même site
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Liens internes, vers une page du même site">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe-generale" class="md-nav__link">
+  <a href="#fichier-du-meme-dossier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntaxe générale
+        Fichier du même dossier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichier-dun-autre-dossier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier d'un autre dossier
       
     </span>
   </a>
@@ -1116,10 +1210,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lattribut-href" class="md-nav__link">
+  <a href="#ouvrir-dans-un-nouvel-onglet-target" class="md-nav__link">
     <span class="md-ellipsis">
       
-        L'attribut HREF
+        Ouvrir dans un nouvel onglet : TARGET
       
     </span>
   </a>
@@ -1127,77 +1221,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-liens-internes" class="md-nav__link">
+  <a href="#les-ancres-aller-a-un-endroit-de-la-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les liens internes
+        Les ancres : aller à un endroit de la page
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-liens-externes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les liens externes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-target" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut TARGET
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-liens-vers-une-adresse-electronique" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les liens vers une adresse électronique
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-ancres" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les ancres
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Les ancres">
+    <nav class="md-nav" aria-label="Les ancres : aller à un endroit de la page">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#etape-1-creer-lancre" class="md-nav__link">
+  <a href="#ancre-dans-une-autre-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 1 — Créer l'ancre
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etape-2-creer-le-lien" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Étape 2 — Créer le lien
+        Ancre dans une autre page
       
     </span>
   </a>
@@ -1210,10 +1249,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-images-comme-liens" class="md-nav__link">
+  <a href="#lien-vers-une-adresse-e-mail-ou-un-telephone" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les images comme liens
+        Lien vers une adresse e-mail ou un téléphone
       
     </span>
   </a>
@@ -1221,21 +1260,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
+  <a href="#une-image-comme-lien" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemple complet
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Erreurs fréquentes
+        Une image comme lien
       
     </span>
   </a>
@@ -1262,22 +1290,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1298,408 +1320,239 @@
 
 
 
-<h1 id="les-liens-hypertextes-en-html">Les liens hypertextes en HTML<a class="headerlink" href="#les-liens-hypertextes-en-html" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>L'une des principales caractéristiques du Web est la possibilité de naviguer facilement d'une page à une autre.</p>
-<p>Cette navigation est rendue possible grâce aux <strong>liens hypertextes</strong>.</p>
-<p>Un lien hypertexte est un élément cliquable permettant à l'utilisateur d'accéder :</p>
+<h1 id="les-liens-hypertextes">Les liens hypertextes<a class="headerlink" href="#les-liens-hypertextes" title="Lien vers cette section">&para;</a></h1>
+<p>Les liens sont ce qui fait du Web une « toile » : ils relient les pages entre elles. Un lien est un mot, une suite de mots ou une image, repéré par une balise spéciale.</p>
+<p>Cliquer sur un lien permet d'aller :</p>
 <ul>
-<li>à une autre page Web ;</li>
-<li>à une page du même site ;</li>
-<li>à une section précise d'une page ;</li>
-<li>à une adresse électronique ;</li>
-<li>à un document (PDF, image, etc.).</li>
+<li>vers un nouveau document HTML, du même serveur ou d'ailleurs sur le Web (par son <strong>URL</strong>) ;</li>
+<li>vers un <strong>autre endroit du même document</strong> ;</li>
+<li>vers un document quelconque.</li>
 </ul>
-<p>Les liens sont créés à l'aide de la balise <code>&lt;A&gt;</code>, également appelée <strong>balise d'ancre</strong> (<em>Anchor</em>).</p>
-<hr />
-<h2 id="la-balise-a">La balise <code>&lt;A&gt;</code><a class="headerlink" href="#la-balise-a" title="Permanent link">&para;</a></h2>
-<p>La balise <code>&lt;A&gt;</code> est utilisée pour créer un lien hypertexte.</p>
-<h3 id="syntaxe-generale">Syntaxe générale<a class="headerlink" href="#syntaxe-generale" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;destination&quot;</span><span class="p">&gt;</span>
-
-    Texte du lien
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<p>Dans un navigateur, les liens sont en général <strong>soulignés</strong>, le pointeur de la souris change d'apparence au survol, et l'adresse de destination s'affiche en bas de la fenêtre.</p>
+<h2 id="la-balise-a">La balise <code>&lt;A&gt;</code><a class="headerlink" href="#la-balise-a" title="Lien vers cette section">&para;</a></h2>
+<p>Un lien se crée avec la balise <code>&lt;A&gt; … &lt;/A&gt;</code> (<em>anchor</em>, « ancre »).</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"cible_du_lien"</span><span class="p">&gt;</span>Texte du lien<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Le texte situé entre les deux balises est celui qui sera affiché et sur lequel l'utilisateur pourra cliquer.</p>
-<hr />
-<h2 id="lattribut-href">L'attribut <code>HREF</code><a class="headerlink" href="#lattribut-href" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>HREF</code> (<em>Hypertext Reference</em>) indique la destination du lien.</p>
-<p>Cette destination peut être :</p>
 <ul>
-<li>une page HTML ;</li>
-<li>une image ;</li>
-<li>un document ;</li>
-<li>une adresse Internet ;</li>
-<li>une adresse électronique.</li>
+<li>L'attribut <strong><code>HREF</code></strong> indique vers quelle page on envoie l'utilisateur.</li>
+<li>Le texte placé entre <code>&lt;A&gt;</code> et <code>&lt;/A&gt;</code> s'appelle <strong>l'ancre du lien</strong> : c'est lui qui est cliquable.</li>
+<li>L'attribut <strong><code>TITLE</code></strong> (facultatif) ajoute une <strong>info-bulle</strong> qui s'affiche au survol.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Exemple 5.1 — Lien vers une page</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;page2.html&quot;</span><span class="p">&gt;</span>
-
-    Accéder à la deuxième page
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<p class="admonition-title">Exemple 5.1 — Un lien avec info-bulle</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"index.html"</span> <span class="na">TITLE</span><span class="o">=</span><span class="s">"Retour à l'accueil du site"</span><span class="p">&gt;</span>Ancre du lien<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Fonctionnement</p>
-<p>Lorsque l'utilisateur clique sur ce lien, le navigateur ouvre la page :</p>
-<p><code>page2.html</code></p>
-</div>
-<hr />
-<h2 id="les-liens-internes">Les liens internes<a class="headerlink" href="#les-liens-internes" title="Permanent link">&para;</a></h2>
-<p>Un <strong>lien interne</strong> relie plusieurs pages appartenant au même site.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 5.2 — Navigation interne</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
-    Accueil
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;contact.html&quot;</span><span class="p">&gt;</span>
-    Contact
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;galerie.html&quot;</span><span class="p">&gt;</span>
-    Galerie
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<p>Dans l'aperçu, cliquer sur un lien affiche où il mènerait.</p>
+<h2 id="les-adresses-url">Les adresses (URL)<a class="headerlink" href="#les-adresses-url" title="Lien vers cette section">&para;</a></h2>
+<p>Les adresses du Web sont des <strong>URL</strong> (<em>Uniform Resource Locator</em>). Elles se décomposent ainsi :</p>
+<div class="highlight"><pre><span></span><code>http://www.univ-chlef.dz/seqanal/LicenceInf/intro-fr.html#Partie1
 </code></pre></div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Remarque</p>
-<p>Ces pages doivent être présentes dans le même dossier que la page courante, ou bien le chemin indiqué dans <code>HREF</code> doit être correct.</p>
-</div>
-<hr />
-<h2 id="les-liens-externes">Les liens externes<a class="headerlink" href="#les-liens-externes" title="Permanent link">&para;</a></h2>
-<p>Un <strong>lien externe</strong> permet d'accéder à un autre site Web.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 5.3 — Lien externe</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;https://www.uam.sn&quot;</span><span class="p">&gt;</span>
-
-    Université Amadou Mahtar Mbow
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Fonctionnement</p>
-<p>Le navigateur ouvre alors le site indiqué.</p>
-</div>
-<hr />
-<h2 id="lattribut-target">L'attribut <code>TARGET</code><a class="headerlink" href="#lattribut-target" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>TARGET</code> indique où la page doit être ouverte.</p>
-<p>Les principales valeurs sont :</p>
 <table>
 <thead>
 <tr>
-<th>Valeur</th>
-<th>Fonction</th>
+<th>Partie</th>
+<th>Exemple</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>_self</code></td>
-<td>Ouvre le lien dans la même fenêtre.</td>
+<td>Le <strong>protocole</strong></td>
+<td><code>http</code></td>
 </tr>
 <tr>
-<td><code>_blank</code></td>
-<td>Ouvre le lien dans une nouvelle fenêtre ou un nouvel onglet.</td>
+<td>Le <strong>serveur</strong></td>
+<td><code>www.univ-chlef.dz</code></td>
 </tr>
 <tr>
-<td><code>_parent</code></td>
-<td>Ouvre le lien dans la fenêtre parente.</td>
+<td>Le <strong>fichier</strong></td>
+<td><code>/seqanal/LicenceInf/intro-fr.html</code></td>
 </tr>
 <tr>
-<td><code>_top</code></td>
-<td>Ouvre le lien dans la fenêtre principale.</td>
+<td>Un <strong>ancrage</strong></td>
+<td><code>#Partie1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Dans un lien, l'adresse peut être :</p>
+<ul>
+<li><strong>absolue</strong> : elle contient tout le chemin, <strong>en commençant par le protocole</strong> : <code>http://www.univ-chlef.dz/pub_social.htm</code> ;</li>
+<li><strong>relative</strong> : elle ne contient qu'une partie du chemin : <code>Mon_repertoire/monfichier.html</code>.</li>
+</ul>
+<h2 id="lien-externe-vers-un-autre-site">Lien externe, vers un autre site<a class="headerlink" href="#lien-externe-vers-un-autre-site" title="Lien vers cette section">&para;</a></h2>
+<p>La cible est l'<strong>adresse complète</strong> du site, <code>http://</code> compris. C'est un <strong>lien absolu</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 5.2 — Lien externe</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"http://www.google.fr"</span> <span class="na">TITLE</span><span class="o">=</span><span class="s">"Moteur de recherche Google"</span><span class="p">&gt;</span>Lien externe vers Google<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"http://www.univ-chlef.dz/"</span><span class="p">&gt;</span>L'université de Chlef<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Attention</p>
+<p><code>HREF="www.google.fr"</code> ne fonctionne <strong>pas</strong> comme lien externe : sans <code>http://</code>, le navigateur cherche un fichier nommé <code>www.google.fr</code> dans votre dossier.</p>
+</div>
+<h2 id="liens-internes-vers-une-page-du-meme-site">Liens internes, vers une page du même site<a class="headerlink" href="#liens-internes-vers-une-page-du-meme-site" title="Lien vers cette section">&para;</a></h2>
+<p>Un site est un ensemble de pages rangées dans un dossier, appelé <strong>racine du site</strong>. Ces pages peuvent être organisées en <strong>sous-dossiers</strong>.</p>
+<h3 id="fichier-du-meme-dossier">Fichier du même dossier<a class="headerlink" href="#fichier-du-meme-dossier" title="Lien vers cette section">&para;</a></h3>
+<p>Il suffit d'écrire le <strong>nom du fichier</strong>. Ce sont des <strong>liens relatifs</strong> : relatifs au dossier dans lequel se trouve la page.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 5.3 — Liens relatifs</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"page1.html"</span> <span class="na">TITLE</span><span class="o">=</span><span class="s">"Ma 1re page"</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"index.html"</span> <span class="na">TITLE</span><span class="o">=</span><span class="s">"Accueil du site"</span><span class="p">&gt;</span>L'accueil<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="fichier-dun-autre-dossier">Fichier d'un autre dossier<a class="headerlink" href="#fichier-dun-autre-dossier" title="Lien vers cette section">&para;</a></h3>
+<ul>
+<li>Pour <strong>descendre</strong> dans un sous-dossier, on ajoute son nom suivi de <code>/</code> : <code>monrepertoire/mapage.html</code>.</li>
+<li>Pour <strong>remonter</strong> d'un dossier, on écrit <code>../</code> : <code>../index.html</code>.</li>
+</ul>
+<p>Imaginons ce site :</p>
+<div class="highlight"><pre><span></span><code>racine/
+├── index.html
+├── cours/
+│   └── html.html
+└── tp/
+    └── tp1.html
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Depuis…</th>
+<th>Vers…</th>
+<th>On écrit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index.html</code></td>
+<td><code>cours/html.html</code></td>
+<td><code>HREF="cours/html.html"</code></td>
+</tr>
+<tr>
+<td><code>cours/html.html</code></td>
+<td><code>index.html</code></td>
+<td><code>HREF="../index.html"</code></td>
+</tr>
+<tr>
+<td><code>cours/html.html</code></td>
+<td><code>tp/tp1.html</code></td>
+<td><code>HREF="../tp/tp1.html"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Le dernier cas <strong>remonte</strong> d'abord à la racine avec <code>../</code>, puis <strong>redescend</strong> dans <code>tp/</code>.</p>
+<h2 id="ouvrir-dans-un-nouvel-onglet-target">Ouvrir dans un nouvel onglet : <code>TARGET</code><a class="headerlink" href="#ouvrir-dans-un-nouvel-onglet-target" title="Lien vers cette section">&para;</a></h2>
+<p>L'attribut <code>TARGET="_blank"</code> ouvre le lien dans une <strong>nouvelle fenêtre</strong> ou un <strong>nouvel onglet</strong>, selon le navigateur.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 5.4 — Nouvel onglet</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"http://www.google.fr"</span> <span class="na">TARGET</span><span class="o">=</span><span class="s">"_blank"</span><span class="p">&gt;</span>Ouvrir Google dans un nouvel onglet<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À utiliser avec modération</p>
+<p>Le cours pose la question : faut-il <strong>laisser l'utilisateur garder le contrôle</strong> de son navigateur ? Ouvrir des onglets sans prévenir peut le gêner.</p>
+</div>
+<h2 id="les-ancres-aller-a-un-endroit-de-la-page">Les ancres : aller à un endroit de la page<a class="headerlink" href="#les-ancres-aller-a-un-endroit-de-la-page" title="Lien vers cette section">&para;</a></h2>
+<p>Un <strong>lien interne</strong> (ou ancre) amène à un <strong>endroit précis</strong> de la page, comme les liens « retour en haut de page » ou le sommaire de Wikipédia. L'ancre apparaît dans l'URL (<code>…page.html#nom</code>).</p>
+<p>Cela se fait en <strong>deux étapes</strong> :</p>
+<ol>
+<li><strong>Marquer l'endroit</strong> à atteindre avec une étiquette :<ul>
+<li>soit avec <code>&lt;A NAME="nom"&gt;</code> ;</li>
+<li>soit avec l'attribut <code>ID="nom"</code> sur n'importe quelle balise.</li>
+</ul>
+</li>
+<li><strong>Créer le lien</strong> vers cet endroit, avec <code>#</code> suivi du nom : <code>&lt;A HREF="#nom"&gt;</code>.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Exemple 5.5 — Un sommaire avec ancres</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H1</span> <span class="na">ID</span><span class="o">=</span><span class="s">"haut"</span><span class="p">&gt;</span>Guide de l'étudiant<span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"#p1"</span><span class="p">&gt;</span>Paragraphe 1<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span> |
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"#p2"</span><span class="p">&gt;</span>Paragraphe 2<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"p1"</span><span class="p">&gt;</span>Paragraphe 1<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Le sujet abord<span class="ni">&amp;eacute;</span> ici est…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ID</span><span class="o">=</span><span class="s">"p2"</span><span class="p">&gt;</span>Paragraphe 2<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Contrairement à ce qui était mentionné au <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"#p1"</span><span class="p">&gt;</span>paragraphe 1<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>…<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"#haut"</span><span class="p">&gt;</span>Retour en haut de page<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="ancre-dans-une-autre-page">Ancre dans une autre page<a class="headerlink" href="#ancre-dans-une-autre-page" title="Lien vers cette section">&para;</a></h3>
+<p>On peut aussi viser un endroit d'<strong>une autre page</strong> : on écrit l'adresse de la page, puis <code>#</code> et le nom de l'étiquette.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"monfichier.html#ref"</span><span class="p">&gt;</span>Vers la référence<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"http://www.toto.com/ExempleLienInterne.html#p1"</span><span class="p">&gt;</span>Paragraphe 1 d'un autre document<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>L'exemple de la page 77 écrit <code>&lt;A NAME="http://www.toto.com/ExempleLienInterne.html#p1"&gt;</code> pour <strong>accéder</strong> au paragraphe d'un autre document. Pour créer un lien, il faut <strong><code>HREF</code></strong>, pas <code>NAME</code> : <code>NAME</code> sert seulement à <strong>poser</strong> l'étiquette. La bonne écriture est donc <code>&lt;A HREF="http://www.toto.com/ExempleLienInterne.html#p1"&gt;</code>.</p>
+</div>
+<h2 id="lien-vers-une-adresse-e-mail-ou-un-telephone">Lien vers une adresse e-mail ou un téléphone<a class="headerlink" href="#lien-vers-une-adresse-e-mail-ou-un-telephone" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;A HREF="mailto:monmail@gmail.com"&gt;</code></td>
+<td>Ouvre automatiquement le logiciel de messagerie, avec l'adresse déjà remplie.</td>
+</tr>
+<tr>
+<td><code>&lt;A HREF="tel:13371337"&gt;</code></td>
+<td>Propose d'<strong>appeler</strong> ce numéro (utile sur téléphone).</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition example">
-<p class="admonition-title">Exemple 5.4 — Ouverture dans un nouvel onglet</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span>
-    <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;https://www.uam.sn&quot;</span>
-    <span class="na">TARGET</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>
-
-    Site officiel de l&#39;UAM
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<p class="admonition-title">Exemple 5.6 — E-mail et téléphone</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"mailto:secretariat@uam.sn"</span><span class="p">&gt;</span>Écrire au secrétariat<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"tel:338000000"</span><span class="p">&gt;</span>Appeler la scolarité<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<hr />
-<h2 id="les-liens-vers-une-adresse-electronique">Les liens vers une adresse électronique<a class="headerlink" href="#les-liens-vers-une-adresse-electronique" title="Permanent link">&para;</a></h2>
-<p>HTML permet également de créer un lien ouvrant automatiquement le logiciel de messagerie.</p>
-<p>La syntaxe utilise le mot-clé :</p>
-<div class="highlight"><pre><span></span><code>mailto:
-</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Le cours le signale</p>
+<p>Un e-mail écrit en clair dans une page peut être <strong>récupéré par des robots</strong> et recevoir du spam. Pour une vraie page de contact, on préfère un <strong>formulaire</strong>.</p>
+</div>
+<h2 id="une-image-comme-lien">Une image comme lien<a class="headerlink" href="#une-image-comme-lien" title="Lien vers cette section">&para;</a></h2>
+<p>Une image peut servir de lien : il suffit de placer la balise <code>&lt;IMG&gt;</code> <strong>entre</strong> <code>&lt;A&gt;</code> et <code>&lt;/A&gt;</code>. Nous verrons la balise <code>&lt;IMG&gt;</code> en détail au chapitre suivant.</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple 5.5 — Lien e-mail</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;mailto:secretariat@universite.sn&quot;</span><span class="p">&gt;</span>
-
-    Contacter le secrétariat
-
+<p class="admonition-title">Exemple 5.7 — Image cliquable</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"maison.gif"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"80"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Retour à l'accueil"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Fonctionnement</p>
-<p>Lorsque l'utilisateur clique sur ce lien, son logiciel de messagerie prépare automatiquement un nouveau courrier destiné à cette adresse.</p>
-</div>
-<hr />
-<h2 id="les-ancres">Les ancres<a class="headerlink" href="#les-ancres" title="Permanent link">&para;</a></h2>
-<p>Une <strong>ancre</strong> permet d'accéder directement à une partie précise d'une même page.</p>
-<p>Cette technique est particulièrement utile dans les longues pages contenant un sommaire.</p>
-<h3 id="etape-1-creer-lancre">Étape 1 — Créer l'ancre<a class="headerlink" href="#etape-1-creer-lancre" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;bibliographie&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>
-    Bibliographie
-<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-</code></pre></div>
-<h3 id="etape-2-creer-le-lien">Étape 2 — Créer le lien<a class="headerlink" href="#etape-2-creer-le-lien" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;#bibliographie&quot;</span><span class="p">&gt;</span>
-
-    Aller à la bibliographie
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Fonctionnement</p>
-<p>Lorsque l'utilisateur clique sur ce lien, le navigateur se positionne directement sur la section correspondante.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Bonne pratique</p>
-<p>En HTML5, il est préférable d'utiliser l'attribut <code>id</code> plutôt que <code>NAME</code> pour créer une ancre.</p>
-<p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">H2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bibliographie&quot;</span><span class="p">&gt;</span>
-    Bibliographie
-<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Puis :</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;#bibliographie&quot;</span><span class="p">&gt;</span>
-    Aller à la bibliographie
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="les-images-comme-liens">Les images comme liens<a class="headerlink" href="#les-images-comme-liens" title="Permanent link">&para;</a></h2>
-<p>Une image peut également être utilisée comme lien hypertexte.</p>
-<p>Il suffit de placer la balise <code>&lt;IMG&gt;</code> entre les balises <code>&lt;A&gt;</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 5.6 — Image cliquable</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;logo.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Retour à l&#39;accueil&quot;</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Résultat</p>
-<p>L'utilisateur pourra cliquer directement sur l'image pour accéder à la page indiquée.</p>
-</div>
-<hr />
-<h2 id="exemple-complet">Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Bibliothèque Universitaire</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-        Bibliothèque Universitaire
-    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;white&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H1</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
-        Bibliothèque Universitaire
-    <span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>
-        Navigation
-    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
-        Accueil
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;catalogue.html&quot;</span><span class="p">&gt;</span>
-        Catalogue
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;contact.html&quot;</span><span class="p">&gt;</span>
-        Contact
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span>
-        <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;https://www.uam.sn&quot;</span>
-        <span class="na">TARGET</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>
-
-        Site officiel de l&#39;UAM
-
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span>
-        <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;mailto:bibliotheque@uam.sn&quot;</span><span class="p">&gt;</span>
-
-        Écrire au bibliothécaire
-
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;#horaire&quot;</span><span class="p">&gt;</span>
-
-        Voir les horaires
-
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet...<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet...<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet...<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;horaire&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>
-        Horaires d&#39;ouverture
-    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
-        Du lundi au vendredi : 08h00 - 18h00
-    <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h2>
-<div class="admonition danger">
-<p class="admonition-title">À éviter</p>
-<ul>
-<li>
-<p>oublier l'attribut <code>HREF</code> ;</p>
-</li>
-<li>
-<p>utiliser un chemin de fichier incorrect ;</p>
-</li>
-<li>
-<p>oublier de fermer la balise <code>&lt;A&gt;</code> ;</p>
-</li>
-<li>
-<p>utiliser un nom d'ancre différent entre <code>NAME</code> et <code>HREF="#..."</code> ;</p>
-</li>
-<li>
-<p>écrire une adresse Internet incomplète (par exemple <code>www.site.com</code> au lieu de <code>https://www.site.com</code>).</p>
-</li>
-</ul>
-</div>
-<hr />
-<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Permanent link">&para;</a></h2>
+<p><code>BORDER="0"</code> évite le cadre de couleur que certains navigateurs dessinent autour d'une image cliquable.</p>
+<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Lien vers cette section">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Points essentiels</p>
 <ul>
-<li>
-<p>La balise <code>&lt;A&gt;</code> permet de créer un lien hypertexte.</p>
-</li>
-<li>
-<p>L'attribut <code>HREF</code> indique la destination du lien.</p>
-</li>
-<li>
-<p>Les liens peuvent être internes ou externes.</p>
-</li>
-<li>
-<p>L'attribut <code>TARGET</code> permet de choisir la manière dont le lien sera ouvert.</p>
-</li>
-<li>
-<p>Le mot-clé <code>mailto:</code> permet de créer un lien vers une adresse électronique.</p>
-</li>
-<li>
-<p>Une ancre permet de naviguer rapidement à l'intérieur d'une même page.</p>
-</li>
-<li>
-<p>Une image peut servir de lien en étant placée entre les balises <code>&lt;A&gt;</code>.</p>
-</li>
+<li>Un lien s'écrit <code>&lt;A HREF="cible"&gt;ancre du lien&lt;/A&gt;</code> ; <code>TITLE</code> ajoute une info-bulle.</li>
+<li>Une URL contient un protocole, un serveur, un fichier et parfois une ancre.</li>
+<li>Un lien <strong>absolu</strong> commence par <code>http://</code> ; un lien <strong>relatif</strong> part du dossier courant.</li>
+<li><code>dossier/page.html</code> descend dans un dossier, <code>../page.html</code> remonte d'un dossier.</li>
+<li><code>TARGET="_blank"</code> ouvre un nouvel onglet.</li>
+<li>Une ancre se pose avec <code>NAME</code> ou <code>ID</code> et s'appelle avec <code>HREF="#nom"</code>.</li>
+<li><code>mailto:</code> ouvre la messagerie, <code>tel:</code> propose un appel.</li>
 </ul>
 </div>
-<hr />
-<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
-<div class="admonition question">
-<p class="admonition-title">Exercice 1</p>
-<p>Créer une page <strong>Accueil.html</strong> contenant :</p>
-<ul>
-<li>un titre principal ;</li>
-<li>trois liens internes :<ul>
-<li>Présentation ;</li>
-<li>Galerie ;</li>
-<li>Contact.</li>
-</ul>
-</li>
-</ul>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Lien vers cette section">&para;</a></h2>
+<div class="exo" data-exo="ch5-1">
+<p>Créez un menu avec trois <strong>liens relatifs</strong> vers <code>presentation.html</code>, <code>galerie.html</code> et <code>contact.html</code>, puis un <strong>lien externe</strong> vers <code>http://www.google.fr</code> qui s'ouvre dans un <strong>nouvel onglet</strong>.</p>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 2</p>
-<p>Créer une page <strong>Liens.html</strong> contenant :</p>
-<ul>
-<li>un lien vers le site de l'Université ;</li>
-<li>un lien ouvrant une nouvelle fenêtre ;</li>
-<li>un lien permettant d'envoyer un courrier électronique au secrétariat.</li>
-</ul>
+<div class="exo" data-exo="ch5-2">
+<p>Créez une page avec un <strong>sommaire</strong> de deux liens vers deux sections, <strong>« Formations »</strong> et <strong>« Horaires »</strong>, marquées par des ancres. Ajoutez un lien <strong>mailto</strong> vers <code>scolarite@uam.sn</code>. Cliquez sur vos liens dans le rendu pour vérifier qu'ils fonctionnent.</p>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 3</p>
-<p>Créer une page intitulée <strong>Guide de l'étudiant</strong> comprenant :</p>
-<ul>
-<li>
-<p>un sommaire placé en haut de la page ;</p>
-</li>
-<li>
-<p>trois sections :</p>
-<ul>
-<li>Présentation ;</li>
-<li>Formations ;</li>
-<li>Horaires.</li>
-</ul>
-</li>
-<li>
-<p>des ancres permettant d'accéder directement à chaque section ;</p>
-</li>
-<li>
-<p>une image servant de bouton <strong>Retour à l'accueil</strong>.</p>
-</li>
-</ul>
+<div class="exo" data-exo="ch5-3">
+<p>Votre page est dans le dossier <code>cours/</code>. Créez un lien vers <code>index.html</code>, qui se trouve <strong>un dossier au-dessus</strong>, et un lien vers <code>tp1.html</code>, qui se trouve dans le dossier <code>tp/</code> <strong>à côté</strong> de <code>cours/</code>.</p>
 </div>
-<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
-<p>Maîtriser la création et l'utilisation des liens hypertextes, des ancres et des images cliquables.</p>
-<hr />
-<p>⬅️ <strong>Précédent :</strong> Les formulaires HTML</p>
-<p>➡️ <strong>Suivant :</strong> Les images HTML</p>
+<h2 id="verifiez-vos-acquis">Vérifiez vos acquis<a class="headerlink" href="#verifiez-vos-acquis" title="Lien vers cette section">&para;</a></h2>
+<div class="quiz" data-quiz="ch5"></div>
 
 
 
@@ -1717,8 +1570,6 @@
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1737,7 +1588,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../chapitre4/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre 4">
+          <a href="../chapitre4/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 4. Les listes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1747,20 +1598,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Chapitre 4
+                4. Les listes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../chapitre6/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre 6">
+          <a href="../chapitre6/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 6. Les images">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Chapitre 6
+                6. Les images
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1793,16 +1644,20 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../javascripts/preview.js"></script>
+        <script src="../../javascripts/exercices.js"></script>
+      
+        <script src="../../javascripts/manuel.js"></script>
       
     
   </body>

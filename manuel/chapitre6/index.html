@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Manuel interactif de HTML - UAM">
+        <meta name="description" content="Le cours de HTML de l'UAM, avec aperçus en direct et exercices corrigés instantanément.">
       
       
         <meta name="author" content="Flamme">
       
       
-        <link rel="canonical" href="https://flamme.github.io/manuel-html/manuel/chapitre6/">
+        <link rel="canonical" href="https://cuttyflam04.github.io/manuel-html/manuel/chapitre6/">
       
       
         <link rel="prev" href="../chapitre5/">
@@ -24,21 +24,46 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Chapitre 6 - Manuel HTML</title>
+        <title>6. Les images - Manuel HTML</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%209a3%203%200%200%201%203%203%203%203%200%200%201-3%203%203%203%200%200%201-3-3%203%203%200%200%201%203-3m0-4.5c5%200%209.27%203.11%2011%207.5-1.73%204.39-6%207.5-11%207.5S2.73%2016.39%201%2012c1.73-4.39%206-7.5%2011-7.5M3.18%2012a9.821%209.821%200%200%200%2017.64%200%209.821%209.821%200%200%200-17.64%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.06%209%20.94.94L5.92%2019H5v-.92zm3.6-6c-.25%200-.51.1-.7.29l-1.83%201.83%203.75%203.75%201.83-1.83c.39-.39.39-1.04%200-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6%203.19L3%2017.25V21h3.75L17.81%209.94z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202C6.5%202%202%206.5%202%2012s4.5%2010%2010%2010%2010-4.5%2010-10S17.5%202%2012%202m0%2018c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m4.59-12.42L10%2014.17l-2.59-2.58L6%2013l4%204%208-8z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M8.27%203%203%208.27v7.46L8.27%2021h7.46C17.5%2019.24%2021%2015.73%2021%2015.73V8.27L15.73%203M9.1%205h5.8L19%209.1v5.8L14.9%2019H9.1L5%2014.9V9.1m6%205.9h2v2h-2zm0-8h2v6h-2z%22/%3E%3C/svg%3E');}</style>
+
 
 
     
@@ -50,16 +75,14 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/home.css">
+      <link rel="stylesheet" href="../../stylesheets/manuel.css">
     
-      <link rel="stylesheet" href="../../stylesheets/manual.css">
-    
-      <link rel="stylesheet" href="../../stylesheets/code.css">
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,6 +90,14 @@
 
     
     
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Bungee&family=Gluten:wght@700;800&display=swap">
+  <script>
+    /* Applique le style choisi avant l'affichage, pour éviter un flash */
+    try { var s = localStorage.getItem("mh:style"); if (s) document.documentElement.setAttribute("data-mh-style", s); } catch (e) {}
+  </script>
+
   </head>
   
   
@@ -77,7 +108,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-images-en-html" class="md-skip">
+        <a href="#les-images" class="md-skip">
           Aller au contenu
         </a>
       
@@ -98,12 +129,14 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapitre 6
+              6. Les images
             
           </span>
         </div>
@@ -133,9 +166,19 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Thème clair"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Thème clair" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème sombre"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Thème sombre" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -143,10 +186,10 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème automatique"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="Thème automatique" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
       </label>
     
   
@@ -201,6 +244,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -209,99 +264,6 @@
       
       
         
-          
-            
-<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Accueil
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Manuel
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../annexes/annexe-a/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Annexes
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  À propos
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
           
         
       
@@ -316,19 +278,29 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
 
     </a>
     Manuel HTML
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -388,14 +360,13 @@
       
         
       
+        
+      
     
     
     
       
         
-        
-      
-      
         
       
     
@@ -415,7 +386,7 @@
   <span class="md-ellipsis">
     
   
-    Manuel
+    Le manuel
   
 
     
@@ -437,7 +408,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Manuel
+    Le manuel
   
 
           </label>
@@ -459,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 1
+    1. Le Web et le HTML
   
 
     
@@ -487,7 +458,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 2
+    2. Structure d'une page
   
 
     
@@ -515,7 +486,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 3
+    3. Le texte
   
 
     
@@ -543,7 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 4
+    4. Les listes
   
 
     
@@ -571,7 +542,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 5
+    5. Les liens
   
 
     
@@ -608,7 +579,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 6
+    6. Les images
   
 
     
@@ -626,7 +597,7 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 6
+    6. Les images
   
 
     
@@ -652,10 +623,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#les-formats-dimage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Les formats d'image
       
     </span>
   </a>
@@ -671,80 +642,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;IMG&gt;">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntaxe-generale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Syntaxe générale
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#lattribut-src" class="md-nav__link">
+  <a href="#lattribut-src-la-source" class="md-nav__link">
     <span class="md-ellipsis">
       
-        L'attribut SRC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="L&#39;attribut SRC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meme-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Même dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sous-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sous-dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#autre-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autre dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-alt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut ALT
+        L'attribut SRC : la source
       
     </span>
   </a>
@@ -752,60 +656,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-attributs-height-et-width" class="md-nav__link">
+  <a href="#lattribut-alt-le-texte-alternatif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les attributs HEIGHT et WIDTH
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Les attributs HEIGHT et WIDTH">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#height" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEIGHT
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#width" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WIDTH
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#height-et-width-ensemble" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEIGHT et WIDTH ensemble
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-align" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut ALIGN
+        L'attribut ALT : le texte alternatif
       
     </span>
   </a>
@@ -813,10 +667,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-images-comme-liens" class="md-nav__link">
+  <a href="#width-et-height-la-taille" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les images comme liens
+        WIDTH et HEIGHT : la taille
       
     </span>
   </a>
@@ -824,10 +678,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plusieurs-images-dans-une-meme-page" class="md-nav__link">
+  <a href="#border-le-cadre" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plusieurs images dans une même page
+        BORDER : le cadre
       
     </span>
   </a>
@@ -835,10 +689,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
+  <a href="#align-la-position-par-rapport-au-texte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemple complet
+        ALIGN : la position par rapport au texte
       
     </span>
   </a>
@@ -846,10 +700,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-formats-dimage" class="md-nav__link">
+  <a href="#une-image-cliquable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les formats d'image
+        Une image cliquable
       
     </span>
   </a>
@@ -857,21 +711,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
+  <a href="#recapitulatif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Erreurs fréquentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        À retenir
+        Récapitulatif
       
     </span>
   </a>
@@ -887,22 +730,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -929,7 +766,35 @@
   <span class="md-ellipsis">
     
   
-    Chapitre 7
+    7. Les tableaux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les feuilles de style
   
 
     
@@ -960,19 +825,19 @@
     
       
         
-      
+          
         
       
     
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -981,7 +846,80 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <div class="md-nav__link md-nav__container">
+            <a href="../bonus-formulaires/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -999,8 +937,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1024,7 +962,7 @@
   <span class="md-ellipsis">
     
   
-    Annexe A
+    A. Erreurs fréquentes
   
 
     
@@ -1052,7 +990,35 @@
   <span class="md-ellipsis">
     
   
-    Annexe B
+    B. Récapitulatif des balises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Corrections du support
   
 
     
@@ -1127,10 +1093,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#les-formats-dimage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Les formats d'image
       
     </span>
   </a>
@@ -1146,80 +1112,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="La balise &lt;IMG&gt;">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntaxe-generale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Syntaxe générale
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#lattribut-src" class="md-nav__link">
+  <a href="#lattribut-src-la-source" class="md-nav__link">
     <span class="md-ellipsis">
       
-        L'attribut SRC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="L&#39;attribut SRC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meme-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Même dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sous-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sous-dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#autre-dossier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autre dossier
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-alt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut ALT
+        L'attribut SRC : la source
       
     </span>
   </a>
@@ -1227,60 +1126,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-attributs-height-et-width" class="md-nav__link">
+  <a href="#lattribut-alt-le-texte-alternatif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les attributs HEIGHT et WIDTH
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Les attributs HEIGHT et WIDTH">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#height" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEIGHT
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#width" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WIDTH
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#height-et-width-ensemble" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        HEIGHT et WIDTH ensemble
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lattribut-align" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L'attribut ALIGN
+        L'attribut ALT : le texte alternatif
       
     </span>
   </a>
@@ -1288,10 +1137,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-images-comme-liens" class="md-nav__link">
+  <a href="#width-et-height-la-taille" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les images comme liens
+        WIDTH et HEIGHT : la taille
       
     </span>
   </a>
@@ -1299,10 +1148,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plusieurs-images-dans-une-meme-page" class="md-nav__link">
+  <a href="#border-le-cadre" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plusieurs images dans une même page
+        BORDER : le cadre
       
     </span>
   </a>
@@ -1310,10 +1159,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-complet" class="md-nav__link">
+  <a href="#align-la-position-par-rapport-au-texte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemple complet
+        ALIGN : la position par rapport au texte
       
     </span>
   </a>
@@ -1321,10 +1170,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-formats-dimage" class="md-nav__link">
+  <a href="#une-image-cliquable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les formats d'image
+        Une image cliquable
       
     </span>
   </a>
@@ -1332,21 +1181,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#erreurs-frequentes" class="md-nav__link">
+  <a href="#recapitulatif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Erreurs fréquentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        À retenir
+        Récapitulatif
       
     </span>
   </a>
@@ -1362,22 +1200,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objectif" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifiez-vos-acquis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objectif
+        Vérifiez vos acquis
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1398,382 +1230,236 @@
 
 
 
-<h1 id="les-images-en-html">Les images en HTML<a class="headerlink" href="#les-images-en-html" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Les images occupent une place importante dans la conception d'une page Web.</p>
-<p>Elles permettent :</p>
-<ul>
-<li>d'illustrer un texte ;</li>
-<li>d'améliorer la présentation d'un site ;</li>
-<li>de faciliter la compréhension des informations.</li>
-</ul>
-<p>En HTML, les images sont insérées grâce à la balise <code>&lt;IMG&gt;</code>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Remarque</p>
-<p>La balise <code>&lt;IMG&gt;</code> est une <strong>balise orpheline</strong> (<em>void element</em>). Elle ne possède donc <strong>pas de balise fermante</strong>.</p>
-</div>
-<hr />
-<h2 id="la-balise-img">La balise <code>&lt;IMG&gt;</code><a class="headerlink" href="#la-balise-img" title="Permanent link">&para;</a></h2>
-<p>La balise <code>&lt;IMG&gt;</code> permet d'insérer une image dans une page HTML.</p>
-<h3 id="syntaxe-generale">Syntaxe générale<a class="headerlink" href="#syntaxe-generale" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;image.jpg&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Le navigateur affiche alors l'image indiquée par l'attribut <code>SRC</code>.</p>
-<hr />
-<h2 id="lattribut-src">L'attribut <code>SRC</code><a class="headerlink" href="#lattribut-src" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>SRC</code> (<em>Source</em>) indique l'emplacement de l'image.</p>
-<p>L'image peut se trouver :</p>
-<ul>
-<li>dans le même dossier que la page HTML ;</li>
-<li>dans un sous-dossier ;</li>
-<li>dans un autre dossier de l'ordinateur ;</li>
-<li>sur Internet.</li>
-</ul>
-<h3 id="meme-dossier">Même dossier<a class="headerlink" href="#meme-dossier" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.1</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;logo.jpg&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<h3 id="sous-dossier">Sous-dossier<a class="headerlink" href="#sous-dossier" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.2</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;Images/logo.jpg&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<h3 id="autre-dossier">Autre dossier<a class="headerlink" href="#autre-dossier" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.3</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;C:\MesImages\logo.jpg&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Bonne pratique</p>
-<p>Lors des travaux pratiques réalisés en local, il est fréquent d'utiliser un chemin provenant directement de l'ordinateur.</p>
-<p>En revanche, pour un site Web destiné à être publié, il est recommandé de placer les images dans le même projet que les pages HTML et d'utiliser des <strong>chemins relatifs</strong>.</p>
-</div>
-<hr />
-<h2 id="lattribut-alt">L'attribut <code>ALT</code><a class="headerlink" href="#lattribut-alt" title="Permanent link">&para;</a></h2>
-<p>L'attribut <code>ALT</code> (<em>Alternative Text</em>) fournit une description de l'image.</p>
-<p>Ce texte est affiché lorsque l'image ne peut pas être chargée.</p>
-<p>Il améliore également l'accessibilité des pages Web, notamment pour les lecteurs d'écran.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.4 — Texte alternatif</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
-    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
-    <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Photo d&#39;un ordinateur portable&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="les-attributs-height-et-width">Les attributs <code>HEIGHT</code> et <code>WIDTH</code><a class="headerlink" href="#les-attributs-height-et-width" title="Permanent link">&para;</a></h2>
-<p>Les attributs <code>HEIGHT</code> et <code>WIDTH</code> permettent de modifier les dimensions de l'image.</p>
-<h3 id="height"><code>HEIGHT</code><a class="headerlink" href="#height" title="Permanent link">&para;</a></h3>
-<p>Définit la hauteur.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.5</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
-    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
-    <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;150&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<h3 id="width"><code>WIDTH</code><a class="headerlink" href="#width" title="Permanent link">&para;</a></h3>
-<p>Définit la largeur.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.6</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
-    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
-    <span class="na">WIDTH</span><span class="o">=</span><span class="s">&quot;300&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<h3 id="height-et-width-ensemble"><code>HEIGHT</code> et <code>WIDTH</code> ensemble<a class="headerlink" href="#height-et-width-ensemble" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.7</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
-    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
-    <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;180&quot;</span>
-    <span class="na">WIDTH</span><span class="o">=</span><span class="s">&quot;300&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Bonne pratique</p>
-<p>Pour éviter de déformer une image, il est préférable de modifier uniquement la largeur <strong>ou</strong> la hauteur, ou de conserver les proportions d'origine.</p>
-</div>
-<hr />
-<h2 id="lattribut-align">L'attribut <code>ALIGN</code><a class="headerlink" href="#lattribut-align" title="Permanent link">&para;</a></h2>
-<p>Dans le HTML classique utilisé lors des travaux pratiques, l'attribut <code>ALIGN</code> permet d'indiquer la position de l'image par rapport au texte.</p>
-<p>Les principales valeurs sont :</p>
-<table>
-<thead>
-<tr>
-<th>Valeur</th>
-<th>Fonction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>LEFT</code></td>
-<td>Image placée à gauche.</td>
-</tr>
-<tr>
-<td><code>RIGHT</code></td>
-<td>Image placée à droite.</td>
-</tr>
-<tr>
-<td><code>TOP</code></td>
-<td>Alignement vers le haut.</td>
-</tr>
-<tr>
-<td><code>MIDDLE</code></td>
-<td>Alignement au milieu.</td>
-</tr>
-<tr>
-<td><code>BOTTOM</code></td>
-<td>Alignement vers le bas.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.8 — Image alignée à gauche</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span>
-    <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo.jpg&quot;</span>
-    <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;LEFT&quot;</span><span class="p">&gt;</span>
-
-Cette image est placée à gauche du paragraphe.
-</code></pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">HTML5</p>
-<p>L'attribut <code>ALIGN</code> est aujourd'hui <strong>obsolète</strong> en HTML5.</p>
-<p>Dans les sites modernes, le positionnement des images est réalisé avec <strong>CSS</strong>.</p>
-<p>Cet attribut reste néanmoins utile pour comprendre les anciens documents HTML et les exercices de ce cours.</p>
-</div>
-<hr />
-<h2 id="les-images-comme-liens">Les images comme liens<a class="headerlink" href="#les-images-comme-liens" title="Permanent link">&para;</a></h2>
-<p>Une image peut également servir de lien hypertexte.</p>
-<p>Il suffit de placer la balise <code>&lt;IMG&gt;</code> entre les balises <code>&lt;A&gt;</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.9 — Image cliquable</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;maison.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;100&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Accueil&quot;</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Résultat</p>
-<p>Lorsque l'utilisateur clique sur l'image, le navigateur ouvre la page indiquée.</p>
-</div>
-<hr />
-<h2 id="plusieurs-images-dans-une-meme-page">Plusieurs images dans une même page<a class="headerlink" href="#plusieurs-images-dans-une-meme-page" title="Permanent link">&para;</a></h2>
-<p>Une page HTML peut contenir autant d'images que nécessaire.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple 6.10</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo1.jpg&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo2.jpg&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;photo3.jpg&quot;</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="exemple-complet">Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Galerie Informatique</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-        Galerie Informatique
-    <span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">BGCOLOR</span><span class="o">=</span><span class="s">&quot;WHITE&quot;</span> <span class="na">TEXT</span><span class="o">=</span><span class="s">&quot;BLACK&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H1</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;CENTER&quot;</span><span class="p">&gt;</span>
-        Salle Informatique
-    <span class="p">&lt;/</span><span class="nt">H1</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
-        Bienvenue dans notre laboratoire informatique.
-    <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;ordinateur.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;180&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Ordinateur&quot;</span>
-        <span class="na">ALIGN</span><span class="o">=</span><span class="s">&quot;LEFT&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
-        Les étudiants disposent d&#39;ordinateurs modernes leur permettant de réaliser leurs travaux pratiques en programmation, infographie et développement Web.
-    <span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>
-        Quelques équipements
-    <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;imprimante.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Imprimante&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;serveur.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Serveur&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">IMG</span>
-        <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;projecteur.jpg&quot;</span>
-        <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;120&quot;</span>
-        <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Projecteur&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">&quot;accueil.html&quot;</span><span class="p">&gt;</span>
-
-        <span class="p">&lt;</span><span class="nt">IMG</span>
-            <span class="na">SRC</span><span class="o">=</span><span class="s">&quot;retour.jpg&quot;</span>
-            <span class="na">HEIGHT</span><span class="o">=</span><span class="s">&quot;70&quot;</span>
-            <span class="na">ALT</span><span class="o">=</span><span class="s">&quot;Retour à l&#39;accueil&quot;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
-</code></pre></div>
-</div>
-<hr />
-<h2 id="les-formats-dimage">Les formats d'image<a class="headerlink" href="#les-formats-dimage" title="Permanent link">&para;</a></h2>
-<p>Les formats les plus utilisés sont :</p>
+<h1 id="les-images">Les images<a class="headerlink" href="#les-images" title="Lien vers cette section">&para;</a></h1>
+<p>Une image illustre un texte, améliore la présentation d'une page et aide à comprendre l'information. En HTML, on l'insère avec une seule balise : <code>&lt;IMG&gt;</code>.</p>
+<h2 id="les-formats-dimage">Les formats d'image<a class="headerlink" href="#les-formats-dimage" title="Lien vers cette section">&para;</a></h2>
+<p>Le cours présente <strong>deux formats</strong> lus par tous les navigateurs :</p>
 <table>
 <thead>
 <tr>
 <th>Format</th>
-<th>Utilisation</th>
+<th>Nom complet</th>
+<th>Usage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>JPG / JPEG</code></td>
-<td>Photographies</td>
+<td><strong>GIF</strong></td>
+<td><em>Graphics Interchange Format</em></td>
+<td>Les <strong>illustrations</strong> (logos, dessins, icônes)</td>
 </tr>
 <tr>
-<td><code>PNG</code></td>
-<td>Images avec fond transparent</td>
-</tr>
-<tr>
-<td><code>GIF</code></td>
-<td>Images simples ou animées</td>
-</tr>
-<tr>
-<td><code>BMP</code></td>
-<td>Images non compressées</td>
-</tr>
-<tr>
-<td><code>WEBP</code></td>
-<td>Format moderne offrant une bonne qualité avec une taille réduite</td>
+<td><strong>JPEG</strong></td>
+<td><em>Joint Photographic Expert Group</em> (format JFIF)</td>
+<td>Les <strong>photos</strong></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h2>
+<h2 id="la-balise-img">La balise <code>&lt;IMG&gt;</code><a class="headerlink" href="#la-balise-img" title="Lien vers cette section">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"nom_du_fichier.jpg"</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;IMG&gt;</code> est une <strong>balise orpheline</strong> (auto-fermante) : pas de <code>&lt;/IMG&gt;</code>.</li>
+<li>C'est une balise <strong>en ligne</strong> (<em>inline</em>) : elle ne provoque <strong>pas de retour à la ligne</strong> et peut s'insérer au milieu du texte.</li>
+<li>On la place généralement dans un <code>&lt;P&gt;</code>, mais elle peut aller n'importe où dans le <code>&lt;BODY&gt;</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Les images dans ce manuel</p>
+<p>Les fichiers des exemples (<code>photo.jpg</code>, <code>logo.gif</code>…) n'existent pas sur ce site. L'aperçu les remplace par une <strong>image de démonstration</strong> qui porte le nom du fichier et respecte la taille demandée. Sur votre ordinateur, mettez une vraie image avec ce nom dans le dossier de votre page.</p>
+</div>
+<h2 id="lattribut-src-la-source">L'attribut <code>SRC</code> : la source<a class="headerlink" href="#lattribut-src-la-source" title="Lien vers cette section">&para;</a></h2>
+<p><code>SRC="…"</code> donne le <strong>chemin vers l'image</strong> : sur le serveur, ou une URL. C'est le <strong>même principe que pour les liens</strong> (chapitre 5).</p>
+<table>
+<thead>
+<tr>
+<th>Où est l'image ?</th>
+<th>On écrit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dans le même dossier que la page</td>
+<td><code>SRC="photo.jpg"</code></td>
+</tr>
+<tr>
+<td>Dans un sous-dossier <code>images/</code></td>
+<td><code>SRC="images/photo.jpg"</code></td>
+</tr>
+<tr>
+<td>Un dossier au-dessus</td>
+<td><code>SRC="../photo.jpg"</code></td>
+</tr>
+<tr>
+<td>Sur un autre site</td>
+<td><code>SRC="http://www.site.com/photo.jpg"</code></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition danger">
-<p class="admonition-title">À éviter</p>
+<p class="admonition-title">Attention aux noms de fichiers</p>
+<p><code>Photo.JPG</code> et <code>photo.jpg</code> peuvent être considérés comme <strong>deux fichiers différents</strong> sur un serveur. Écrivez le nom <strong>exactement</strong> comme il est, et préférez des noms simples, en minuscules, sans espaces ni accents.</p>
+</div>
+<h2 id="lattribut-alt-le-texte-alternatif">L'attribut <code>ALT</code> : le texte alternatif<a class="headerlink" href="#lattribut-alt-le-texte-alternatif" title="Lien vers cette section">&para;</a></h2>
+<p><code>ALT="description de l'image"</code> donne un <strong>texte qui décrit</strong> l'image. Il la <strong>remplace</strong> si elle ne peut pas être chargée.</p>
 <ul>
-<li>
-<p>oublier l'attribut <code>SRC</code> ;</p>
-</li>
-<li>
-<p>utiliser un chemin incorrect ;</p>
-</li>
-<li>
-<p>oublier l'attribut <code>ALT</code> ;</p>
-</li>
-<li>
-<p>modifier excessivement la largeur ou la hauteur, ce qui déforme l'image ;</p>
-</li>
-<li>
-<p>utiliser une image qui n'existe pas dans le dossier indiqué ;</p>
-</li>
-<li>
-<p>confondre les majuscules et minuscules dans le nom du fichier.</p>
-</li>
+<li>Il est <strong>lu à voix haute</strong> par les lecteurs d'écran, et aide les personnes malvoyantes à comprendre l'image.</li>
+<li>Il est <strong>obligatoire</strong>, mais peut rester <strong>vide</strong> (<code>ALT=""</code>) pour une image purement décorative.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.1 — Texte alternatif</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"photo.jpg"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Photo d'un ordinateur portable"</span><span class="p">&gt;</span>
+    Une image accompagnée de son texte alternatif.
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>Le support indique que <code>ALT</code> « apparaît si la souris s'arrête sur l'image » (info-bulle). C'était le cas dans d'<strong>anciens navigateurs</strong> comme Internet Explorer. Aujourd'hui, <code>ALT</code> sert à <strong>remplacer</strong> l'image ; pour une info-bulle, on utilise l'attribut <strong><code>TITLE</code></strong>, comme pour les liens.</p>
+</div>
+<h2 id="width-et-height-la-taille"><code>WIDTH</code> et <code>HEIGHT</code> : la taille<a class="headerlink" href="#width-et-height-la-taille" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WIDTH="w"</code> ou <code>"w%"</code></td>
+<td><strong>Largeur</strong> affichée, en pixels ou en pourcentage</td>
+</tr>
+<tr>
+<td><code>HEIGHT="h"</code> ou <code>"h%"</code></td>
+<td><strong>Hauteur</strong> affichée, en pixels ou en pourcentage</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Sans ces attributs, l'image s'affiche à sa <strong>taille réelle</strong>.</li>
+<li>Si on n'en donne <strong>qu'un seul</strong>, l'autre est <strong>calculé automatiquement</strong> en proportion.</li>
+<li>Sans taille, le navigateur « devine », ce qui fait <strong>sauter</strong> la page pendant le chargement. <strong>Indiquez toujours au moins un des deux</strong> pour accélérer l'affichage.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.2 — Différentes tailles</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"300"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"150"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus, plus petit"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"300"</span> <span class="na">HEIGHT</span><span class="o">=</span><span class="s">"80"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus déformé"</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>La troisième image est <strong>déformée</strong> : sa largeur et sa hauteur ne respectent plus ses proportions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Conseils du cours</p>
+<ul>
+<li>Attention au <strong>poids</strong> des images : pas d'images trop lourdes.</li>
+<li>Mieux vaut <strong>redimensionner l'image</strong> dans un logiciel avant, plutôt que de charger une grande image et la rétrécir avec <code>WIDTH</code>.</li>
+<li>Pour une galerie : de <strong>petites images cliquables</strong> qui mènent vers les grandes.</li>
 </ul>
 </div>
-<hr />
-<h2 id="a-retenir">À retenir<a class="headerlink" href="#a-retenir" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Points essentiels</p>
-<ul>
-<li>
-<p><code>&lt;IMG&gt;</code> permet d'insérer une image.</p>
-</li>
-<li>
-<p><code>SRC</code> indique l'emplacement de l'image.</p>
-</li>
-<li>
-<p><code>ALT</code> fournit un texte alternatif.</p>
-</li>
-<li>
-<p><code>HEIGHT</code> définit la hauteur.</p>
-</li>
-<li>
-<p><code>WIDTH</code> définit la largeur.</p>
-</li>
-<li>
-<p><code>ALIGN</code> permet de positionner l'image dans le HTML classique.</p>
-</li>
-<li>
-<p>Une image peut également servir de lien hypertexte.</p>
-</li>
-</ul>
+<div class="admonition support">
+<p class="admonition-title">Dans le support de cours</p>
+<p>Page 79, <code>WIDTH</code> et <code>HEIGHT</code> sont décrits comme « largeur / hauteur <strong>du tableau</strong> ». Il s'agit bien sûr de la largeur et de la hauteur <strong>de l'image</strong>.</p>
 </div>
-<hr />
-<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
-<div class="admonition question">
-<p class="admonition-title">Exercice 1</p>
-<p>Créer une page intitulée <strong>Galerie de l'UAM</strong> contenant :</p>
-<ul>
-<li>un titre principal ;</li>
-<li>trois images représentant différents bâtiments de l'université ;</li>
-<li>une ligne horizontale séparant chaque partie.</li>
-</ul>
+<h2 id="border-le-cadre"><code>BORDER</code> : le cadre<a class="headerlink" href="#border-le-cadre" title="Lien vers cette section">&para;</a></h2>
+<p><code>BORDER="n"</code> dessine un <strong>cadre noir</strong> de <code>n</code> pixels autour de l'image. Si l'image est un <strong>lien</strong>, mettez <code>BORDER="0"</code> pour ne pas voir le cadre de la couleur des liens (<code>LINK</code> du <code>&lt;BODY&gt;</code>).</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.3 — Bordure</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"mafoto.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"160"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"4"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Ma photo"</span><span class="p">&gt;</span>
+</code></pre></div>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 2</p>
-<p>Créer une page présentant un laboratoire informatique avec :</p>
-<ul>
-<li>une image alignée à gauche ;</li>
-<li>un paragraphe décrivant le laboratoire ;</li>
-<li>deux autres images affichées sous le texte.</li>
-</ul>
+<h2 id="align-la-position-par-rapport-au-texte"><code>ALIGN</code> : la position par rapport au texte<a class="headerlink" href="#align-la-position-par-rapport-au-texte" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TOP</code>, <code>MIDDLE</code>, <code>BOTTOM</code></td>
+<td>Position <strong>verticale</strong> de l'image par rapport à la ligne de texte</td>
+</tr>
+<tr>
+<td><code>LEFT</code>, <code>RIGHT</code></td>
+<td>L'image se place à gauche ou à droite, et <strong>le texte s'enroule autour</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.4 — Image alignée au milieu de la ligne</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    Texte avant
+    <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"mafoto.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"MIDDLE"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"2"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Ma photo"</span><span class="p">&gt;</span>
+    texte après, centré verticalement sur l'image.
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
 </div>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Exercice 3</p>
-<p>Créer une page intitulée <strong>Mon Album Photo</strong> contenant :</p>
-<ul>
-<li>cinq images de tailles différentes ;</li>
-<li>une image servant de bouton <strong>Retour à l'accueil</strong> ;</li>
-<li>une image accompagnée d'un texte descriptif utilisant l'attribut <code>ALT</code>.</li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.5 — Le texte s'enroule autour</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"salle-info.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"150"</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"LEFT"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Salle informatique"</span><span class="p">&gt;</span>
+    Les étudiants disposent d'ordinateurs pour réaliser leurs travaux pratiques
+    en programmation et en développement Web. Grâce à ALIGN="LEFT", ce texte
+    s'enroule autour de l'image, à sa droite, au lieu de commencer en dessous.
+    Essayez de remplacer LEFT par RIGHT pour voir l'image passer de l'autre côté.
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
 </div>
-<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
-<p>Apprendre à insérer, dimensionner et organiser plusieurs images dans une page HTML tout en utilisant les principaux attributs de la balise <code>&lt;IMG&gt;</code>.</p>
-<hr />
-<p>⬅️ <strong>Précédent :</strong> Les liens hypertextes en HTML</p>
-<p>➡️ <strong>Suivant :</strong> Les feuilles de style CSS</p>
+<h2 id="une-image-cliquable">Une image cliquable<a class="headerlink" href="#une-image-cliquable" title="Lien vers cette section">&para;</a></h2>
+<p>Comme vu au chapitre 5, une image placée entre <code>&lt;A&gt;</code> et <code>&lt;/A&gt;</code> devient un lien.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.6 — Galerie de vignettes</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande1.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette1.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Amphithéâtre"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande2.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette2.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Bibliothèque"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande3.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette3.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Restaurant"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="recapitulatif">Récapitulatif<a class="headerlink" href="#recapitulatif" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRC="url"</code></td>
+<td>Adresse du fichier image (obligatoire)</td>
+</tr>
+<tr>
+<td><code>ALT="texte"</code></td>
+<td>Texte alternatif (obligatoire, vide si décoratif)</td>
+</tr>
+<tr>
+<td><code>WIDTH="w"</code></td>
+<td>Largeur, en pixels ou en %</td>
+</tr>
+<tr>
+<td><code>HEIGHT="h"</code></td>
+<td>Hauteur, en pixels ou en %</td>
+</tr>
+<tr>
+<td><code>BORDER="n"</code></td>
+<td>Cadre de <code>n</code> pixels</td>
+</tr>
+<tr>
+<td><code>ALIGN="…"</code></td>
+<td><code>TOP</code>, <code>MIDDLE</code>, <code>BOTTOM</code>, ou <code>LEFT</code> / <code>RIGHT</code> pour l'enroulement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Lien vers cette section">&para;</a></h2>
+<div class="exo" data-exo="ch6-1">
+<p>Insérez l'image <code>campus.jpg</code> avec une <strong>largeur de 250 pixels</strong> et un <strong>texte alternatif</strong> qui la décrit.</p>
+</div>
+<div class="exo" data-exo="ch6-2">
+<p>Créez un paragraphe avec l'image <code>labo.jpg</code> <strong>alignée à gauche</strong> (le texte doit s'enrouler autour), puis, en dessous, une image <code>retour.gif</code> <strong>cliquable</strong> qui mène vers <code>index.html</code>, <strong>sans bordure</strong>.</p>
+</div>
+<h2 id="verifiez-vos-acquis">Vérifiez vos acquis<a class="headerlink" href="#verifiez-vos-acquis" title="Lien vers cette section">&para;</a></h2>
+<div class="quiz" data-quiz="ch6"></div>
 
 
 
@@ -1791,8 +1477,6 @@ Cette image est placée à gauche du paragraphe.
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1811,7 +1495,7 @@ Cette image est placée à gauche du paragraphe.
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../chapitre5/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Chapitre 5">
+          <a href="../chapitre5/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 5. Les liens">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1821,20 +1505,20 @@ Cette image est placée à gauche du paragraphe.
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Chapitre 5
+                5. Les liens
               </div>
             </div>
           </a>
         
         
           
-          <a href="../chapitre7/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Chapitre 7">
+          <a href="../chapitre7/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 7. Les tableaux">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Chapitre 7
+                7. Les tableaux
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1867,16 +1551,20 @@ Cette image est placée à gauche du paragraphe.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../javascripts/preview.js"></script>
+        <script src="../../javascripts/exercices.js"></script>
+      
+        <script src="../../javascripts/manuel.js"></script>
       
     
   </body>

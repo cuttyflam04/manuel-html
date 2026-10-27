@@ -1,0 +1,303 @@
+/* =========================================================
+   Styles au choix : Sous-verre, Car rapide, Notice de montage.
+   Le style « Classique » est celui de manuel.css (aucun attribut).
+   Chaque style redéfinit les jetons, puis signe le cadre :
+   en-tête, titres, encadrés, aperçus, exercices. La colonne de lecture reste calme.
+   ========================================================= */
+
+/* ---------- Le sélecteur ---------- */
+.mh-style { position: relative; display: flex; align-items: center; }
+.mh-style-btn { color: currentColor; cursor: pointer; background: none; border: 0; }
+.mh-style-btn svg { width: 1.2rem; height: 1.2rem; display: block; }
+.mh-style-menu {
+  position: absolute; right: 0; top: calc(100% + .4rem); z-index: 10; width: 15.5rem;
+  padding: .4rem; border-radius: 14px; background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+  border: 1px solid var(--mh-ligne-forte); box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 6px 14px -6px rgba(0,0,0,.25);
+}
+.mh-style-menu[hidden] { display: none; }
+@media screen and (max-width: 30em) {
+  .mh-style-menu { position: fixed; left: .8rem; right: .8rem; top: 3.1rem; width: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mh-style-menu:not([hidden]) { animation: mh-glisse .22s cubic-bezier(.16, 1, .3, 1); }
+}
+.mh-style-titre { font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--md-default-fg-color--light); padding: .35rem .5rem .45rem; }
+.mh-style-opt {
+  display: flex; align-items: center; gap: .7rem; width: 100%; text-align: left; cursor: pointer;
+  padding: .45rem .5rem; border-radius: 9px; border: 1px solid transparent; background: none; color: inherit; font: inherit;
+}
+.mh-style-opt:hover { background: var(--mh-surface); }
+.mh-style-opt[aria-checked="true"] { border-color: var(--mh-accent); background: var(--mh-accent-doux); }
+.mh-style-pastilles { display: inline-flex; flex: none; }
+.mh-style-pastilles i { width: .95rem; height: .95rem; border-radius: 50%; border: 2px solid var(--md-default-bg-color); margin-left: -.3rem; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+.mh-style-pastilles i:first-child { margin-left: 0; }
+.mh-style-txt { display: grid; line-height: 1.3; }
+.mh-style-txt b { font-size: .72rem; }
+.mh-style-note { margin: .35rem .5rem .3rem; padding-top: .45rem; border-top: 1px solid var(--mh-ligne); font-size: .6rem; line-height: 1.45; color: var(--md-default-fg-color--light); }
+.mh-style-txt small { font-size: .62rem; color: var(--md-default-fg-color--light); }
+
+/* =========================================================
+   1. SOUS-VERRE — peinture sous verre sénégalaise
+   Aplats saturés, cerne noir épais, frises, reflet du verre.
+   ========================================================= */
+[data-mh-style="sousverre"] [data-md-color-scheme] {
+  --sv-rouge: #d7262e; --sv-ocre: #e3a21a; --sv-vert: #1e8a4c; --sv-indigo: #2b3a8f; --sv-turquoise: #12a3b5;
+  --sv-frise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='12'%3E%3Cpath d='M0 12 7 0 14 12z' fill='%23d7262e'/%3E%3Cpath d='M14 12 21 0 28 12z' fill='%23e3a21a'/%3E%3Cpath d='M28 12 35 0 42 12z' fill='%231e8a4c'/%3E%3C/svg%3E");
+  --sv-points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='8'%3E%3Ccircle cx='4' cy='4' r='3' fill='%23d7262e'/%3E%3Ccircle cx='16' cy='4' r='3' fill='%23e3a21a'/%3E%3Ccircle cx='28' cy='4' r='3' fill='%2312a3b5'/%3E%3C/svg%3E");
+  --mh-rayon: 14px;
+}
+[data-mh-style="sousverre"] [data-md-color-scheme="default"] {
+  --sv-trait: #141414;
+  --md-default-bg-color: #fbfaf6; --md-default-fg-color: #141414; --md-typeset-color: #141414;
+  --md-default-fg-color--light: #47443d; --md-code-bg-color: #f2efe6; --md-code-fg-color: #1d1b17;
+  --mh-accent: #2b3a8f; --mh-accent-fort: #1d2870; --mh-accent-doux: #e3e7fa;
+  --mh-ligne: #d9d3c4; --mh-ligne-forte: #141414; --mh-surface: #f2efe6; --mh-texte-doux: #47443d;
+  --mh-ok: #1e7a44; --mh-ok-doux: #d6f0dd; --mh-faux: #c11f27; --mh-faux-doux: #fbe0e0;
+  --t-tag: #2b3a8f; --t-att: #b0291f; --t-val: #1e7a44; --t-ent: #9a3b8f;
+}
+[data-mh-style="sousverre"] [data-md-color-scheme="slate"] {
+  --sv-trait: #efe9da;
+  --md-default-bg-color: #121318; --md-default-fg-color: #f1ecdf; --md-typeset-color: #f1ecdf;
+  --md-default-fg-color--light: #bdb6a6; --md-code-bg-color: #1b1d26; --md-code-fg-color: #ece6d6;
+  --mh-accent: #7ed3dc; --mh-accent-fort: #a7e4ea; --mh-accent-doux: #1b3236;
+  --mh-ligne: #343441; --mh-ligne-forte: #efe9da; --mh-surface: #1b1d26; --mh-texte-doux: #bdb6a6;
+  --mh-ok: #7fd89a; --mh-ok-doux: #173323; --mh-faux: #ff8f8f; --mh-faux-doux: #3a1b1d;
+  --t-tag: #8fb0ff; --t-att: #ffb07a; --t-val: #8fe0a9; --t-ent: #f3a0e6;
+}
+/* En-tête indigo + frise */
+[data-mh-style="sousverre"] .md-header { background: var(--sv-indigo); color: #fff; box-shadow: none; backdrop-filter: none; }
+[data-mh-style="sousverre"] .md-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -12px; height: 12px; pointer-events: none;
+  background: var(--sv-frise) repeat-x; border-top: 2px solid #141414;
+}
+[data-mh-style="sousverre"] .md-header__button.md-logo { color: var(--sv-ocre); }
+[data-mh-style="sousverre"] .md-header__title { font-family: "Gluten", cursive; font-size: 1rem; }
+[data-mh-style="sousverre"] .md-search__form { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.35); }
+[data-mh-style="sousverre"] .md-search__input, [data-mh-style="sousverre"] .md-search__input::placeholder, [data-mh-style="sousverre"] .md-search__icon, [data-mh-style="sousverre"] .md-source { color: #fff; }
+[data-mh-style="sousverre"] .md-main { padding-top: 12px; }
+[data-mh-style="sousverre"] .md-nav__link--active, [data-mh-style="sousverre"] .md-nav__link:hover { color: var(--sv-rouge); }
+[data-mh-style="sousverre"] [data-md-color-scheme="slate"] .md-nav__link--active { color: var(--sv-ocre); }
+/* Le titre du chapitre : un panneau peint sous verre */
+[data-mh-style="sousverre"] .md-typeset h1 {
+  font-family: "Gluten", cursive; font-weight: 800; letter-spacing: 0; color: #fff;
+  background: linear-gradient(158deg, rgba(255,255,255,.3) 0 18%, rgba(255,255,255,0) 18.4%), var(--sv-rouge);
+  border: 3px solid var(--sv-trait); border-radius: 18px; padding: .55em .8em .45em;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,.16);
+}
+[data-mh-style="sousverre"] .mh-hero h1 { background: none; border: 0; box-shadow: none; padding: 0; color: var(--md-default-fg-color); }
+[data-mh-style="sousverre"] .md-typeset .mh-hero h1 em { color: var(--sv-rouge); }
+[data-mh-style="sousverre"] .md-typeset h2 {
+  font-family: "Gluten", cursive; font-weight: 800; letter-spacing: 0; color: var(--sv-indigo);
+  border-top: 0; background: var(--sv-points) left top / auto 8px repeat-x;
+}
+[data-mh-style="sousverre"] [data-md-color-scheme="slate"] .md-typeset h2 { color: var(--sv-ocre); }
+[data-mh-style="sousverre"] .md-typeset h3 { color: var(--sv-rouge); }
+[data-mh-style="sousverre"] [data-md-color-scheme="slate"] .md-typeset h3 { color: #ff8a80; }
+/* Encadrés : cerne noir, titres en aplat */
+[data-mh-style="sousverre"] .md-typeset :is(.admonition, details, .quiz-q, table:not([class])) { border: 2px solid var(--sv-trait); }
+[data-mh-style="sousverre"] .md-typeset :is(.admonition-title, summary) { color: #141414; border-bottom: 2px solid var(--sv-trait); }
+[data-mh-style="sousverre"] .md-typeset details:not([open]) > summary { border-bottom: 0; }
+[data-mh-style="sousverre"] .md-typeset :is(.admonition-title, summary)::before { background-color: #141414 !important; }
+[data-mh-style="sousverre"] .md-typeset .example > .admonition-title { background: #f6c453; }
+[data-mh-style="sousverre"] .md-typeset :is(.note, .info, .tip) > :is(.admonition-title, summary) { background: #82d4dd; }
+[data-mh-style="sousverre"] .md-typeset .success > :is(.admonition-title, summary) { background: #8fd3a2; }
+[data-mh-style="sousverre"] .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary) { background: #f59a9a; }
+[data-mh-style="sousverre"] .md-typeset .support > :is(.admonition-title, summary) { background: #f4b183; }
+[data-mh-style="sousverre"] .md-typeset .question > :is(.admonition-title, summary) { background: #bcc5f2; }
+[data-mh-style="sousverre"] .md-typeset .horsprog > .admonition-title { background: #e6e0d0; }
+[data-mh-style="sousverre"] .md-typeset table:not([class]) th { background: #f6c453; color: #141414; }
+/* Aperçus, éditeurs, exercices */
+[data-mh-style="sousverre"] :is(figure.apercu, .editeur, .md-typeset .exo, .demo-live, .exo-checks li, .quiz-opt) { border: 2px solid var(--sv-trait); }
+[data-mh-style="sousverre"] .md-typeset .exo-checks li.ok { border-color: var(--mh-ok); }
+[data-mh-style="sousverre"] .apercu-barre { background: #f6c453; border-bottom: 2px solid var(--sv-trait); }
+[data-mh-style="sousverre"] .apercu-points i { background: #141414; opacity: .55; }
+[data-mh-style="sousverre"] .apercu-onglet { border: 2px solid #141414; border-bottom: 0; background: #fff; color: #141414; }
+[data-mh-style="sousverre"] .exo-titre { font-family: "Gluten", cursive; font-size: .9rem; }
+[data-mh-style="sousverre"] .md-typeset .exo.reussi { border-color: var(--mh-ok); background: linear-gradient(158deg, color-mix(in srgb, var(--mh-ok) 10%, transparent) 0 12%, transparent 12.4%), var(--md-default-bg-color); }
+[data-mh-style="sousverre"] .md-typeset .md-button, [data-mh-style="sousverre"] .md-button { border: 2px solid var(--sv-trait); border-radius: 10px; }
+[data-mh-style="sousverre"] .md-typeset .md-button--primary, [data-mh-style="sousverre"] .md-button--primary { background: var(--sv-rouge); border-color: var(--sv-trait); color: #fff; }
+[data-mh-style="sousverre"] .md-typeset .md-button:hover { background: #f6c453; color: #141414; border-color: var(--sv-trait); }
+[data-mh-style="sousverre"] .mh-num { font-family: "Gluten", cursive; color: var(--sv-rouge); font-size: 1.2rem; }
+[data-mh-style="sousverre"] .md-footer { background: var(--sv-indigo); color: #fff; border-top: 2px solid #141414; }
+[data-mh-style="sousverre"] .md-footer__title, [data-mh-style="sousverre"] .md-footer__direction { color: #fff; }
+
+/* =========================================================
+   2. CAR RAPIDE — les bus peints de Dakar
+   Jaune et bleu, filets rouge et vert, lettrage d'enseigne.
+   ========================================================= */
+[data-mh-style="carrapide"] [data-md-color-scheme] {
+  --cr-jaune: #ffc800; --cr-bleu: #0b4ea2; --cr-rouge: #d62828; --cr-vert: #138a43; --cr-ciel: #3fa9f5;
+  --cr-filets: linear-gradient(to bottom, var(--cr-bleu) 0 4px, #fff 4px 6px, var(--cr-rouge) 6px 9px, #fff 9px 11px, var(--cr-vert) 11px 14px);
+  --mh-rayon: 16px;
+}
+[data-mh-style="carrapide"] [data-md-color-scheme="default"] {
+  --cr-trait: #0b4ea2;
+  --md-default-bg-color: #ffffff; --md-default-fg-color: #0f1d3a; --md-typeset-color: #0f1d3a;
+  --md-default-fg-color--light: #3c4a66; --md-code-bg-color: #f1f5fc; --md-code-fg-color: #0f1d3a;
+  --mh-accent: #0b4ea2; --mh-accent-fort: #083a7a; --mh-accent-doux: #e3eefc;
+  --mh-ligne: #d3def0; --mh-ligne-forte: #0b4ea2; --mh-surface: #f1f5fc; --mh-texte-doux: #3c4a66;
+  --mh-ok: #127a3b; --mh-ok-doux: #dcf3e4; --mh-faux: #c41f1f; --mh-faux-doux: #fde3e3;
+  --t-tag: #0b4ea2; --t-att: #c41f1f; --t-val: #127a3b; --t-ent: #8a3fb0;
+}
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] {
+  --cr-trait: #ffc800;
+  --md-default-bg-color: #0a1630; --md-default-fg-color: #f4f0e0; --md-typeset-color: #f4f0e0;
+  --md-default-fg-color--light: #b9c0d4; --md-code-bg-color: #0f2042; --md-code-fg-color: #eef0f7;
+  --mh-accent: #ffc800; --mh-accent-fort: #ffd84d; --mh-accent-doux: #2a2a14;
+  --mh-ligne: #1f3462; --mh-ligne-forte: #ffc800; --mh-surface: #0f2042; --mh-texte-doux: #b9c0d4;
+  --mh-ok: #5fd68d; --mh-ok-doux: #12301f; --mh-faux: #ff8a80; --mh-faux-doux: #3a1a1c;
+  --t-tag: #7fb8ff; --t-att: #ffb07a; --t-val: #7fe0a6; --t-ent: #e7a6ff;
+}
+[data-mh-style="carrapide"] .md-header { background: var(--cr-jaune); color: var(--cr-bleu); box-shadow: none; backdrop-filter: none; }
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] .md-header { background: var(--cr-bleu); color: var(--cr-jaune); }
+[data-mh-style="carrapide"] .md-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 14px; background: var(--cr-filets); pointer-events: none; }
+[data-mh-style="carrapide"] .md-main { padding-top: 14px; }
+[data-mh-style="carrapide"] .md-header__title { font-family: "Bungee", sans-serif; font-weight: 400; font-size: .95rem; }
+[data-mh-style="carrapide"] .md-header__button.md-logo { color: var(--cr-rouge); }
+[data-mh-style="carrapide"] .md-search__form { background: rgba(255,255,255,.55); border: 2px solid var(--cr-bleu); }
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] .md-search__form { background: rgba(255,255,255,.1); border-color: var(--cr-jaune); }
+[data-mh-style="carrapide"] .md-search__input, [data-mh-style="carrapide"] .md-search__input::placeholder, [data-mh-style="carrapide"] .md-search__icon, [data-mh-style="carrapide"] .md-source { color: currentColor; }
+[data-mh-style="carrapide"] .md-nav__link--active { color: var(--cr-rouge); }
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] .md-nav__link--active { color: var(--cr-jaune); }
+/* Le titre : une plaque peinte */
+[data-mh-style="carrapide"] .md-typeset h1 {
+  font-family: "Bungee", sans-serif; font-weight: 400; letter-spacing: 0; line-height: 1.15;
+  display: table; position: relative; color: var(--cr-bleu); background: var(--cr-jaune);
+  border: 3px solid var(--cr-bleu); border-radius: 14px; padding: .4em .65em .3em; margin-bottom: 1.9rem;
+}
+[data-mh-style="carrapide"] .md-typeset h1::after {
+  content: ""; position: absolute; left: 10%; right: 10%; bottom: -14px; height: 9px; border-radius: 0 0 6px 6px;
+  background: linear-gradient(to bottom, var(--cr-rouge) 0 4px, transparent 4px 5px, var(--cr-vert) 5px 9px);
+}
+[data-mh-style="carrapide"] .mh-hero h1 { display: block; background: none; border: 0; padding: 0; color: var(--md-default-fg-color); }
+[data-mh-style="carrapide"] .mh-hero h1::after { display: none; }
+[data-mh-style="carrapide"] .md-typeset .mh-hero h1 em { color: var(--cr-bleu); background: var(--cr-jaune); padding: 0 .15em; border-radius: 8px; }
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] .md-typeset .mh-hero h1 em { color: var(--cr-bleu); }
+[data-mh-style="carrapide"] .md-typeset h2 {
+  font-family: "Bungee", sans-serif; font-weight: 400; letter-spacing: 0; font-size: 1.15rem; color: var(--cr-bleu);
+  border-top: 0; background: linear-gradient(to right, var(--cr-bleu) 0 62%, var(--cr-rouge) 62% 82%, var(--cr-vert) 82%) left top / 100% 4px no-repeat;
+}
+[data-mh-style="carrapide"] [data-md-color-scheme="slate"] .md-typeset h2 { color: var(--cr-jaune); background-image: linear-gradient(to right, var(--cr-jaune) 0 62%, var(--cr-rouge) 62% 82%, var(--cr-vert) 82%); }
+[data-mh-style="carrapide"] .md-typeset h2 code { font-family: var(--mh-mono); }
+[data-mh-style="carrapide"] .md-typeset :is(.admonition, details, .quiz-q, table:not([class])) { border: 2px solid var(--cr-trait); }
+[data-mh-style="carrapide"] .md-typeset .example > .admonition-title { background: var(--cr-bleu); color: #fff; }
+[data-mh-style="carrapide"] .md-typeset .example > .admonition-title::before { background-color: var(--cr-jaune); }
+[data-mh-style="carrapide"] .md-typeset :is(.note, .info, .tip) > :is(.admonition-title, summary) { background: #cfe8fb; color: #0f1d3a; }
+[data-mh-style="carrapide"] .md-typeset :is(.note, .info, .tip) > :is(.admonition-title, summary)::before { background-color: var(--cr-bleu); }
+[data-mh-style="carrapide"] .md-typeset .success > :is(.admonition-title, summary) { background: var(--cr-vert); color: #fff; }
+[data-mh-style="carrapide"] .md-typeset .success > :is(.admonition-title, summary)::before { background-color: #fff; }
+[data-mh-style="carrapide"] .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary) { background: var(--cr-rouge); color: #fff; }
+[data-mh-style="carrapide"] .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary)::before { background-color: #fff; }
+[data-mh-style="carrapide"] .md-typeset .support > :is(.admonition-title, summary) { background: var(--cr-jaune); color: #0f1d3a; }
+[data-mh-style="carrapide"] .md-typeset .support > :is(.admonition-title, summary)::before { background-color: var(--cr-bleu); }
+[data-mh-style="carrapide"] .md-typeset .question > :is(.admonition-title, summary) { background: #fff1b3; color: #0f1d3a; }
+[data-mh-style="carrapide"] .md-typeset table:not([class]) th { background: var(--cr-jaune); color: #0f1d3a; }
+[data-mh-style="carrapide"] :is(figure.apercu, .editeur, .md-typeset .exo, .demo-live, .quiz-opt) { border: 2px solid var(--cr-trait); }
+[data-mh-style="carrapide"] .apercu-barre { background: var(--cr-bleu); border-bottom: 0; }
+[data-mh-style="carrapide"] .apercu-points i { background: var(--cr-jaune); }
+[data-mh-style="carrapide"] .apercu-points i:nth-child(2) { background: var(--cr-rouge); }
+[data-mh-style="carrapide"] .apercu-points i:nth-child(3) { background: #3dbb6c; }
+[data-mh-style="carrapide"] .apercu-onglet { background: #fff; color: #0f1d3a; border-color: #fff; }
+[data-mh-style="carrapide"] .apercu-barre .md-button { background: var(--cr-jaune); color: #0f1d3a; border-color: var(--cr-jaune); }
+[data-mh-style="carrapide"] .md-typeset .exo { border-radius: 20px; }
+[data-mh-style="carrapide"] .exo-titre { font-family: "Bungee", sans-serif; font-weight: 400; font-size: .8rem; color: var(--mh-accent); }
+[data-mh-style="carrapide"] .md-typeset .md-button, [data-mh-style="carrapide"] .md-button { border: 2px solid var(--cr-trait); border-radius: 999px; }
+[data-mh-style="carrapide"] .md-typeset .md-button--primary, [data-mh-style="carrapide"] .md-button--primary { background: var(--cr-rouge); border-color: var(--cr-rouge); color: #fff; }
+[data-mh-style="carrapide"] .md-typeset .md-button:hover { background: var(--cr-jaune); color: #0f1d3a; border-color: var(--cr-bleu); }
+[data-mh-style="carrapide"] .mh-num { font-family: "Bungee", sans-serif; font-weight: 400; color: var(--cr-rouge); font-size: 1.1rem; }
+[data-mh-style="carrapide"] .md-footer { background: var(--cr-bleu); color: var(--cr-jaune); border-top: 0; box-shadow: 0 -14px 0 -10px var(--cr-vert); }
+[data-mh-style="carrapide"] .md-footer__title, [data-mh-style="carrapide"] .md-footer__direction { color: var(--cr-jaune); }
+
+/* =========================================================
+   3. NOTICE DE MONTAGE — livret d'instructions à briques
+   Pages blanches sur fond ciel à tenons, grands numéros d'étape,
+   pièce nouvelle en rouge, encadrés « 1:1 » cernés.
+   ========================================================= */
+[data-mh-style="notice"] [data-md-color-scheme] { --mh-rayon: 4px; --nt-jaune: #f2cd37; --nt-rouge: #d01012; }
+[data-mh-style="notice"] [data-md-color-scheme="default"] {
+  --nt-ciel: #cfe9f7; --nt-tenon: rgba(255,255,255,.6); --nt-trait: #1a1a1a;
+  --md-default-bg-color: #ffffff; --md-default-fg-color: #1a1a1a; --md-typeset-color: #1a1a1a;
+  --md-default-fg-color--light: #47525a; --md-code-bg-color: #f3f7fa; --md-code-fg-color: #1a1a1a;
+  --mh-accent: #c40d10; --mh-accent-fort: #970a0c; --mh-accent-doux: #fde4e4;
+  --mh-ligne: #cfdae2; --mh-ligne-forte: #1a1a1a; --mh-surface: #f3f7fa; --mh-texte-doux: #47525a;
+  --mh-ok: #237a35; --mh-ok-doux: #dcf1df; --mh-faux: #c40d10; --mh-faux-doux: #fde4e4;
+  --t-tag: #c40d10; --t-att: #1d5fa8; --t-val: #237a35; --t-ent: #8a3fb0;
+}
+[data-mh-style="notice"] [data-md-color-scheme="slate"] {
+  --nt-ciel: #0e2233; --nt-tenon: rgba(255,255,255,.06); --nt-trait: #e7f2fa;
+  --md-default-bg-color: #13293b; --md-default-fg-color: #ecf5fb; --md-typeset-color: #ecf5fb;
+  --md-default-fg-color--light: #a9c2d4; --md-code-bg-color: #0f2131; --md-code-fg-color: #e6f0f7;
+  --mh-accent: #ff7b74; --mh-accent-fort: #ffa39d; --mh-accent-doux: #3a1d24;
+  --mh-ligne: #24425a; --mh-ligne-forte: #e7f2fa; --mh-surface: #0f2131; --mh-texte-doux: #a9c2d4;
+  --mh-ok: #73d48a; --mh-ok-doux: #163324; --mh-faux: #ff7b74; --mh-faux-doux: #3a1d24;
+  --t-tag: #ff8a84; --t-att: #8cc4ff; --t-val: #86dd9c; --t-ent: #e0a6ff;
+}
+/* Le fond ciel à tenons, la page blanche du livret */
+[data-mh-style="notice"] body, [data-mh-style="notice"] .md-container {
+  background-color: var(--nt-ciel);
+  background-image: radial-gradient(circle, var(--nt-tenon) 0 3.5px, transparent 4px);
+  background-size: 22px 22px;
+}
+[data-mh-style="notice"] .md-content { background: var(--md-default-bg-color); border: 2px solid var(--nt-trait); border-radius: 6px; margin: 1rem .6rem 1.4rem; }
+[data-mh-style="notice"] .md-content__inner { padding-top: .4rem; }
+[data-mh-style="notice"] .md-header { background: var(--nt-ciel); color: var(--md-default-fg-color); box-shadow: 0 2px 0 var(--nt-trait); backdrop-filter: none; }
+[data-mh-style="notice"] .md-header__title { font-family: "Archivo", sans-serif; font-weight: 900; }
+[data-mh-style="notice"] .md-header__button.md-logo { color: var(--nt-rouge); }
+[data-mh-style="notice"] .md-search__form { background: var(--md-default-bg-color); border: 2px solid var(--nt-trait); border-radius: 4px; }
+[data-mh-style="notice"] .md-nav__link--active { color: var(--mh-accent); }
+[data-mh-style="notice"] .md-sidebar .md-nav__item--section > .md-nav__link { color: var(--md-default-fg-color); }
+/* Grands numéros d'étape */
+[data-mh-style="notice"] .md-typeset h1 { font-family: "Archivo", sans-serif; font-weight: 900; letter-spacing: -.02em; }
+[data-mh-style="notice"] .md-content__inner { counter-reset: etape; }
+[data-mh-style="notice"] .md-typeset h2 {
+  font-family: "Archivo", sans-serif; font-weight: 800; letter-spacing: -.01em;
+  border-top: 2px dashed var(--mh-ligne); display: flex; align-items: center; gap: .6em;
+}
+[data-mh-style="notice"] .md-typeset h2::before {
+  counter-increment: etape; content: counter(etape); flex: none;
+  display: inline-grid; place-items: center; width: 2.1em; height: 2.1em; font-size: 1.15em; font-weight: 900;
+  background: var(--nt-jaune); color: #1a1a1a; border: 2px solid var(--nt-trait); border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+}
+[data-mh-style="notice"] .mh-hero + .demo-live + h2::before, [data-mh-style="notice"] .md-typeset h2:has(+ .mh-chapitres)::before { content: none; display: none; }
+[data-mh-style="notice"] .md-typeset .mh-hero h1 em { color: var(--nt-rouge); }
+[data-mh-style="notice"] [data-md-color-scheme="slate"] .md-typeset .mh-hero h1 em { color: var(--mh-accent); }
+/* Encadrés : boîtes « 1:1 » cernées */
+[data-mh-style="notice"] .md-typeset :is(.admonition, details, .quiz-q, table:not([class])) { border: 2px solid var(--nt-trait); border-radius: 4px; }
+[data-mh-style="notice"] .md-typeset :is(.admonition-title, summary) { color: #1a1a1a; border-radius: 0; border-bottom: 2px solid var(--nt-trait); }
+[data-mh-style="notice"] .md-typeset details:not([open]) > summary { border-bottom: 0; }
+[data-mh-style="notice"] .md-typeset :is(.admonition-title, summary)::before { background-color: #1a1a1a !important; }
+[data-mh-style="notice"] .md-typeset .example { border-top-left-radius: 0; }
+[data-mh-style="notice"] .md-typeset .example > .admonition-title { background: var(--nt-jaune); }
+[data-mh-style="notice"] .md-typeset :is(.note, .info, .tip) > :is(.admonition-title, summary) { background: #cfe9f7; }
+[data-mh-style="notice"] .md-typeset .success > :is(.admonition-title, summary) { background: #bfe6c4; }
+[data-mh-style="notice"] .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary) { background: var(--nt-rouge); color: #fff; }
+[data-mh-style="notice"] .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary)::before { background-color: #fff !important; }
+[data-mh-style="notice"] .md-typeset .support > :is(.admonition-title, summary) { background: #ffc79a; }
+[data-mh-style="notice"] .md-typeset .question > :is(.admonition-title, summary) { background: #e6ebef; }
+[data-mh-style="notice"] .md-typeset .horsprog > .admonition-title { background: #e6ebef; }
+[data-mh-style="notice"] .md-typeset table:not([class]) th { background: var(--nt-jaune); color: #1a1a1a; }
+[data-mh-style="notice"] :is(figure.apercu, .editeur, .md-typeset .exo, .demo-live, .quiz-opt, .exo-checks li) { border: 2px solid var(--nt-trait); border-radius: 4px; }
+[data-mh-style="notice"] .md-typeset .exo-checks li.ok { border-color: var(--mh-ok); }
+[data-mh-style="notice"] .apercu-barre { background: var(--nt-ciel); border-bottom: 2px solid var(--nt-trait); }
+[data-mh-style="notice"] .apercu-points i { border-radius: 2px; background: var(--nt-rouge); }
+[data-mh-style="notice"] .apercu-points i:nth-child(2) { background: var(--nt-jaune); }
+[data-mh-style="notice"] .apercu-points i:nth-child(3) { background: #1d5fa8; }
+[data-mh-style="notice"] .apercu-onglet { border: 2px solid var(--nt-trait); border-bottom: 0; border-radius: 4px 4px 0 0; }
+[data-mh-style="notice"] .exo-titre { font-family: "Archivo", sans-serif; font-weight: 900; font-size: .85rem; }
+[data-mh-style="notice"] .exo-etat { border-radius: 4px; border: 2px solid var(--nt-trait); }
+[data-mh-style="notice"] .md-typeset .md-button, [data-mh-style="notice"] .md-button { border: 2px solid var(--nt-trait); border-radius: 4px; }
+[data-mh-style="notice"] .md-typeset .md-button--primary, [data-mh-style="notice"] .md-button--primary { background: var(--nt-rouge); color: #fff; border-color: var(--nt-trait); }
+[data-mh-style="notice"] .md-typeset .md-button:hover { background: var(--nt-jaune); color: #1a1a1a; border-color: var(--nt-trait); }
+[data-mh-style="notice"] .mh-num {
+  display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; font-family: "Archivo", sans-serif; font-weight: 900;
+  background: var(--nt-jaune); color: #1a1a1a; border: 2px solid var(--nt-trait); border-radius: 4px; font-size: .9rem;
+}
+[data-mh-style="notice"] .md-typeset .mh-chapitres a { align-items: center; }
+[data-mh-style="notice"] .md-footer { background: var(--md-default-bg-color); border-top: 2px solid var(--nt-trait); }
+@media screen and (min-width: 76.25em) {
+  [data-mh-style="notice"] .md-sidebar__scrollwrap { background: var(--md-default-bg-color); border: 2px solid var(--nt-trait); border-radius: 6px; }
+}
+@media screen and (max-width: 44.9375em) {
+  [data-mh-style="notice"] .md-content { margin: .6rem .3rem 1rem; }
+}

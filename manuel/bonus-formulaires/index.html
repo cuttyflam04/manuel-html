@@ -1,0 +1,1490 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Le cours de HTML de l'UAM, avec aperçus en direct et exercices corrigés instantanément.">
+      
+      
+        <meta name="author" content="Flamme">
+      
+      
+        <link rel="canonical" href="https://cuttyflam04.github.io/manuel-html/manuel/bonus-formulaires/">
+      
+      
+        <link rel="prev" href="../chapitre8/">
+      
+      
+        <link rel="next" href="../annexes/annexe-a/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Les formulaires - Manuel HTML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%209a3%203%200%200%201%203%203%203%203%200%200%201-3%203%203%203%200%200%201-3-3%203%203%200%200%201%203-3m0-4.5c5%200%209.27%203.11%2011%207.5-1.73%204.39-6%207.5-11%207.5S2.73%2016.39%201%2012c1.73-4.39%206-7.5%2011-7.5M3.18%2012a9.821%209.821%200%200%200%2017.64%200%209.821%209.821%200%200%200-17.64%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.06%209%20.94.94L5.92%2019H5v-.92zm3.6-6c-.25%200-.51.1-.7.29l-1.83%201.83%203.75%203.75%201.83-1.83c.39-.39.39-1.04%200-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6%203.19L3%2017.25V21h3.75L17.81%209.94z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202C6.5%202%202%206.5%202%2012s4.5%2010%2010%2010%2010-4.5%2010-10S17.5%202%2012%202m0%2018c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m4.59-12.42L10%2014.17l-2.59-2.58L6%2013l4%204%208-8z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M8.27%203%203%208.27v7.46L8.27%2021h7.46C17.5%2019.24%2021%2015.73%2021%2015.73V8.27L15.73%203M9.1%205h5.8L19%209.1v5.8L14.9%2019H9.1L5%2014.9V9.1m6%205.9h2v2h-2zm0-8h2v6h-2z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/manuel.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Bungee&family=Gluten:wght@700;800&display=swap">
+  <script>
+    /* Applique le style choisi avant l'affichage, pour éviter un flash */
+    try { var s = localStorage.getItem("mh:style"); if (s) document.documentElement.setAttribute("data-mh-style", s); } catch (e) {}
+  </script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bonus-les-formulaires" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Manuel HTML" class="md-header__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manuel HTML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les formulaires
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Thème clair"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Thème clair" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème sombre"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Thème sombre" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème automatique"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Thème automatique" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manuel HTML" class="md-nav__button md-logo" aria-label="Manuel HTML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/></svg>
+
+    </a>
+    Manuel HTML
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuttyflam04/manuel-html" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    manuel-html
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Le manuel
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Le manuel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Le Web et le HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Structure d'une page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Le texte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Les listes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Les liens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Les images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Les tableaux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les feuilles de style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bonus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annexes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Annexes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Erreurs fréquentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Récapitulatif des balises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexes/annexe-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Corrections du support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    À propos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;FORM&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;FORM&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-ou-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET ou POST ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-balise-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La balise &lt;INPUT&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La balise &lt;INPUT&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#texte-et-mot-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texte et mot de passe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boutons-radio-et-cases-a-cocher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boutons radio et cases à cocher
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes-deroulantes-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes déroulantes : &lt;SELECT&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-zones-de-texte-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les zones de texte : &lt;TEXTAREA&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regrouper-les-champs-fieldset-et-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regrouper les champs : &lt;FIELDSET&gt; et &lt;LEGEND&gt;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-boutons-et-les-champs-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les boutons et les champs spéciaux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bonus-les-formulaires">Bonus : les formulaires<a class="headerlink" href="#bonus-les-formulaires" title="Lien vers cette section">&para;</a></h1>
+<div class="admonition horsprog">
+<p class="admonition-title">Hors programme</p>
+<p>Ce chapitre <strong>n'est pas dans le support de cours</strong> de Dr Niang : le cours cite seulement les formulaires parmi les possibilités du HTML (« concevoir des formulaires permettant de mener à bien des recherches, effectuer des réservations, commander des produits »). Il est proposé ici <strong>pour aller plus loin</strong>, et parce que les formulaires reviennent dans la suite du module avec PHP. <strong>Ne le révisez pas en priorité pour l'examen de HTML.</strong></p>
+</div>
+<p>Jusqu'ici, nos pages ne faisaient qu'<strong>afficher</strong> des informations. Un <strong>formulaire</strong> permet au visiteur d'en <strong>saisir</strong> : créer un compte, se connecter, faire une recherche, réserver, envoyer un commentaire… Ces informations sont ensuite <strong>envoyées à un serveur</strong>.</p>
+<p>Dans les aperçus de ce chapitre, cliquer sur <strong>Envoyer</strong> affiche exactement ce que le navigateur transmettrait.</p>
+<h2 id="la-balise-form">La balise <code>&lt;FORM&gt;</code><a class="headerlink" href="#la-balise-form" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;FORM&gt; … &lt;/FORM&gt;</code> délimite le formulaire. Tous les champs placés à l'intérieur sont envoyés ensemble.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"inscription.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+    … les champs …
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACTION</code></td>
+<td>L'adresse de la page qui <strong>recevra</strong> les données.</td>
+</tr>
+<tr>
+<td><code>METHOD</code></td>
+<td>La méthode d'envoi : <code>GET</code> ou <code>POST</code>.</td>
+</tr>
+<tr>
+<td><code>ENCTYPE</code></td>
+<td>Le format d'envoi ; <code>multipart/form-data</code> est obligatoire pour envoyer un fichier.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-ou-post"><code>GET</code> ou <code>POST</code> ?<a class="headerlink" href="#get-ou-post" title="Lien vers cette section">&para;</a></h3>
+<ul>
+<li><strong><code>GET</code></strong> ajoute les données <strong>à la fin de l'adresse</strong> : <code>resultat.php?nom=Ali&amp;age=20</code>. On l'utilise pour les recherches.</li>
+<li><strong><code>POST</code></strong> envoie les données <strong>dans le corps de la requête</strong> : elles n'apparaissent pas dans l'adresse. On l'utilise pour les inscriptions, les connexions et l'envoi de fichiers.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.1 — Comparez GET et POST</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"recherche.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"GET"</span><span class="p">&gt;</span>
+    Recherche : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"q"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"html"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Chercher (GET)"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HR</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"connexion.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+    Identifiant : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"login"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"fatou"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Se connecter (POST)"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="la-balise-input">La balise <code>&lt;INPUT&gt;</code><a class="headerlink" href="#la-balise-input" title="Lien vers cette section">&para;</a></h2>
+<p>La plupart des champs sont créés par la balise orpheline <code>&lt;INPUT&gt;</code>. Son attribut <strong><code>TYPE</code></strong> décide du genre de champ, et son attribut <strong><code>NAME</code></strong> donne le nom sous lequel la valeur sera envoyée.</p>
+<div class="admonition danger">
+<p class="admonition-title">Sans <code>NAME</code>, rien n'est envoyé</p>
+<p>Un champ sans <code>NAME</code> s'affiche, mais sa valeur <strong>n'est pas transmise</strong> au serveur.</p>
+</div>
+<h3 id="texte-et-mot-de-passe">Texte et mot de passe<a class="headerlink" href="#texte-et-mot-de-passe" title="Lien vers cette section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TYPE="text"</code></td>
+<td>Zone de saisie sur une ligne</td>
+</tr>
+<tr>
+<td><code>TYPE="password"</code></td>
+<td>Pareil, mais les caractères sont <strong>masqués</strong></td>
+</tr>
+<tr>
+<td><code>SIZE</code></td>
+<td>Largeur visible de la zone</td>
+</tr>
+<tr>
+<td><code>MAXLENGTH</code></td>
+<td>Nombre maximal de caractères</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td>Texte présent au départ</td>
+</tr>
+<tr>
+<td><code>READONLY</code></td>
+<td>Champ non modifiable</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.2 — Connexion étudiant</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"connexion.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Nom : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"nom"</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"30"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Mot de passe : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"password"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"mdp"</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"15"</span> <span class="na">MAXLENGTH</span><span class="o">=</span><span class="s">"20"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Se connecter"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="boutons-radio-et-cases-a-cocher">Boutons radio et cases à cocher<a class="headerlink" href="#boutons-radio-et-cases-a-cocher" title="Lien vers cette section">&para;</a></h3>
+<ul>
+<li><strong><code>TYPE="radio"</code></strong> : <strong>un seul choix</strong> possible dans un groupe. Tous les boutons d'un même groupe ont <strong>le même <code>NAME</code></strong>.</li>
+<li><strong><code>TYPE="checkbox"</code></strong> : <strong>plusieurs choix</strong> possibles.</li>
+<li><code>VALUE</code> donne la valeur envoyée ; <code>CHECKED</code> coche par défaut.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.3 — Radio et cases à cocher</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"inscription.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"GET"</span><span class="p">&gt;</span>
+    Niveau :
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"niveau"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"L1"</span> <span class="na">CHECKED</span><span class="p">&gt;</span> Licence 1
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"niveau"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"L2"</span><span class="p">&gt;</span> Licence 2
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"niveau"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"L3"</span><span class="p">&gt;</span> Licence 3
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    Langages étudiés :
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"langage"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"HTML"</span> <span class="na">CHECKED</span><span class="p">&gt;</span> HTML
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"langage"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"PHP"</span><span class="p">&gt;</span> PHP
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"langage"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"JavaScript"</span><span class="p">&gt;</span> JavaScript
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Envoyer"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>Essayez de cocher deux niveaux à la fois : impossible, car ils partagent le même <code>NAME</code>.</p>
+<h2 id="les-listes-deroulantes-select">Les listes déroulantes : <code>&lt;SELECT&gt;</code><a class="headerlink" href="#les-listes-deroulantes-select" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;SELECT&gt;</code> crée une liste de choix ; chaque choix est une balise <code>&lt;OPTION&gt;</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Sur</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NAME</code></td>
+<td><code>&lt;SELECT&gt;</code></td>
+<td>Nom de la liste</td>
+</tr>
+<tr>
+<td><code>SIZE</code></td>
+<td><code>&lt;SELECT&gt;</code></td>
+<td>Nombre de lignes visibles</td>
+</tr>
+<tr>
+<td><code>MULTIPLE</code></td>
+<td><code>&lt;SELECT&gt;</code></td>
+<td>Autorise plusieurs choix (avec <kbd>Ctrl</kbd>)</td>
+</tr>
+<tr>
+<td><code>VALUE</code></td>
+<td><code>&lt;OPTION&gt;</code></td>
+<td>Valeur envoyée</td>
+</tr>
+<tr>
+<td><code>SELECTED</code></td>
+<td><code>&lt;OPTION&gt;</code></td>
+<td>Choix sélectionné par défaut</td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;OPTGROUP LABEL="…"&gt;</code> regroupe des options sous un intitulé.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.4 — Listes de choix</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"choix.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"GET"</span><span class="p">&gt;</span>
+    Département :
+    <span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"departement"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTGROUP</span> <span class="na">LABEL</span><span class="o">=</span><span class="s">"Sciences et technologies"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"GI"</span><span class="p">&gt;</span>Génie Informatique<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"ELEC"</span><span class="p">&gt;</span>Électronique<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">OPTGROUP</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"SIC"</span> <span class="na">SELECTED</span><span class="p">&gt;</span>Sciences de l'Information et de la Communication<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    Modules suivis :<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"modules"</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"4"</span> <span class="na">MULTIPLE</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>PHP<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>JavaScript<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>SQL<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Envoyer"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="les-zones-de-texte-textarea">Les zones de texte : <code>&lt;TEXTAREA&gt;</code><a class="headerlink" href="#les-zones-de-texte-textarea" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;TEXTAREA&gt;</code> permet de saisir <strong>plusieurs lignes</strong>. <code>ROWS</code> règle le nombre de lignes visibles, <code>COLS</code> la largeur.</p>
+<p>Le texte de départ se place <strong>entre les deux balises</strong>, et non dans un attribut <code>VALUE</code>. Attention : tout ce qui est entre les balises, <strong>espaces et retours à la ligne compris</strong>, apparaît dans la zone. Écrivez donc le texte collé aux balises.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.5 — Zone de commentaire</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"avis.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+    Votre avis :<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">TEXTAREA</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"commentaire"</span> <span class="na">ROWS</span><span class="o">=</span><span class="s">"4"</span> <span class="na">COLS</span><span class="o">=</span><span class="s">"40"</span><span class="p">&gt;</span>Aucun commentaire.<span class="p">&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Envoyer"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="regrouper-les-champs-fieldset-et-legend">Regrouper les champs : <code>&lt;FIELDSET&gt;</code> et <code>&lt;LEGEND&gt;</code><a class="headerlink" href="#regrouper-les-champs-fieldset-et-legend" title="Lien vers cette section">&para;</a></h2>
+<p><code>&lt;FIELDSET&gt;</code> entoure un groupe de champs d'un <strong>cadre</strong>. <code>&lt;LEGEND&gt;</code>, placé juste à l'intérieur, donne un <strong>titre</strong> à ce cadre.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.6 — Groupes de champs</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"inscription.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>Informations personnelles<span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+        Nom : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"nom"</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+        Prénom : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"prenom"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>Coordonnées<span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+        Téléphone : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"tel"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Envoyer"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="les-boutons-et-les-champs-speciaux">Les boutons et les champs spéciaux<a class="headerlink" href="#les-boutons-et-les-champs-speciaux" title="Lien vers cette section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;INPUT TYPE="submit" VALUE="Envoyer"&gt;</code></td>
+<td>Envoie le formulaire vers l'adresse de <code>ACTION</code></td>
+</tr>
+<tr>
+<td><code>&lt;INPUT TYPE="reset" VALUE="Effacer"&gt;</code></td>
+<td>Remet tous les champs dans leur <strong>état initial</strong></td>
+</tr>
+<tr>
+<td><code>&lt;INPUT TYPE="button" VALUE="Calculer"&gt;</code></td>
+<td>Bouton sans action automatique, utilisé avec JavaScript</td>
+</tr>
+<tr>
+<td><code>&lt;INPUT TYPE="image" SRC="valider.gif"&gt;</code></td>
+<td>Une image qui envoie le formulaire, comme un bouton <code>submit</code></td>
+</tr>
+<tr>
+<td><code>&lt;INPUT TYPE="file" NAME="photo"&gt;</code></td>
+<td>Choisir un fichier sur l'ordinateur (exige <code>ENCTYPE="multipart/form-data"</code> et <code>METHOD="POST"</code>)</td>
+</tr>
+<tr>
+<td><code>&lt;INPUT TYPE="hidden" NAME="code" VALUE="UAM2026"&gt;</code></td>
+<td>Champ <strong>invisible</strong>, envoyé avec le reste</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Exemple B.7 — Fiche d'inscription complète</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>Inscription à la bibliothèque<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">H2</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"CENTER"</span><span class="p">&gt;</span>Nouvel étudiant<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">ACTION</span><span class="o">=</span><span class="s">"inscription.php"</span> <span class="na">METHOD</span><span class="o">=</span><span class="s">"POST"</span> <span class="na">ENCTYPE</span><span class="o">=</span><span class="s">"multipart/form-data"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>Informations personnelles<span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+            Nom : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"text"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"nom"</span> <span class="na">SIZE</span><span class="o">=</span><span class="s">"25"</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+            Mot de passe : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"password"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"motdepasse"</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">LEGEND</span><span class="p">&gt;</span>Informations complémentaires<span class="p">&lt;/</span><span class="nt">LEGEND</span><span class="p">&gt;</span>
+            Commentaire :<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">TEXTAREA</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"commentaire"</span> <span class="na">ROWS</span><span class="o">=</span><span class="s">"3"</span> <span class="na">COLS</span><span class="o">=</span><span class="s">"40"</span><span class="p">&gt;&lt;/</span><span class="nt">TEXTAREA</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+            Photo : <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"file"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"photo"</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">FIELDSET</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">NAME</span><span class="o">=</span><span class="s">"code"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"UAM2026"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Envoyer"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">TYPE</span><span class="o">=</span><span class="s">"reset"</span> <span class="na">VALUE</span><span class="o">=</span><span class="s">"Effacer"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>Remplissez les champs puis cliquez sur <strong>Envoyer</strong> : l'aperçu liste toutes les données, y compris le champ caché <code>code</code>.</p>
+<h2 id="erreurs-frequentes">Erreurs fréquentes<a class="headerlink" href="#erreurs-frequentes" title="Lien vers cette section">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">À éviter</p>
+<ul>
+<li>placer les champs en dehors de <code>&lt;FORM&gt;</code> ;</li>
+<li>oublier <code>NAME</code> : la valeur n'est pas envoyée ;</li>
+<li>donner des <code>NAME</code> différents à des boutons radio d'un même groupe ;</li>
+<li>mettre un attribut <code>VALUE</code> sur <code>&lt;TEXTAREA&gt;</code> ;</li>
+<li>oublier <code>ENCTYPE="multipart/form-data"</code> pour envoyer un fichier ;</li>
+<li>croire que <code>TYPE="button"</code> envoie le formulaire.</li>
+</ul>
+</div>
+<h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Lien vers cette section">&para;</a></h2>
+<div class="exo" data-exo="bonus-1">
+<p>Créez un formulaire envoyé en <strong>POST</strong> vers <code>inscription.php</code>, avec un champ <strong>nom</strong>, un groupe de <strong>boutons radio</strong> <code>niveau</code> (L1, L2), une <strong>liste déroulante</strong> <code>faculte</code> d'au moins deux choix, et un bouton <strong>Envoyer</strong>. Testez l'envoi dans le rendu.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../chapitre8/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 8. Les feuilles de style">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                8. Les feuilles de style
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../annexes/annexe-a/" class="md-footer__link md-footer__link--next" aria-label="Suivant: A. Erreurs fréquentes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                A. Erreurs fréquentes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/exercices.js"></script>
+      
+        <script src="../../javascripts/manuel.js"></script>
+      
+    
+  </body>
+</html>
