@@ -25,12 +25,13 @@ Sous-verre, Car rapide et Notice de montage chargent leurs polices depuis Intern
 
 ## Vos données
 
-Votre code d'exercice, votre progression et votre style sont enregistrés **uniquement dans votre navigateur**. Rien n'est envoyé nulle part. Si vous videz les données du site, ou changez d'appareil, la progression repart de zéro.
+Votre code d'exercice, votre progression, votre style et les images ajoutées dans « Mes images » sont enregistrés **uniquement dans votre navigateur**. Rien n'est envoyé nulle part. Si vous videz les données du site, ou changez d'appareil, la progression repart de zéro.
 
 ## Versions
 
 | Version | Changements |
 |---------|-------------|
+| 2.1 | « Mes images » : tester ses propres photos dans les aperçus. |
 | 2.0 | Quatre styles au choix. Contenu réaligné sur le support de cours, coquilles du support signalées, aperçus en direct, exercices corrigés automatiquement, quiz, nouveau design. |
 | 1.0 | Première version du manuel. |
 

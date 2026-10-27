@@ -21,9 +21,33 @@ Le cours présente **deux formats** lus par tous les navigateurs :
 - C'est une balise **en ligne** (*inline*) : elle ne provoque **pas de retour à la ligne** et peut s'insérer au milieu du texte.
 - On la place généralement dans un `<P>`, mais elle peut aller n'importe où dans le `<BODY>`.
 
-!!! info "Les images dans ce manuel"
+## Tester avec vos propres images
 
-    Les fichiers des exemples (`photo.jpg`, `logo.gif`…) n'existent pas sur ce site. L'aperçu les remplace par une **image de démonstration** qui porte le nom du fichier et respecte la taille demandée. Sur votre ordinateur, mettez une vraie image avec ce nom dans le dossier de votre page.
+Chaque aperçu qui contient une image affiche un bouton **Mes images**. Il ouvre le **dossier de votre page** : un dossier imaginaire, comme celui où vous rangez vos fichiers `.html` en TP.
+
+1. Cliquez sur **Mes images**, puis sur **Ajouter des images**, ou glissez une photo directement sur le rendu. Sur téléphone, le bouton ouvre votre galerie.
+2. La photo apparaît dans le dossier avec son **nom**, ses **dimensions** en pixels et son **poids**.
+3. Écrivez ce nom dans l'attribut `SRC` : la photo s'affiche dans le rendu.
+
+Le dossier se comporte comme un vrai dossier :
+
+- pour ranger une image dans un sous-dossier, **renommez-la** : `images/moi.jpg`. Il faudra alors écrire `SRC="images/moi.jpg"` ;
+- si le nom ne correspond pas exactement (majuscules, sous-dossier oublié, `../` en trop), l'image ne s'affiche pas, et l'aperçu explique pourquoi ;
+- le même dossier sert dans **tout le manuel** : une photo ajoutée ici est disponible dans les exercices et dans les autres chapitres.
+
+!!! example "Exemple 6.1 — Votre photo"
+
+    ```html
+    <P>
+        <IMG SRC="moi.jpg" WIDTH="200" BORDER="2" ALT="Ma photo">
+        Ajoutez une image nommée moi.jpg dans « Mes images » :
+        elle remplacera l'image de démonstration.
+    </P>
+    ```
+
+!!! info "Vos images restent chez vous"
+
+    Les photos ajoutées ne sont **envoyées nulle part** : elles restent dans le navigateur de votre appareil. Les fichiers des autres exemples (`campus.jpg`, `logo.gif`…) n'existent pas sur ce site : tant que vous ne les ajoutez pas, l'aperçu les remplace par une **image de démonstration** qui porte leur nom et respecte la taille demandée.
 
 ## L'attribut `SRC` : la source
 
@@ -47,7 +71,7 @@ Le cours présente **deux formats** lus par tous les navigateurs :
 - Il est **lu à voix haute** par les lecteurs d'écran, et aide les personnes malvoyantes à comprendre l'image.
 - Il est **obligatoire**, mais peut rester **vide** (`ALT=""`) pour une image purement décorative.
 
-!!! example "Exemple 6.1 — Texte alternatif"
+!!! example "Exemple 6.2 — Texte alternatif"
 
     ```html
     <P>
@@ -71,7 +95,7 @@ Le cours présente **deux formats** lus par tous les navigateurs :
 - Si on n'en donne **qu'un seul**, l'autre est **calculé automatiquement** en proportion.
 - Sans taille, le navigateur « devine », ce qui fait **sauter** la page pendant le chargement. **Indiquez toujours au moins un des deux** pour accélérer l'affichage.
 
-!!! example "Exemple 6.2 — Différentes tailles"
+!!! example "Exemple 6.3 — Différentes tailles"
 
     ```html
     <IMG SRC="campus.jpg" WIDTH="300" ALT="Le campus">
@@ -95,7 +119,7 @@ La troisième image est **déformée** : sa largeur et sa hauteur ne respectent 
 
 `BORDER="n"` dessine un **cadre noir** de `n` pixels autour de l'image. Si l'image est un **lien**, mettez `BORDER="0"` pour ne pas voir le cadre de la couleur des liens (`LINK` du `<BODY>`).
 
-!!! example "Exemple 6.3 — Bordure"
+!!! example "Exemple 6.4 — Bordure"
 
     ```html
     <IMG SRC="mafoto.jpg" WIDTH="160" BORDER="4" ALT="Ma photo">
@@ -108,7 +132,7 @@ La troisième image est **déformée** : sa largeur et sa hauteur ne respectent 
 | `TOP`, `MIDDLE`, `BOTTOM` | Position **verticale** de l'image par rapport à la ligne de texte |
 | `LEFT`, `RIGHT` | L'image se place à gauche ou à droite, et **le texte s'enroule autour** |
 
-!!! example "Exemple 6.4 — Image alignée au milieu de la ligne"
+!!! example "Exemple 6.5 — Image alignée au milieu de la ligne"
 
     ```html
     <P>
@@ -118,7 +142,7 @@ La troisième image est **déformée** : sa largeur et sa hauteur ne respectent 
     </P>
     ```
 
-!!! example "Exemple 6.5 — Le texte s'enroule autour"
+!!! example "Exemple 6.6 — Le texte s'enroule autour"
 
     ```html
     <P>
@@ -134,7 +158,7 @@ La troisième image est **déformée** : sa largeur et sa hauteur ne respectent 
 
 Comme vu au chapitre 5, une image placée entre `<A>` et `</A>` devient un lien.
 
-!!! example "Exemple 6.6 — Galerie de vignettes"
+!!! example "Exemple 6.7 — Galerie de vignettes"
 
     ```html
     <A HREF="grande1.jpg"><IMG SRC="vignette1.jpg" WIDTH="100" BORDER="0" ALT="Amphithéâtre"></A>
