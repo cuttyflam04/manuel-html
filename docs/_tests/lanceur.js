@@ -2,7 +2,7 @@
    ?fichiers=a.js,b.js limite les fichiers ; ?filtre=mot limite les tests par nom. */
 (function () {
   "use strict";
-  const FICHIERS = ["regression.js", "dossier.js", "apercu-site.js", "sites.js", "etapes.js", "atelier.js", "atelier-fichiers.js"];
+  const FICHIERS = ["regression.js", "dossier.js", "apercu-site.js", "sites.js", "etapes.js", "atelier.js", "atelier-fichiers.js", "atelier-mobile.js"];
   const tests = [];
   const sortie = document.getElementById("resultats");
   const etat = document.getElementById("etat");

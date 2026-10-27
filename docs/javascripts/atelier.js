@@ -137,6 +137,21 @@
 
     app.append(barre, bandeaux, message, el("div", "atelier-corps"));
     app.lastChild.append(guide, travail);
+    // Téléphone : une seule vue à la fois, choisie dans une barre d'onglets en bas de l'écran.
+    const navMobile = el("div", "atelier-mobile");
+    navMobile.setAttribute("role", "tablist"); navMobile.setAttribute("aria-label", "Vue de l'atelier");
+    const choisirVue = (v) => {
+      app.dataset.vue = v;
+      [...navMobile.children].forEach((b) => b.setAttribute("aria-selected", String(b.dataset.vue === v)));
+    };
+    [["consigne", "Consigne"], ["code", "Code"], ["rendu", "Rendu"]].forEach(([v, t]) => {
+      const b = el("button", "atelier-mobile-btn", t);
+      b.type = "button"; b.dataset.vue = v; b.setAttribute("role", "tab");
+      b.addEventListener("click", () => choisirVue(v));
+      navMobile.append(b);
+    });
+    app.append(navMobile);
+    choisirVue("consigne");
     racine.append(app);
 
     /* --- état --- */

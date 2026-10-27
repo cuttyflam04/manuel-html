@@ -127,3 +127,24 @@
 .atelier-fichier-info { font-size: .64rem; color: var(--md-default-fg-color--light); }
 .atelier-fichiers-actions { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
 .atelier-nouveau { min-width: 12rem; }
+
+/* ---------- Téléphone : une vue à la fois ---------- */
+.atelier-mobile { display: none; }
+@media screen and (max-width: 59.9375em) {
+  .atelier-app { padding-bottom: 3.8rem; }
+  .atelier-mobile {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 4; display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: .3rem; padding: .4rem .5rem calc(.4rem + env(safe-area-inset-bottom));
+    background: var(--md-default-bg-color); border-top: 1px solid var(--mh-ligne-forte); box-shadow: 0 -4px 12px -8px rgba(0, 0, 0, .3);
+  }
+  .atelier-mobile-btn {
+    font: inherit; font-size: .78rem; font-weight: 700; padding: .55rem .3rem; border-radius: 10px; cursor: pointer;
+    border: 1px solid transparent; background: transparent; color: var(--md-default-fg-color--light);
+  }
+  .atelier-mobile-btn[aria-selected="true"] { background: var(--mh-accent-doux); color: var(--mh-accent-fort); border-color: var(--mh-accent); }
+  .atelier-app[data-vue="consigne"] .atelier-travail { display: none; }
+  .atelier-app:not([data-vue="consigne"]) .atelier-guide { display: none; }
+  .atelier-app[data-vue="code"] .atelier-travail figure.apercu { display: none; }
+  .atelier-app[data-vue="rendu"] :is(.atelier-barre-onglets, .atelier-fichiers, .atelier-editeur) { display: none; }
+  .atelier-outils { margin-left: 0; width: 100%; }
+}
