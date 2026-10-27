@@ -87,3 +87,27 @@ test("mobile : aucun débordement à 375 px", async () => {
   }
   attendre(!fautes.length, fautes.slice(0, 8).join(" ; "));
 });
+
+test("mes images : la photo s'affiche et les chemins faux sont expliqués", async () => {
+  const { doc, win } = await charger("manuel/chapitre6/");
+  const D = win.MH.Dossier;
+  await D.ready;
+  D.list().forEach((f) => D.remove(f.path));
+  const c = doc.createElement("canvas"); c.width = 64; c.height = 48;
+  const blob = await new Promise((ok) => c.toBlob(ok, "image/jpeg"));
+  attendre(!(await D.add(new win.File([blob], "moi.jpg", { type: "image/jpeg" }))), "ajout refusé");
+  await pause(600);
+  const ad = [...doc.querySelectorAll(".admonition.example")].find((a) => a.textContent.includes("6.1"));
+  const etat = () => ({ img: ad.querySelector("iframe").contentDocument.querySelector("img"), note: ad.querySelector(".apercu-note") });
+  attendre(etat().img.src.startsWith("blob:"), "moi.jpg ne s'affiche pas");
+  D.rename("moi.jpg", "images/moi.jpg"); await pause(600);
+  attendre(/Vouliez-vous dire/.test(etat().note.textContent), "pas de suggestion : " + etat().note.textContent);
+  const resultats = {
+    majuscule: D.resolve("images/Moi.jpg").casse === "images/moi.jpg",
+    remonte: !!D.resolve("../images/moi.jpg").dehors,
+    disque: !!D.resolve("D:/cours/moi.jpg").disque,
+    bon: !!D.resolve("images/moi.jpg").fichier,
+  };
+  D.remove("images/moi.jpg");
+  attendre(Object.values(resultats).every(Boolean), JSON.stringify(resultats));
+});

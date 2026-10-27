@@ -186,25 +186,11 @@
         return null;
       },
       // Trouve le fichier visé par SRC, comme le ferait un navigateur depuis une page à la racine.
-      resolve(src) {
-        if (src == null || !src.trim()) return { vide: true };
-        src = src.trim();
-        if (/^(https?:|data:|blob:|\/\/)/i.test(src)) return { externe: true };
-        if (/^[a-z]:[\\/]/i.test(src) || /^file:/i.test(src)) return { disque: true };
-        let p = src.split(/[?#]/)[0].replace(/\\/g, "/");
-        try { p = decodeURI(p); } catch (e) { /* on garde tel quel */ }
-        const out = [];
-        for (const seg of p.split("/")) {
-          if (!seg || seg === ".") continue;
-          if (seg === "..") { if (!out.length) return { dehors: true }; out.pop(); } else out.push(seg);
-        }
-        const path = out.join("/");
-        if (files.has(path)) return { fichier: files.get(path), path };
-        const ci = [...files.keys()].find((k) => k.toLowerCase() === path.toLowerCase());
-        if (ci) return { casse: ci, path };
-        const nom = path.split("/").pop().toLowerCase();
-        const proche = [...files.keys()].find((k) => k.split("/").pop().toLowerCase() === nom);
-        return { absent: true, path, proche };
+      resolve(src, depuis) {
+        const r = MH.outils.resoudreChemin(src, depuis || "", [...files.keys()]);
+        if (r.fichier) return { fichier: files.get(r.fichier), path: r.fichier };
+        if (r.chemin != null) r.path = r.chemin;
+        return r;
       },
     };
   })();
