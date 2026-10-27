@@ -6,6 +6,10 @@ repo_url: https://github.com/cuttyflam04/manuel-html
 repo_name: manuel-html
 edit_uri: ""
 
+# Pages de test : servies par `mkdocs serve`, jamais publiées.
+draft_docs: |
+  _tests/
+
 nav:
   - Accueil: index.md
   - Le manuel:
