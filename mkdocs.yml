@@ -89,6 +89,7 @@ extra_javascript:
   - javascripts/zip.js?v=2.1.1
   - javascripts/noyau.js?v=2.1.1
   - javascripts/exercices.js?v=2.1.1
+  - javascripts/projet.js?v=2.1.1
   - javascripts/manuel.js?v=2.1.1
 
 markdown_extensions:
