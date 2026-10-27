@@ -80,9 +80,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/manuel.css?v=2.0.4">
+      <link rel="stylesheet" href="../../stylesheets/manuel.css?v=2.1.0">
     
-      <link rel="stylesheet" href="../../stylesheets/styles.css?v=2.0.4">
+      <link rel="stylesheet" href="../../stylesheets/styles.css?v=2.1.0">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -645,6 +645,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tester-avec-vos-propres-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tester avec vos propres images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lattribut-src-la-source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1115,6 +1126,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tester-avec-vos-propres-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tester avec vos propres images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lattribut-src-la-source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1263,9 +1285,31 @@
 <li>C'est une balise <strong>en ligne</strong> (<em>inline</em>) : elle ne provoque <strong>pas de retour à la ligne</strong> et peut s'insérer au milieu du texte.</li>
 <li>On la place généralement dans un <code>&lt;P&gt;</code>, mais elle peut aller n'importe où dans le <code>&lt;BODY&gt;</code>.</li>
 </ul>
+<h2 id="tester-avec-vos-propres-images">Tester avec vos propres images<a class="headerlink" href="#tester-avec-vos-propres-images" title="Lien vers cette section">&para;</a></h2>
+<p>Chaque aperçu qui contient une image affiche un bouton <strong>Mes images</strong>. Il ouvre le <strong>dossier de votre page</strong> : un dossier imaginaire, comme celui où vous rangez vos fichiers <code>.html</code> en TP.</p>
+<ol>
+<li>Cliquez sur <strong>Mes images</strong>, puis sur <strong>Ajouter des images</strong>, ou glissez une photo directement sur le rendu. Sur téléphone, le bouton ouvre votre galerie.</li>
+<li>La photo apparaît dans le dossier avec son <strong>nom</strong>, ses <strong>dimensions</strong> en pixels et son <strong>poids</strong>.</li>
+<li>Écrivez ce nom dans l'attribut <code>SRC</code> : la photo s'affiche dans le rendu.</li>
+</ol>
+<p>Le dossier se comporte comme un vrai dossier :</p>
+<ul>
+<li>pour ranger une image dans un sous-dossier, <strong>renommez-la</strong> : <code>images/moi.jpg</code>. Il faudra alors écrire <code>SRC="images/moi.jpg"</code> ;</li>
+<li>si le nom ne correspond pas exactement (majuscules, sous-dossier oublié, <code>../</code> en trop), l'image ne s'affiche pas, et l'aperçu explique pourquoi ;</li>
+<li>le même dossier sert dans <strong>tout le manuel</strong> : une photo ajoutée ici est disponible dans les exercices et dans les autres chapitres.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple 6.1 — Votre photo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"moi.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"200"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"2"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Ma photo"</span><span class="p">&gt;</span>
+    Ajoutez une image nommée moi.jpg dans « Mes images » :
+    elle remplacera l'image de démonstration.
+<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
 <div class="admonition info">
-<p class="admonition-title">Les images dans ce manuel</p>
-<p>Les fichiers des exemples (<code>photo.jpg</code>, <code>logo.gif</code>…) n'existent pas sur ce site. L'aperçu les remplace par une <strong>image de démonstration</strong> qui porte le nom du fichier et respecte la taille demandée. Sur votre ordinateur, mettez une vraie image avec ce nom dans le dossier de votre page.</p>
+<p class="admonition-title">Vos images restent chez vous</p>
+<p>Les photos ajoutées ne sont <strong>envoyées nulle part</strong> : elles restent dans le navigateur de votre appareil. Les fichiers des autres exemples (<code>campus.jpg</code>, <code>logo.gif</code>…) n'existent pas sur ce site : tant que vous ne les ajoutez pas, l'aperçu les remplace par une <strong>image de démonstration</strong> qui porte leur nom et respecte la taille demandée.</p>
 </div>
 <h2 id="lattribut-src-la-source">L'attribut <code>SRC</code> : la source<a class="headerlink" href="#lattribut-src-la-source" title="Lien vers cette section">&para;</a></h2>
 <p><code>SRC="…"</code> donne le <strong>chemin vers l'image</strong> : sur le serveur, ou une URL. C'est le <strong>même principe que pour les liens</strong> (chapitre 5).</p>
@@ -1306,7 +1350,7 @@
 <li>Il est <strong>obligatoire</strong>, mais peut rester <strong>vide</strong> (<code>ALT=""</code>) pour une image purement décorative.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.1 — Texte alternatif</p>
+<p class="admonition-title">Exemple 6.2 — Texte alternatif</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"photo.jpg"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Photo d'un ordinateur portable"</span><span class="p">&gt;</span>
     Une image accompagnée de son texte alternatif.
@@ -1342,7 +1386,7 @@
 <li>Sans taille, le navigateur « devine », ce qui fait <strong>sauter</strong> la page pendant le chargement. <strong>Indiquez toujours au moins un des deux</strong> pour accélérer l'affichage.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.2 — Différentes tailles</p>
+<p class="admonition-title">Exemple 6.3 — Différentes tailles</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"300"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"150"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus, plus petit"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"campus.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"300"</span> <span class="na">HEIGHT</span><span class="o">=</span><span class="s">"80"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Le campus déformé"</span><span class="p">&gt;</span>
@@ -1364,7 +1408,7 @@
 <h2 id="border-le-cadre"><code>BORDER</code> : le cadre<a class="headerlink" href="#border-le-cadre" title="Lien vers cette section">&para;</a></h2>
 <p><code>BORDER="n"</code> dessine un <strong>cadre noir</strong> de <code>n</code> pixels autour de l'image. Si l'image est un <strong>lien</strong>, mettez <code>BORDER="0"</code> pour ne pas voir le cadre de la couleur des liens (<code>LINK</code> du <code>&lt;BODY&gt;</code>).</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.3 — Bordure</p>
+<p class="admonition-title">Exemple 6.4 — Bordure</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"mafoto.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"160"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"4"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Ma photo"</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
@@ -1388,7 +1432,7 @@
 </tbody>
 </table>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.4 — Image alignée au milieu de la ligne</p>
+<p class="admonition-title">Exemple 6.5 — Image alignée au milieu de la ligne</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
     Texte avant
     <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"mafoto.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"MIDDLE"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"2"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Ma photo"</span><span class="p">&gt;</span>
@@ -1397,7 +1441,7 @@
 </code></pre></div>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.5 — Le texte s'enroule autour</p>
+<p class="admonition-title">Exemple 6.6 — Le texte s'enroule autour</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"salle-info.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"150"</span> <span class="na">ALIGN</span><span class="o">=</span><span class="s">"LEFT"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Salle informatique"</span><span class="p">&gt;</span>
     Les étudiants disposent d'ordinateurs pour réaliser leurs travaux pratiques
@@ -1410,7 +1454,7 @@
 <h2 id="une-image-cliquable">Une image cliquable<a class="headerlink" href="#une-image-cliquable" title="Lien vers cette section">&para;</a></h2>
 <p>Comme vu au chapitre 5, une image placée entre <code>&lt;A&gt;</code> et <code>&lt;/A&gt;</code> devient un lien.</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple 6.6 — Galerie de vignettes</p>
+<p class="admonition-title">Exemple 6.7 — Galerie de vignettes</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande1.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette1.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Amphithéâtre"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande2.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette2.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Bibliothèque"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">A</span> <span class="na">HREF</span><span class="o">=</span><span class="s">"grande3.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">SRC</span><span class="o">=</span><span class="s">"vignette3.jpg"</span> <span class="na">WIDTH</span><span class="o">=</span><span class="s">"100"</span> <span class="na">BORDER</span><span class="o">=</span><span class="s">"0"</span> <span class="na">ALT</span><span class="o">=</span><span class="s">"Restaurant"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;</span>
@@ -1562,9 +1606,9 @@
     
       <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
-        <script src="../../javascripts/exercices.js?v=2.0.4"></script>
+        <script src="../../javascripts/exercices.js?v=2.1.0"></script>
       
-        <script src="../../javascripts/manuel.js?v=2.0.4"></script>
+        <script src="../../javascripts/manuel.js?v=2.1.0"></script>
       
     
   </body>
