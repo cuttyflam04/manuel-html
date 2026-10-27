@@ -183,6 +183,18 @@ input, textarea { caret-color: var(--mh-accent); }
 }
 .md-typeset .admonition > :last-child, .md-typeset details > :last-child { margin-bottom: .8rem; }
 
+/* Grille des encadrés : bordures et icônes sur la 1re ligne verticale,
+   tous les textes (titre, légende, code, barre du navigateur) sur la 2e, à 1.4rem du bord intérieur. */
+.md-typeset :is(.admonition-title, summary)::before {
+  top: calc(.55rem + (1lh - 1rem) / 2) !important;
+  width: 1rem !important; height: 1rem !important;
+}
+.md-typeset .admonition .highlight pre > code { padding-left: calc(1.4rem - 1px); }
+.md-typeset .admonition .editeur .editeur-hl, .md-typeset .admonition .editeur .editeur-ta { padding-left: calc(1.4rem - 1px); }
+.md-typeset .admonition .apercu-legende { gap: .4rem; }
+.md-typeset .admonition .apercu-legende svg { width: 1rem; height: 1rem; flex: none; }
+.md-typeset .admonition .apercu-barre { padding-left: calc(1.4rem - 1px); }
+
 /* exemple : neutre, le rendu parle */
 .md-typeset .admonition.example { border-color: var(--mh-ligne); }
 .md-typeset .example > .admonition-title { background: var(--mh-surface); }
