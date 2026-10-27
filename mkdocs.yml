@@ -86,6 +86,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/outils.js?v=2.1.1
+  - javascripts/zip.js?v=2.1.1
   - javascripts/noyau.js?v=2.1.1
   - javascripts/exercices.js?v=2.1.1
   - javascripts/manuel.js?v=2.1.1
