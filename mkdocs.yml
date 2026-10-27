@@ -22,6 +22,7 @@ nav:
       - 6. Les images: manuel/chapitre6/index.md
       - 7. Les tableaux: manuel/chapitre7/index.md
       - 8. Les feuilles de style: manuel/chapitre8/index.md
+      - "Projet : mon site": manuel/projet/index.md
   - Bonus:
       - Les formulaires: manuel/bonus-formulaires/index.md
   - Annexes:
@@ -83,6 +84,7 @@ theme:
 extra_css:
   - stylesheets/manuel.css?v=2.1.1
   - stylesheets/styles.css?v=2.1.1
+  - stylesheets/atelier.css?v=2.1.1
 
 extra_javascript:
   - javascripts/outils.js?v=2.1.1
@@ -91,6 +93,7 @@ extra_javascript:
   - javascripts/exercices.js?v=2.1.1
   - javascripts/projet.js?v=2.1.1
   - javascripts/manuel.js?v=2.1.1
+  - javascripts/atelier.js?v=2.1.1
 
 markdown_extensions:
   - admonition

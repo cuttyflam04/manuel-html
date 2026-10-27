@@ -2,7 +2,7 @@
    ?fichiers=a.js,b.js limite les fichiers ; ?filtre=mot limite les tests par nom. */
 (function () {
   "use strict";
-  const FICHIERS = ["regression.js", "dossier.js", "apercu-site.js", "sites.js", "etapes.js"];
+  const FICHIERS = ["regression.js", "dossier.js", "apercu-site.js", "sites.js", "etapes.js", "atelier.js"];
   const tests = [];
   const sortie = document.getElementById("resultats");
   const etat = document.getElementById("etat");
@@ -23,7 +23,9 @@
     f.className = "cadre-test";
     f.style.cssText = `position:fixed;left:-6000px;top:0;width:${opts.largeur || 1280}px;height:${opts.hauteur || 900}px;border:0`;
     document.body.append(f);
-    await new Promise((ok) => { f.onload = ok; f.src = "../" + chemin + (chemin.includes("?") ? "&" : "?") + "t=" + Date.now(); });
+    const [sansAncre, ancre] = chemin.split("#");
+    const url = "../" + sansAncre + (sansAncre.includes("?") ? "&" : "?") + "t=" + Date.now() + (ancre ? "#" + ancre : "");
+    await new Promise((ok) => { f.onload = ok; f.src = url; });
     const win = f.contentWindow, doc = f.contentDocument;
     for (let i = 0; i < 60 && !(doc.querySelector(".md-content") && win.MH_EXERCICES); i++) await pause(50);
     await pause(opts.attente || 700);
