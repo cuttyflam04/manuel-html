@@ -6,8 +6,12 @@
   const MH = (globalThis.MH = globalThis.MH || {});
 
   const CLE = "projet", BROUILLON = "brouillon";
+  const LIMITE_ZIP = 20 * 1024 * 1024, MAX_FICHIERS = 200;
+  const TEXTE = /\.(html?|css)$/i, IMAGE = /\.(gif|jpe?g|png|webp|svg)$/i, PAGE = /\.html?$/i;
   const lireMeta = () => { try { return JSON.parse(MH.store.get(CLE) || "null"); } catch (e) { return null; } };
   const ecrireMeta = (m) => MH.store.set(CLE, JSON.stringify(m));
+  const nettoyerNom = (p) => (p || "").replace(/\\/g, "/").replace(/^\.?\/+/, "").replace(/\/{2,}/g, "/").trim();
+  const nomRisque = (n) => /\s/.test(n) || /[^\x00-\x7F]/.test(n);
 
   // Disponible partout (accueil, chapitres) : état résumé du projet.
   MH.atelier = {
@@ -67,24 +71,33 @@
 
   /* ---------- L'atelier ---------- */
 
-  function atelier(racine, meta) {
+  function atelier(racine, meta, messageInitial) {
     const { el, esc, ICON } = MH;
     racine.innerHTML = "";
+    const nettoyages = [];
+    const ecouter = (cible, type, fn) => { cible.addEventListener(type, fn); nettoyages.push(() => cible.removeEventListener(type, fn)); };
     const app = el("div", "atelier-app");
 
-    // Barre du haut
+    // Barre du haut : nom, état, importer, télécharger, menu
     const barre = el("header", "atelier-barre");
     const nom = el("b", "atelier-nom", esc(meta.nom));
     const statut = el("span", "atelier-statut", "Enregistré");
     statut.setAttribute("role", "status");
     const outils = el("span", "atelier-outils");
+    const lblImport = el("label", "md-button dossier-ajout atelier-importer", ICON.folder + "<span>Importer un .zip</span>");
+    const inpImport = el("input", "dossier-input");
+    inpImport.type = "file"; inpImport.accept = ".zip,application/zip";
+    inpImport.setAttribute("aria-label", "Importer un site au format .zip");
+    lblImport.append(inpImport);
+    const btnExport = el("button", "md-button md-button--primary atelier-exporter", "<span>Télécharger mon site</span>");
+    btnExport.type = "button";
     const menuBtn = el("button", "md-button atelier-menu-btn", "⋯");
     menuBtn.type = "button"; menuBtn.setAttribute("aria-label", "Plus d'actions"); menuBtn.setAttribute("aria-haspopup", "true");
     const menu = el("div", "atelier-menu"); menu.hidden = true;
     const recommencer = el("button", "", "Recommencer le projet");
     recommencer.type = "button";
     menu.append(recommencer);
-    outils.append(menuBtn, menu);
+    outils.append(lblImport, btnExport, menuBtn, menu);
     barre.append(nom, statut, outils);
 
     const bandeaux = el("div", "atelier-bandeaux");
@@ -93,6 +106,10 @@
     bandeauOnglet.append(btnRecharger); bandeauOnglet.hidden = true;
     bandeaux.append(bandeauOnglet);
     if (!MH.Dossier.persistant) bandeaux.append(el("div", "atelier-bandeau", "Ton navigateur ne garde pas les fichiers (navigation privée ?) : ton travail sera perdu en fermant la page. Télécharge ton site régulièrement."));
+    const message = el("p", "atelier-message");
+    message.setAttribute("role", "status");
+    const dire = (t) => { message.textContent = t || ""; message.hidden = !t; };
+    dire(messageInitial);
 
     // Guide
     const guide = el("section", "atelier-guide");
@@ -106,19 +123,24 @@
     const suivante = el("button", "md-button md-button--primary atelier-suivante", "Étape suivante"); suivante.type = "button";
     guide.append(frise, titre, consigne, revoir, checks, suivante, exemple);
 
-    // Travail
+    // Travail : onglets, panneau Fichiers, éditeur, rendu
     const travail = el("section", "atelier-travail");
     travail.setAttribute("aria-label", "Ton site");
-    const onglets = el("div", "atelier-onglets"); onglets.setAttribute("role", "tablist");
+    const barreOnglets = el("div", "atelier-barre-onglets");
+    const onglets = el("div", "atelier-onglets"); onglets.setAttribute("role", "tablist"); onglets.setAttribute("aria-label", "Fichiers ouverts");
+    const btnFichiers = el("button", "md-button atelier-fichiers-btn", ICON.folder + "<span>Fichiers</span>");
+    btnFichiers.type = "button"; btnFichiers.setAttribute("aria-expanded", "false");
+    barreOnglets.append(onglets, btnFichiers);
+    const panneau = el("div", "atelier-fichiers"); panneau.hidden = true;
     const zoneEditeur = el("div", "atelier-editeur");
-    travail.append(onglets, zoneEditeur);
+    travail.append(barreOnglets, panneau, zoneEditeur);
 
-    app.append(barre, bandeaux, el("div", "atelier-corps"));
+    app.append(barre, bandeaux, message, el("div", "atelier-corps"));
     app.lastChild.append(guide, travail);
     racine.append(app);
 
     /* --- état --- */
-    let actif = meta.base.includes(meta.actif) || MH.Dossier.lire(meta.actif) != null ? meta.actif : meta.base[0];
+    let actif = MH.Dossier.lire(meta.actif) != null ? meta.actif : meta.base.find((c) => MH.Dossier.lire(c) != null) || meta.base[0];
     let etapeVue = 1, chargement = false, enAttente = false, dernierRes = null;
     const sauverMeta = () => { meta.actif = actif; ecrireMeta(meta); };
 
@@ -133,15 +155,14 @@
       if (apercu.page === actif) apercu.render(v);
       sauverPlusTard();
       evaluerPlusTard();
-    }, "Code de la page");
+    }, "Code du fichier ouvert");
     zoneEditeur.append(editeur.node);
     travail.append(apercu.node);
 
     const sauver = () => {
       if (!enAttente) return Promise.resolve();
       enAttente = false;
-      const chemin = actif, texte = editeur.value;
-      return MH.Dossier.ecrire(chemin, texte).then((ok) => {
+      return MH.Dossier.ecrire(actif, editeur.value).then((ok) => {
         statut.textContent = ok || !MH.Dossier.persistant ? "Enregistré" : "Stockage plein : télécharge ton site";
       });
     };
@@ -149,7 +170,8 @@
 
     function dessinerOnglets() {
       onglets.innerHTML = "";
-      meta.ouverts.filter((c) => MH.Dossier.lire(c) != null).forEach((c) => {
+      meta.ouverts = meta.ouverts.filter((c) => MH.Dossier.lire(c) != null);
+      meta.ouverts.forEach((c) => {
         const o = el("button", "atelier-onglet" + (c === actif ? " actif" : ""), esc(c));
         o.type = "button"; o.dataset.chemin = c;
         o.setAttribute("role", "tab"); o.setAttribute("aria-selected", String(c === actif));
@@ -165,10 +187,187 @@
       chargement = true;
       editeur.value = MH.Dossier.lire(chemin) || "";
       chargement = false;
-      if (!depuisApercu && /\.html?$/i.test(chemin)) apercu.ouvrir(chemin, true);
+      if (!depuisApercu && PAGE.test(chemin)) apercu.ouvrir(chemin, true);
       sauverMeta();
       dessinerOnglets();
     }
+
+    /* --- panneau Fichiers --- */
+    const pagesQuiPointent = (cible) => {
+      const chemins = MH.Dossier.chemins();
+      return MH.Dossier.list({ type: "texte" }).filter((f) => PAGE.test(f.path) && f.path !== cible).filter((f) => {
+        const doc = new DOMParser().parseFromString(f.texte, "text/html");
+        return [...doc.querySelectorAll("a[href], img[src], link[href]")].some((n) =>
+          MH.outils.resoudreChemin(n.getAttribute("href") || n.getAttribute("src"), f.path, chemins).fichier === cible);
+      }).map((f) => f.path);
+    };
+
+    function renommer(ancien, saisi) {
+      if (enAttente) sauver();
+      const nouveau = nettoyerNom(saisi);
+      if (!nouveau) { dire("Le nom ne peut pas être vide."); dessinerFichiers(); return; }
+      if (ancien !== nouveau && MH.Dossier.estImage(ancien) !== MH.Dossier.estImage(nouveau)) { dire("Garde la même extension : une image reste une image, une page reste une page."); dessinerFichiers(); return; }
+      // Le dossier prévient l'atelier pendant le renommage : on mémorise la place de l'onglet avant.
+      const place = meta.ouverts.indexOf(ancien);
+      const err = MH.Dossier.rename(ancien, nouveau);
+      if (err) { dire(err); dessinerFichiers(); return; }
+      meta.base = meta.base.map((c) => (c === ancien ? nouveau : c));
+      meta.ouverts = meta.ouverts.filter((c) => c !== ancien && c !== nouveau);
+      if (place >= 0) meta.ouverts.splice(Math.min(place, meta.ouverts.length), 0, nouveau);
+      if (actif === ancien) { actif = nouveau; apercu.ouvrir(nouveau); }
+      sauverMeta();
+      dire("Renommé : " + ancien + " → " + nouveau + "." + (nomRisque(nouveau) ? " Conseil : évite les espaces et les accents dans les noms de fichiers." : ""));
+      dessinerOnglets(); dessinerFichiers(); evaluer();
+    }
+
+    function supprimer(chemin) {
+      const liens = pagesQuiPointent(chemin);
+      const q = "Supprimer « " + chemin + " » ?" + (liens.length ? "\nCes pages ont un lien ou une image vers ce fichier, qui ne marchera plus : " + liens.join(", ") + "." : "");
+      if (!window.confirm(q)) return;
+      MH.Dossier.remove(chemin);
+      if (actif === chemin) {
+        const autre = meta.ouverts.find((c) => c !== chemin && MH.Dossier.lire(c) != null) || MH.Dossier.list({ type: "texte" }).map((f) => f.path).find((c) => c !== chemin);
+        if (autre) ouvrirFichier(autre);
+      }
+      dire("Supprimé : " + chemin + ".");
+      dessinerOnglets(); dessinerFichiers(); evaluer();
+    }
+
+    async function creer(saisi) {
+      const n = nettoyerNom(saisi);
+      if (!TEXTE.test(n)) return dire("Seuls les fichiers .html et .css se créent ici. Les images s'ajoutent avec « Ajouter des images ».");
+      if (MH.Dossier.chemins().includes(n)) return dire("Un fichier « " + n + " » existe déjà.");
+      await MH.Dossier.ecrire(n, PAGE.test(n) ? MH.projet.MODELES[0].squelette(meta.nom, "Nouvelle page") : "/* Feuille de style de « " + meta.nom + " » */\n");
+      ouvrirFichier(n);
+      dire("Fichier créé : " + n + "." + (nomRisque(n) ? " Conseil : évite les espaces et les accents dans les noms de fichiers." : ""));
+      dessinerFichiers();
+    }
+
+    function dessinerFichiers() {
+      if (panneau.hidden) return;
+      panneau.innerHTML = "";
+      const ROLES = ["Accueil", "2e page", "Contact"];
+      const pages = MH.Dossier.list({ type: "texte" }).map((f) => f.path).filter((c) => PAGE.test(c));
+      const bases = el("div", "atelier-bases", "<b>Pages vérifiées</b>");
+      ROLES.forEach((r, i) => {
+        const lab = el("label", "atelier-base", "<span>" + r + "</span>");
+        const sel = el("select");
+        pages.forEach((c) => { const o = el("option", "", esc(c)); o.value = c; if (c === meta.base[i]) o.selected = true; sel.append(o); });
+        sel.addEventListener("change", () => { meta.base[i] = sel.value; sauverMeta(); evaluer(); });
+        lab.append(sel); bases.append(lab);
+      });
+      const liste = el("ul", "atelier-liste");
+      MH.Dossier.list().forEach((f) => {
+        const li = el("li", "atelier-fichier");
+        li.dataset.chemin = f.path;
+        const role = meta.base.indexOf(f.path);
+        const champ = el("input", "atelier-fichier-nom");
+        champ.value = f.path; champ.spellcheck = false;
+        champ.setAttribute("aria-label", "Nom de " + f.path);
+        champ.addEventListener("change", () => renommer(f.path, champ.value));
+        champ.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); champ.blur(); } });
+        const info = el("span", "atelier-fichier-info", role >= 0 ? ROLES[role] : MH.Dossier.estImage(f.path) ? "image" : "");
+        const ouvrir = el("button", "dossier-ico atelier-fichier-ouvrir", ICON.edit);
+        ouvrir.type = "button"; ouvrir.setAttribute("aria-label", "Ouvrir " + f.path); ouvrir.hidden = MH.Dossier.estImage(f.path);
+        ouvrir.addEventListener("click", () => ouvrirFichier(f.path));
+        const suppr = el("button", "dossier-ico atelier-fichier-suppr", ICON.trash);
+        suppr.type = "button"; suppr.setAttribute("aria-label", "Supprimer " + f.path);
+        suppr.addEventListener("click", () => supprimer(f.path));
+        li.append(champ, info, ouvrir, suppr);
+        liste.append(li);
+      });
+      const actions = el("div", "atelier-fichiers-actions");
+      const nouveau = el("input", "atelier-nouveau");
+      nouveau.placeholder = "nouvelle-page.html"; nouveau.setAttribute("aria-label", "Nom du nouveau fichier");
+      const btnNouveau = el("button", "md-button atelier-nouveau-btn", ICON.plus + "<span>Créer</span>"); btnNouveau.type = "button";
+      btnNouveau.addEventListener("click", () => creer(nouveau.value));
+      nouveau.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); creer(nouveau.value); } });
+      const lblImg = el("label", "md-button dossier-ajout", ICON.plus + "<span>Ajouter des images</span>");
+      const inpImg = el("input", "dossier-input"); inpImg.type = "file"; inpImg.accept = "image/*"; inpImg.multiple = true;
+      inpImg.setAttribute("aria-label", "Ajouter des images dans le dossier images/");
+      inpImg.addEventListener("change", async () => {
+        const erreurs = [];
+        for (const f of [...inpImg.files]) { const err = await MH.Dossier.add(f, "images/" + f.name); if (err) erreurs.push(err); }
+        inpImg.value = "";
+        dire(erreurs.length ? erreurs.join(" ") : "Images ajoutées dans images/.");
+      });
+      lblImg.append(inpImg);
+      actions.append(nouveau, btnNouveau, lblImg);
+      panneau.append(bases, liste, actions);
+    }
+    btnFichiers.addEventListener("click", () => {
+      panneau.hidden = !panneau.hidden;
+      btnFichiers.setAttribute("aria-expanded", String(!panneau.hidden));
+      dessinerFichiers();
+    });
+
+    /* --- export et import --- */
+    async function exporter() {
+      if (enAttente) await sauver();
+      const enc = new TextEncoder(), fichiers = [];
+      for (const f of MH.Dossier.list()) {
+        const octets = MH.Dossier.estImage(f.path) ? new Uint8Array(await f.blob.arrayBuffer()) : enc.encode(f.texte || "");
+        fichiers.push({ chemin: f.path, octets });
+      }
+      return { nom: MH.outils.slugSite(meta.nom) + ".zip", blob: MH.zip.creer(fichiers) };
+    }
+    btnExport.addEventListener("click", async () => {
+      const { nom: n, blob } = await exporter();
+      const a = el("a"); a.href = URL.createObjectURL(blob); a.download = n;
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      dire("Téléchargé : " + n + ". Décompresse-le, puis ouvre le dossier dans VS Code.");
+    });
+
+    async function importer(file) {
+      if (file.size > LIMITE_ZIP) { dire("Ce .zip est trop lourd (plus de 20 Mo)."); return message.textContent; }
+      let entrees;
+      try { entrees = await MH.zip.lire(file); } catch (e) {
+        dire(e.message === "zip-methode" ? "Ce .zip utilise une compression que le navigateur ne sait pas lire. Recompresse le dossier avec Windows." : "Ce fichier n'est pas un .zip valide.");
+        return message.textContent;
+      }
+      if (entrees.length > MAX_FICHIERS) { dire("Ce .zip contient trop de fichiers (plus de " + MAX_FICHIERS + ")."); return message.textContent; }
+      // Si tout le site est rangé dans un dossier (mon-site/index.html), ce dossier est retiré.
+      const tetes = new Set(entrees.map((e) => (e.chemin.includes("/") ? e.chemin.split("/")[0] : "")));
+      if (tetes.size === 1 && !tetes.has("")) { const t = [...tetes][0] + "/"; entrees.forEach((e) => { e.chemin = e.chemin.slice(t.length); }); }
+      const ignores = entrees.filter((e) => !TEXTE.test(e.chemin) && !IMAGE.test(e.chemin)).map((e) => e.chemin);
+      const garder = entrees.filter((e) => TEXTE.test(e.chemin) || IMAGE.test(e.chemin));
+      if (!garder.some((e) => PAGE.test(e.chemin))) { dire("Ce .zip ne contient aucune page .html."); return message.textContent; }
+      if (!window.confirm("Importer « " + file.name + " » va remplacer les pages de ton site actuel (tes images sont gardées).\nPour garder ton site actuel, annule et clique d'abord sur « Télécharger mon site ».")) return "";
+      for (const f of MH.Dossier.list({ type: "texte" })) MH.Dossier.remove(f.path);
+      const dec = new TextDecoder(), refusees = [];
+      for (const e of garder) {
+        if (TEXTE.test(e.chemin)) { await MH.Dossier.ecrire(e.chemin, dec.decode(e.octets)); continue; }
+        const ext = e.chemin.split(".").pop().toLowerCase();
+        const type = ext === "svg" ? "image/svg+xml" : ext === "jpg" ? "image/jpeg" : "image/" + ext;
+        const err = await MH.Dossier.add(new File([e.octets], e.chemin.split("/").pop(), { type }), e.chemin);
+        if (err) refusees.push(e.chemin);
+      }
+      const pages = garder.map((e) => e.chemin).filter((c) => PAGE.test(c)).sort();
+      const accueil = pages.includes("index.html") ? "index.html" : pages[0];
+      const contact = pages.find((c) => c !== accueil && /contact/i.test(c));
+      const deux = pages.find((c) => c !== accueil && c !== contact);
+      const base = [accueil, deux, contact];
+      const DEFAUT = [null, "page2.html", "contact.html"], ROLES = [null, "Deuxième page", "Page de contact"];
+      for (let i = 1; i < 3; i++) {
+        if (base[i]) continue;
+        let n = DEFAUT[i], k = 2;
+        while (MH.Dossier.lire(n) != null || base.includes(n)) n = DEFAUT[i].replace(".html", "-" + k++ + ".html");
+        await MH.Dossier.ecrire(n, MH.projet.MODELES[0].squelette(meta.nom, ROLES[i]));
+        base[i] = n;
+      }
+      const suite = { version: 1, nom: meta.nom, modele: "libre", base, etapesReussies: [], ouverts: base.slice(), actif: base[0] };
+      ecrireMeta(suite);
+      const bilan = "Importé : " + garder.length + " fichier(s)." +
+        (ignores.length ? " Ignorés (ni page, ni feuille de style, ni image) : " + ignores.join(", ") + "." : "") +
+        (refusees.length ? " Images trop lourdes, non importées : " + refusees.join(", ") + "." : "");
+      detruire();
+      atelier(racine, suite, bilan);
+      return bilan;
+    }
+    inpImport.addEventListener("change", () => { const f = inpImport.files[0]; inpImport.value = ""; if (f) importer(f); });
+    MH.atelier.exporter = exporter;
+    MH.atelier.importer = importer;
 
     /* --- vérification --- */
     function evaluer() {
@@ -218,8 +417,7 @@
       exemple.innerHTML = "<summary>Voir un exemple</summary>";
       const pre = el("pre", "exo-sol-code"); pre.innerHTML = MH.highlight(e.exemple);
       exemple.append(el("p", "atelier-exemple-note", "Un extrait pour le site « Club Info UAM » : inspire-toi en l'adaptant à ton sujet."), pre);
-      const toutOk = res.every(Boolean);
-      suivante.hidden = !toutOk || e.n === 7;
+      suivante.hidden = !res.every(Boolean) || e.n === 7;
     }
 
     function voirEtape(n) {
@@ -230,38 +428,34 @@
     /* --- événements --- */
     suivante.addEventListener("click", () => voirEtape(etapeVue + 1));
     menuBtn.addEventListener("click", () => { menu.hidden = !menu.hidden; });
-    recommencer.addEventListener("click", async () => {
+    recommencer.addEventListener("click", () => {
       menu.hidden = true;
       if (!window.confirm("Recommencer le projet ? Tes pages seront effacées (tes images restent). Pense à télécharger ton site avant.")) return;
       for (const f of MH.Dossier.list({ type: "texte" })) MH.Dossier.remove(f.path);
       MH.store.del(CLE);
+      detruire();
       racine.dataset.vu = ""; demarrer(racine);
     });
     btnRecharger.addEventListener("click", () => location.reload());
-    const surStockage = (e) => { if (e.key === "mh:" + CLE && racine.isConnected) bandeauOnglet.hidden = false; };
-    window.addEventListener("storage", surStockage);
+    ecouter(window, "storage", (e) => { if (e.key === "mh:" + CLE && racine.isConnected) bandeauOnglet.hidden = false; });
     // Quitter la page : on garde tout de suite le texte non sauvegardé (sauvegarde synchrone de secours).
     const auDepart = () => {
       if (!enAttente) return;
       MH.store.set(BROUILLON, JSON.stringify({ chemin: actif, texte: editeur.value }));
       sauver();
     };
-    window.addEventListener("pagehide", auDepart);
+    ecouter(window, "pagehide", auDepart);
     const surHash = () => { const m = /^#etape-(\d)$/.exec(location.hash); if (m) voirEtape(+m[1]); };
-    window.addEventListener("hashchange", surHash);
-    const surDossier = () => { if (!racine.isConnected) { MH.Dossier.off(surDossier); return; } dessinerOnglets(); evaluerPlusTard(); };
+    ecouter(window, "hashchange", surHash);
+    const surDossier = () => { if (!racine.isConnected) { detruire(); return; } dessinerOnglets(); dessinerFichiers(); evaluerPlusTard(); };
     MH.Dossier.on(surDossier);
+    nettoyages.push(() => MH.Dossier.off(surDossier));
     if (window.document$ && window.document$.subscribe) {
       // Navigation instantanée : en quittant l'atelier, on sauvegarde et on se désabonne.
-      const abo = window.document$.subscribe(() => {
-        if (racine.isConnected) return;
-        auDepart();
-        window.removeEventListener("storage", surStockage);
-        window.removeEventListener("pagehide", auDepart);
-        window.removeEventListener("hashchange", surHash);
-        if (abo && abo.unsubscribe) abo.unsubscribe();
-      });
+      const abo = window.document$.subscribe(() => { if (!racine.isConnected) { auDepart(); detruire(); } });
+      nettoyages.push(() => { if (abo && abo.unsubscribe) abo.unsubscribe(); });
     }
+    function detruire() { while (nettoyages.length) { try { nettoyages.pop()(); } catch (e) { /* déjà nettoyé */ } } }
 
     /* --- premier affichage --- */
     dessinerOnglets();

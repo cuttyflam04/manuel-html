@@ -99,3 +99,31 @@
 .atelier-editeur .editeur { margin: 0; }
 .atelier-editeur .editeur .editeur-ta, .atelier-editeur .editeur .editeur-hl { min-height: 16rem; }
 .atelier-travail figure.apercu { margin: 0; }
+
+/* ---------- Message, panneau Fichiers ---------- */
+.md-typeset .atelier-message { margin: 0; font-size: .74rem; font-weight: 700; color: var(--mh-accent-fort); }
+.md-typeset .atelier-message[hidden] { display: none; }
+.atelier-barre-onglets { display: flex; gap: .5rem; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; }
+.atelier-fichiers {
+  display: grid; gap: .7rem; padding: .8rem; font-size: .74rem;
+  border: 1px solid var(--mh-ligne-forte); border-radius: 12px; background: var(--mh-surface);
+}
+.atelier-fichiers[hidden] { display: none; }
+.atelier-bases { display: flex; flex-wrap: wrap; gap: .4rem .9rem; align-items: center; }
+.atelier-base { display: inline-flex; gap: .35rem; align-items: center; }
+.atelier-base span { color: var(--md-default-fg-color--light); }
+.atelier-base select, .atelier-nouveau, .atelier-fichier-nom {
+  font-family: var(--mh-mono); font-size: 12.5px; padding: .25rem .45rem; border-radius: 7px;
+  border: 1px solid var(--mh-ligne-forte); background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+}
+.md-typeset .atelier-liste { list-style: none; margin: 0 !important; padding: 0 !important; display: grid; gap: .3rem; }
+.md-typeset .atelier-fichier {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; gap: .4rem; align-items: center; margin: 0 !important;
+  padding: .2rem .3rem; border-radius: 8px; background: var(--md-default-bg-color); border: 1px solid var(--mh-ligne);
+}
+.atelier-fichier-nom { border-color: transparent; width: 100%; min-width: 0; }
+.atelier-fichier-nom:hover { border-color: var(--mh-ligne-forte); }
+.atelier-fichier-nom:focus { border-color: var(--mh-accent); outline: none; }
+.atelier-fichier-info { font-size: .64rem; color: var(--md-default-fg-color--light); }
+.atelier-fichiers-actions { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.atelier-nouveau { min-width: 12rem; }
