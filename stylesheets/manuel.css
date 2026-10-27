@@ -176,11 +176,11 @@ input, textarea { caret-color: var(--mh-accent); }
   box-shadow: none; font-size: .82rem; background: var(--md-default-bg-color);
   margin: 1.5em 0; overflow: visible;
 }
+.md-typeset .admonition, .md-typeset details { overflow: hidden; }
 .md-typeset .admonition-title, .md-typeset summary {
-  border-radius: calc(var(--mh-rayon) - 1px) calc(var(--mh-rayon) - 1px) 0 0;
+  border-radius: 0;
   font-weight: 700; border: 0; padding-top: .55rem; padding-bottom: .55rem;
 }
-.md-typeset details:not([open]) > summary { border-radius: calc(var(--mh-rayon) - 1px); }
 .md-typeset .admonition > :last-child, .md-typeset details > :last-child { margin-bottom: .8rem; }
 
 /* exemple : neutre, le rendu parle */
@@ -202,6 +202,11 @@ input, textarea { caret-color: var(--mh-accent); }
 .md-typeset :is(.danger, .failure) { border-color: color-mix(in srgb, var(--mh-faux) 30%, var(--mh-ligne)); }
 .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary) { background: var(--mh-faux-doux); }
 .md-typeset :is(.danger, .failure) > :is(.admonition-title, summary)::before { background-color: var(--mh-faux); }
+
+/* avertissements */
+.md-typeset :is(.warning, .caution) { border-color: color-mix(in srgb, var(--mh-avert) 35%, var(--mh-ligne)); }
+.md-typeset :is(.warning, .caution) > :is(.admonition-title, summary) { background: var(--mh-avert-doux); }
+.md-typeset :is(.warning, .caution) > :is(.admonition-title, summary)::before { background-color: var(--mh-avert); }
 
 /* exercices papier */
 .md-typeset .question { border-color: var(--mh-ligne-forte); }
@@ -251,7 +256,7 @@ input, textarea { caret-color: var(--mh-accent); }
   background: var(--md-default-bg-color); border: 1px solid var(--mh-ligne); border-bottom: 0;
   margin-bottom: -.35rem; align-self: flex-end; color: var(--md-default-fg-color); max-width: 60%;
 }
-.apercu-onglet.vide { color: var(--md-default-fg-color--lighter); font-style: italic; }
+.apercu-onglet.vide { color: var(--md-default-fg-color--light); font-style: italic; }
 .apercu-actions { margin-left: auto; display: inline-flex; gap: .3rem; flex: none; }
 .apercu-cadre { display: block; width: 100%; height: 80px; border: 0; background: #fff; color-scheme: light; }
 .apercu-note {
