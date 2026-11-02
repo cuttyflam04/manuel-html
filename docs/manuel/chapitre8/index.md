@@ -174,6 +174,10 @@ Avec l'attribut `STYLE`, donnez au paragraphe un **texte bleu** et une **taille 
 Dans l'en-tête, ajoutez une balise `<STYLE>` qui rend **tous les paragraphes verts et centrés**, et crée une classe `h1.titre` en **rouge**. Utilisez cette classe sur le `<H1>`.
 </div>
 
+## Votre site : étape 7
+
+<div class="etape-projet" data-etape="7"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch8"></div>

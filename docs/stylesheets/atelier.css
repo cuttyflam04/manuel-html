@@ -1,0 +1,157 @@
+/* Atelier « Mon site » — uniquement les jetons du thème (--mh-*, --md-*) : suit les 4 styles. */
+
+/* La page de l'atelier prend toute la largeur. */
+.md-main__inner.md-grid:has(.atelier) { max-width: 100rem; }
+.md-content:has(.atelier) .md-content__inner > h1 { font-size: 1.4rem; margin-bottom: .6rem; }
+.atelier-chargement { color: var(--md-default-fg-color--light); }
+
+/* ---------- Écran de départ ---------- */
+.md-typeset .atelier-depart { max-width: 44rem; display: grid; gap: 1rem; }
+.md-typeset .atelier-depart h2 { margin: 0; padding: 0; border: 0; }
+.md-typeset .atelier-depart > p { margin: 0; color: var(--md-default-fg-color--light); }
+.atelier-champ { display: grid; gap: .3rem; font-weight: 700; font-size: .8rem; }
+.atelier-champ input {
+  font: inherit; font-weight: 400; padding: .55rem .7rem; border-radius: 10px;
+  border: 1px solid var(--mh-ligne-forte); background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+}
+.atelier-champ input:focus { outline: 2px solid var(--mh-accent); outline-offset: 1px; }
+.md-typeset .atelier-modeles { border: 0; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.md-typeset .atelier-modeles legend { font-weight: 700; font-size: .8rem; padding: 0; margin-bottom: .4rem; }
+.atelier-modele {
+  display: flex; gap: .7rem; align-items: flex-start; padding: .65rem .8rem; border-radius: 12px; cursor: pointer;
+  border: 1px solid var(--mh-ligne-forte); background: var(--md-default-bg-color);
+}
+.atelier-modele:has(input:checked) { border-color: var(--mh-accent); background: var(--mh-accent-doux); }
+.atelier-modele input { margin-top: .25rem; accent-color: var(--mh-accent); }
+.atelier-modele span { display: grid; gap: .1rem; }
+.atelier-modele small { color: var(--md-default-fg-color--light); font-size: .72rem; }
+.atelier-modele code { justify-self: start; font-size: .68rem; }
+.atelier-depart .md-button { justify-self: start; font-size: .8rem; padding: .55em 1.1em; }
+
+/* ---------- Barre du haut ---------- */
+.atelier-app { display: grid; gap: .8rem; }
+.atelier-barre {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  padding: .55rem .8rem; border: 1px solid var(--mh-ligne-forte); border-radius: var(--mh-rayon); background: var(--mh-surface);
+}
+.atelier-nom { font-size: .9rem; }
+.atelier-statut { font-size: .66rem; color: var(--md-default-fg-color--light); }
+.atelier-outils { margin-left: auto; display: flex; gap: .4rem; align-items: center; position: relative; flex-wrap: wrap; }
+.atelier-menu {
+  position: absolute; right: 0; top: calc(100% + .3rem); z-index: 5; min-width: 13rem; padding: .3rem;
+  background: var(--md-default-bg-color); border: 1px solid var(--mh-ligne-forte); border-radius: 10px; box-shadow: var(--mh-ombre);
+}
+.atelier-menu[hidden] { display: none; }
+.atelier-menu button {
+  display: block; width: 100%; text-align: left; font: inherit; font-size: .74rem; padding: .45rem .6rem; border: 0; border-radius: 7px;
+  background: none; color: var(--md-default-fg-color); cursor: pointer;
+}
+.atelier-menu button:hover { background: var(--mh-surface); }
+.atelier-bandeaux:empty { display: none; }
+.atelier-bandeau {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .74rem; padding: .5rem .8rem; border-radius: 10px;
+  background: var(--mh-avert-doux); border: 1px solid color-mix(in srgb, var(--mh-avert) 40%, var(--mh-ligne)); color: var(--md-default-fg-color);
+}
+.atelier-bandeau[hidden] { display: none; }
+
+/* ---------- Corps : guide à gauche, travail à droite ---------- */
+.atelier-corps { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media screen and (min-width: 60em) {
+  .atelier-corps { grid-template-columns: minmax(16rem, 34%) minmax(0, 1fr); }
+  .atelier-guide { position: sticky; top: 3.6rem; max-height: calc(100vh - 4.5rem); overflow: auto; }
+}
+.md-typeset .atelier-guide {
+  padding: .9rem; border: 1px solid var(--mh-ligne-forte); border-radius: 14px; background: var(--md-default-bg-color); font-size: .78rem;
+}
+.md-typeset ol.atelier-frise { list-style: none; display: flex !important; flex-wrap: wrap; gap: .35rem; margin: 0 0 .9rem !important; padding: 0 !important; }
+.md-typeset .atelier-frise li { margin: 0 !important; }
+.atelier-etape {
+  width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; cursor: pointer; font: inherit; font-weight: 700; font-size: .78rem;
+  border: 1px solid var(--mh-ligne-forte); background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+  font-variant-numeric: tabular-nums;
+}
+.atelier-etape.reussie { background: var(--mh-ok); border-color: var(--mh-ok); color: var(--md-default-bg-color); }
+.atelier-etape[aria-current="step"] { box-shadow: 0 0 0 2px var(--md-default-bg-color), 0 0 0 4px var(--mh-accent); }
+.atelier-etape.vue:not(.reussie) { border-color: var(--mh-accent); color: var(--mh-accent-fort); border-width: 2px; }
+.md-typeset .atelier-etape-titre { margin: 0 0 .5rem; padding: 0; border: 0; font-size: 1.05rem; }
+.md-typeset .atelier-consigne { margin: 0 0 .5rem; line-height: 1.6; }
+.atelier-revoir { font-size: .72rem; font-weight: 700; display: inline-block; margin-bottom: .8rem; }
+.md-typeset .atelier-checks { list-style: none; margin: 0 0 .8rem !important; padding: 0 !important; display: grid; gap: .3rem; }
+.md-typeset .atelier-checks li {
+  display: flex; gap: .55rem; align-items: flex-start; margin: 0 !important; font-size: .74rem; line-height: 1.5;
+  padding: .35rem .55rem; border-radius: 8px; background: var(--mh-surface);
+}
+.md-typeset .atelier-checks li.ok { background: var(--mh-ok-doux); }
+.atelier-checks li.ok .exo-ico { color: var(--mh-ok); }
+.atelier-suivante[hidden] { display: none !important; }
+.md-typeset .atelier-exemple { margin: .8rem 0 0; border-style: dashed; }
+.md-typeset .atelier-exemple > summary { background: transparent; font-size: .74rem; }
+.md-typeset .atelier-exemple > summary::before { background-color: var(--md-default-fg-color--light); }
+.md-typeset .atelier-exemple-note { margin: .5rem .8rem; font-size: .7rem; color: var(--md-default-fg-color--light); }
+
+.atelier-travail { min-width: 0; display: grid; gap: .7rem; }
+.atelier-onglets { display: flex; gap: .3rem; flex-wrap: wrap; align-items: center; }
+.atelier-onglet {
+  font-family: var(--mh-mono); font-size: 12.5px; padding: .3rem .7rem; border-radius: 8px 8px 0 0; cursor: pointer;
+  border: 1px solid var(--mh-ligne-forte); border-bottom-width: 2px; background: var(--mh-surface); color: var(--md-default-fg-color);
+}
+.atelier-onglet.actif { background: var(--md-default-bg-color); border-bottom-color: var(--mh-accent); font-weight: 700; }
+.atelier-editeur .editeur { margin: 0; }
+.atelier-editeur .editeur .editeur-ta, .atelier-editeur .editeur .editeur-hl { min-height: 16rem; }
+.atelier-travail figure.apercu { margin: 0; }
+
+/* ---------- Message, panneau Fichiers ---------- */
+.md-typeset .atelier-message { margin: 0; font-size: .74rem; font-weight: 700; color: var(--mh-accent-fort); }
+.md-typeset .atelier-message[hidden] { display: none; }
+.atelier-barre-onglets { display: flex; gap: .5rem; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; }
+.atelier-fichiers {
+  display: grid; gap: .7rem; padding: .8rem; font-size: .74rem;
+  border: 1px solid var(--mh-ligne-forte); border-radius: 12px; background: var(--mh-surface);
+}
+.atelier-fichiers[hidden] { display: none; }
+.atelier-bases { display: flex; flex-wrap: wrap; gap: .4rem .9rem; align-items: center; }
+.atelier-base { display: inline-flex; gap: .35rem; align-items: center; }
+.atelier-base span { color: var(--md-default-fg-color--light); }
+.atelier-base select, .atelier-nouveau, .atelier-fichier-nom {
+  font-family: var(--mh-mono); font-size: 12.5px; padding: .25rem .45rem; border-radius: 7px;
+  border: 1px solid var(--mh-ligne-forte); background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+}
+.md-typeset .atelier-liste { list-style: none; margin: 0 !important; padding: 0 !important; display: grid; gap: .3rem; }
+.md-typeset .atelier-fichier {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; gap: .4rem; align-items: center; margin: 0 !important;
+  padding: .2rem .3rem; border-radius: 8px; background: var(--md-default-bg-color); border: 1px solid var(--mh-ligne);
+}
+.atelier-fichier-nom { border-color: transparent; width: 100%; min-width: 0; }
+.atelier-fichier-nom:hover { border-color: var(--mh-ligne-forte); }
+.atelier-fichier-nom:focus { border-color: var(--mh-accent); outline: none; }
+.atelier-fichier-info { font-size: .64rem; color: var(--md-default-fg-color--light); }
+.atelier-fichiers-actions { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.atelier-nouveau { min-width: 12rem; }
+
+/* ---------- Téléphone : une vue à la fois ---------- */
+.atelier-mobile { display: none; }
+@media screen and (max-width: 59.9375em) {
+  .atelier-app { padding-bottom: 3.8rem; }
+  .atelier-mobile {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 4; display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: .3rem; padding: .4rem .5rem calc(.4rem + env(safe-area-inset-bottom));
+    background: var(--md-default-bg-color); border-top: 1px solid var(--mh-ligne-forte); box-shadow: 0 -4px 12px -8px rgba(0, 0, 0, .3);
+  }
+  .atelier-mobile-btn {
+    font: inherit; font-size: .78rem; font-weight: 700; padding: .55rem .3rem; border-radius: 10px; cursor: pointer;
+    border: 1px solid transparent; background: transparent; color: var(--md-default-fg-color--light);
+  }
+  .atelier-mobile-btn[aria-selected="true"] { background: var(--mh-accent-doux); color: var(--mh-accent-fort); border-color: var(--mh-accent); }
+  .atelier-app[data-vue="consigne"] .atelier-travail { display: none; }
+  .atelier-app:not([data-vue="consigne"]) .atelier-guide { display: none; }
+  .atelier-app[data-vue="code"] .atelier-travail figure.apercu { display: none; }
+  .atelier-app[data-vue="rendu"] :is(.atelier-barre-onglets, .atelier-fichiers, .atelier-editeur) { display: none; }
+  .atelier-outils { margin-left: 0; width: 100%; }
+}
+
+/* Le titre d'étape n'est pas un titre de section : pas de décoration de style (points, filets, numéro). */
+.md-typeset h2.atelier-etape-titre { background: none !important; padding-top: 0 !important; display: block !important; }
+.md-typeset h2.atelier-etape-titre::before { content: none !important; display: none !important; }
+@media screen and (max-width: 59.9375em) {
+  body:has(.atelier) .md-footer { padding-bottom: 4rem; }
+}

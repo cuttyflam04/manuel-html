@@ -6,6 +6,10 @@ repo_url: https://github.com/cuttyflam04/manuel-html
 repo_name: manuel-html
 edit_uri: ""
 
+# Pages de test : servies par `mkdocs serve`, jamais publiées.
+draft_docs: |
+  _tests/
+
 nav:
   - Accueil: index.md
   - Le manuel:
@@ -18,6 +22,7 @@ nav:
       - 6. Les images: manuel/chapitre6/index.md
       - 7. Les tableaux: manuel/chapitre7/index.md
       - 8. Les feuilles de style: manuel/chapitre8/index.md
+      - "Projet : mon site": manuel/projet/index.md
   - Bonus:
       - Les formulaires: manuel/bonus-formulaires/index.md
   - Annexes:
@@ -77,12 +82,18 @@ theme:
 # ?v=… : changez ce numéro à chaque publication pour que les navigateurs
 # rechargent les styles et scripts au lieu d'utiliser leur ancienne copie.
 extra_css:
-  - stylesheets/manuel.css?v=2.1.1
-  - stylesheets/styles.css?v=2.1.1
+  - stylesheets/manuel.css?v=2.2.0
+  - stylesheets/styles.css?v=2.2.0
+  - stylesheets/atelier.css?v=2.2.0
 
 extra_javascript:
-  - javascripts/exercices.js?v=2.1.1
-  - javascripts/manuel.js?v=2.1.1
+  - javascripts/outils.js?v=2.2.0
+  - javascripts/zip.js?v=2.2.0
+  - javascripts/noyau.js?v=2.2.0
+  - javascripts/exercices.js?v=2.2.0
+  - javascripts/projet.js?v=2.2.0
+  - javascripts/manuel.js?v=2.2.0
+  - javascripts/atelier.js?v=2.2.0
 
 markdown_extensions:
   - admonition

@@ -314,3 +314,14 @@
 
 /* Bordure d'aperçu de 2px dans les trois styles : la barre recule d'autant */
 [data-mh-style] .md-typeset .admonition .apercu-barre { padding-left: calc(1.4rem - 2px); }
+
+/* Atelier « Mon site » : la frise et la barre du haut prennent l'accent de chaque style */
+[data-mh-style="sousverre"] :is(.atelier-barre, .atelier-guide, .etape-projet) { border: 2px solid var(--sv-trait); }
+[data-mh-style="sousverre"] .atelier-etape { border: 2px solid var(--sv-trait); font-family: "Gluten", cursive; }
+[data-mh-style="carrapide"] .atelier-barre { background: var(--cr-jaune); border: 2px solid var(--cr-bleu); color: #0f1d3a; }
+[data-mh-style="carrapide"] .atelier-barre .atelier-statut { color: #0f1d3a; }
+[data-mh-style="carrapide"] .atelier-nom { font-family: "Bungee", sans-serif; font-weight: 400; }
+[data-mh-style="carrapide"] .atelier-etape { border: 2px solid var(--cr-trait); }
+[data-mh-style="notice"] :is(.atelier-barre, .atelier-guide, .etape-projet) { border: 2px solid var(--nt-trait); border-radius: 4px; }
+[data-mh-style="notice"] .atelier-etape { border-radius: 4px; border: 2px solid var(--nt-trait); font-family: "Archivo", sans-serif; font-weight: 900; }
+[data-mh-style="notice"] .atelier-etape[aria-current="step"]:not(.reussie) { background: var(--nt-jaune); color: #1a1a1a; }

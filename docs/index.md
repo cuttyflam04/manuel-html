@@ -51,6 +51,7 @@ title: Accueil
 <li><a href="manuel/chapitre6/"><span class="mh-num">6</span><span class="mh-ch-titre">Les images</span><span class="mh-progres" data-progression="ch6"></span><span class="mh-ch-desc">GIF et JPEG, SRC, ALT, taille, bordure, alignement, image cliquable.</span></a></li>
 <li><a href="manuel/chapitre7/"><span class="mh-num">7</span><span class="mh-ch-titre">Les tableaux</span><span class="mh-progres" data-progression="ch7"></span><span class="mh-ch-desc">Lignes et cellules, en-têtes, CAPTION, alignements, COLSPAN et ROWSPAN.</span></a></li>
 <li><a href="manuel/chapitre8/"><span class="mh-num">8</span><span class="mh-ch-titre">Les feuilles de style</span><span class="mh-progres" data-progression="ch8"></span><span class="mh-ch-desc">Attribut STYLE, balise STYLE, classes, fichier séparé.</span></a></li>
+<li><a href="manuel/projet/"><span class="mh-num">P</span><span class="mh-ch-titre">Projet : mon site</span><span class="mh-progres" data-progression="projet"></span><span class="mh-ch-desc">Votre propre site de plusieurs pages, construit étape par étape et vérifié automatiquement, puis téléchargé pour VS Code.</span></a></li>
 <li><a href="manuel/bonus-formulaires/"><span class="mh-num">+</span><span class="mh-ch-titre">Bonus : les formulaires</span><span class="mh-progres" data-progression="bonus"></span><span class="mh-ch-desc">Hors programme. FORM, INPUT, SELECT, TEXTAREA, envoi GET et POST.</span></a></li>
 </ul>
 

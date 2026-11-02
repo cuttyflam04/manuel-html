@@ -155,6 +155,10 @@ Créez une **liste numérotée** des étapes d'adhésion au club (au moins trois
 Créez une liste à puces des sections du club : **Programmation**, **Réseaux**, **Infographie**. Dans l'élément « Programmation », imbriquez une **liste numérotée** avec deux langages.
 </div>
 
+## Votre site : étape 3
+
+<div class="etape-projet" data-etape="3"></div>
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch4"></div>

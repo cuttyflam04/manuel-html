@@ -25,12 +25,13 @@ Sous-verre, Car rapide et Notice de montage chargent leurs polices depuis Intern
 
 ## Vos données
 
-Votre code d'exercice, votre progression, votre style et les images ajoutées dans « Mes images » sont enregistrés **uniquement dans votre navigateur**. Rien n'est envoyé nulle part. Si vous videz les données du site, ou changez d'appareil, la progression repart de zéro.
+Votre code d'exercice, votre progression, votre style, les images ajoutées dans « Mes images » et les pages de votre projet « Mon site » sont enregistrés **uniquement dans votre navigateur**. Rien n'est envoyé nulle part. Si vous videz les données du site, ou changez d'appareil, la progression repart de zéro. Pour garder votre projet, utilisez « Télécharger mon site » dans l'atelier : le .zip se réimporte ensuite.
 
 ## Versions
 
 | Version | Changements |
 |---------|-------------|
+| 2.2 | Atelier « Projet : mon site » : construire son site en 7 étapes vérifiées, puis le télécharger en .zip. |
 | 2.1 | « Mes images » : tester ses propres photos dans les aperçus. |
 | 2.0 | Quatre styles au choix. Contenu réaligné sur le support de cours, coquilles du support signalées, aperçus en direct, exercices corrigés automatiquement, quiz, nouveau design. |
 | 1.0 | Première version du manuel. |

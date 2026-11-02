@@ -211,6 +211,10 @@ Retenez trois règles :
 Écrivez une page dont **l'onglet** affiche « Ma page UAM » et dont le corps contient la phrase « Bonjour le Web ». Partez de la structure ci-dessous.
 </div>
 
+## Votre propre site
+
+À partir du chapitre 2, chaque chapitre se termine par une étape de **votre propre site** : une page d'accueil, une page de contenu, une page de contact, puis des listes, des liens, des images, un tableau et du style. Vous le construisez dans l'[atelier « Projet : mon site »](../projet/index.md), puis vous le téléchargez pour l'ouvrir dans VS Code.
+
 ## Vérifiez vos acquis
 
 <div class="quiz" data-quiz="ch1"></div>
