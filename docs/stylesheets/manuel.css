@@ -540,3 +540,24 @@ html:not([data-mh-style]) [data-md-color-scheme="slate"] .md-typeset :is(.md-but
 .md-typeset .etape-projet-tete { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: baseline; justify-content: space-between; }
 .etape-projet-etat { font-size: .68rem; font-weight: 700; color: var(--md-default-fg-color--light); }
 .etape-projet.reussie .etape-projet-etat { color: var(--mh-ok); }
+
+/* ---------- Suggestions pendant la frappe ---------- */
+.editeur.avec-completion { overflow: visible; }
+.completion {
+  position: absolute; z-index: 6; width: min(22rem, calc(100% - 8px));
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+  border: 1px solid var(--mh-ligne-forte); border-radius: 10px; box-shadow: var(--mh-ombre); overflow: hidden;
+}
+.completion[hidden] { display: none; }
+.md-typeset .completion-liste, .completion-liste { list-style: none; margin: 0 !important; padding: .25rem !important; max-height: 9.6rem; overflow: auto; }
+.md-typeset .completion-item, .completion-item {
+  margin: 0 !important; padding: .22rem .5rem; border-radius: 6px; cursor: pointer;
+  font-family: var(--mh-mono); font-size: 12.5px; line-height: 1.5; color: var(--md-default-fg-color);
+}
+.completion-item:hover { background: var(--mh-surface); }
+.completion-item.actif { background: var(--mh-accent-doux); color: var(--mh-accent-fort); font-weight: 700; }
+.md-typeset .completion-astuce, .completion-astuce {
+  margin: 0 !important; padding: .45rem .6rem; border-top: 1px solid var(--mh-ligne); background: var(--mh-surface);
+  font-size: 12px; line-height: 1.45; color: var(--md-default-fg-color--light);
+}
+.completion-astuce b { color: var(--mh-accent-fort); margin-right: .25rem; }

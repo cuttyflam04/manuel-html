@@ -173,7 +173,7 @@
       if (apercu.page === actif) apercu.render(v);
       sauverPlusTard();
       evaluerPlusTard();
-    }, "Code du fichier ouvert");
+    }, "Code du fichier ouvert", { completion: true });
     zoneEditeur.append(editeur.node);
     travail.append(apercu.node);
 

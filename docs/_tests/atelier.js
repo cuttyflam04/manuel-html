@@ -92,3 +92,33 @@ test("atelier : une sauvegarde de secours périmée est ignorée", async () => {
   attendre(r.win.MH.Dossier.lire("index.html") === "<P>version récente</P>", "le brouillon périmé a écrasé : " + r.win.MH.Dossier.lire("index.html"));
   attendre(!r.win.localStorage.getItem("mh:brouillon"), "brouillon non effacé");
 });
+
+test("suggestions : « <U » dans l'atelier propose <UL> avec son astuce, Entrée l'écrit", async () => {
+  const { doc, win } = await creerClub();
+  const ta = doc.querySelector(".atelier-travail .editeur-ta");
+  ta.focus(); ta.value = "<BODY>\n<U"; ta.setSelectionRange(ta.value.length, ta.value.length);
+  ta.dispatchEvent(new win.Event("input", { bubbles: true }));
+  await pause(100);
+  const pop = doc.querySelector(".atelier-travail .completion");
+  attendre(pop && !pop.hidden, "liste de suggestions absente");
+  const items = [...pop.querySelectorAll('[role="option"]')].map((li) => li.textContent);
+  attendre(items.includes("<UL>"), "suggestions : " + items.join(" "));
+  attendre(/Astuce/.test(pop.textContent), "astuce absente");
+  // Choisir <UL> (flèches), puis Entrée
+  for (let i = 0; i < items.indexOf("<UL>"); i++) ta.dispatchEvent(new win.KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }));
+  ta.dispatchEvent(new win.KeyboardEvent("keydown", { key: "Enter", bubbles: true, cancelable: true }));
+  await pause(100);
+  attendre(ta.value === "<BODY>\n<UL></UL>", "texte : " + JSON.stringify(ta.value));
+  attendre(ta.selectionStart === "<BODY>\n<UL>".length, "curseur mal placé : " + ta.selectionStart);
+  attendre(pop.hidden, "la liste devrait se fermer");
+});
+
+test("suggestions : rien dans les exercices corrigés", async () => {
+  const { doc, win } = await charger("manuel/chapitre4/");
+  const ta = doc.querySelector(".exo .editeur-ta");
+  ta.focus(); ta.value = "<U"; ta.setSelectionRange(2, 2);
+  ta.dispatchEvent(new win.Event("input", { bubbles: true }));
+  await pause(100);
+  const pop = doc.querySelector(".exo .completion");
+  attendre(!pop || pop.hidden, "l'exercice ne doit rien proposer");
+});

@@ -82,18 +82,19 @@ theme:
 # ?v=… : changez ce numéro à chaque publication pour que les navigateurs
 # rechargent les styles et scripts au lieu d'utiliser leur ancienne copie.
 extra_css:
-  - stylesheets/manuel.css?v=2.2.0
-  - stylesheets/styles.css?v=2.2.0
-  - stylesheets/atelier.css?v=2.2.0
+  - stylesheets/manuel.css?v=2.3.0
+  - stylesheets/styles.css?v=2.3.0
+  - stylesheets/atelier.css?v=2.3.0
 
 extra_javascript:
-  - javascripts/outils.js?v=2.2.0
-  - javascripts/zip.js?v=2.2.0
-  - javascripts/noyau.js?v=2.2.0
-  - javascripts/exercices.js?v=2.2.0
-  - javascripts/projet.js?v=2.2.0
-  - javascripts/manuel.js?v=2.2.0
-  - javascripts/atelier.js?v=2.2.0
+  - javascripts/outils.js?v=2.3.0
+  - javascripts/zip.js?v=2.3.0
+  - javascripts/completion.js?v=2.3.0
+  - javascripts/noyau.js?v=2.3.0
+  - javascripts/exercices.js?v=2.3.0
+  - javascripts/projet.js?v=2.3.0
+  - javascripts/manuel.js?v=2.3.0
+  - javascripts/atelier.js?v=2.3.0
 
 markdown_extensions:
   - admonition

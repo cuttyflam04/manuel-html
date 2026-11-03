@@ -31,6 +31,7 @@ Votre code d'exercice, votre progression, votre style, les images ajoutées dans
 
 | Version | Changements |
 |---------|-------------|
+| 2.3 | Suggestions pendant la frappe dans l'atelier et les exemples : balises, attributs, fermetures et caractères spéciaux du cours, chacun avec son astuce. |
 | 2.2 | Atelier « Projet : mon site » : construire son site en 7 étapes vérifiées, puis le télécharger en .zip. |
 | 2.1 | « Mes images » : tester ses propres photos dans les aperçus. |
 | 2.0 | Quatre styles au choix. Contenu réaligné sur le support de cours, coquilles du support signalées, aperçus en direct, exercices corrigés automatiquement, quiz, nouveau design. |

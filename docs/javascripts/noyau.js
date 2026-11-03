@@ -59,7 +59,8 @@
 
   /* ---------- Éditeur (zone de texte posée sur le code coloré) ---------- */
 
-  function makeEditor(initial, onChange, label) {
+  function makeEditor(initial, onChange, label, opts) {
+    opts = opts || {};
     const wrap = el("div", "editeur");
     const hl = el("pre", "editeur-hl");
     hl.setAttribute("aria-hidden", "true");
@@ -81,9 +82,96 @@
       ta.style.height = ta.scrollHeight + "px";
       hl.style.height = ta.style.height;
     };
-    ta.addEventListener("input", () => { sync(); onChange && onChange(ta.value); });
-    ta.addEventListener("scroll", () => { hl.scrollLeft = ta.scrollLeft; });
+    /* Suggestions pendant la frappe (opts.completion) : balises, attributs, fermetures, caractères spéciaux,
+       chacune avec une astuce du cours. Clavier : ↑ ↓, Entrée ou Tab, Échap. */
+    let sug = null, choix = 0, insertion = false, largeurCar = 0;
+    const pop = el("div", "completion");
+    pop.id = "cpl-" + Math.random().toString(36).slice(2, 8);
+    pop.hidden = true;
+    const liste = el("ul", "completion-liste");
+    liste.setAttribute("role", "listbox");
+    liste.setAttribute("aria-label", "Suggestions");
+    const astuce = el("p", "completion-astuce");
+    pop.append(liste, astuce);
+    if (opts.completion && MH.completion) {
+      wrap.classList.add("avec-completion");
+      wrap.append(pop);
+      ta.setAttribute("aria-autocomplete", "list");
+      ta.setAttribute("aria-controls", pop.id);
+    }
+    const fermer = () => { sug = null; pop.hidden = true; ta.removeAttribute("aria-activedescendant"); };
+    const placer = () => {
+      if (!largeurCar) {
+        const s = el("span"); s.textContent = "M".repeat(20);
+        s.style.cssText = "position:absolute;visibility:hidden;white-space:pre";
+        hl.append(s); largeurCar = s.getBoundingClientRect().width / 20; s.remove();
+      }
+      const lignes = ta.value.slice(0, ta.selectionStart).split("\n");
+      const cs = getComputedStyle(ta), lh = parseFloat(cs.lineHeight) || 22;
+      const haut = parseFloat(cs.paddingTop) + lignes.length * lh;
+      let gauche = parseFloat(cs.paddingLeft) + lignes[lignes.length - 1].length * largeurCar - ta.scrollLeft;
+      gauche = Math.max(4, Math.min(gauche, wrap.clientWidth - pop.offsetWidth - 4));
+      // Pas la place sous la ligne : la liste passe au-dessus.
+      const dessus = haut + pop.offsetHeight > wrap.clientHeight + 120 && haut - lh - pop.offsetHeight > 0;
+      pop.style.left = gauche + "px";
+      pop.style.top = (dessus ? haut - lh - pop.offsetHeight - 4 : haut + 2) + "px";
+    };
+    const dessiner = () => {
+      liste.innerHTML = "";
+      sug.items.forEach((it, i) => {
+        const li = el("li", "completion-item" + (i === choix ? " actif" : ""));
+        li.textContent = it.libelle;
+        li.id = pop.id + "-" + i;
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", String(i === choix));
+        li.addEventListener("pointerdown", (e) => { e.preventDefault(); choix = i; inserer(); });
+        liste.append(li);
+      });
+      astuce.innerHTML = "<b>Astuce</b> " + esc(sug.items[choix].astuce);
+      ta.setAttribute("aria-activedescendant", pop.id + "-" + choix);
+      const a = liste.children[choix];
+      if (a && a.scrollIntoView) a.scrollIntoView({ block: "nearest" });
+    };
+    const proposer = () => {
+      if (!opts.completion || !MH.completion || ta.selectionStart !== ta.selectionEnd) return fermer();
+      const r = MH.completion.suggerer(ta.value, ta.selectionStart, opts);
+      if (!r) return fermer();
+      sug = r; choix = 0; pop.hidden = false;
+      dessiner(); placer();
+    };
+    const inserer = () => {
+      const it = sug.items[choix], de = sug.de, a = sug.a;
+      fermer();
+      ta.focus();
+      ta.setSelectionRange(de, a);
+      insertion = true;
+      // insertText garde l'annulation (Ctrl+Z) ; sinon, on remplace et on prévient.
+      const ok = document.execCommand && document.execCommand("insertText", false, it.texte);
+      if (!ok || ta.value.slice(de, de + it.texte.length) !== it.texte) {
+        ta.setRangeText(it.texte, de, a, "end");
+        ta.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+      insertion = false;
+      ta.setSelectionRange(de + it.curseur, de + it.curseur);
+    };
+    ta.addEventListener("blur", () => setTimeout(() => { if (document.activeElement !== ta) fermer(); }, 120));
+    ta.addEventListener("click", fermer);
+
+    ta.addEventListener("input", () => { sync(); onChange && onChange(ta.value); if (!insertion) proposer(); });
+    ta.addEventListener("scroll", () => { hl.scrollLeft = ta.scrollLeft; if (sug) placer(); });
     ta.addEventListener("keydown", (e) => {
+      if (sug && !pop.hidden) {
+        const n = sug.items.length;
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+          e.preventDefault();
+          choix = (choix + (e.key === "ArrowDown" ? 1 : n - 1)) % n;
+          dessiner();
+          return;
+        }
+        if (e.key === "Enter" || e.key === "Tab") { e.preventDefault(); inserer(); return; }
+        if (e.key === "Escape") { e.preventDefault(); fermer(); return; }
+        if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "Home" || e.key === "End") fermer();
+      }
       if (e.key === "Tab" && !e.shiftKey && !ta.dataset.escaped) {
         e.preventDefault();
         document.execCommand ? document.execCommand("insertText", false, "    ")
