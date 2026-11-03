@@ -30,7 +30,7 @@
       const live = debounce((v) => preview.render(v), 120);
       btnEdit.addEventListener("click", () => {
         if (!editor) {
-          editor = makeEditor(original, live, "Code de l'exemple, modifiable");
+          editor = makeEditor(original, live, "Code de l'exemple, modifiable", { completion: true, formulaires: /bonus-formulaires/.test(location.pathname) });
           editor.node.classList.add("editeur-exemple");
           block.after(editor.node);
         }
